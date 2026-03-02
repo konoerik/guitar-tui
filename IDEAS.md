@@ -50,6 +50,28 @@ A dedicated content section for style profiles and original exercises in the sty
 
 ---
 
+### Styles Area
+
+A content section organized by musical genre/style rather than by song or artist.
+
+**What it is**: Theory and technique profiles for genres — the vocabulary, characteristic progressions, scales, and feel that define a style. Blues, rock, jazz, country, funk, classical fingerstyle, etc.
+
+**Example — Blues**:
+- Core theory: 12-bar blues form, dominant 7th chords, blues scale vs. minor pentatonic
+- Characteristic techniques: bends, vibrato, call-and-response phrasing, shuffle feel
+- Key artists entry links (e.g., BB King, SRV, Knopfler)
+- Foundational progressions: I7–IV7–V7, quick-change variation, minor blues
+- Links to relevant lessons, licks, and songbook entries
+
+**Relationship to Songbook and Artist areas**: Styles is the top-level organizer. A song belongs to a style; an artist belongs to one or more styles. Navigation could flow Style → Artist → Song or Style → Lessons.
+
+**UI questions for M4**:
+- Is Styles the top-level navigation category that Songbook and Artist sit under?
+- Or are all three peers in the main nav?
+- Genre tagging on lessons — should lessons carry a `style` frontmatter tag?
+
+---
+
 ## Copyright Boundary (applies to both areas)
 
 Music theory is not copyrightable. The following are always safe:
