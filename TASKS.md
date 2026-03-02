@@ -1,6 +1,6 @@
 # Tasks
 
-## Current Milestone: M0 — Project Scaffold
+## Completed: M0 — Project Scaffold
 
 - [x] Define architecture and diagram types (session 1)
 - [x] Initialize uv project (`pyproject.toml`, `.python-version`)
@@ -10,18 +10,18 @@
 - [x] Write `ROADMAP.md`
 - [x] Write `schemas/diagram_spec.md`
 - [x] Write `schemas/lesson_format.md`
-- [ ] Verify uv install + textual hello world runs
+- [x] Verify uv install + textual hello world runs
 
 ---
 
-## Upcoming: M1 — Data Layer
+## Completed: M1 — Data Layer
 
-- [ ] Define Pydantic model for chord voicings
-- [ ] Define Pydantic model for scale patterns
-- [ ] Populate `open_chords.yaml` (Am, A, Bm, C, D, Dm, E, Em, F, G)
-- [ ] Populate pentatonic minor scale — 5 positions
-- [ ] Write `guitar_tui/loaders/data_loader.py` with startup validation
-- [ ] Tests: loader validation (valid file, malformed file, missing required field)
+- [x] Define Pydantic model for chord voicings (`guitar_tui/loaders/models.py`)
+- [x] Define Pydantic model for scale patterns (`guitar_tui/loaders/models.py`)
+- [x] Populate `open_chords.yaml` (Am, A, Bm, C, D, Dm, E, Em, F, G)
+- [x] Populate pentatonic minor scale — 5 positions
+- [x] Write `guitar_tui/loaders/data_loader.py` with startup validation
+- [x] Tests: loader validation (valid file, malformed file, missing required field)
 
 ## Upcoming: M2 — Diagram Engine
 
