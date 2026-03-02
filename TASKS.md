@@ -23,14 +23,15 @@
 - [x] Write `guitar_tui/loaders/data_loader.py` with startup validation
 - [x] Tests: loader validation (valid file, malformed file, missing required field)
 
-## Upcoming: M2 — Diagram Engine
+## Completed: M2 — Diagram Engine
 
-- [ ] Finalize DiagramSpec Pydantic models (chord, scale, tab, fretboard variants)
-- [ ] Implement chord box renderer
-- [ ] Implement tab renderer
-- [ ] Implement static fretboard renderer
-- [ ] Implement diagram dispatcher
-- [ ] Tests: all renderer types with known inputs
+- [x] Finalize DiagramSpec Pydantic models (chord, scale, tab, fretboard variants)
+- [x] Implement chord box renderer
+- [x] Implement scale position renderer
+- [x] Implement tab renderer
+- [x] Implement static fretboard renderer
+- [x] Implement diagram dispatcher
+- [x] Tests: all renderer types with known inputs (85 engine tests, 104 total)
 
 ## Upcoming: M3 — Content Layer
 
