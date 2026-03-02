@@ -1,0 +1,7 @@
+/* Guitar TUI — application stylesheet */
+
+#placeholder {
+    content-align: center middle;
+    width: 100%;
+    height: 1fr;
+}

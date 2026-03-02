@@ -1,0 +1,30 @@
+[project]
+name = "guitar-tui"
+version = "0.1.0"
+description = "A TUI application for guitar music theory"
+requires-python = ">=3.12"
+dependencies = [
+    "textual>=1.0",
+    "pyyaml>=6.0",
+    "python-frontmatter>=1.1",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+guitar-tui = "guitar_tui.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "textual-dev>=1.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
