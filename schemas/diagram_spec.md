@@ -102,7 +102,7 @@ Renders a scale pattern on a fretboard grid (horizontal strings, vertical frets)
 |-------------|-------------------|----------|-------------|
 | `root`      | string            | yes      | Root note: `A`–`G`, optionally `#` or `b` (e.g., `"C"`, `"F#"`, `"Bb"`) |
 | `positions` | list[ScaleNote]   | yes      | List of notes to highlight (see below) |
-| `fret_range`| [int, int]        | no       | `[low, high]` fret range to display (default: `[0, 12]`) |
+| `fret_range`| [int, int]        | no       | `[low, high]` fret range to display. Omit to auto-compute from the min/max frets in `positions`. Use `[0, 12]` for a full-neck view. |
 | `highlight_root` | bool        | no       | Whether to visually distinguish root notes (default: true) |
 
 #### ScaleNote object
@@ -160,7 +160,7 @@ Renders a guitar tablature block (6-line staff with numbers).
 
 | Field    | Type            | Required | Description |
 |----------|-----------------|----------|-------------|
-| `notes`  | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret; `null` = string not played; `-` = let ring/held |
+| `notes`  | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret number; `null` = string not played this beat. |
 | `label`  | string          | no       | Beat label (e.g., `"1"`, `"&"`, `"2"`) |
 
 ### Examples
