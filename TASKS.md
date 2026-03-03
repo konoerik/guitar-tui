@@ -33,13 +33,13 @@
 - [x] Implement diagram dispatcher
 - [x] Tests: all renderer types with known inputs (85 engine tests, 104 total)
 
-## Upcoming: M3 — Content Layer
+## Completed: M3 — Content Layer
 
-- [ ] Implement lesson parser (frontmatter + body)
-- [ ] Implement diagram block dispatcher
-- [ ] Implement lesson index
-- [ ] Write 2 test lessons exercising parser and diagrams
-- [ ] Tests: parser, dispatcher, validation errors
+- [x] Implement lesson parser (frontmatter + body) — `guitar_tui/loaders/lesson_loader.py`
+- [x] Implement diagram block dispatcher (integrated in lesson parser via engine dispatcher)
+- [x] Implement lesson index (`by_tag`, `by_difficulty`, `by_module`)
+- [x] Write 2 stub lessons (`open_g_chord.md`, `minor_pentatonic_intro.md`)
+- [x] Tests: parser, dispatcher, validation errors (42 tests, 146 total)
 
 ## Upcoming: M4 — TUI Application
 
