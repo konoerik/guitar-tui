@@ -41,13 +41,14 @@
 - [x] Write 2 stub lessons (`open_g_chord.md`, `minor_pentatonic_intro.md`)
 - [x] Tests: parser, dispatcher, validation errors (42 tests, 146 total)
 
-## Upcoming: M4 — TUI Application
+## Completed: M4 — TUI Application
 
-- [ ] Main navigation screen
-- [ ] Lesson viewer screen
-- [ ] Reference lookup screen
-- [ ] Keyboard navigation + Footer bindings
-- [ ] Stylesheet for all screens
+- [x] Main navigation screen (`ui/screens/home.py` — TabbedContent, Lessons + Reference tabs)
+- [x] Lesson viewer screen (`ui/screens/lesson.py` — TextBlock/DiagramBlock rendering)
+- [x] Reference lookup screen (chord/scale Selects + live diagram in HomeScreen Reference tab)
+- [x] Keyboard navigation + Footer bindings (q, l, r, Escape)
+- [x] Stylesheet for all screens (`ui/app.tcss`)
+- [x] Smoke tests: app mounts, lesson list populated, navigate to lesson and back (149 total)
 
 ## Upcoming: M5 — Interactive Features
 

@@ -1,7 +1,33 @@
-/* Guitar TUI — application stylesheet */
+/* ── Global ─────────────────────────────────────────────────────────── */
+Screen { background: $surface; }
 
-#placeholder {
-    content-align: center middle;
-    width: 100%;
+/* ── Lessons tab ────────────────────────────────────────────────────── */
+#lesson-list {
     height: 1fr;
+    border: solid $primary-darken-2;
+    padding: 0 1;
+}
+#lesson-list > ListItem { padding: 0 1; }
+#lesson-list > ListItem.--highlight { background: $accent; color: $text; }
+
+/* ── Reference tab ──────────────────────────────────────────────────── */
+.ref-label { margin-top: 1; text-style: bold; color: $text-muted; }
+#chord-select, #scale-select { width: 40; margin-bottom: 1; }
+#ref-diagram {
+    margin-top: 1;
+    padding: 1 2;
+    border: solid $primary-darken-2;
+    width: auto;
+    height: auto;
+    min-height: 10;
+}
+
+/* ── Lesson viewer ──────────────────────────────────────────────────── */
+#lesson-body { height: 1fr; padding: 1 2; }
+.lesson-text { margin-bottom: 1; }
+.lesson-diagram {
+    margin: 1 0 1 4;
+    padding: 0 1;
+    border-left: thick $accent;
+    width: auto;
 }
