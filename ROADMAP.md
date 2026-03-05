@@ -132,3 +132,86 @@
 - All lessons parse and render without errors
 - All diagram directives validate against schemas
 - Lesson flow is pedagogically sequenced (prerequisites enforced)
+
+---
+
+## M7 — Theory Web
+
+**Goal**: Transform the reference area from two independent lookups (chord, scale) into
+an interconnected theory system where selecting any element reveals its musical context.
+
+**Background**: A guitarist who knows a scale should immediately see which chords belong
+to it, which progressions are idiomatic, and which positions cover the neck. Conversely,
+selecting a chord should reveal which scales and keys it belongs to. This is the
+information a learner needs to connect isolated knowledge into practical musicianship.
+
+**Deliverables**:
+
+*Data layer*
+- Model scale-to-chord relationships (diatonic chord sets computed from interval formulas)
+- Model chord-to-key membership (which keys/scales contain this chord)
+- Multiple voicings per chord name (FEAT-004)
+- Scale transposition support (DECISIONS.md D5 deferral resolved here)
+
+*UI — Scale View*
+- Select a scale → show all 5 positions (navigable, not just position 1)
+- Diatonic chord panel: the chords built from that scale, with chord diagrams
+- Common progressions panel: typical I-IV-V, I-vi-IV-V etc. for the selected key
+- Cross-references to lessons, artists, and songs that feature this scale
+
+*UI — Chord View*
+- Select a chord → show all voicings (open, barre positions) — FEAT-004
+- Keys/scales this chord belongs to (e.g. Am belongs to C major, A minor, D minor...)
+- Common chord functions (tonic, subdominant, dominant) in those keys
+- Cross-references to progressions and lessons
+
+*UI — Progression Builder (stretch goal)*
+- Select a key → see all diatonic chords laid out
+- Click chords to build a progression and see it rendered as a tab diagram
+
+**Acceptance criteria**:
+- Selecting a scale shows its diatonic chords with diagrams
+- Selecting a chord shows which keys/scales it belongs to
+- All positions of a scale are navigable from the scale view
+- All voicings of a chord are accessible from the chord view
+- Cross-references to lessons and content are populated
+
+---
+
+## M8 — Song Analysis
+
+**Goal**: Give the learner a systematic method for figuring out how to play a song —
+finding the key, identifying the scale, mapping the chord progression — and an
+interactive tool that guides the process.
+
+**Background**: The endpoint of learning guitar theory is applying it to real music.
+A learner who can navigate the Theory Web (M7) has all the pieces; M8 teaches them
+the analytical process for using those pieces on an unfamiliar song. This is the
+"flip side" of the reference: instead of browsing known theory, the learner starts
+from a song and works backwards to the theory.
+
+**Deliverables**:
+
+*Instructor — Song Analysis track (see CURRICULUM.md)*
+- Lessons on finding a song's key by ear and by chord recognition
+- Lessons on identifying major vs. minor tonality
+- Lessons on mapping progressions to Roman numerals
+- Lessons on choosing the right scale for a given key/feel
+- Lessons on using the Theory Web as an analytical tool
+
+*Developer — Analysis workflow UI*
+- "Analyse a Song" guided screen: user inputs a key and mode (major/minor), the UI
+  surfaces the relevant scale, diatonic chords, common progressions, and suggested
+  scale positions — all linked to lessons
+- This is the Theory Web (M7) used in reverse: start from what you hear, arrive at
+  the theory
+
+*Developer — Songbook area (see IDEAS.md)*
+- Each Songbook entry demonstrates the analysis methodology applied to a real song
+- Links back to the relevant Theory Web entries (scale, chords, progressions)
+
+**Acceptance criteria**:
+- Song Analysis lesson track is complete and sequenced
+- Analysis workflow UI accepts a key + mode and returns theory context
+- At least three Songbook entries exist demonstrating the methodology
+- Songbook entries link correctly to scale, chord, and lesson content

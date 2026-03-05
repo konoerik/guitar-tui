@@ -1,33 +1,70 @@
-/* ── Global ─────────────────────────────────────────────────────────── */
+/* ── Global ──────────────────────────────────────────────────────────── */
 Screen { background: $surface; }
 
-/* ── Lessons tab ────────────────────────────────────────────────────── */
-#lesson-list {
-    height: 1fr;
-    border: solid $primary-darken-2;
-    padding: 0 1;
+/* ── Welcome screen ──────────────────────────────────────────────────── */
+#welcome-content {
+    margin: 4 4;
+    color: $text-muted;
 }
-#lesson-list > ListItem { padding: 0 1; }
-#lesson-list > ListItem.--highlight { background: $accent; color: $text; }
 
-/* ── Reference tab ──────────────────────────────────────────────────── */
-.ref-label { margin-top: 1; text-style: bold; color: $text-muted; }
-#chord-select, #scale-select { width: 40; margin-bottom: 1; }
-#ref-diagram {
-    margin-top: 1;
+/* ── Lesson mode ─────────────────────────────────────────────────────── */
+#lesson-hint {
+    margin: 4 4;
+    color: $text-muted;
+}
+
+#lesson-body { height: 1fr; padding: 0 2; }
+
+/* ── Lesson picker modal ─────────────────────────────────────────────── */
+LessonPickerModal {
+    align: center middle;
+}
+
+#picker-title {
+    width: 60;
     padding: 1 2;
-    border: solid $primary-darken-2;
-    width: auto;
-    height: auto;
-    min-height: 10;
+    text-style: bold;
+    background: $panel;
+    border-bottom: solid $primary-darken-2;
 }
 
-/* ── Lesson viewer ──────────────────────────────────────────────────── */
-#lesson-body { height: 1fr; padding: 1 2; }
+#lesson-list {
+    width: 60;
+    height: auto;
+    max-height: 24;
+    background: $panel;
+    border: solid $primary-darken-2;
+    border-top: none;
+}
+
+/* ── Lesson content blocks ───────────────────────────────────────────── */
 .lesson-text { margin-bottom: 1; }
 .lesson-diagram {
     margin: 1 0 1 4;
     padding: 0 1;
     border-left: thick $accent;
     width: auto;
+}
+.placeholder { margin: 2; color: $text-muted; }
+
+/* ── Tool views ──────────────────────────────────────────────────────── */
+.tool-view {
+    height: 100%;
+    padding: 2 4;
+}
+
+.tool-title {
+    text-style: bold;
+    color: $text;
+    margin-bottom: 1;
+    padding-bottom: 1;
+    border-bottom: solid $primary-darken-2;
+}
+
+#chord-select, #voicing-select, #scale-select { margin-bottom: 1; }
+
+#chord-diagram, #scale-diagram {
+    margin-top: 1;
+    width: auto;
+    height: auto;
 }

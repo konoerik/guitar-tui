@@ -56,7 +56,9 @@ Renders a chord box diagram (vertical grid, nut at top).
 
 - `frets` must have exactly 6 elements
 - `fingers` must have exactly 6 elements if provided
-- Fret numbers are relative to `base_fret` when provided
+- **Fret numbers are row numbers, not absolute fret numbers.** Row 1 = the first visible fret row (= `base_fret` on the real neck). Row 2 = `base_fret + 1`, etc. When `base_fret: 1` (default), row numbers equal absolute fret numbers. When `base_fret: 5`, row 1 = 5th fret, row 2 = 6th fret, etc.
+- `0` = open string (shown with ○ above nut); `null` = muted (shown with X above nut)
+- `barre.fret` is also a row number (same convention as `frets`)
 - String order: index 0 = low E (string 6), index 5 = high e (string 1)
 
 ### Examples
@@ -83,11 +85,26 @@ barre:
 ```
 
 ```yaml
-# A major (higher position, muted low strings)
+# A major (open position)
 type: chord
-title: A Major (open)
+title: A Major
 frets: [null, 0, 2, 2, 2, 0]
 fingers: [null, null, 1, 2, 3, null]
+```
+
+```yaml
+# Am barre at 5th fret — row numbers relative to base_fret: 5
+# Row 1 = 5th fret, row 2 = 6th fret, row 3 = 7th fret
+type: chord
+title: A Minor (barre, 5th fret)
+frets: [1, 1, 3, 3, 2, 1]
+fingers: [1, 1, 3, 4, 2, 1]
+base_fret: 5
+barre:
+  fret: 1       # row 1 = 5th fret
+  from: 1
+  to: 6
+  finger: 1
 ```
 
 ---
@@ -146,26 +163,37 @@ Renders a guitar tablature block (6-line staff with numbers).
 
 | Field    | Type         | Required | Description |
 |----------|--------------|----------|-------------|
-| `lines`  | list[TabLine]| yes      | Sequence of tab lines. Each line is one "measure" or logical group. |
+| `lines`  | list[TabLine]| yes      | Sequence of tab lines. Each line is a staff row rendered as a single block. |
 | `tempo`  | int          | no       | BPM for reference (display only) |
 | `time`   | string       | no       | Time signature (e.g., `"4/4"`) |
 
 #### TabLine object
 
+Exactly one of `beats` or `measures` must be provided.
+
+| Field      | Type              | Required | Description |
+|------------|-------------------|----------|-------------|
+| `beats`    | list[TabBeat]     | one of   | Flat list of beats — treated as a single measure. Legacy format; no bar lines inserted. |
+| `measures` | list[TabMeasure]  | one of   | List of measures; a `\|` bar line is inserted between each measure in the rendered output. |
+
+#### TabMeasure object
+
 | Field    | Type          | Required | Description |
 |----------|---------------|----------|-------------|
-| `beats`  | list[TabBeat] | yes      | Ordered list of beats/events in this line |
+| `beats`  | list[TabBeat] | yes      | Ordered list of beats/events in this measure |
 
 #### TabBeat object
 
-| Field    | Type            | Required | Description |
-|----------|-----------------|----------|-------------|
-| `notes`  | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret number; `null` = string not played this beat. |
-| `label`  | string          | no       | Beat label (e.g., `"1"`, `"&"`, `"2"`) |
+| Field      | Type            | Required | Description |
+|------------|-----------------|----------|-------------|
+| `notes`    | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret number; `null` = string not played this beat. |
+| `label`    | string          | no       | Beat label shown below the staff (e.g., `"G"`, `"1"`, `"&"`) |
+| `duration` | int             | no       | Number of beats the note rings for (default: `1`). Expands the column by `duration × col_width`. |
 
 ### Examples
 
 ```yaml
+# Single measure — flat beats (legacy format)
 type: tab
 title: E Minor Arpeggio
 tempo: 80
@@ -180,6 +208,31 @@ lines:
         label: "3"
       - notes: [null, null, 0, null, null, null]
         label: "4"
+```
+
+```yaml
+# Four-measure chord progression — each chord rings for 4 beats
+type: tab
+title: G – D – Em – C
+time: "4/4"
+lines:
+  - measures:
+      - beats:
+          - notes: [3, 2, 0, 0, 0, 3]
+            label: "G"
+            duration: 4
+      - beats:
+          - notes: [null, null, 0, 2, 3, 2]
+            label: "D"
+            duration: 4
+      - beats:
+          - notes: [0, 2, 2, 0, 0, 0]
+            label: "Em"
+            duration: 4
+      - beats:
+          - notes: [null, 3, 2, 0, 1, 0]
+            label: "C"
+            duration: 4
 ```
 
 ---

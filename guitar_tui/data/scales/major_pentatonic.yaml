@@ -1,0 +1,107 @@
+# Major Pentatonic Scale — 5 positions
+#
+# key: C  (all fret numbers are concrete for C major pentatonic)
+# intervals: 1 2 3 5 6  (major scale without 4th and 7th)
+# Notes: C D E G A
+#
+# String numbering: 1 = high e, 6 = low E
+#
+# The major pentatonic in C is the relative major of the A minor pentatonic.
+# Position 1 of C major pentatonic shares fret positions with
+# Position 2 of A minor pentatonic.
+
+name: major_pentatonic
+full_name: Major Pentatonic
+key: C
+intervals: ["1", "2", "3", "5", "6"]
+
+positions:
+  - id: 1
+    name: Position 1
+    caged_shape: E
+    fret_range: [7, 10]
+    notes:
+      - {string: 6, fret: 8,  degree: "1",  root: true}
+      - {string: 6, fret: 10, degree: "2"}
+      - {string: 5, fret: 7,  degree: "3"}
+      - {string: 5, fret: 10, degree: "5"}
+      - {string: 4, fret: 7,  degree: "6"}
+      - {string: 4, fret: 10, degree: "1",  root: true}
+      - {string: 3, fret: 7,  degree: "2"}
+      - {string: 3, fret: 9,  degree: "3"}
+      - {string: 2, fret: 8,  degree: "5"}
+      - {string: 2, fret: 10, degree: "6"}
+      - {string: 1, fret: 8,  degree: "1",  root: true}
+      - {string: 1, fret: 10, degree: "2"}
+
+  - id: 2
+    name: Position 2
+    caged_shape: D
+    fret_range: [9, 13]
+    notes:
+      - {string: 6, fret: 10, degree: "2"}
+      - {string: 6, fret: 12, degree: "3"}
+      - {string: 5, fret: 10, degree: "5"}
+      - {string: 5, fret: 12, degree: "6"}
+      - {string: 4, fret: 10, degree: "1",  root: true}
+      - {string: 4, fret: 12, degree: "2"}
+      - {string: 3, fret: 9,  degree: "3"}
+      - {string: 3, fret: 12, degree: "5"}
+      - {string: 2, fret: 10, degree: "6"}
+      - {string: 2, fret: 13, degree: "1",  root: true}
+      - {string: 1, fret: 10, degree: "2"}
+      - {string: 1, fret: 12, degree: "3"}
+
+  - id: 3
+    name: Position 3
+    caged_shape: C
+    fret_range: [12, 15]
+    notes:
+      - {string: 6, fret: 12, degree: "3"}
+      - {string: 6, fret: 15, degree: "5"}
+      - {string: 5, fret: 12, degree: "6"}
+      - {string: 5, fret: 15, degree: "1",  root: true}
+      - {string: 4, fret: 12, degree: "2"}
+      - {string: 4, fret: 14, degree: "3"}
+      - {string: 3, fret: 12, degree: "5"}
+      - {string: 3, fret: 14, degree: "6"}
+      - {string: 2, fret: 13, degree: "1",  root: true}
+      - {string: 2, fret: 15, degree: "2"}
+      - {string: 1, fret: 12, degree: "3"}
+      - {string: 1, fret: 15, degree: "5"}
+
+  - id: 4
+    name: Position 4
+    caged_shape: A
+    fret_range: [2, 5]
+    notes:
+      - {string: 6, fret: 3,  degree: "5"}
+      - {string: 6, fret: 5,  degree: "6"}
+      - {string: 5, fret: 3,  degree: "1",  root: true}
+      - {string: 5, fret: 5,  degree: "2"}
+      - {string: 4, fret: 2,  degree: "3"}
+      - {string: 4, fret: 5,  degree: "5"}
+      - {string: 3, fret: 2,  degree: "6"}
+      - {string: 3, fret: 5,  degree: "1",  root: true}
+      - {string: 2, fret: 3,  degree: "2"}
+      - {string: 2, fret: 5,  degree: "3"}
+      - {string: 1, fret: 3,  degree: "5"}
+      - {string: 1, fret: 5,  degree: "6"}
+
+  - id: 5
+    name: Position 5
+    caged_shape: G
+    fret_range: [5, 8]
+    notes:
+      - {string: 6, fret: 5,  degree: "6"}
+      - {string: 6, fret: 8,  degree: "1",  root: true}
+      - {string: 5, fret: 5,  degree: "2"}
+      - {string: 5, fret: 7,  degree: "3"}
+      - {string: 4, fret: 5,  degree: "5"}
+      - {string: 4, fret: 7,  degree: "6"}
+      - {string: 3, fret: 5,  degree: "1",  root: true}
+      - {string: 3, fret: 7,  degree: "2"}
+      - {string: 2, fret: 5,  degree: "3"}
+      - {string: 2, fret: 8,  degree: "5"}
+      - {string: 1, fret: 5,  degree: "6"}
+      - {string: 1, fret: 8,  degree: "1",  root: true}

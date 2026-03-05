@@ -6,7 +6,7 @@ No imports from guitar_tui.data or guitar_tui.content are permitted here.
 
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 # ── Chord ─────────────────────────────────────────────────────────────────────
@@ -85,6 +85,7 @@ class TabBeat(BaseModel):
 
     notes: list[int | None]   # exactly 6; index 0 = low E, index 5 = high e
     label: str | None = None
+    duration: int = Field(default=1, ge=1)  # number of beats the note rings for
 
     @field_validator("notes")
     @classmethod
@@ -94,10 +95,38 @@ class TabBeat(BaseModel):
         return v
 
 
-class TabLine(BaseModel):
-    """One logical line (measure) of tablature."""
+class TabMeasure(BaseModel):
+    """One measure within a tab line."""
 
     beats: list[TabBeat]
+
+
+class TabLine(BaseModel):
+    """One logical line of tablature containing one or more measures.
+
+    Accepts either ``beats`` (legacy flat format — treated as a single measure)
+    or ``measures`` (new format — enables bar lines between measures).
+    Exactly one must be provided.
+    """
+
+    beats: list[TabBeat] | None = None
+    measures: list[TabMeasure] | None = None
+
+    @model_validator(mode="after")
+    def check_beats_xor_measures(self) -> "TabLine":
+        has_beats = self.beats is not None
+        has_measures = self.measures is not None
+        if not has_beats and not has_measures:
+            raise ValueError("TabLine requires either 'beats' or 'measures'")
+        if has_beats and has_measures:
+            raise ValueError("TabLine cannot have both 'beats' and 'measures'")
+        return self
+
+    def get_measures(self) -> list[TabMeasure]:
+        """Return a normalised list of TabMeasure regardless of input format."""
+        if self.measures is not None:
+            return self.measures
+        return [TabMeasure(beats=self.beats)]  # type: ignore[arg-type]
 
 
 class TabSpec(BaseModel):

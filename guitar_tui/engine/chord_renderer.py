@@ -4,7 +4,7 @@ Renders a ChordSpec into a Rich Text object.  The output is a vertical grid
 (nut at top) with string labels, open/muted markers, fret dots, and optional
 barre indicators.
 
-Grid geometry (all rows are 19 chars wide):
+Grid geometry (all rows are 25 chars wide):
     Header row:   ' E  A  D  G  B  e  '  (string labels)
     Marker row:   ' ○     ○  ○        '  (○ open, X muted, ' ' fretted)
     Nut row:      '╒══╤══╤══╤══╤══╕'    (when base_fret == 1)
@@ -20,24 +20,24 @@ from guitar_tui.engine.models import ChordSpec
 # String labels displayed left-to-right (index 0 = low E, index 5 = high e)
 _STRING_LABELS = ["E", "A", "D", "G", "B", "e"]
 
-_NUT      = "╒══╤══╤══╤══╤══╤══╕"   # 6 cells, 19 chars
-_SEP      = "├──┼──┼──┼──┼──┼──┤"   # 6 cells, 19 chars (5 inner ┼)
-_BOTTOM   = "└──┴──┴──┴──┴──┴──┘"   # 6 cells, 19 chars
-_TOP_OPEN = "┌──┬──┬──┬──┬──┬──┐"   # used when base_fret > 1 (no nut line)
+_NUT      = "╒═══╤═══╤═══╤═══╤═══╤═══╕"   # 6 cells, 25 chars
+_SEP      = "├───┼───┼───┼───┼───┼───┤"   # 6 cells, 25 chars (5 inner ┼)
+_BOTTOM   = "└───┴───┴───┴───┴───┴───┘"   # 6 cells, 25 chars
+_TOP_OPEN = "┌───┬───┬───┬───┬───┬───┐"   # used when base_fret > 1 (no nut line)
 
 
 def _header_row(items: list[str]) -> str:
-    """Build a 19-char display row aligned with grid cells.
+    """Build a 25-char display row aligned with grid cells.
 
-    Each item is 1 char (label or marker).  Layout matches the grid columns:
-    border at position 0 and 18, cells at positions 1-2, 4-5, 7-8, 10-11,
-    13-14, 16-17.
+    Each item is 1 char (label or marker), centered in a 3-char cell.
+    Border positions are at 0, 4, 8, 12, 16, 20, 24; cell centers at 2, 6,
+    10, 14, 18, 22.
     """
-    return " " + " ".join(f"{c} " for c in items) + " "
+    return " " + " ".join(f" {c} " for c in items) + " "
 
 
 def _content_row(cells: list[str]) -> str:
-    """Build a 19-char content row: │cell│cell│...│  (each cell is 2 chars)."""
+    """Build a 25-char content row: │cell│cell│...│  (each cell is 3 chars)."""
     return "│" + "│".join(cells) + "│"
 
 
@@ -81,11 +81,11 @@ def render_chord(spec: ChordSpec) -> Text:
                 and spec.barre.fret == row
                 and (spec.barre.from_string - 1) <= i <= (spec.barre.to_string - 1)
             ):
-                cells.append("▬ ")
+                cells.append(" ▬ ")
             elif fret is not None and fret == row:
-                cells.append("● ")
+                cells.append(" ● ")
             else:
-                cells.append("  ")
+                cells.append("   ")
 
         lines.append(_content_row(cells))
         lines.append(_SEP if row < num_rows else _BOTTOM)

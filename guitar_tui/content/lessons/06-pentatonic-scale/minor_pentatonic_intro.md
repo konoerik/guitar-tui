@@ -3,7 +3,7 @@ title: Minor Pentatonic Scale — Position 1
 slug: minor_pentatonic_intro
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales]
-prerequisites: [open_g_chord]
+prerequisites: [reading_scale_diagrams, open_g_chord]
 module: pentatonic-scale
 position: 1
 summary: Learn the first position of the A minor pentatonic scale — the foundation of blues and rock soloing.

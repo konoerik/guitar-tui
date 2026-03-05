@@ -50,6 +50,21 @@
 - [x] Stylesheet for all screens (`ui/app.tcss`)
 - [x] Smoke tests: app mounts, lesson list populated, navigate to lesson and back (149 total)
 
+## Completed: M4 follow-up — Engine/Schema items
+
+- [x] FEAT-001: Tab measure grouping — `TabMeasure`, `measures` field on `TabLine`, bar lines in renderer
+- [x] FEAT-002: Tab beat duration — `duration` field on `TabBeat`, column expansion
+- [x] FEAT-004: Multiple chord voicings — `ChordEntry`, voicing selector in Reference tab
+- [x] Updated `g_d_em_c_progression.md` tab diagram to use measures + duration
+
+## Completed: Layout A — Two-panel split
+
+- [x] Replace TabbedContent + ListView with Horizontal split layout
+- [x] Left panel: collapsible Tree (lessons by module) + reference selects
+- [x] Right panel: ContentSwitcher (welcome → inline lesson viewer)
+- [x] Lesson viewer: TabbedContent with Lesson (live), Practice + References (placeholders)
+- [x] Lesson loads inline via _show_lesson(); no longer pushes LessonScreen
+
 ## Upcoming: M5 — Interactive Features
 
 - [ ] Rolling-window fretboard widget
@@ -57,14 +72,31 @@
 - [ ] Scale degree overlay on chord diagrams
 - [ ] Position navigator for scale patterns
 
-## Upcoming: M6 — Content Expansion
+## Completed: M6 — Content Expansion (partial)
 
-> **Note**: This section is a placeholder. The Instructor should expand it into individual lesson tasks once M2 is complete and the DiagramSpec is locked. Each task should include the lesson slug, which diagram types it uses, and its prerequisites.
+- [x] Reorganise lessons into track subdirectories (`01-orientation/` … `06-pentatonic-scale/`)
+- [x] Update lesson loader to use `rglob` for recursive discovery
+- [x] Track 1 — Orientation: 4/4 lessons complete
+- [x] Track 2 — Open Chords: 10/10 lessons complete
+- [x] Track 3 — First Progressions: 5/5 lessons complete (G–D–Em–C, C–G–Am–F, A–D–E, 12-Bar Blues in A, I–IV–V)
+- [x] Track 6 — Pentatonic Scale: 5/9 lessons complete (positions 1–5)
 
-- [ ] Instructor: scope and expand this section (do after M2 is done)
-- [ ] Module 1: Open Chords
-- [ ] Module 2: Barre Chords
-- [ ] Module 3: Pentatonic Scale
-- [ ] Module 4: Major Scale
-- [ ] Module 5: Chord Progressions
+## Completed: M6 — Content Expansion (second batch)
+
+- [x] Track 6 — Pentatonic Scale: 9/9 lessons complete (connections, major pent intro, major vs minor, blues scale)
+- [x] Track 4 — Theory Basics: 8/8 lessons complete
+- [x] Track 5 — Barre Chords: 7/7 lessons complete
+- [x] Data: barre_chords.yaml, seventh_chords.yaml, natural_minor.yaml, major.yaml, major_pentatonic.yaml, blues_scale.yaml
+
+## Completed: M6 — Content Expansion (third batch)
+
+- [x] Track 7 — Natural Minor: 7/7 lessons complete
+- [x] Track 8 — Major Scale: 7/7 lessons complete
+- [x] Track 9 — Seventh Chords: 5/5 lessons complete
+- Total: 62 lessons across 9 tracks
+
+## Upcoming: M6 — Content Expansion (remaining)
+
+- [ ] Track 10 — Modes (6 lessons; requires mode scale YAML data)
+- [ ] Track 11 — Song Analysis (9 lessons)
 - [ ] Complete reference section

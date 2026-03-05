@@ -1,5 +1,8 @@
 """Tests for the guitar tablature renderer (M2)."""
 
+import pytest
+from pydantic import ValidationError
+
 from guitar_tui.engine.models import TabSpec
 from guitar_tui.engine.tab_renderer import render_tab
 
@@ -193,3 +196,147 @@ class TestHighFretNumbers:
         # All rows must have equal width
         widths = {len(r) for r in string_rows}
         assert len(widths) == 1
+
+
+# ── TabLine validation (FEAT-001) ─────────────────────────────────────────────
+
+
+class TestTabLineValidation:
+    def test_beats_only_valid(self) -> None:
+        TabSpec.model_validate({
+            "type": "tab",
+            "lines": [{"beats": [{"notes": [0] * 6}]}],
+        })
+
+    def test_measures_only_valid(self) -> None:
+        TabSpec.model_validate({
+            "type": "tab",
+            "lines": [{"measures": [{"beats": [{"notes": [0] * 6}]}]}],
+        })
+
+    def test_neither_beats_nor_measures_invalid(self) -> None:
+        with pytest.raises(ValidationError):
+            TabSpec.model_validate({
+                "type": "tab",
+                "lines": [{}],
+            })
+
+    def test_both_beats_and_measures_invalid(self) -> None:
+        with pytest.raises(ValidationError):
+            TabSpec.model_validate({
+                "type": "tab",
+                "lines": [{
+                    "beats": [{"notes": [0] * 6}],
+                    "measures": [{"beats": [{"notes": [0] * 6}]}],
+                }],
+            })
+
+
+# ── Measures format rendering (FEAT-001) ──────────────────────────────────────
+
+
+class TestSingleMeasureFormat:
+    """measures format with one measure renders identically to flat beats."""
+
+    beats_spec = TabSpec.model_validate({
+        "type": "tab",
+        "lines": [{"beats": [{"notes": [0, 2, 2, 0, 0, 0], "label": "Em"}]}],
+    })
+    measures_spec = TabSpec.model_validate({
+        "type": "tab",
+        "lines": [{"measures": [{"beats": [{"notes": [0, 2, 2, 0, 0, 0], "label": "Em"}]}]}],
+    })
+
+    def test_same_output_as_flat_beats(self) -> None:
+        assert render_tab(self.beats_spec).plain == render_tab(self.measures_spec).plain
+
+
+class TestMultipleMeasures:
+    """Four one-beat measures produce inter-measure bar lines."""
+
+    spec = TabSpec.model_validate({
+        "type": "tab",
+        "title": "G – D – Em – C",
+        "time": "4/4",
+        "lines": [
+            {
+                "measures": [
+                    {"beats": [{"notes": [3, 2, 0, 0, 0, 3], "label": "G"}]},
+                    {"beats": [{"notes": [None, None, 0, 2, 3, 2], "label": "D"}]},
+                    {"beats": [{"notes": [0, 2, 2, 0, 0, 0], "label": "Em"}]},
+                    {"beats": [{"notes": [None, 3, 2, 0, 1, 0], "label": "C"}]},
+                ]
+            }
+        ],
+    })
+
+    def test_title_in_output(self) -> None:
+        assert "G – D – Em – C" in render_tab(self.spec).plain
+
+    def test_all_labels_present(self) -> None:
+        plain = render_tab(self.spec).plain
+        for label in ("G", "D", "Em", "C"):
+            assert label in plain
+
+    def test_inter_measure_bar_lines(self) -> None:
+        """4 measures → opening | + 3 inter-measure | + closing | = 5 per string row."""
+        lines = render_tab(self.spec).plain.splitlines()
+        string_rows = [l for l in lines if "|" in l]
+        for row in string_rows:
+            assert row.count("|") == 5, f"Expected 5 bars, got {row.count('|')} in: {row!r}"
+
+    def test_six_string_rows(self) -> None:
+        lines = render_tab(self.spec).plain.splitlines()
+        string_rows = [l for l in lines if "|" in l]
+        assert len(string_rows) == 6
+
+    def test_all_string_rows_same_width(self) -> None:
+        lines = render_tab(self.spec).plain.splitlines()
+        string_rows = [l for l in lines if "|" in l]
+        widths = {len(r) for r in string_rows}
+        assert len(widths) == 1
+
+
+# ── Beat duration (FEAT-002) ───────────────────────────────────────────────────
+
+
+class TestBeatDuration:
+    """duration > 1 expands the column width proportionally."""
+
+    def _single_beat_spec(self, duration: int) -> TabSpec:
+        return TabSpec.model_validate({
+            "type": "tab",
+            "lines": [
+                {"measures": [{"beats": [{"notes": [0] * 6, "duration": duration}]}]}
+            ],
+        })
+
+    def test_duration_1_row_width(self) -> None:
+        # "e |" (3) + col_width*1 (3) + "|" (1) = 7
+        lines = render_tab(self._single_beat_spec(1)).plain.splitlines()
+        string_rows = [l for l in lines if "|" in l]
+        assert all(len(r) == 7 for r in string_rows)
+
+    def test_duration_4_row_width(self) -> None:
+        # "e |" (3) + col_width*4 (12) + "|" (1) = 16
+        lines = render_tab(self._single_beat_spec(4)).plain.splitlines()
+        string_rows = [l for l in lines if "|" in l]
+        assert all(len(r) == 16 for r in string_rows)
+
+    def test_all_rows_same_width_for_all_durations(self) -> None:
+        for duration in (1, 2, 3, 4):
+            lines = render_tab(self._single_beat_spec(duration)).plain.splitlines()
+            string_rows = [l for l in lines if "|" in l]
+            widths = {len(r) for r in string_rows}
+            assert len(widths) == 1, f"Inconsistent widths for duration={duration}"
+
+    def test_default_duration_is_1(self) -> None:
+        """A beat with no duration field behaves the same as duration=1."""
+        spec_no_dur = TabSpec.model_validate({
+            "type": "tab",
+            "lines": [{"measures": [{"beats": [{"notes": [0] * 6}]}]}],
+        })
+        assert (
+            render_tab(spec_no_dur).plain
+            == render_tab(self._single_beat_spec(1)).plain
+        )

@@ -7,12 +7,12 @@ Column width:
     max_fret_width = max digit width across all non-null notes (default 1)
     col_width      = max_fret_width + 2   (1 leading dash + number + 1 trailing dash)
 
-Note column:   '─' + str(n).rjust(max_fret_width) + '─'
-Null column:   '─' * col_width
+Note column:   '─' + str(n).rjust(max_fret_width) + '─' + '─' * col_width * (duration - 1)
+Null column:   '─' * col_width * duration
 
-String row:    '{label} |' + columns + '|'
+String row:    '{label} |' + columns ['|' between measures] + '|'
 Beat label row (if any beat has a label):
-               '   ' + label.center(col_width) per beat
+               '   ' + label.center(col_width * duration) per beat [' ' for bar lines]
 
 Multiple TabLine objects are separated by blank lines.
 """
@@ -34,28 +34,44 @@ _STRING_DISPLAY: list[tuple[int, str]] = [
 
 def _render_tab_line(tab_line: TabLine, col_width: int, max_fret_width: int) -> str:
     """Render a single TabLine into a multi-line string."""
-    rows: list[str] = []
+    measures = tab_line.get_measures()
 
-    for idx, label in _STRING_DISPLAY:
-        row = f"{label} |"
-        for beat in tab_line.beats:
-            note = beat.notes[idx]
-            if note is not None:
-                row += "─" + str(note).rjust(max_fret_width) + "─"
-            else:
-                row += "─" * col_width
-        row += "|"
-        rows.append(row)
+    # One row per string, initialised with the string label prefix
+    rows: list[str] = [f"{lbl} |" for _, lbl in _STRING_DISPLAY]
 
-    # Beat label row (only if at least one beat has a label)
-    if any(beat.label for beat in tab_line.beats):
-        label_row = "   "
-        for beat in tab_line.beats:
-            lbl = beat.label or ""
-            label_row += lbl.center(col_width)
-        rows.append(label_row)
+    has_labels = any(beat.label for m in measures for beat in m.beats)
+    label_row = "   "
 
-    return "\n".join(rows)
+    for m_idx, measure in enumerate(measures):
+        for beat in measure.beats:
+            beat_width = col_width * beat.duration
+            for row_idx, (notes_idx, _) in enumerate(_STRING_DISPLAY):
+                note = beat.notes[notes_idx]
+                if note is not None:
+                    note_col = "─" + str(note).rjust(max_fret_width) + "─"
+                    sustain = "─" * (col_width * (beat.duration - 1))
+                    rows[row_idx] += note_col + sustain
+                else:
+                    rows[row_idx] += "─" * beat_width
+            if has_labels:
+                label_row += (beat.label or "").center(beat_width)
+
+        # Insert a bar line between measures (not after the last one)
+        if m_idx < len(measures) - 1:
+            for row_idx in range(len(rows)):
+                rows[row_idx] += "|"
+            if has_labels:
+                label_row += " "  # keeps label row aligned with the bar character
+
+    # Closing bar line
+    for row_idx in range(len(rows)):
+        rows[row_idx] += "|"
+
+    result = rows[:]
+    if has_labels:
+        result.append(label_row)
+
+    return "\n".join(result)
 
 
 def render_tab(spec: TabSpec) -> Text:
@@ -75,11 +91,12 @@ def render_tab(spec: TabSpec) -> Text:
         parts.append(header)
         parts.append("")
 
-    # Compute column width from all notes across all lines
+    # Compute column width from all notes across all lines (handles both formats)
     all_notes = [
         n
         for tab_line in spec.lines
-        for beat in tab_line.beats
+        for measure in tab_line.get_measures()
+        for beat in measure.beats
         for n in beat.notes
         if n is not None
     ]

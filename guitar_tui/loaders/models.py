@@ -7,7 +7,7 @@ Scale positions store absolute fret numbers for a reference key (e.g. A).
 Key transposition is out of scope for M1 — see DECISIONS.md D5 note.
 """
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 
 # ── Chord models ──────────────────────────────────────────────────────────────
@@ -22,15 +22,17 @@ class BarreSpec(BaseModel):
 
 
 class ChordVoicing(BaseModel):
-    """A single chord voicing.
+    """A single chord voicing within a ChordEntry.
 
     frets: 6 values, index 0 = low E (string 6), index 5 = high e (string 1).
            int = fret number (1-based); 0 = open string; None = muted (X).
     fingers: 6 values matching frets. 1–4 = finger number; None = no label.
+    id: machine-readable voicing key, e.g. "open", "barre_5".
+    label: human-readable label for the voicing selector, e.g. "Open", "Barre (5th fret)".
     """
 
-    name: str                                    # e.g. "Am"
-    full_name: str                               # e.g. "A minor"
+    id: str = "default"
+    label: str = "Default"
     frets: list[int | None]                      # exactly 6 values
     fingers: list[int | None] | None = None      # exactly 6 values if present
     base_fret: int = Field(default=1, ge=1)
@@ -51,10 +53,53 @@ class ChordVoicing(BaseModel):
         return v
 
 
+class ChordEntry(BaseModel):
+    """All voicings for one chord name.
+
+    YAML format (new):
+        name: Am
+        full_name: A minor
+        voicings:
+          - id: open
+            label: Open
+            frets: [null, 0, 2, 2, 1, 0]
+            ...
+
+    YAML format (legacy — single voicing at top level, backwards compatible):
+        name: Am
+        full_name: A minor
+        frets: [null, 0, 2, 2, 1, 0]
+        ...
+
+    The model_validator normalises the legacy format transparently.
+    """
+
+    name: str
+    full_name: str
+    voicings: list[ChordVoicing]
+
+    @model_validator(mode="before")
+    @classmethod
+    def normalize_legacy_format(cls, data: object) -> object:
+        if not isinstance(data, dict):
+            return data
+        if "frets" in data and "voicings" not in data:
+            # Legacy flat format: extract name/full_name, wrap the rest as one voicing
+            voicing_data = {k: v for k, v in data.items() if k not in ("name", "full_name")}
+            voicing_data.setdefault("id", "default")
+            voicing_data.setdefault("label", "Default")
+            return {
+                "name": data.get("name"),
+                "full_name": data.get("full_name"),
+                "voicings": [voicing_data],
+            }
+        return data
+
+
 class ChordLibrary(BaseModel):
     """Top-level wrapper for a chord YAML file."""
 
-    chords: list[ChordVoicing]
+    chords: list[ChordEntry]
 
 
 # ── Scale models ──────────────────────────────────────────────────────────────

@@ -86,7 +86,7 @@ class TestLoadRealLessons:
         loader.load()
         meta = loader.lessons["minor_pentatonic_intro"].meta
         assert meta.difficulty == "intermediate"
-        assert meta.prerequisites == ["open_g_chord"]
+        assert meta.prerequisites == ["reading_scale_diagrams", "open_g_chord"]
 
     def test_lesson_has_text_block(self) -> None:
         loader = LessonLoader()

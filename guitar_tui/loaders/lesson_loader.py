@@ -143,7 +143,7 @@ class LessonLoader:
         An empty lessons_dir is not an error.
         """
         self.lessons = {}
-        md_files = sorted(self.lessons_dir.glob("*.md"))
+        md_files = sorted(self.lessons_dir.rglob("*.md"))
 
         # Phase 1: parse all files
         for path in md_files:

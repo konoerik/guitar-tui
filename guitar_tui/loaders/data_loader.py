@@ -10,8 +10,8 @@ import yaml
 from pydantic import ValidationError
 
 from guitar_tui.loaders.models import (
+    ChordEntry,
     ChordLibrary,
-    ChordVoicing,
     ScalePattern,
     Tuning,
 )
@@ -36,7 +36,7 @@ class DataLoader:
 
     def __init__(self, data_dir: Path | None = None) -> None:
         self.data_dir = data_dir or _DEFAULT_DATA_DIR
-        self.chords: dict[str, ChordVoicing] = {}
+        self.chords: dict[str, ChordEntry] = {}
         self.scales: dict[str, ScalePattern] = {}
         self.tunings: dict[str, Tuning] = {}
 
@@ -70,7 +70,14 @@ class DataLoader:
                     f"Invalid chord data in {path}: {exc}"
                 ) from exc
             for chord in library.chords:
-                self.chords[chord.name] = chord
+                if chord.name in self.chords:
+                    existing = self.chords[chord.name]
+                    existing_ids = {v.id for v in existing.voicings}
+                    for v in chord.voicings:
+                        if v.id not in existing_ids:
+                            existing.voicings.append(v)
+                else:
+                    self.chords[chord.name] = chord
 
     def _load_scales(self) -> None:
         scales_dir = self.data_dir / "scales"

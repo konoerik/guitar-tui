@@ -1,0 +1,110 @@
+# Seventh chord voicings — open position
+#
+# frets: [string6, string5, string4, string3, string2, string1]
+#         low E    A        D        G        B        high e
+# 0 = open string, null = muted (X)
+# fingers: 1=index, 2=middle, 3=ring, 4=pinky, null = no finger label
+#
+# Includes:
+#   Dominant 7th (X7)   — intervals: 1 3 5 b7
+#   Major 7th   (Xmaj7) — intervals: 1 3 5 7
+#   Minor 7th   (Xm7)   — intervals: 1 b3 5 b7
+
+chords:
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # DOMINANT 7TH (X7)
+  # ════════════════════════════════════════════════════════════════════════════
+
+  - name: E7
+    full_name: E dominant 7th
+    frets: [0, 2, 0, 1, 0, 0]
+    fingers: [null, 2, null, 1, null, null]
+
+  - name: A7
+    full_name: A dominant 7th
+    frets: [null, 0, 2, 0, 2, 0]
+    fingers: [null, null, 2, null, 3, null]
+
+  - name: D7
+    full_name: D dominant 7th
+    frets: [null, null, 0, 2, 1, 2]
+    fingers: [null, null, null, 2, 1, 3]
+
+  - name: G7
+    full_name: G dominant 7th
+    frets: [3, 2, 0, 0, 0, 1]
+    fingers: [3, 2, null, null, null, 1]
+
+  - name: C7
+    full_name: C dominant 7th
+    frets: [null, 3, 2, 3, 1, 0]
+    fingers: [null, 3, 2, 4, 1, null]
+
+  - name: B7
+    full_name: B dominant 7th
+    frets: [null, 2, 1, 2, 0, 2]
+    fingers: [null, 2, 1, 3, null, 4]
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # MAJOR 7TH (Xmaj7)
+  # ════════════════════════════════════════════════════════════════════════════
+
+  - name: Emaj7
+    full_name: E major 7th
+    frets: [0, 2, 1, 1, 0, 0]
+    fingers: [null, 3, 1, 2, null, null]
+
+  - name: Amaj7
+    full_name: A major 7th
+    frets: [null, 0, 2, 1, 2, 0]
+    fingers: [null, null, 2, 1, 3, null]
+
+  - name: Dmaj7
+    full_name: D major 7th
+    frets: [null, null, 0, 2, 2, 2]
+    fingers: [null, null, null, 1, 2, 3]
+
+  - name: Gmaj7
+    full_name: G major 7th
+    frets: [3, 2, 0, 0, 0, 2]
+    fingers: [3, 2, null, null, null, 4]
+
+  - name: Cmaj7
+    full_name: C major 7th
+    frets: [null, 3, 2, 0, 0, 0]
+    fingers: [null, 3, 2, null, null, null]
+
+  - name: Fmaj7
+    full_name: F major 7th
+    frets: [null, null, 3, 2, 1, 0]
+    fingers: [null, null, 3, 2, 1, null]
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # MINOR 7TH (Xm7)
+  # ════════════════════════════════════════════════════════════════════════════
+
+  - name: Em7
+    full_name: E minor 7th
+    frets: [0, 2, 0, 0, 0, 0]
+    fingers: [null, 2, null, null, null, null]
+
+  - name: Am7
+    full_name: A minor 7th
+    frets: [null, 0, 2, 0, 1, 0]
+    fingers: [null, null, 2, null, 1, null]
+
+  - name: Dm7
+    full_name: D minor 7th
+    frets: [null, null, 0, 2, 1, 1]
+    fingers: [null, null, null, 2, 1, 1]
+    barre:
+      fret: 1
+      from_string: 1
+      to_string: 2
+      finger: 1
+
+  - name: Bm7
+    full_name: B minor 7th
+    frets: [null, 2, 0, 2, 0, 2]
+    fingers: [null, 1, null, 2, null, 3]

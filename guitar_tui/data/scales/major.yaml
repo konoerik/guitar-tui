@@ -1,0 +1,134 @@
+# Major Scale (Ionian mode) — 5 positions
+#
+# key: C  (all fret numbers are concrete for C major)
+# intervals: 1 2 3 4 5 6 7
+# Notes: C D E F G A B
+#
+# String numbering: 1 = high e, 6 = low E
+#
+# Roots (C) on each string:
+#   Str 6: fret 8   Str 5: fret 3, 15   Str 4: fret 10
+#   Str 3: fret 5   Str 2: fret 1, 13   Str 1: fret 8
+#
+# CAGED positions (E→D→C→A→G shape order ascending):
+#   Pos 1 E-shape: frets 7-10, root str6/fret8
+#   Pos 2 D-shape: frets 9-13, root str4/fret10
+#   Pos 3 C-shape: frets 12-15, root str5/fret15
+#   Pos 4 A-shape: frets 1-5,  root str5/fret3
+#   Pos 5 G-shape: frets 4-8,  root str3/fret5
+
+name: major
+full_name: Major
+key: C
+intervals: ["1", "2", "3", "4", "5", "6", "7"]
+
+positions:
+  - id: 1
+    name: Position 1
+    caged_shape: E
+    fret_range: [7, 10]
+    notes:
+      - {string: 6, fret: 7,  degree: "7"}
+      - {string: 6, fret: 8,  degree: "1",  root: true}
+      - {string: 6, fret: 10, degree: "2"}
+      - {string: 5, fret: 7,  degree: "3"}
+      - {string: 5, fret: 8,  degree: "4"}
+      - {string: 5, fret: 10, degree: "5"}
+      - {string: 4, fret: 7,  degree: "6"}
+      - {string: 4, fret: 9,  degree: "7"}
+      - {string: 4, fret: 10, degree: "1",  root: true}
+      - {string: 3, fret: 7,  degree: "2"}
+      - {string: 3, fret: 9,  degree: "3"}
+      - {string: 3, fret: 10, degree: "4"}
+      - {string: 2, fret: 8,  degree: "5"}
+      - {string: 2, fret: 10, degree: "6"}
+      - {string: 1, fret: 8,  degree: "1",  root: true}
+      - {string: 1, fret: 10, degree: "2"}
+
+  - id: 2
+    name: Position 2
+    caged_shape: D
+    fret_range: [9, 13]
+    notes:
+      - {string: 6, fret: 10, degree: "2"}
+      - {string: 6, fret: 12, degree: "3"}
+      - {string: 5, fret: 10, degree: "5"}
+      - {string: 5, fret: 12, degree: "6"}
+      - {string: 4, fret: 9,  degree: "7"}
+      - {string: 4, fret: 10, degree: "1",  root: true}
+      - {string: 4, fret: 12, degree: "2"}
+      - {string: 3, fret: 9,  degree: "3"}
+      - {string: 3, fret: 10, degree: "4"}
+      - {string: 3, fret: 12, degree: "5"}
+      - {string: 2, fret: 10, degree: "6"}
+      - {string: 2, fret: 12, degree: "7"}
+      - {string: 2, fret: 13, degree: "1",  root: true}
+      - {string: 1, fret: 10, degree: "2"}
+      - {string: 1, fret: 12, degree: "3"}
+
+  - id: 3
+    name: Position 3
+    caged_shape: C
+    fret_range: [12, 15]
+    notes:
+      - {string: 6, fret: 12, degree: "3"}
+      - {string: 6, fret: 13, degree: "4"}
+      - {string: 6, fret: 15, degree: "5"}
+      - {string: 5, fret: 12, degree: "6"}
+      - {string: 5, fret: 14, degree: "7"}
+      - {string: 5, fret: 15, degree: "1",  root: true}
+      - {string: 4, fret: 12, degree: "2"}
+      - {string: 4, fret: 14, degree: "3"}
+      - {string: 4, fret: 15, degree: "4"}
+      - {string: 3, fret: 12, degree: "5"}
+      - {string: 3, fret: 14, degree: "6"}
+      - {string: 2, fret: 13, degree: "1",  root: true}
+      - {string: 2, fret: 15, degree: "2"}
+      - {string: 1, fret: 12, degree: "3"}
+      - {string: 1, fret: 13, degree: "4"}
+      - {string: 1, fret: 15, degree: "5"}
+
+  - id: 4
+    name: Position 4
+    caged_shape: A
+    fret_range: [1, 5]
+    notes:
+      - {string: 6, fret: 3,  degree: "5"}
+      - {string: 6, fret: 5,  degree: "6"}
+      - {string: 5, fret: 2,  degree: "7"}
+      - {string: 5, fret: 3,  degree: "1",  root: true}
+      - {string: 5, fret: 5,  degree: "2"}
+      - {string: 4, fret: 2,  degree: "3"}
+      - {string: 4, fret: 3,  degree: "4"}
+      - {string: 4, fret: 5,  degree: "5"}
+      - {string: 3, fret: 2,  degree: "6"}
+      - {string: 3, fret: 4,  degree: "7"}
+      - {string: 3, fret: 5,  degree: "1",  root: true}
+      - {string: 2, fret: 1,  degree: "1",  root: true}
+      - {string: 2, fret: 3,  degree: "2"}
+      - {string: 2, fret: 5,  degree: "3"}
+      - {string: 1, fret: 3,  degree: "5"}
+      - {string: 1, fret: 5,  degree: "6"}
+
+  - id: 5
+    name: Position 5
+    caged_shape: G
+    fret_range: [4, 8]
+    notes:
+      - {string: 6, fret: 5,  degree: "6"}
+      - {string: 6, fret: 7,  degree: "7"}
+      - {string: 6, fret: 8,  degree: "1",  root: true}
+      - {string: 5, fret: 5,  degree: "2"}
+      - {string: 5, fret: 7,  degree: "3"}
+      - {string: 5, fret: 8,  degree: "4"}
+      - {string: 4, fret: 5,  degree: "5"}
+      - {string: 4, fret: 7,  degree: "6"}
+      - {string: 3, fret: 4,  degree: "7"}
+      - {string: 3, fret: 5,  degree: "1",  root: true}
+      - {string: 3, fret: 7,  degree: "2"}
+      - {string: 2, fret: 5,  degree: "3"}
+      - {string: 2, fret: 6,  degree: "4"}
+      - {string: 2, fret: 8,  degree: "5"}
+      - {string: 1, fret: 5,  degree: "6"}
+      - {string: 1, fret: 7,  degree: "7"}
+      - {string: 1, fret: 8,  degree: "1",  root: true}
