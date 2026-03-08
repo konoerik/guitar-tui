@@ -6,7 +6,7 @@ tags: [music-theory, fretboard, fundamentals]
 prerequisites: [the_fretboard]
 module: theory-basics
 position: 1
-summary: Learn the 12-note chromatic scale and how note names repeat in a cycle across the fretboard.
+summary: Seven letter names, twelve notes, one repeating cycle — and why E–F and B–C are the exceptions. The chromatic scale is the map every other piece of theory is drawn on.
 ---
 
 ## Seven Letters, Twelve Notes

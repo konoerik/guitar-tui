@@ -95,8 +95,23 @@
 - [x] Track 9 — Seventh Chords: 5/5 lessons complete
 - Total: 62 lessons across 9 tracks
 
-## Upcoming: M6 — Content Expansion (remaining)
+## Completed: M6 — Content Expansion (fourth batch)
 
-- [ ] Track 10 — Modes (6 lessons; requires mode scale YAML data)
-- [ ] Track 11 — Song Analysis (9 lessons)
-- [ ] Complete reference section
+- [x] Track 10 — Modes: 6/6 lessons complete (intro, Dorian, Phrygian, Lydian, Mixolydian, in context)
+- [x] Data: dorian.yaml, phrygian.yaml, lydian.yaml, mixolydian.yaml
+- [x] Track 11 — Song Analysis: 9/9 lessons complete
+- [x] index.yaml updated with Modes and Song Analysis tracks
+- Total: 77 lessons across 11 tracks
+
+## Completed: Post-M6 — Tier 3 content additions
+
+- [x] `strumming_basics.md` — Track 03 position 6; D/U mechanics, ghost strums, 4 essential strumming patterns; 78th lesson in curriculum
+- [x] Barre chord position finder — Reference tab panel; root note → E-shape fret (low E) and A-shape fret (A string) for all 12 notes; computed from `note_to_semitone()`
+
+## Completed: M6 — Content Expansion (reference section)
+
+- [x] Reference tab: intervals table (name / semitones / symbol)
+- [x] Reference tab: major scale interval formula (W W H W W W H pattern + C major example)
+- [x] Reference tab: notes on each string — open to 12th fret (all 6 strings)
+- [x] Reference tab: diatonic chords for all 12 major keys (circle-of-fifths order)
+- Deferred: CAGED shapes and common-progressions-by-key (require chord/fretboard diagram rendering — developer scope, post-M6)

@@ -62,3 +62,7 @@ Strum D major, then move the index to the high e string at fret 1. The shift in 
 - **Index finger muting the open D** — the index finger at fret 1 can droop down and touch the open D string below. Keep the finger tipped upright.
 - **B string buzz** — the ring finger at fret 3 must press firmly. B string buzz is almost always a pressure issue on the ring finger.
 - **Swapping Dm and D fingering** — because the shapes are so similar, it is easy to play one when you intend the other. Slow down and confirm finger placement before strumming.
+
+## What's Next
+
+With D and Dm both in your hands, the next lesson is G major — a six-string chord with a wide finger spread that is one of the most sonically full open chords on the guitar.

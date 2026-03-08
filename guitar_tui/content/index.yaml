@@ -1,0 +1,156 @@
+# Lesson track index — defines the display order, titles, descriptions, and
+# curriculum overview for the lesson screen. Maintained by the Instructor.
+# Add new tracks here when introducing new modules.
+# The `id` must match the `module:` field used in lesson frontmatter.
+
+overview:
+  title: "Guitar Theory — A Complete Curriculum"
+  body: |-
+    This curriculum is built on a single pedagogical principle: **play first, understand
+    second.** The first three tracks get you making real music immediately — chord shapes,
+    strumming progressions, songs you recognise — without demanding that you understand
+    *why* it works. That understanding arrives in Track 4, once your hands already know
+    the shapes and your ear has started to recognise the sounds.
+
+    **How the tracks are structured**
+
+    The curriculum unfolds in three phases:
+
+    *Phase 1 — Playing foundation (Tracks 1–3).* You learn to read the notation used
+    in this app, build a core set of open chord shapes, and put those chords into
+    real musical sequences. By the end of Track 3 you can strum through an enormous
+    repertoire. No theory is required yet.
+
+    *Phase 2 — Vocabulary expansion (Tracks 4–9).* Theory arrives here to explain what
+    your hands already know. Barre chords unlock the full neck. Three scale tracks
+    (pentatonic, natural minor, major) build your lead-playing vocabulary from the
+    ground up. Seventh chords extend the harmonic palette. Each track adds a new
+    layer without discarding the previous one.
+
+    *Phase 3 — Synthesis and application (Tracks 10–11).* Modes reframe the scales
+    you already know as a unified system. Song analysis teaches you to sit down with
+    any unfamiliar piece of music, work out what is happening, and know exactly what
+    to play. After Track 11 you have a method — not just a collection of facts.
+
+    **How to approach it**
+
+    The tracks are intentionally sequenced, and each lesson lists its prerequisites.
+    If you have some prior experience, Tracks 1–3 will move quickly; do not skip
+    Track 1 entirely, as the notation it teaches is used throughout the app.
+
+    The scale tracks (6–8) reward patience. Knowing a scale means navigating it
+    freely, starting phrases on the root, and *hearing* its characteristic intervals —
+    not just memorising the dot pattern. Spend time with each position before moving on.
+
+    There is no wrong pace. The curriculum is here whenever you return to it.
+
+tracks:
+  - id: orientation
+    title: "Orientation"
+    description: |-
+      Before anything else makes sense, you need to read the app's notation. This
+      track teaches chord diagrams, scale diagrams, and tablature — not as an
+      academic exercise but as the visual vocabulary every subsequent lesson relies on.
+      It takes less than an hour and is the only track with no prerequisites.
+
+  - id: open-chords
+    title: "Open Chords"
+    description: |-
+      The first playable milestone. Ten chord shapes — the complete set of essential
+      open-position major and minor chords — give you access to thousands of songs.
+      This is where you start making music rather than studying it. The theory behind
+      why these chords work together comes later, in Track 4; here you just learn the
+      shapes and get them under your fingers.
+
+  - id: first-progressions
+    title: "First Progressions"
+    description: |-
+      Chords only make sense in motion. This track puts the shapes from Track 2 into
+      real musical sequences: the I–IV–V that underlies most rock and country, the
+      twelve-bar blues, and the I–V–vi–IV progression behind countless pop songs.
+      By the end you can strum through an enormous repertoire and you will have heard
+      the patterns that reappear throughout the rest of the curriculum.
+
+  - id: theory-basics
+    title: "Music Theory Basics"
+    description: |-
+      Everything you played in Tracks 2 and 3 has an explanation, and this track
+      provides it. Intervals, the major scale, key signatures, and chord construction
+      turn the intuitive patterns you already know into transferable knowledge. You
+      will understand *why* G, C, and D go together — and be able to apply that logic
+      to any key. This is the theoretical backbone that the remaining tracks build on.
+
+  - id: barre-chords
+    title: "Barre Chords"
+    description: |-
+      Theory without reach is incomplete. Barre technique moves any open chord shape
+      up the neck, giving you every major and minor chord in every key using just two
+      shapes. This track follows the theory track deliberately: you now understand
+      what a chord *is*, which makes it easier to see why the same shape works
+      everywhere. After Track 5, no chord is out of your reach on the fretboard.
+
+  - id: pentatonic-scale
+    title: "The Pentatonic Scale"
+    description: |-
+      The backbone of lead guitar and the entry point to single-note playing. The
+      minor pentatonic's five positions cover the entire neck; learning to connect
+      them is the most direct route to sounding musical when you improvise. This track
+      runs immediately after barre chords because you now have the neck geography to
+      understand what "five positions" means in practice. The pentatonic is where most
+      rock and blues guitarists spend the majority of their time.
+
+  - id: natural-minor
+    title: "The Natural Minor Scale"
+    description: |-
+      The pentatonic is a five-note subset of the seven-note natural minor scale.
+      This track fills in the missing notes, revealing the full Aeolian sound and
+      the diatonic chord family it generates. Each lesson pairs one position of the
+      scale with the pentatonic position you already know in that region — so you are
+      extending familiar shapes rather than learning from scratch. The track closes
+      with the minor key diatonic chords, connecting scale knowledge directly back
+      to the chord progressions from Track 3.
+
+  - id: major-scale
+    title: "The Major Scale"
+    description: |-
+      The root of Western harmony. The major scale generates the diatonic chord
+      families that have been implicit throughout the curriculum since Track 3;
+      learning its five positions on the neck connects theory to fretboard geography
+      in a way the earlier theory track could only describe abstractly. After this
+      track you can map any diatonic chord progression directly to a scale position,
+      see how major and minor positions relate and overlap, and begin to think of the
+      neck as one connected system rather than isolated boxes.
+
+  - id: seventh-chords
+    title: "Seventh Chords"
+    description: |-
+      The next layer of harmonic colour, placed here because you now have the theory
+      (from Track 4) to understand what a 7th does, and the chord vocabulary (from
+      Tracks 2 and 5) to put the voicings straight into use. Dominant 7ths define the
+      blues sound; major 7ths appear throughout jazz-influenced pop; minor 7ths add
+      warmth to any minor progression. This track introduces the voicings and explains
+      the intervals behind them.
+
+  - id: modes
+    title: "Modes"
+    description: |-
+      Modes are not a new set of scales — they are new ways of hearing the major and
+      natural minor positions you already know. Each mode is the major scale starting
+      on a different degree, with a different note treated as home. This track sits
+      after the major and minor scale tracks because it presupposes familiarity with
+      both; the modes are then revealed as a unifying system connecting everything you
+      have learned. The four characteristic modes (Dorian, Phrygian, Lydian,
+      Mixolydian) are covered in depth, each with its defining interval, its sound,
+      and the chord progressions that call for it.
+
+  - id: song-analysis
+    title: "Song Analysis"
+    description: |-
+      The capstone track. Everything built across Tracks 4–10 comes together as an
+      analytical toolkit you can apply to any unfamiliar song: identify the key,
+      determine major or minor, label the chord functions with Roman numerals, detect
+      modal colour, and select the right scale. Three complete worked analyses — a
+      major-key pop song, a minor-key rock song, and a modal progression — demonstrate
+      the full workflow. After this track you have a method for learning from any
+      music you encounter, which is the point at which theory becomes a permanent
+      part of how you hear.

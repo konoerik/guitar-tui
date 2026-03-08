@@ -6,7 +6,7 @@ tags: [chords, barre-chords, technique]
 prerequisites: [open_f_chord, open_bm_chord]
 module: barre-chords
 position: 1
-summary: Understand the principle of barre chords — moveable shapes that work in every key.
+summary: The index-finger barre replaces the nut and makes every chord shape moveable to all 12 keys. This lesson explains the principle, why F major is the hardest starting point, and the focused daily practice that gets results in two weeks.
 ---
 
 ## The Problem Open Chords Cannot Solve
@@ -64,3 +64,7 @@ Start with F major (E-shape at fret 1). This is the hardest position because the
 4. Build up and down from F: once F is clean, try G (fret 3), then Bb (fret 6)
 
 The barre technique improves faster with short, focused daily sessions (10–15 minutes) than with long occasional sessions.
+
+## What's Next
+
+The next three lessons introduce the four essential barre shapes in sequence: E-shape major, E-shape minor, A-shape major, and A-shape minor. Start with the E-shape major — the F chord pattern moved up the neck — and spend as much time as it needs before moving to the next shape.

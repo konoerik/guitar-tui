@@ -41,9 +41,6 @@ def _col(note: FretNote, show_notes: bool) -> str:
     """Return the 5-char column string for a highlighted fret note."""
     if note.label is not None:
         char = note.label[:1]
-    elif show_notes:
-        # M4 will derive the note name from the tuning; for M2 use style marker
-        char = _STYLE_CHARS.get(note.style, "●")
     else:
         char = _STYLE_CHARS.get(note.style, "●")
     return f"──{char}──"

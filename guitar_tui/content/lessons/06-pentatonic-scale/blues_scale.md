@@ -81,3 +81,7 @@ positions:
 ## The Blues Scale Across the Neck
 
 The five positions of the blues scale mirror the five positions of the minor pentatonic — the b5 is simply inserted wherever it fits within the fret window. Once you know all five pentatonic positions, you already know where the blue note slots in for each one. Practise inserting it as a single passing note into phrases you already know from the pentatonic positions rather than re-learning the entire scale as a new shape.
+
+## What's Next
+
+The blues scale closes the pentatonic track with the most expressive single addition available. Track 07 builds on this foundation with the full natural minor scale — all seven notes, five positions, and the richer melodic range that opens up when you move beyond the pentatonic into diatonic territory.

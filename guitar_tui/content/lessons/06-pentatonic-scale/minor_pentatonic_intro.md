@@ -6,7 +6,7 @@ tags: [scales, pentatonic, minor-scales]
 prerequisites: [reading_scale_diagrams, open_g_chord]
 module: pentatonic-scale
 position: 1
-summary: Learn the first position of the A minor pentatonic scale — the foundation of blues and rock soloing.
+summary: The minor pentatonic is the scale most lead guitarists learn first — five notes, five positions across the neck, and the sound of blues, rock, and pop soloing. Position 1 is the box shape where every guitarist starts.
 ---
 
 ## What Is the Minor Pentatonic?
@@ -42,3 +42,7 @@ positions:
 1. Learn the shape with strict alternate picking (down-up)
 2. Start slowly with a metronome and increase speed gradually
 3. Focus on the root notes — they are your melodic anchor
+
+## What's Next
+
+Position 1 is the foundation — the box shape every lead guitarist starts with. The next four lessons introduce Positions 2 through 5, which extend the same scale across the full length of the neck. Learn them in order and you will be able to solo in any register without running out of notes.

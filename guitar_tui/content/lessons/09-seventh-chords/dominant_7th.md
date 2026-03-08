@@ -72,3 +72,7 @@ The standard blues uses dominant 7ths on all three chords (I7, IV7, V7):
 | G | G7 | C7 | D7 |
 
 Replacing the plain major chords with their 7th versions immediately transforms a simple progression into the blues harmonic vocabulary.
+
+## What's Next
+
+Dominant 7th chords create the most powerful resolution in tonal music. The next lesson introduces their counterpart: major 7th chords, which use the natural 7th instead of the minor 7th to produce a lush, floating sound — the defining colour of jazz ballads and slow soul.

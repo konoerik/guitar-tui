@@ -85,3 +85,7 @@ This shifting between minor and relative major pentatonic within a single phrase
 ## Identifying Which Is Which
 
 A practical test: play a phrase and land on the root note. If landing on A sounds resolved and musical, you are in A minor pentatonic mode. If landing on C sounds resolved, you are in C major pentatonic mode. Both are "correct" over the same five notes — the tonal character comes from *where you land*, not which notes you play.
+
+## What's Next
+
+The major-vs-minor distinction gives you a two-colour palette. The final lesson in this track adds one more note to that palette — the blue note (b5), which turns the minor pentatonic into the blues scale and is the single most characteristic addition in all of blues vocabulary.

@@ -90,3 +90,7 @@ In minor keys, the tonic chord is lowercase (i — a minor chord). The most comm
 | VII | G |
 
 The lowercase numerals indicate minor chords; uppercase indicate major chords borrowed from the parallel or relative major. This is the basis of the Am–F–C–G progression heard in countless rock and pop songs.
+
+## What's Next
+
+Roman numerals describe chord *function* — once you can read a progression by numeral, you can transpose it to any key instantly. The next lesson connects this system to minor keys through the relative minor: why Am, F, C, and G form a natural family, and how the vi chord of C major becomes the tonic of A minor.

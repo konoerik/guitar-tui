@@ -37,7 +37,55 @@ it is a cosmetic issue only.
 
 ## Priority: Low
 
-_(none)_
+### BUG-002 — Tab key cycles within active tab instead of switching tabs
+
+**Component**: `guitar_tui/ui/screens/tools.py`
+**Discovered**: Manual testing after Reference tab added (Tier 1 Group A)
+
+**Symptom**
+Pressing `Tab` while on the Tools screen moves focus through the focusable elements
+inside the active tab (selects, widgets) rather than switching between "Key View" and
+"Reference" tabs.
+
+**Root cause**
+Textual's default `Tab` key binding moves focus to the next focusable widget in the DOM.
+`TabbedContent` tab-switching requires clicking the tab labels or using a dedicated
+binding. There is no keyboard shortcut currently bound to switch between tabs.
+
+**Fix direction**
+Add explicit bindings to `ToolsMode` (e.g. `ctrl+tab` / `shift+ctrl+tab`, or reuse a
+dedicated key like `t`) that call `TabbedContent`'s `action_next_tab` /
+`action_previous_tab` actions. Alternatively, use `Tab` / `Shift+Tab` only when no
+focusable widget inside the tab has focus — but this is more complex to implement cleanly.
+
+**Workaround**
+Click the tab label with the mouse.
+
+---
+
+### BUG-003 — Tunings table columns misalign on accidentals
+
+**Component**: `guitar_tui/ui/screens/tools.py` — `_build_tunings_panel()`
+**Discovered**: Manual testing after Reference tab added (Tier 1 Group A)
+
+**Symptom**
+Notes with an accidental (e.g. `Eb`, `F#`) push adjacent plain notes out of
+column alignment because centering is applied to the full string. `A` and `Ab`
+centre differently — the `A` in `Ab` aligns with the `A` in `A`, but the `b`
+shifts the visual weight rightward, making columns look ragged.
+
+**Root cause**
+`f"{n:^5}"` centres the full note string within 5 chars. Single-char notes (`E`)
+and two-char notes (`Eb`) centre to different visual positions for the note letter.
+
+**Fix direction**
+Left-align the note letter within a fixed-width column rather than centering the
+whole string, so the letter always appears at the same column offset and the
+accidental extends to the right. E.g. pad to `f"{n:<4}"` with consistent spacing,
+or manually separate letter and accidental into two sub-columns.
+
+**Workaround**
+None. Cosmetic only — all note names are present and readable.
 
 ---
 

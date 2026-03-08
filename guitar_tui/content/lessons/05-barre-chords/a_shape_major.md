@@ -6,7 +6,7 @@ tags: [chords, barre-chords, major-chords]
 prerequisites: [e_shape_minor]
 module: barre-chords
 position: 4
-summary: Learn the A-shape major barre — the second moveable shape, with its root on string 5.
+summary: The A-shape barre gives you a second position for every major chord, with its root on the A string. Combined with the E shape, you can play any major chord in two different neck positions — choosing between them becomes a tonal and fingering decision.
 ---
 
 ## The Second Moveable Shape
@@ -94,3 +94,7 @@ The low E string must be muted — it does not belong in the A-shape chord. Opti
 - Let the side of the index finger touch string 6 lightly (it will mute without sounding)
 - Avoid picking string 6 when strumming
 - Use the thumb to lightly damp string 6 from behind the neck (common in country and rock playing)
+
+## What's Next
+
+A-shape major and E-shape major together give you every major chord twice on the neck. The next lesson adds the final piece: A-shape minor, which completes the four-shape system and means you can play any major or minor chord in two positions without repositioning across the neck.

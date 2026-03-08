@@ -74,3 +74,7 @@ The ii m7 → V7 → Imaj7 progression (e.g., Am7 → D7 → Gmaj7 in G major) i
 ## Minor 7th as Colour
 
 Plain minor chords can feel stark or sad. Minor 7th chords soften that edge — they are melancholy without being harsh, smooth rather than heavy. Swapping Am for Am7, or Em for Em7, in a pop or folk progression instantly adds a jazz-influenced warmth.
+
+## What's Next
+
+With all three 7th qualities in hand — dominant, major 7th, and minor 7th — the next lesson combines them into progressions: the ii7–V7–Imaj7 movement that underlies jazz harmony, and the dominant-7th-on-every-chord approach that defines the blues.

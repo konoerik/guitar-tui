@@ -6,7 +6,7 @@ tags: [scales, major-scales]
 prerequisites: [major_scale_p4]
 module: major-scale
 position: 5
-summary: Learn Position 5 of the C major scale — the G-shape position that completes the five-position cycle.
+summary: Position 5 is the densest major scale shape — 17 notes across all six strings — and bridges the gap between Positions 4 and 1 to close the cycle. It's also the Mixolydian mode starting position, so it comes up again when modes are covered.
 ---
 
 ## Position 5 — G-Shape (frets 4–8)
@@ -65,3 +65,7 @@ Position 5 ends at fret 8 on string 6 — the same fret where Position 1 has its
 ## Fingering
 
 The G string starts at fret 4 (index), which is one fret lower than the other strings. Keep the index available for fret 4 on string 3 without displacing the hand from its overall fret 5–8 position. The B string spans 5–6–8 (index, middle, pinky). The D string has only two notes (5, 7) and needs no third finger.
+
+## What's Next
+
+All five major scale positions are now in place. The next lesson maps the seven diatonic chords of C major — one chord built on each scale degree — completing the harmonic framework needed to understand and analyse any major key song.

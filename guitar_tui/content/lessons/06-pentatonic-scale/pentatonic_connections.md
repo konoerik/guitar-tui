@@ -82,3 +82,7 @@ The most effective approach is to learn one join at a time:
 ## The Goal
 
 The five-position system is not five separate scales — it is one scale, described five different ways across the neck. When you can slide freely from position to position following the root notes, you have full neck access for A minor pentatonic in any key (since the shapes are moveable by key). Every note you need for an A minor blues solo exists somewhere in this continuous map.
+
+## What's Next
+
+With all five positions connected, the remaining lessons in this track explore the major pentatonic and the blues scale — extending the pentatonic palette with a brighter relative scale and a single added note that defines the blues sound.

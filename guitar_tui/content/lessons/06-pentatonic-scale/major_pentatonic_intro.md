@@ -6,7 +6,7 @@ tags: [scales, pentatonic, major-scales]
 prerequisites: [minor_pentatonic_intro]
 module: pentatonic-scale
 position: 7
-summary: Learn the first position of the C major pentatonic — the bright counterpart to the minor pentatonic.
+summary: C major pentatonic and A minor pentatonic share the exact same notes — just with a different home base. The five shapes you already know work here too; what changes is which note you treat as home, and the emotional character shifts from dark to bright.
 ---
 
 ## Two Pentatonics, One Relationship
@@ -52,3 +52,7 @@ Both scales are heavily used in country, pop, rock, and blues. The shift between
 1. **Identify the roots first** — C on string 6 fret 8, string 4 fret 10, string 1 fret 8. These are your landing points for phrases.
 2. **Play the scale ascending and descending** from the lowest note (string 5, fret 7) to the highest (string 1, fret 10) and back.
 3. **Compare with the A minor shape** — if you have Position 2 of A minor memorised, play it both ways: starting on the D string root (A minor feel) then starting on the low E root (C major feel). Listen to how the same notes produce two entirely different emotional characters.
+
+## What's Next
+
+The major and minor pentatonic share their notes but not their home. The next lesson examines that relationship directly — comparing the two side by side, showing when each one creates the right emotional character, and explaining how to mix both within a single phrase.

@@ -124,3 +124,7 @@ Barre chord changes improve through deliberate repetition of specific transition
 2. **Land on time, not on pitch first**: aim to have your hand in position by beat 1, even if the chord does not ring cleanly yet. Timing before tone.
 3. **Use a metronome at half speed**: reduce the tempo until the change is effortless, then increase by 5 bpm at a time.
 4. **Same-fret changes last**: practice moving along string 6 (all E-shapes in one key) before mixing E-shape and A-shape changes.
+
+## What's Next
+
+Fluent barre chord transitions are the foundation of playing in any key. The final lesson in this track gives you the broader picture: the CAGED system, which names and organises all five moveable chord shapes and explains how barre chord positions connect to scale positions — a relationship that pays dividends when you begin soloing in Track 06.

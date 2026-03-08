@@ -6,7 +6,7 @@ tags: [chords, open-chords, major-chords]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 3
-summary: Learn the open A major chord — three fingers on the same fret, with the low E muted.
+summary: A major packs three fingers onto one fret — the tight spacing is its own challenge, and the muscle memory you build here is exactly what A-shape barre chords require later.
 ---
 
 ## Finger Placement
@@ -55,3 +55,7 @@ If the high e sounds muted or buzzy, the ring finger is leaning into it. Tilt th
 - **High e muted by ring finger** — the most common issue. The ring finger tip must point directly downward, not tilt toward the high e string.
 - **Fingers not close enough to fret wires** — with three fingers sharing one fret, there is a temptation to spread them. Keep each tip as close to its wire as possible.
 - **Accidentally strumming the low E** — rest the heel of the strumming hand lightly against it, or practise angling the pick downward from the A string. The low E produces a dissonant note that muddies the chord.
+
+## What's Next
+
+A major's tight three-finger cluster prepares your hand for the A-shape barre chords in Track 05, where the same grip moves up the neck. The next lesson is A minor — one small adjustment to the fingering that changes the chord's entire emotional quality.

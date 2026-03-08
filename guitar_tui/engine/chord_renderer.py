@@ -83,7 +83,16 @@ def render_chord(spec: ChordSpec) -> Text:
             ):
                 cells.append(" ▬ ")
             elif fret is not None and fret == row:
-                cells.append(" ● ")
+                label = spec.dot_labels[i] if spec.dot_labels else None
+                is_root = spec.root_strings is not None and i in spec.root_strings
+                if label:
+                    # Center 1-char label; left-align 2-char label (max 2 chars)
+                    s = label[:2]
+                    cells.append(f" {s} " if len(s) == 1 else f"{s} ")
+                elif is_root:
+                    cells.append(" ◉ ")
+                else:
+                    cells.append(" ● ")
             else:
                 cells.append("   ")
 

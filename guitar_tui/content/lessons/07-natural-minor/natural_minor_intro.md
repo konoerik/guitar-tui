@@ -62,3 +62,7 @@ Playing through Position 1 of both scales back to back makes the relationship cl
 1. Learn the shape by playing from the lowest note (string 6, fret 5) to the highest (string 1, fret 8) and back. Three notes per string on most strings.
 2. Compare it to the minor pentatonic in the same region — identify which notes are the same and which are the two additions (B on string 6/1, F on string 2).
 3. Play the scale descending and focus on landing on root notes — A at fret 5 on strings 6, 4, and 1.
+
+## What's Next
+
+The intro establishes what natural minor adds and why it matters. The next five lessons walk through all five positions across the neck, following the same CAGED order as the pentatonic. Position 1 is the natural starting point — it sits at the same fret as minor pentatonic Position 1 and extends it by the 2nd and b6.

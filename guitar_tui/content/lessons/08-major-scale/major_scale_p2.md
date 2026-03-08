@@ -6,7 +6,7 @@ tags: [scales, major-scales]
 prerequisites: [major_scale_p1]
 module: major-scale
 position: 2
-summary: Learn Position 2 of the C major scale — the D-shape position spanning frets 9–13.
+summary: Position 2 of the major scale opens with the 7th degree on the lower strings — ascending runs carry a built-in tension that resolves to the root on the very next fret. It's also the Dorian mode starting position, so this shape does double duty when modes come up in Track 10.
 ---
 
 ## Position 2 — D-Shape (frets 9–13)
@@ -51,3 +51,7 @@ The overlap: the 2nd degree (D in C major) sits at fret 10 on the low E string �
 ## Fingering
 
 The D string starts at fret 9 (index), then 10 (middle), then 12 (pinky). The G string is the same. The low E and A strings skip fret 9 and start at fret 10. The B string extends to fret 13 — reach with the pinky while keeping the hand anchored around fret 10.
+
+## What's Next
+
+Position 2 introduces the upper-neck zone. Position 3 (next) centres on the 12th fret and opens on the 3rd degree — the first note of one of the major scale's two natural half-step pairs, immediately giving the position a recognisable harmonic character.

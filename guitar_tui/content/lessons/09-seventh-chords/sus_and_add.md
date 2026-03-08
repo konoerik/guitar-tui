@@ -6,7 +6,7 @@ tags: [chords, extended-chords, music-theory]
 prerequisites: [seventh_progressions]
 module: seventh-chords
 position: 5
-summary: Sus and add chords — suspending or extending the basic triad without the 7th, for colour and movement.
+summary: Sus2, sus4, and add9 are small fingering changes with an immediately bigger sound — staples of acoustic, pop, and folk guitar. The deciding factor is whether the 3rd stays (add) or gets replaced (sus), and that difference determines everything about how the chord feels.
 ---
 
 ## Sus Chords — Suspending the Third
@@ -94,3 +94,7 @@ The 3rd is the deciding factor. Sus = no 3rd (ambiguous). Add = 3rd present (fla
 **Sus2 as colour**: Dsus2 and Asus2 work as substitutes for D and A in bright, open-sounding progressions. They share all notes except the 3rd, so the transition is seamless.
 
 **Cadd9 and Gadd9**: These two chords are staples of acoustic and folk guitar. Cadd9 is often used instead of plain C because it is easier to finger and sounds richer. Gadd9 (often notated G with the pinky added) is nearly identical to G major except the A note on the B string adds shimmer.
+
+## What's Next
+
+Sus and add chords close the seventh chord track with the most practically useful extensions in acoustic and pop playing. Track 10 shifts from chords to scales — specifically modes, the seven scale flavours derived from the major scale that add the modal colour heard in rock, blues, jazz, and film music.

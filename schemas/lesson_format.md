@@ -50,6 +50,7 @@ Every lesson file has two parts:
 | Field           | Type         | Default | Description |
 |-----------------|--------------|---------|-------------|
 | `prerequisites` | list[string] | `[]`    | List of lesson slugs that should be completed first. |
+| `see_also`      | list[string] | `[]`    | Related lesson slugs. Shown as a "See Also" line at the bottom of the lesson view. Missing slugs emit a warning. |
 | `module`        | string       | `null`  | Module this lesson belongs to (e.g., `"open-chords"`). |
 | `position`      | int          | `null`  | Ordering within module (lower = earlier). |
 | `summary`       | string       | `null`  | One-sentence summary shown in lesson list. |

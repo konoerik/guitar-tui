@@ -80,6 +80,7 @@ Within a track, lessons are ordered by `position`.
 | ✓ | a_d_e_progression | The A–D–E Progression | beginner | chord ×3, tab |
 | ✓ | twelve_bar_blues_a | 12-Bar Blues in A | beginner | chord ×3, tab |
 | ✓ | one_four_five | The I–IV–V Progression | beginner | tab |
+| ✓ | strumming_basics | Rhythm and Strumming Patterns | beginner | — |
 
 > **Note**: `one_four_five` is the first theory-forward lesson — it explains Roman
 > numeral notation and shows the same progression in multiple keys.
@@ -191,15 +192,15 @@ the UI provides the tools.*
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
-| ○ | finding_the_key | Finding the Key of a Song | intermediate | fretboard |
-| ○ | major_or_minor | Major or Minor — Identifying the Tonality | intermediate | scale ×2 |
-| ○ | hearing_the_one | Hearing the Tonic Chord | intermediate | chord ×4 |
-| ○ | roman_numeral_ear | Recognising Progressions by Ear | intermediate | tab |
-| ○ | scale_to_chords | From a Scale to Its Chords | intermediate | scale, chord ×7 |
-| ○ | chords_to_scale | From Chords to the Scale | intermediate | chord ×3, scale |
-| ○ | choosing_position | Choosing the Right Scale Position | intermediate | scale ×2, fretboard |
-| ○ | capo_and_key | Capo Positions and Key Transposition | beginner | chord ×4, fretboard |
-| ○ | analysis_walkthrough | Full Analysis Walkthrough | advanced | chord ×4, scale, tab |
+| ✓ | what_is_song_analysis | What Is Song Analysis? | intermediate | — |
+| ✓ | finding_the_key | Finding the Key of a Song | intermediate | fretboard |
+| ✓ | major_or_minor | Major or Minor — Identifying the Tonality | intermediate | scale ×2 |
+| ✓ | chord_function_analysis | Chord Function Analysis | intermediate | chord ×4 |
+| ✓ | scale_selection | Scale Selection | intermediate | scale, chord ×7 |
+| ✓ | analysing_common_progressions | Analysing Common Progressions | intermediate | chord ×3, scale |
+| ✓ | modal_progressions | Modal Progressions | intermediate | scale ×2, fretboard |
+| ✓ | ear_training_basics | Ear Training Basics | intermediate | tab |
+| ✓ | putting_it_together | Putting It All Together | advanced | chord ×4, scale, tab |
 
 > **Note**: `analysis_walkthrough` is a capstone lesson — it works through a complete
 > song analysis (key → scale → progression → positions → song feel) as a single
@@ -213,12 +214,12 @@ the UI provides the tools.*
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
-| ○ | modes_intro | What Are Modes? | advanced | scale ×2, fretboard |
-| ○ | dorian_mode | The Dorian Mode | advanced | scale |
-| ○ | mixolydian_mode | The Mixolydian Mode | advanced | scale |
-| ○ | phrygian_mode | The Phrygian Mode | advanced | scale |
-| ○ | lydian_mode | The Lydian Mode | advanced | scale |
-| ○ | modes_in_context | Modes Over Chord Progressions | advanced | scale ×2, chord ×4, tab |
+| ✓ | modes_intro | What Are Modes? | advanced | scale ×2, fretboard |
+| ✓ | dorian_mode | The Dorian Mode | advanced | scale |
+| ✓ | mixolydian_mode | The Mixolydian Mode | advanced | scale |
+| ✓ | phrygian_mode | The Phrygian Mode | advanced | scale |
+| ✓ | lydian_mode | The Lydian Mode | advanced | scale |
+| ✓ | modes_in_context | Modes Over Chord Progressions | advanced | scale ×2, chord ×4, tab |
 
 ---
 
@@ -253,22 +254,24 @@ Quick-access content with no prerequisite structure. Browsable, not sequential.
 | Blues scale | 5 positions, key of A | ✓ data |
 | Natural minor (Aeolian) | 5 positions, key of A | ✓ data |
 | Major (Ionian) | 5 positions, key of C | ✓ data |
-| Dorian | 5 positions | ○ data needed |
-| Mixolydian | 5 positions | ○ data needed |
+| Dorian | 5 positions | ✓ data |
+| Phrygian | 5 positions | ✓ data |
+| Lydian | 5 positions | ✓ data |
+| Mixolydian | 5 positions | ✓ data |
 
 ### Theory Tables
 
 | Item | Format | Status |
 |------|--------|--------|
-| Notes on each string (open to 12th fret) | fretboard diagram ×6 | ○ |
-| Interval names and distances | static table | ○ |
-| Major scale interval formula | static text + scale diagram | ○ |
-| Circle of fifths | static text (TUI-friendly summary) | ○ |
-| Key signatures — major | static table (key / sharps / flats) | ○ |
-| Key signatures — minor | static table | ○ |
+| Notes on each string (open to 12th fret) | text table | ✓ |
+| Interval names and distances | static table | ✓ |
+| Major scale interval formula | static text | ✓ |
+| Circle of fifths | static text (TUI-friendly summary) | ✓ |
+| Key signatures — major | static table (key / sharps / flats) | ✓ |
+| Key signatures — minor | static table | ✓ |
 | Common chord progressions by key | chord diagrams | ○ |
 | CAGED system shapes | chord ×5 + fretboard | ○ |
-| Diatonic chords — all major keys | static table | ○ |
+| Diatonic chords — all major keys | static table | ✓ |
 
 ---
 
@@ -281,10 +284,10 @@ needed to perform the exercise correctly.
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
-| ○ | chromatic_warmup | Chromatic Warm-Up | beginner | tab |
-| ○ | spider_exercise | Spider Exercise | beginner | tab |
-| ○ | one_minute_changes | One-Minute Chord Changes | beginner | chord ×2 |
-| ○ | alternate_picking | Alternate Picking on One String | beginner | tab |
+| ✓ | chromatic_warmup | Chromatic Warm-Up | beginner | tab |
+| ✓ | spider_exercise | Spider Exercise | beginner | tab |
+| ✓ | one_minute_changes | One-Minute Chord Changes | beginner | chord ×2 |
+| ✓ | alternate_picking | Alternate Picking on One String | beginner | tab |
 | ○ | string_skipping | String Skipping | intermediate | tab |
 | ○ | position_shifts | Position Shifts Across the Neck | intermediate | tab, fretboard |
 
@@ -292,7 +295,7 @@ needed to perform the exercise correctly.
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
-| ○ | pentatonic_sequences | Pentatonic in Sequences of Three | intermediate | scale, tab |
+| ✓ | pentatonic_sequences | Pentatonic in Sequences of Three | intermediate | tab |
 | ○ | pentatonic_licks_1 | Five Essential Pentatonic Licks | intermediate | tab ×5 |
 | ○ | major_scale_sequences | Major Scale Sequences | intermediate | scale, tab |
 | ○ | three_notes_per_string | Three Notes Per String | advanced | scale, tab |
@@ -301,13 +304,41 @@ needed to perform the exercise correctly.
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
-| ○ | barre_strength | Barre Chord Strength Builder | intermediate | chord ×2, tab |
+| ✓ | barre_strength | Barre Chord Strength Builder | intermediate | chord ×2 |
 | ○ | seventh_voicings | 7th Chord Voicing Practice | intermediate | chord ×4 |
 | ○ | chord_melody_intro | Simple Chord Melody | advanced | tab |
 
 ---
 
-## 4. Songbook
+## 4. Licks Library
+
+Looper-ready melodic phrases organised by scale/mode category. Each lick
+specifies a key, scale, backing chords, and feel/style tags. Designed to be
+used with a loop pedal: record the backing, practise the phrase over it.
+
+**Category order** (matches Practice screen display): pentatonic, blues,
+major, natural_minor, dorian, phrygian, lydian, mixolydian.
+
+| Status | Slug | Title | Key | Scale | Category |
+|--------|------|-------|-----|-------|----------|
+| ✓ | pent_box1_run | Box 1 Ascending Run | A | minor_pentatonic | pentatonic |
+| ✓ | pent_bend_release | Bend and Release | A | minor_pentatonic | pentatonic |
+| ✓ | pent_blues_turnaround | Blues Turnaround | A | minor_pentatonic | pentatonic |
+| ✓ | blues_tritone_pass | Tritone Passing Tone | A | blues_scale | blues |
+| ✓ | major_pent_country_walk | Country Walk | G | major_pentatonic | major |
+| ✓ | natural_minor_descent | Natural Minor Descent | A | natural_minor | natural_minor |
+| ✓ | dorian_groove | Dorian Groove Phrase | D | dorian | dorian |
+| ✓ | phrygian_half_step | Phrygian Half-Step Descent | E | phrygian | phrygian |
+| ✓ | lydian_raised_fourth | Lydian Raised Fourth Run | G | lydian | lydian |
+| ✓ | mixolydian_b7_phrase | Mixolydian b7 Phrase | A | mixolydian | mixolydian |
+| ○ | pent_position2_run | Position 2 Connector Run | A | minor_pentatonic | pentatonic |
+| ○ | blues_bb_king_box | The B.B. King Box | A | minor_pentatonic | blues |
+| ○ | phrygian_flamenco | Flamenco Rasgueado Pattern | E | phrygian | phrygian |
+| ○ | mixolydian_chord_riff | Mixolydian Chord-Riff Hybrid | G | mixolydian | mixolydian |
+
+---
+
+## 5. Songbook
 
 Theory breakdowns of real songs — key, mode, progression, scale, technique. No
 reproduction of copyrighted material. See IDEAS.md for scope definition and copyright
@@ -364,15 +395,16 @@ written.
 |-------|----------------|----------|-------|
 | 1 — Orientation | 4 | 4 | 0 |
 | 2 — Open Chords | 10 | 10 | 0 |
-| 3 — First Progressions | 5 | 5 | 0 |
+| 3 — First Progressions | 6 | 6 | 0 |
 | 4 — Theory Basics | 8 | 8 | 0 |
 | 5 — Barre Chords | 7 | 7 | 0 |
 | 6 — Pentatonic | 9 | 9 | 0 |
-| 7 — Natural Minor | 7 | 0 | 0 |
-| 8 — Major Scale | 7 | 0 | 0 |
-| 9 — Seventh Chords | 5 | 0 | 0 |
-| 10 — Modes | 6 | 0 | 0 |
-| 11 — Song Analysis | 9 | 0 | 0 |
-| **Total** | **77** | **43** | **0** |
+| 7 — Natural Minor | 7 | 7 | 0 |
+| 8 — Major Scale | 7 | 7 | 0 |
+| 9 — Seventh Chords | 5 | 5 | 0 |
+| 10 — Modes | 6 | 6 | 0 |
+| 11 — Song Analysis | 9 | 9 | 0 |
+| **Total** | **78** | **78** | **0** |
 
-Exercises: 13 planned, 0 complete.
+Exercises: 13 planned, 6 complete (4 technique, 1 scale, 1 chord).
+Licks: 10 complete, 4 planned.

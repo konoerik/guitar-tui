@@ -6,7 +6,7 @@ tags: [chords, barre-chords, major-chords]
 prerequisites: [barre_intro, musical_alphabet]
 module: barre-chords
 position: 2
-summary: Master the E-shape major barre chord and learn its root positions across the entire neck.
+summary: One shape, root on the low E string, all 12 major chords — this is where the fretboard stops being a collection of open chords and becomes a system. Memorise the note names on string 6 and every major key is a position shift away.
 ---
 
 ## The Shape
@@ -93,3 +93,7 @@ Memorising the note names on the low E string is the key skill — once you know
 ## Practical Use
 
 The E-shape major barre fills the gap in keys that have no open chord option. In a song using G–Bb–C–F (common in rock and pop), three of the four chords are only practical as E-shape barres: Bb (fret 6), C (fret 8), F (fret 1). G can be played open. The E-shape barre is the tool that makes this progression physically possible.
+
+## What's Next
+
+With the E-shape major in place, the next lesson extends it to minor: removing one finger from the E-shape major immediately produces the E-shape minor, giving you minor chords in all 12 keys from the same barre position.

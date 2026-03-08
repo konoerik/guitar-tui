@@ -101,3 +101,7 @@ These four chords dominate popular music:
 | vi | Am | Em | Bm |
 
 Once you know the diatonic chord quality pattern, you can derive the chords of any major key in seconds.
+
+## What's Next
+
+The seven diatonic chords of C major are the building blocks of tonal harmony. The final lesson in this track shows how they combine into the four core progressions that underpin the vast majority of pop, rock, and folk music — and how to recognise, transpose, and use those progressions in any key.

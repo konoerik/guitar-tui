@@ -3,17 +3,17 @@ Screen { background: $surface; }
 
 /* ── Welcome screen ──────────────────────────────────────────────────── */
 #welcome-content {
-    margin: 4 4;
-    color: $text-muted;
+    margin: 2 4;
+    color: $text;
 }
 
 /* ── Lesson mode ─────────────────────────────────────────────────────── */
-#lesson-hint {
-    margin: 4 4;
-    color: $text-muted;
-}
-
 #lesson-body { height: 1fr; padding: 0 2; }
+
+.lesson-overview {
+    margin: 2 2;
+    color: $text;
+}
 
 /* ── Lesson picker modal ─────────────────────────────────────────────── */
 LessonPickerModal {
@@ -38,6 +38,14 @@ LessonPickerModal {
 }
 
 /* ── Lesson content blocks ───────────────────────────────────────────── */
+.lesson-summary {
+    margin: 1 0 1 0;
+    padding: 1 2;
+    background: $boost;
+    border-left: thick $accent;
+    color: $text-muted;
+}
+
 .lesson-text { margin-bottom: 1; }
 .lesson-diagram {
     margin: 1 0 1 4;
@@ -47,24 +55,167 @@ LessonPickerModal {
 }
 .placeholder { margin: 2; color: $text-muted; }
 
-/* ── Tool views ──────────────────────────────────────────────────────── */
-.tool-view {
-    height: 100%;
-    padding: 2 4;
-}
-
-.tool-title {
-    text-style: bold;
-    color: $text;
-    margin-bottom: 1;
-    padding-bottom: 1;
+/* ── Key View (Tools screen) ─────────────────────────────────────────── */
+#key-controls {
+    height: auto;
+    padding: 1 2;
+    background: $panel;
     border-bottom: solid $primary-darken-2;
 }
 
-#chord-select, #voicing-select, #scale-select { margin-bottom: 1; }
+#key-controls Select {
+    width: 24;
+    margin-right: 2;
+}
 
-#chord-diagram, #scale-diagram {
-    margin-top: 1;
-    width: auto;
+#key-content {
+    height: 1fr;
+}
+
+#full-neck {
     height: auto;
+    padding: 1 2;
+    color: $text;
+}
+
+#chord-row {
+    height: auto;
+    max-height: 32;
+    border-top: solid $primary-darken-2;
+    background: $panel;
+}
+
+#chord-strip {
+    height: auto;
+    padding: 1 2;
+    color: $text;
+}
+
+#chord-detail {
+    height: auto;
+    padding: 0 2 1 2;
+    border-top: solid $primary-darken-2;
+    color: $text;
+}
+
+/* ── Reference tab (Tools screen) ───────────────────────────────────── */
+#reference-scroll {
+    height: 1fr;
+    padding: 2 2;
+}
+
+#ref-row-1 {
+    height: auto;
+    padding-bottom: 2;
+    margin-bottom: 1;
+    border-bottom: solid $primary-darken-2;
+}
+
+#ref-row-2 {
+    height: auto;
+    margin-top: 1;
+    padding-bottom: 2;
+    margin-bottom: 1;
+    border-bottom: solid $primary-darken-2;
+}
+
+#ref-row-3 {
+    height: auto;
+    margin-top: 1;
+}
+
+#tunings-panel, #key-sigs-panel, #intervals-panel {
+    width: 1fr;
+    height: auto;
+    padding: 0 2 0 0;
+    border-right: solid $primary-darken-2;
+    color: $text;
+}
+
+#formulas-panel, #capo-panel, #scale-formula-panel {
+    width: 1fr;
+    height: auto;
+    padding: 0 0 0 3;
+    color: $text;
+}
+
+#notes-panel, #diatonic-all-keys-panel {
+    width: 100%;
+    height: auto;
+    margin-top: 2;
+    color: $text;
+}
+
+/* ── Practice screen ─────────────────────────────────────────────── */
+#exercises-scroll {
+    height: 1fr;
+    padding: 1 2;
+}
+
+.exercise-category {
+    margin-top: 2;
+    margin-bottom: 1;
+    color: $accent;
+    text-style: bold;
+}
+
+.exercise-summary {
+    margin: 0 0 1 2;
+    padding: 1 2;
+    background: $boost;
+    border-left: thick $accent;
+    color: $text-muted;
+}
+
+.exercise-text { margin: 0 0 1 2; }
+
+.exercise-diagram {
+    margin: 1 0 1 4;
+    padding: 0 1;
+    border-left: thick $accent;
+    width: auto;
+}
+
+.exercise-spacer { height: 1; }
+
+#licks-layout {
+    height: 1fr;
+}
+
+#licks-list-pane {
+    width: 36;
+    height: 1fr;
+    border-right: solid $primary-darken-2;
+}
+
+#lick-detail-pane {
+    width: 1fr;
+    height: 1fr;
+    padding: 1 2;
+}
+
+#lick-detail-header {
+    height: auto;
+    padding: 1 2;
+    background: $panel;
+    border-bottom: solid $primary-darken-2;
+    margin-bottom: 1;
+    color: $text;
+}
+
+.lick-summary {
+    margin: 0 0 1 0;
+    padding: 1 2;
+    background: $boost;
+    border-left: thick $accent;
+    color: $text-muted;
+}
+
+.lick-text { margin-bottom: 1; }
+
+.lick-diagram {
+    margin: 1 0 1 2;
+    padding: 0 1;
+    border-left: thick $accent;
+    width: auto;
 }

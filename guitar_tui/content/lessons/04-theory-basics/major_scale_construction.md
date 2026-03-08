@@ -6,7 +6,7 @@ tags: [music-theory, major-scales, scales, intervals]
 prerequisites: [intervals]
 module: theory-basics
 position: 4
-summary: Learn the interval formula of the major scale and how it generates the notes of any key.
+summary: W–W–H–W–W–W–H is the most useful formula in Western music — apply it from any root and you get that key's major scale. Learn this pattern and keys, modes, and diatonic harmony all flow from the same source.
 ---
 
 ## The Major Scale Formula
@@ -93,3 +93,7 @@ Once the major scale formula is in your ear and hands, every other scale and cho
 ## Memorising Keys
 
 Start by learning C major (no sharps or flats — just the natural notes). Then learn G major (one sharp: F#) and F major (one flat: Bb). These three keys cover the most common guitar progressions. From there, each new key adds one sharp or flat to the previous key — a pattern described by the circle of fifths.
+
+## What's Next
+
+You now have the major scale formula. The next lesson is chord construction — understanding how stacking scale degrees produces the chords you have been playing, and why the 3rd is the single note that determines whether a chord sounds major or minor.

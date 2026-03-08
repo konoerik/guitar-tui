@@ -87,3 +87,7 @@ All three chords are dominant 7ths. The characteristic "blues sound" comes partl
 | Blues I, IV, V | dominant 7th | Gritty; creates forward momentum on every chord |
 
 Understanding these choices lets you match the harmonic vocabulary to the style — maj7 and m7 for jazz-influenced smoothness, dominant 7ths throughout for blues.
+
+## What's Next
+
+7th chord progressions round out the core harmonic vocabulary. The final lesson in this track introduces suspended and add chords — sus2, sus4, and add9 — which extend chords by replacing or adding a single note, giving acoustic and pop playing their characteristic shimmer and open space.

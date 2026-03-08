@@ -25,10 +25,11 @@ TUI Layer       guitar_tui/ui/          Screens, widgets, stylesheet
 
 ## Personas
 
-Two distinct roles share this codebase. See [PERSONAS.md](PERSONAS.md) for full details.
+Three distinct roles share this codebase. See [PERSONAS.md](project/PERSONAS.md) for full details.
 
 - **Developer** — owns engine, loaders, UI, schemas, tooling
-- **Instructor** — owns `guitar_tui/data/` and `guitar_tui/content/`
+- **Instructor** — owns `guitar_tui/data/` and `guitar_tui/content/`; [CURRICULUM.md](project/CURRICULUM.md) is the Instructor's primary planning document — read it before adding any lesson or reference content
+- **Reviewer** — external perspective; periodic assessments live in `project/reviews/`
 
 ## Key Commands
 
@@ -61,10 +62,11 @@ uv run textual run --dev guitar_tui/app.py
 
 ## Session Resumption
 
-1. Read `TASKS.md` — find the current milestone and next unchecked task
-2. Read `ROADMAP.md` — review the current milestone's acceptance criteria
-3. Check `schemas/` if working on content or engine boundary code
-4. Check `DECISIONS.md` before questioning an established pattern — the trade-offs were considered during planning
+1. Read `project/BACKLOG.md` — find the highest-priority unchecked item
+2. Read `project/TASKS.md` — review milestone history and current milestone context
+3. Read `project/ROADMAP.md` — review the current milestone's acceptance criteria
+4. Check `schemas/` if working on content or engine boundary code
+5. Check `project/DECISIONS.md` before questioning an established pattern — the trade-offs were considered during planning
 
 ## Critical Rules
 

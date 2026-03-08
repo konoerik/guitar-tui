@@ -86,3 +86,7 @@ Because the shapes differ by only one finger, switching between E-shape major an
 ## Practical Context
 
 The E-shape minor barre fills all the minor chord positions that have no open equivalent — F#m, G#m, Bbm, Cm, C#m, Ebm. In the key of A (A–D–E–F#m), F#m is only practical as an E-shape minor barre at fret 2. In a song using the I–V–vi–IV progression in A, the vi chord (F#m) is the one that requires barre technique.
+
+## What's Next
+
+You now have major and minor barre chords rooted on string 6. The next two lessons add the A-shape equivalents — major and minor barre chords rooted on string 5 — which gives you two positions for every chord on the neck and makes smooth voice-leading between chord changes far easier.

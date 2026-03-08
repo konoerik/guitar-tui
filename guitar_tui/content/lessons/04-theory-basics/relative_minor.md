@@ -95,3 +95,7 @@ Understanding this relationship means:
 - One scale pattern covers both the major key and its relative minor
 - A song that shifts between a minor tonic and a major tonic (Aeolian vs. Ionian feel) can be navigated with the same scale shapes
 - You can predict which scale to use over a progression just by identifying the tonic chord
+
+## What's Next
+
+The relative minor relationship is the foundation for everything in Tracks 06–08. The minor pentatonic and natural minor scales introduced there are built on the Aeolian pattern described here, and the diatonic chord work in Track 08 builds directly on the Roman numeral and relative major/minor framework you now have.

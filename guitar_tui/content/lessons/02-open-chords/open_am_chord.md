@@ -66,3 +66,7 @@ The single-fret shift of the B string is what changes major to minor. This is a 
 - **High e muted** — the index finger at fret 1 must arch steeply so its tip does not rest against the high e string. This is the most common problem with Am.
 - **B string buzz** — index finger too far from the fret wire. Move the tip closer.
 - **Low E accidentally strummed** — start the strum from the A string. With practice this becomes automatic.
+
+## What's Next
+
+You now have E, Em, A, and Am — a major and minor pair from two of the most common guitar roots. The next lesson introduces D major, which moves the three-finger cluster from the middle strings to the top four strings and adds a new strumming challenge: avoiding the low two strings entirely.

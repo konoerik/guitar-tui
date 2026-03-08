@@ -6,7 +6,7 @@ tags: [music-theory, chords, intervals, fundamentals]
 prerequisites: [major_scale_construction]
 module: theory-basics
 position: 6
-summary: Learn the interval recipes for major, minor, and 7th chords and how they derive from the major scale.
+summary: Chords are stacked intervals, not memorised shapes — and the interval formula is what makes any shape movable. This lesson shows how major, minor, dominant 7th, and major 7th chords are built, and why the third is the note that changes everything.
 ---
 
 ## Chords Are Stacked Intervals
@@ -84,3 +84,7 @@ The **third** (major or minor) is what determines whether a chord sounds happy o
 On guitar, the same shape — the same relative finger positions — produces the same *chord type* regardless of where you play it, because the interval relationships between the strings are fixed. An open A major chord uses frets that spell out the intervals 1–3–5 starting from A. Move the root to a different note using a barre, and the same interval pattern now spells out 1–3–5 from that new root — a major chord in the new key.
 
 This is why learning the *formula* of a chord (its interval structure) is more powerful than memorising the specific frets — once you understand the recipe, the shape makes sense, and transposing to any key is a matter of moving the root to the right string and fret.
+
+## What's Next
+
+With chord formulas understood, the next lessons cover key signatures, Roman numerals, and the relative minor — the theory that explains why certain chords always appear together, and why the same group of notes can sound major or minor depending on which chord is treated as home.

@@ -6,7 +6,7 @@ tags: [music-theory, intervals, fretboard, fundamentals]
 prerequisites: [sharps_and_flats]
 module: theory-basics
 position: 3
-summary: Learn how intervals measure the distance between any two notes — the building block of chords and scales.
+summary: The labels in every scale diagram in this app — "1", "b3", "5", "b7" — are interval names. Understand what intervals measure and chord formulas stop being memorisation; they become logic you can apply in any key.
 ---
 
 ## What Is an Interval?
@@ -67,3 +67,7 @@ Two immediate applications:
 Scale diagrams in this app label each note with its *interval* from the root ("1", "b3", "4"), not its absolute note name. This is because the same scale shape works in any key — the interval labels stay constant, only the specific notes change when you move the shape. When you see a note labelled "b3" in an A minor scale, you know it is a C (3 semitones above A). The same label in a D minor scale would be F (3 semitones above D).
 
 Learning intervals is what makes scale patterns portable — it transforms a shape you have memorised into a concept you understand.
+
+## What's Next
+
+Intervals are the building blocks of every scale and chord formula in this app. The next lesson applies them directly: building the major scale step by step using the whole-step/half-step formula, which produces all the interval names you have just learned in their natural order.

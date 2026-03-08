@@ -5,7 +5,7 @@ difficulty: beginner
 tags: [orientation, chord-diagrams]
 module: orientation
 position: 1
-summary: Learn how to read the chord box diagrams used throughout this app.
+summary: Everything in a chord box diagram explained — dot positions, finger numbers, open strings, muted strings, and barre markings, so every diagram in this app makes immediate sense.
 ---
 
 ## What Is a Chord Diagram?
@@ -83,3 +83,7 @@ A **barre** is when one finger — usually the index — presses all strings acr
 | `X` above a string | Mute — do not play |
 | `●` in a cell | Press that string at that fret |
 | `▬` spanning a row | Barre: one finger covers all marked strings |
+
+## What's Next
+
+Chord diagrams appear throughout this app. The next orientation lesson covers tab notation — the six-line staff used for melodies, riffs, and chord progressions — and the final orientation lesson introduces scale diagrams, which use a horizontal fretboard layout to show scale patterns across the neck.

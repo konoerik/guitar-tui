@@ -37,6 +37,8 @@ class ChordSpec(BaseModel):
     fingers: list[int | None] | None = None  # exactly 6 if provided
     barre: BarreDef | None = None
     base_fret: int = Field(default=1, ge=1)
+    dot_labels: list[str | None] | None = None  # exactly 6 if provided; label shown in dot cell (≤2 chars)
+    root_strings: list[int] | None = None  # 0-based string indices where the root note sits; uses ◉ dot
 
     @field_validator("frets")
     @classmethod
@@ -50,6 +52,13 @@ class ChordSpec(BaseModel):
     def fingers_length(cls, v: list | None) -> list | None:
         if v is not None and len(v) != 6:
             raise ValueError(f"fingers must have exactly 6 elements, got {len(v)}")
+        return v
+
+    @field_validator("dot_labels")
+    @classmethod
+    def dot_labels_length(cls, v: list | None) -> list | None:
+        if v is not None and len(v) != 6:
+            raise ValueError(f"dot_labels must have exactly 6 elements, got {len(v)}")
         return v
 
 
@@ -86,6 +95,7 @@ class TabBeat(BaseModel):
     notes: list[int | None]   # exactly 6; index 0 = low E, index 5 = high e
     label: str | None = None
     duration: int = Field(default=1, ge=1)  # number of beats the note rings for
+    rest: bool = False  # if True, beat is a rest; notes are ignored in rendering
 
     @field_validator("notes")
     @classmethod
@@ -126,7 +136,8 @@ class TabLine(BaseModel):
         """Return a normalised list of TabMeasure regardless of input format."""
         if self.measures is not None:
             return self.measures
-        return [TabMeasure(beats=self.beats)]  # type: ignore[arg-type]
+        assert self.beats is not None  # guaranteed by model_validator
+        return [TabMeasure(beats=self.beats)]
 
 
 class TabSpec(BaseModel):

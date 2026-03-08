@@ -6,7 +6,7 @@ tags: [chords, open-chords, major-chords]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 8
-summary: Learn the open C major chord — technically demanding but essential, and worth every minute of practice.
+summary: C major demands an unusually steep arch from the index finger to keep the high e ringing while fretting the B string. Solve that arch and a lot of other open-chord problems solve themselves too.
 ---
 
 ## Finger Placement
@@ -55,3 +55,7 @@ After the arpeggio check, pluck the B string and high e string together. If both
 - **Open G muted** — the middle finger is leaning into the G string. Keep the middle finger tip pointing straight down.
 - **A string buzz** — the ring finger at the 3rd fret needs to be right behind the fret wire. A long stretch for some hands; with repetition, the reach becomes natural.
 - **Low E accidentally strummed** — start the strum from the A string. The low E produces a wrong note (E instead of C) that makes the chord sound off.
+
+## What's Next
+
+With G, C, Em, and D in your hands you can play the most common four-chord progression in pop music. The next lesson introduces Bm — the trickiest chord in this track, requiring a partial barre — which completes the set needed to play comfortably in the key of G major.

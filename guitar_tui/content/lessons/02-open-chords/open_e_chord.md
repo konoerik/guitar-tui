@@ -6,7 +6,7 @@ tags: [chords, open-chords, major-chords]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 1
-summary: Learn the open E major chord — a full six-string shape and one of the richest-sounding open chords.
+summary: E major is the parent shape for every E-form barre chord on the neck. Master it open first — every major barre chord you play for the rest of your life starts with this grip.
 ---
 
 ## Finger Placement
@@ -55,3 +55,7 @@ Work through this slowly. If the G string buzzes, the index finger is too close 
 - **G string buzz** — the index finger tip is not arched enough, or is leaning backward off the 1st fret wire. Press the very tip of the finger, as close to the wire as possible.
 - **B string muted** — the index finger is leaning slightly into the open B string. Raise the knuckle.
 - **D string not ringing** — the ring finger is not pressing firmly at the 2nd fret. Check that all three fingers are close to their respective fret wires.
+
+## What's Next
+
+E major is the parent shape for E-form barre chords — the same grip, moved up the neck with a barre, gives you every major chord in every key. Before that, the next lesson is the closest minor chord shape: E minor — one of the easiest chords on the guitar and a clear demonstration of how a single note change shifts major to minor.

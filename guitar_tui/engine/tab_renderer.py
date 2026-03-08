@@ -45,6 +45,14 @@ def _render_tab_line(tab_line: TabLine, col_width: int, max_fret_width: int) -> 
     for m_idx, measure in enumerate(measures):
         for beat in measure.beats:
             beat_width = col_width * beat.duration
+            if beat.rest:
+                rest_col = "─" + "r".rjust(max_fret_width) + "─"
+                sustain = "─" * (col_width * (beat.duration - 1))
+                for row_idx in range(len(rows)):
+                    rows[row_idx] += rest_col + sustain
+                if has_labels:
+                    label_row += (beat.label or "rest").center(beat_width)
+                continue
             for row_idx, (notes_idx, _) in enumerate(_STRING_DISPLAY):
                 note = beat.notes[notes_idx]
                 if note is not None:

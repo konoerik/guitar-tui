@@ -107,3 +107,7 @@ These all use only diatonic chords:
 ## Key Transposition
 
 In any minor key, the chord pattern is identical — only the names change. In D minor: i=Dm, II°=E°, III=F, iv=Gm, v=Am, VI=Bb, VII=C. The relationships and the progressions remain the same.
+
+## What's Next
+
+The diatonic chords of the minor scale give you the harmonic vocabulary for minor keys. Track 08 builds the parallel picture for major keys — five positions of the major scale and the seven diatonic chords that emerge from stacking thirds on each major scale degree, completing the theoretical foundation for song analysis and improvisation.

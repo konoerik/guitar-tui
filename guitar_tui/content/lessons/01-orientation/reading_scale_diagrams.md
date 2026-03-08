@@ -6,7 +6,7 @@ tags: [orientation, scale-diagrams]
 prerequisites: [reading_chord_diagrams]
 module: orientation
 position: 3
-summary: Learn how to read the horizontal fretboard scale diagrams used throughout this app.
+summary: How the horizontal fretboard diagrams in this app work — strings, fret columns, the difference between root dots and scale-tone dots, and what the interval labels mean.
 ---
 
 ## Scale Diagrams vs Chord Diagrams
@@ -67,3 +67,7 @@ The fret numbers at the top tell you where this shape sits on the neck. The diag
 2. Play each dot from bottom to top, string by string, moving across the rows
 3. Come back down in reverse order
 4. Once the shape is in your hands, experiment with starting and ending on `■` notes — this is what makes phrases sound musical rather than like a warm-up exercise
+
+## What's Next
+
+You have now covered all three notation systems this app uses. Track 02 introduces the open chords — starting with E major and E minor — and scale diagrams will reappear from Track 06 onward when pentatonic and natural minor scale positions are introduced.

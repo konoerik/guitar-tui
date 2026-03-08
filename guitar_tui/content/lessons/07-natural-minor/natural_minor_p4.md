@@ -6,7 +6,7 @@ tags: [scales, minor-scales]
 prerequisites: [natural_minor_p3]
 module: natural-minor
 position: 5
-summary: Learn Position 4 of A natural minor — the A-shape position at the 12th fret.
+summary: Position 4 sits in the upper neck with the flat 6th appearing as the second note on both outer strings — immediately after the 5th. That adjacency gives descending phrases a classical, resolved minor character right from the opening note.
 ---
 
 ## Position 4 — A-Shape (frets 12–15)
@@ -53,3 +53,7 @@ The fret span here (12–15) is four frets. Use strict one-finger-per-fret:
 - Fret 15: pinky
 
 String 4 (D) has only two notes (frets 12, 14 — index and ring, skipping middle). String 3 (G) also has two notes (frets 12, 14). The B string starts at fret 13 rather than 12 — the position begins one fret higher on that string than on the others, which is the expected behaviour at the B string boundary.
+
+## What's Next
+
+Position 4 is the highest natural minor position before the pattern wraps around. Position 5 (next) completes the cycle, closing the loop back to the open-position area and reconnecting to Position 1 at fret 5 — the same join structure you saw in the pentatonic positions.

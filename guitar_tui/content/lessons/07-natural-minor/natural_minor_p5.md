@@ -6,7 +6,7 @@ tags: [scales, minor-scales]
 prerequisites: [natural_minor_p4]
 module: natural-minor
 position: 6
-summary: Learn Position 5 of A natural minor — the G-shape position that closes the loop back to Position 1.
+summary: Position 5 closes the five-position cycle, reconnecting to Position 1 at fret 5 on the low E string. The flat 6th sits on the D string in a three-note sequence that highlights the expressive half-step between the 5th and b6 — a sound central to natural minor melody.
 ---
 
 ## Position 5 — G-Shape (frets 2–5)
@@ -57,3 +57,7 @@ At fret 5 on the low E string, Position 5 ends where Position 1 begins — the r
 ## Fingering
 
 Fret span is 2–5, but the G string has a note at fret 4 (not 3), making it index–ring–pinky on that string. The A string spans 2–3–5: index, middle, pinky. Most strings use three notes. Keep the hand comfortably centred around frets 3–4 with index reaching back to fret 2 where needed.
+
+## What's Next
+
+With all five positions mapped, the track closes with the chords of the minor scale — stacking thirds on each degree of A natural minor to produce the seven diatonic chords that belong together in any minor key and form the harmonic vocabulary of minor-key music.

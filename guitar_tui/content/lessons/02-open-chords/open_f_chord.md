@@ -80,3 +80,7 @@ String tension is highest near the nut. The further up the neck you go, the easi
 - **Low E buzz** — the barre is not covering the outer strings firmly. Roll the index slightly toward the nut edge and increase pressure at the base knuckle.
 - **B string dead** — the barre often collapses at the B string because that is where most fingers have a natural joint crease. Adjust the index finger position until the crease moves off the B string.
 - **Hand fatigue** — this is the most physically demanding chord in the beginner set. Take breaks. Strength builds over days and weeks, not in a single session. Practise in short bursts rather than pushing through pain.
+
+## What's Next
+
+Completing F major is a genuine milestone. Track 03 puts these chords into progressions — G–D–Em–C, C–G–Am–F, and the 12-bar blues in A — where chord transitions become the primary challenge. Track 05 then returns to the barre technique to show how the same E-shape principle works in every key across the entire neck.

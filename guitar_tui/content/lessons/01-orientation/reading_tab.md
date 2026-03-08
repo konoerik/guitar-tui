@@ -95,3 +95,7 @@ lines:
 ## What Tab Does Not Show
 
 Tab tells you *where* to play but not exactly *how long* each note rings. A `3` on the low E could be a quick pluck or a long sustain. Labels, tempo markings, and your ear fill in the rhythm. When a lesson includes a time signature or tempo, use that context to judge timing.
+
+## What's Next
+
+Now that you can read chord diagrams and tab, the orientation track closes with scale diagrams — the horizontal fretboard notation used throughout the scale and mode lessons. After that, Track 02 begins with the open chords you will strum using the rhythms tab notation describes.

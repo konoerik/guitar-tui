@@ -6,7 +6,7 @@ tags: [scales, minor-scales]
 prerequisites: [natural_minor_p2]
 module: natural-minor
 position: 4
-summary: Learn Position 3 of A natural minor — the C-shape position spanning frets 9–13.
+summary: Position 3 centres on the 12th fret octave landmark, with the root on the A string at fret 12 — easy to find and a reliable anchor for phrases. The wider fret span and a fret-13 extension make this the most technically demanding position, but also one of the most musically rich.
 ---
 
 ## Position 3 — C-Shape (frets 9–13)
@@ -47,3 +47,7 @@ The b3 (C) at fret 13 on the B string is the only note outside the four-fret win
 ## Fingering
 
 Strings 6 and 5 are handled with just two notes each (two frets apart). Strings 4, 3, and 2 have three notes, requiring index–middle–pinky (or index–ring–pinky, depending on fret spacing). For string 2 (frets 10, 12, 13): index at 10, ring at 12, pinky at 13 — a stretch that benefits from keeping the wrist slightly dropped.
+
+## What's Next
+
+Position 3 marks the midpoint of the five-position cycle. Position 4 (next) moves higher into the upper neck and features a distinctive property: the b6 appears immediately adjacent to the 5th on both outer strings, giving descending phrases a particularly classical minor quality from the very first note.

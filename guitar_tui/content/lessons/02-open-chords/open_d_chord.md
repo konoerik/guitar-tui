@@ -51,3 +51,7 @@ If the open D string buzzes, a finger is resting against it. Bring the fingertip
 - **Strumming the low E or A strings** — these produce wrong notes and ruin the chord. Train the strumming hand to start from the D string. A useful drill: rest the heel of the picking hand against the low two strings before strumming.
 - **Open D string muted** — the fingers are sitting too low and touching the D string from above. Arch the knuckles and move the cluster upward.
 - **High e and B out of tune with each other** — if the chord sounds dissonant when strummed, check that the middle and ring finger positions are not swapped. Index (G) and middle (high e) sit at fret 2; ring (B) sits at fret 3.
+
+## What's Next
+
+D major pairs naturally with its next-door neighbour: D minor. The next lesson changes just one note and dramatically shifts the mood — together D and Dm are among the most expressive chord pairs in folk, country, and pop.

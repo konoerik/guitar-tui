@@ -36,12 +36,14 @@ Renders a chord box diagram (vertical grid, nut at top).
 
 ### Fields
 
-| Field       | Type            | Required | Description |
-|-------------|-----------------|----------|-------------|
-| `frets`     | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret number (1-based); `0` = open string; `null` = muted (X). |
-| `fingers`   | list[int\|null] | no       | 6 values. Finger number 1–4; `null` = no finger label. |
-| `barre`     | object          | no       | Barre chord indicator. See below. |
-| `base_fret` | int             | no       | Fret number at the top of the diagram (default: 1). Use for higher-position chords. |
+| Field          | Type              | Required | Description |
+|----------------|-------------------|----------|-------------|
+| `frets`        | list[int\|null]   | yes      | 6 values (low E → high e). Integer = fret number (1-based); `0` = open string; `null` = muted (X). |
+| `fingers`      | list[int\|null]   | no       | 6 values. Finger number 1–4; `null` = no finger label. |
+| `barre`        | object            | no       | Barre chord indicator. See below. |
+| `base_fret`    | int               | no       | Fret number at the top of the diagram (default: 1). Use for higher-position chords. |
+| `dot_labels`   | list[str\|null]   | no       | 6 values (low E → high e). Label shown inside the dot cell instead of the default dot (≤2 chars; e.g., `"1"`, `"b3"`, `"5"`). Use `null` for strings with no dot or where default dot should show. |
+| `root_strings` | list[int]         | no       | 0-based string indices (0 = low E) where the root note sits. Those dots render as `◉` instead of `●`. Ignored on strings that have a `dot_labels` entry. |
 
 #### barre object
 
@@ -186,9 +188,10 @@ Exactly one of `beats` or `measures` must be provided.
 
 | Field      | Type            | Required | Description |
 |------------|-----------------|----------|-------------|
-| `notes`    | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret number; `null` = string not played this beat. |
-| `label`    | string          | no       | Beat label shown below the staff (e.g., `"G"`, `"1"`, `"&"`) |
+| `notes`    | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret number; `null` = string not played this beat. Ignored when `rest: true`. |
+| `label`    | string          | no       | Beat label shown below the staff (e.g., `"G"`, `"1"`, `"&"`). Defaults to `"rest"` when `rest: true`. |
 | `duration` | int             | no       | Number of beats the note rings for (default: `1`). Expands the column by `duration × col_width`. |
+| `rest`     | bool            | no       | If `true`, renders a rest symbol (`r`) on all strings instead of fret numbers (default: `false`). |
 
 ### Examples
 

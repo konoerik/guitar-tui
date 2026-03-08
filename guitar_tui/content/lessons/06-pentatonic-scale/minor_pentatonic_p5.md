@@ -6,7 +6,7 @@ tags: [scales, pentatonic, minor-scales]
 prerequisites: [minor_pentatonic_p4]
 module: pentatonic-scale
 position: 5
-summary: Learn Position 5 of the A minor pentatonic scale — the shape that closes the loop back to Position 1.
+summary: Position 5 closes the five-position loop — its highest root note on the high e string is the same fret as Position 1's lowest root. Three root notes make it the most naturally grounded shape, and the seam back into Position 1 is what makes the system feel like a complete neck rather than five isolated boxes.
 ---
 
 ## Closing the Loop

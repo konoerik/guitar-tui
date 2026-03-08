@@ -6,7 +6,7 @@ tags: [scales, major-scales]
 prerequisites: [major_scale_p3]
 module: major-scale
 position: 4
-summary: Learn Position 4 of the C major scale — the A-shape position in open/first position.
+summary: Position 4 sits in the lowest register of the neck and contains more root notes than any other major scale position — three in the key of C. The root on the B string at fret 1 is the lowest tonic available on the guitar in standard tuning.
 ---
 
 ## Position 4 — A-Shape (frets 1–5)
@@ -52,3 +52,7 @@ Position 5 (the G-shape, frets 4–8) begins right where Position 4 ends — the
 ## Fingering
 
 The fret span is 1–5. The A string runs 2–3–5 (index, middle, pinky — note: starts at fret 2). The D string also starts at fret 2. The G string runs 2–4–5 (index, ring, pinky). The B string starts at fret 1 (index). The low E string starts at fret 3 (no low-end notes below fret 3 for this position).
+
+## What's Next
+
+Position 4 covers the low-register neck. Position 5 (next) bridges back to Position 1, spanning frets 4–8 and completing the CAGED cycle. With all five positions learned, the track closes with the diatonic chords of C major and the progressions they form.

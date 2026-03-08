@@ -6,7 +6,7 @@ tags: [scales, pentatonic, minor-scales]
 prerequisites: [minor_pentatonic_intro]
 module: pentatonic-scale
 position: 2
-summary: Learn Position 2 of the A minor pentatonic scale — the shape that connects directly to Position 1.
+summary: Position 2 begins exactly where Position 1 ends on the low E string — learning that overlap is the key to linking all five shapes. The root sits mid-shape on the D string, giving phrases a sinking, resolved quality that blues players use constantly.
 ---
 
 ## From Position 1 to Position 2
@@ -50,3 +50,7 @@ Use the standard one-finger-per-fret approach for this position: the index finge
 ## What This Position Sounds Like
 
 Because the root does not sit at the bottom of the shape, phrases in Position 2 sound naturally mid-range in character. Blues players use Position 2 extensively for runs that descend from the upper strings into the root territory around the D string — the resolution has a sinking, satisfying feel. Compare playing a phrase that ends on the root at the D string (fret 7) versus the B string (fret 10) — they are both A, but the B string root has a brighter, more ringing quality.
+
+## What's Next
+
+Position 2 extends your range above Position 1. The next lesson, Position 3, centres on the 12th-fret octave — one of the easiest landmarks on the guitar to find — and connects the mid-neck zone to the upper register.

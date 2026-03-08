@@ -6,7 +6,7 @@ tags: [chords, open-chords, major-chords]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 7
-summary: Learn the open G major chord — a cornerstone of beginner guitar.
+summary: G major's full six-string voicing is one of the richest open chords on the guitar, but the wide finger spread and the ring finger arching over the open B string make it a real test of left-hand control.
 ---
 
 ## Finger Placement
@@ -53,3 +53,7 @@ lines:
 - **B string muted by ring finger** — the ring finger on the high e string must arch sharply at the first knuckle so the tip does not drag across the B string beside it.
 - **Fret buzz on low E or high e** — these strings are at the 3rd fret, which requires a firm press. Move each fingertip closer to the fret wire.
 - **Index finger leaning into open D** — the index finger at the A string can tilt downward and touch the open D string. Keep the knuckle raised.
+
+## What's Next
+
+G major pairs with C major (the next lesson) and D major to form the I–IV–V of the key of G — one of the most common guitar progressions. The G→C transition is one of the larger hand repositions in beginner chords; it is worth practising the change in isolation before moving on.

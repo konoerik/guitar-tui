@@ -6,7 +6,7 @@ tags: [scales, pentatonic, minor-scales]
 prerequisites: [minor_pentatonic_p3]
 module: pentatonic-scale
 position: 4
-summary: Learn Position 4 of the A minor pentatonic scale — a high-register shape with a distinctive stretch on the B string.
+summary: Position 4 lives above the 12th fret with both roots sitting in the middle of the shape, not at the bottom. Phrases naturally descend to find the root here — a falling, expressive quality that suits slower, blues-inflected playing.
 ---
 
 ## The High-Neck Shape
@@ -61,3 +61,7 @@ On the B string, the index shifts up to fret 13 rather than staying at fret 12 �
 ## The Sound of Position 4
 
 Because both roots are in the middle of the shape rather than at the bottom, Position 4 invites phrases that start high and resolve downward to the root. Descending lines from the high e and B strings into the G or A string root have a natural falling quality that suits slower, expressive playing. The b7 degree on the low E string (fret 15) is also a useful starting point for blues phrases — the ear hears it as a dissonant departure that resolves convincingly back to the root.
+
+## What's Next
+
+Position 4 brings you to the top of the neck. Position 5 — the next and final position — sits below Position 1 and closes the loop, forming an unbroken chain from the open-position area all the way to the 15th fret. After Position 5, the connections lesson shows how to move between all five positions mid-phrase.

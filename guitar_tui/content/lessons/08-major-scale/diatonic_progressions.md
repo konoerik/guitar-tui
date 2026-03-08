@@ -6,7 +6,7 @@ tags: [chords, major-scales, chord-progressions, music-theory]
 prerequisites: [major_scale_chords, minor_scale_chords]
 module: major-scale
 position: 7
-summary: Understand how diatonic progressions work and practise the most essential patterns in the key of G.
+summary: The I, IV, V, and vi chords appear in almost every song you know — not by coincidence, but because diatonic harmony gives each chord a predictable emotional function. Learn the four core rotations in G major and you'll start hearing song structure everywhere.
 ---
 
 ## What Makes a Progression Diatonic?
@@ -98,3 +98,7 @@ The most important harmonic movement is V → I (D → G in the key of G). The V
 ## Transposing the Pattern
 
 The same Roman numeral relationships hold in every key. I–V–vi–IV in A major is A–E–F#m–D. In E major: E–B–C#m–A. The chord shapes change with the key; the emotional relationships between them do not.
+
+## What's Next
+
+Diatonic progressions are the backbone of Western music. Track 09 extends the harmonic palette with seventh chords — dominant 7th, major 7th, minor 7th, and suspended voicings — adding the colour and sophistication that distinguishes jazz, soul, and blues harmony from straight triadic playing.

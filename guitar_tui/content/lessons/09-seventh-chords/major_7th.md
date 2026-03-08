@@ -76,3 +76,7 @@ The major 7th interval (root to 7th) is 11 semitones — a half-step below the o
 | G | Gmaj7 | Cmaj7 |
 
 The open voicings in this lesson give you Imaj7 → IVmaj7 in the keys of E, A, D, and G — the four most guitar-friendly keys — all in open position.
+
+## What's Next
+
+Major 7th chords are the lush, resolved voice of the I and IV. The next lesson adds minor 7th chords — the cooler, smoother minor colour that softens plain minor chords and provides the ii and vi sounds that are central to jazz and pop harmony.

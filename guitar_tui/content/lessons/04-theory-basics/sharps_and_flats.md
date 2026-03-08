@@ -6,7 +6,7 @@ tags: [music-theory, fretboard, fundamentals]
 prerequisites: [musical_alphabet]
 module: theory-basics
 position: 2
-summary: Understand accidentals, enharmonic equivalents, and where sharps and flats appear on the guitar.
+summary: F# and Gb are the same fret — and knowing why prevents a lot of confusion when chord charts switch naming conventions. This lesson covers enharmonic equivalents, the A-string note map, and the practical rules guitarists actually use.
 ---
 
 ## Moving by Semitones

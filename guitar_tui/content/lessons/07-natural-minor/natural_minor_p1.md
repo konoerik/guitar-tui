@@ -6,7 +6,7 @@ tags: [scales, minor-scales]
 prerequisites: [natural_minor_intro]
 module: natural-minor
 position: 2
-summary: Master Position 1 of A natural minor — the E-shape position at the 5th fret.
+summary: Position 1 of the natural minor adds the 2nd and flat 6th to the pentatonic you already know at this fret. The b6 on the B string is the most distinctive new note — its half-step resolution down to the 5th is the sound of natural minor melody.
 ---
 
 ## Position 1 — E-Shape (frets 5–8)
@@ -62,3 +62,7 @@ Fret 6 on the B string (the b6, degree F in key A) is the "extra" note that is n
 1. Ascending and descending through all 15 notes in strict alternate picking.
 2. Play three-note groupings: start on string 6, play frets 5–7–8, move to string 5 frets 5–7, etc.
 3. Focus phrases on the root notes at fret 5 (strings 6, 4, 1) as arrival points.
+
+## What's Next
+
+Position 1 establishes the template. Position 2 (next) shifts up the neck and brings the b6 to the A and G strings, with 16 notes across six strings — one of the denser positions in the scale.

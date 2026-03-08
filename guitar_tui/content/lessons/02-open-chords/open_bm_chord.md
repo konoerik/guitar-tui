@@ -6,7 +6,7 @@ tags: [chords, open-chords, barre-chords, minor-chords]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 9
-summary: Learn the Bm chord — a partial barre shape that appears constantly in beginner progressions.
+summary: B minor is where many beginners stall — the standard voicing needs a barre at the second fret. This lesson covers the full grip, a stepping-stone version for when it isn't yet clean, and the layered build approach that makes the barre click.
 ---
 
 ## About This Chord
@@ -85,3 +85,7 @@ This produces a Bm5 voicing that sounds close enough for practice while you buil
 - **Barre strings buzzing** — insufficient index finger pressure, or the finger is bending at the joint. Straighten the index and press from the base knuckle.
 - **Ring and pinky not reaching fret 4** — the wrist needs to rotate under the neck. Drop the wrist lower (toward the floor), which opens the hand and makes fret 4 much more reachable.
 - **Thumb position** — for barre chords, the thumb should be roughly centred behind the neck, opposite the middle finger. A thumb creeping over the top of the neck kills barre strength.
+
+## What's Next
+
+Bm completes the chord set for the key of G major. The next lesson, F major, is the most demanding chord in this track — a full six-string barre at the 1st fret — and is the gateway to the barre chord system covered in depth in Track 05. The hand strength and barre technique you build here make F significantly more reachable.

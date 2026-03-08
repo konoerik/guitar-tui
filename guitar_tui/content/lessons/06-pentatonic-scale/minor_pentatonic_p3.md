@@ -6,7 +6,7 @@ tags: [scales, pentatonic, minor-scales]
 prerequisites: [minor_pentatonic_p2]
 module: pentatonic-scale
 position: 3
-summary: Learn Position 3 of the A minor pentatonic scale — the shape that spans the 12th fret octave.
+summary: Position 3 is anchored around the 12th fret — the octave landmark every guitarist can find instantly. The upper-neck register is brighter and more cutting, and the A-string root at fret 12 is always one step away as a landing point.
 ---
 
 ## The Octave Landmark
@@ -59,3 +59,7 @@ The shape breaks the standard one-finger-per-fret rule on the G string because o
 ## The High Register
 
 Position 3 lives in the upper-mid register of the guitar. Soloing here produces a brighter, more cutting tone than Positions 1 or 2. Many classic rock solos in A or E minor use this zone extensively — the 12th fret area of the G, B, and high e strings is particularly resonant and articulate for string bends. Once you are comfortable with the shape, experiment with bending the b3 (fret 10, D string) up a whole step to hear how it affects the sound.
+
+## What's Next
+
+Position 3 covers the mid-to-upper neck. Position 4 (next) extends further above the 12th fret into the brightest, most cutting zone of the scale. Once you have all four positions linked, one more (Position 5, below Position 1) closes the system into a complete loop across the full neck.

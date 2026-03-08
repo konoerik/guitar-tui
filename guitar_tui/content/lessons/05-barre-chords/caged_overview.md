@@ -96,3 +96,7 @@ You do not need to learn all five CAGED shapes immediately. Start with the two y
 3. **D-shape**: the open D chord shape moved up the neck, primarily used for high-register chord fragments
 
 Each new shape you add extends your fretboard vocabulary and connects another region of the neck to the musical concepts you already understand.
+
+## What's Next
+
+The CAGED system provides the map; Tracks 06–08 populate it with scales. The minor pentatonic, natural minor, and major scale positions introduced in those tracks all correspond to CAGED positions — once you make that connection, scale shapes and chord shapes stop being separate things and become one integrated picture of the neck.

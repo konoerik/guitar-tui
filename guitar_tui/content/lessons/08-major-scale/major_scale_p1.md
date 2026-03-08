@@ -6,7 +6,7 @@ tags: [scales, major-scales]
 prerequisites: [major_scale_construction, natural_minor_p1]
 module: major-scale
 position: 1
-summary: Learn Position 1 of the C major scale — the E-shape position at the 8th fret.
+summary: The major scale in Position 1 — bright, settled, and built around fret 8 on string 6. Seven notes per octave versus the pentatonic's five, with the 7th degree sitting one semitone below the root and creating a built-in pull toward home on every phrase.
 ---
 
 ## The Major Scale on the Neck
@@ -63,3 +63,7 @@ The major scale's 7th degree (B in C major, at fret 7 on the low E string) is on
 ## Fingering
 
 Index at fret 7, middle at 8, ring at 9, pinky at 10. The D string and G string both have notes at 7, 9, 10 (skipping 8) — use index, ring, pinky for those strings, letting middle rest.
+
+## What's Next
+
+Position 1 is the E-shape anchor for C major. Position 2 (next) shifts up the neck to the D-shape position, opening on the 7th degree — the leading tone that creates the major scale's characteristic tension-and-release pull toward the root.

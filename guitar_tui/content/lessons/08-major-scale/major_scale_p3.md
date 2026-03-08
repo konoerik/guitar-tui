@@ -6,7 +6,7 @@ tags: [scales, major-scales]
 prerequisites: [major_scale_p2]
 module: major-scale
 position: 3
-summary: Learn Position 3 of the C major scale — the C-shape position in the upper neck.
+summary: Position 3 of the major scale sits at the 12th fret and opens on the 3rd degree — the first note of one of the two natural semitone pairs (E–F in C major). The outer strings mirror each other exactly in fret pattern, which makes the shape faster to memorise.
 ---
 
 ## Position 3 — C-Shape (frets 12–15)
@@ -48,3 +48,7 @@ Strings 6 and 1 both carry three notes at frets 12, 13, 15. The outer strings ar
 ## Fingering
 
 Fret span 12–15, four frets, one-finger-per-fret standard assignment. The A string runs 12–14–15 (index, ring, pinky — skipping middle). The D string also runs 12–14–15. The G string has only two notes (12, 14 — index, ring). The B string starts at fret 13 (middle) due to the B-string offset.
+
+## What's Next
+
+Position 3 completes the upper neck. Position 4 (next) drops back to the lowest register of the guitar, contains three root notes — more than any other position — and anchors the A-shape chord region where C major sits at its lowest available pitch on the neck.

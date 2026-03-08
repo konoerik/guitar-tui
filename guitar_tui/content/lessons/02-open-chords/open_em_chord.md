@@ -59,3 +59,7 @@ If the open G buzzes or sounds dead, the ring finger on the D string is leaning 
 - **Using index + middle instead of middle + ring** — works for Em on its own, but makes E major and Am transitions much harder. Change the habit now.
 - **Ring finger touching the G string** — keep the ring fingertip arched. The G string should ring completely free.
 - **Understrumming** — because only two strings are fretted, there is a temptation to strum only the middle of the chord. Strum confidently across all six strings; the open strings on both ends give Em its full sound.
+
+## What's Next
+
+Em sets you up for the A string shapes coming next. A major (the next lesson) uses the same middle-and-ring grip relocated to the D and G strings — the hand memory you built for Em carries directly over to the A string family.

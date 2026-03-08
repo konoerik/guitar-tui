@@ -1,0 +1,131 @@
+# Phrygian Mode — 5 positions
+#
+# key: E  (all fret numbers are concrete for E Phrygian)
+# intervals: 1 b2 b3 4 5 b6 b7
+# Notes: E F G A B C D
+#
+# E Phrygian shares all notes with C major; root shifted to E.
+# The flat 2nd (F) is the defining interval — a half-step above the root,
+# producing the dark, Spanish-flavoured sound of Phrygian.
+#
+# Positions are derived from the 5 C major CAGED boxes,
+# with E marked as root and degrees relabeled accordingly.
+# Degree mapping from C major: 1→b6, 2→b7, 3→1, 4→b2, 5→b3, 6→4, 7→5
+#
+# String numbering: 1 = high e, 6 = low E
+
+name: phrygian
+full_name: Phrygian
+key: E
+intervals: ["1", "b2", "b3", "4", "5", "b6", "b7"]
+
+positions:
+  - id: 1
+    name: Position 1
+    caged_shape: D
+    fret_range: [9, 13]
+    notes:
+      - {string: 6, fret: 10, degree: "b7"}
+      - {string: 6, fret: 12, degree: "1",  root: true}
+      - {string: 5, fret: 10, degree: "b3"}
+      - {string: 5, fret: 12, degree: "4"}
+      - {string: 4, fret: 9,  degree: "5"}
+      - {string: 4, fret: 10, degree: "b6"}
+      - {string: 4, fret: 12, degree: "b7"}
+      - {string: 3, fret: 9,  degree: "1",  root: true}
+      - {string: 3, fret: 10, degree: "b2"}
+      - {string: 3, fret: 12, degree: "b3"}
+      - {string: 2, fret: 10, degree: "4"}
+      - {string: 2, fret: 12, degree: "5"}
+      - {string: 2, fret: 13, degree: "b6"}
+      - {string: 1, fret: 10, degree: "b7"}
+      - {string: 1, fret: 12, degree: "1",  root: true}
+
+  - id: 2
+    name: Position 2
+    caged_shape: C
+    fret_range: [12, 15]
+    notes:
+      - {string: 6, fret: 12, degree: "1",  root: true}
+      - {string: 6, fret: 13, degree: "b2"}
+      - {string: 6, fret: 15, degree: "b3"}
+      - {string: 5, fret: 12, degree: "4"}
+      - {string: 5, fret: 14, degree: "5"}
+      - {string: 5, fret: 15, degree: "b6"}
+      - {string: 4, fret: 12, degree: "b7"}
+      - {string: 4, fret: 14, degree: "1",  root: true}
+      - {string: 4, fret: 15, degree: "b2"}
+      - {string: 3, fret: 12, degree: "b3"}
+      - {string: 3, fret: 14, degree: "4"}
+      - {string: 2, fret: 13, degree: "b6"}
+      - {string: 2, fret: 15, degree: "b7"}
+      - {string: 1, fret: 12, degree: "1",  root: true}
+      - {string: 1, fret: 13, degree: "b2"}
+      - {string: 1, fret: 15, degree: "b3"}
+
+  - id: 3
+    name: Position 3
+    caged_shape: A
+    fret_range: [1, 5]
+    notes:
+      - {string: 6, fret: 3,  degree: "b3"}
+      - {string: 6, fret: 5,  degree: "4"}
+      - {string: 5, fret: 2,  degree: "5"}
+      - {string: 5, fret: 3,  degree: "b6"}
+      - {string: 5, fret: 5,  degree: "b7"}
+      - {string: 4, fret: 2,  degree: "1",  root: true}
+      - {string: 4, fret: 3,  degree: "b2"}
+      - {string: 4, fret: 5,  degree: "b3"}
+      - {string: 3, fret: 2,  degree: "4"}
+      - {string: 3, fret: 4,  degree: "5"}
+      - {string: 3, fret: 5,  degree: "b6"}
+      - {string: 2, fret: 1,  degree: "b6"}
+      - {string: 2, fret: 3,  degree: "b7"}
+      - {string: 2, fret: 5,  degree: "1",  root: true}
+      - {string: 1, fret: 3,  degree: "b3"}
+      - {string: 1, fret: 5,  degree: "4"}
+
+  - id: 4
+    name: Position 4
+    caged_shape: G
+    fret_range: [4, 8]
+    notes:
+      - {string: 6, fret: 5,  degree: "4"}
+      - {string: 6, fret: 7,  degree: "5"}
+      - {string: 6, fret: 8,  degree: "b6"}
+      - {string: 5, fret: 5,  degree: "b7"}
+      - {string: 5, fret: 7,  degree: "1",  root: true}
+      - {string: 5, fret: 8,  degree: "b2"}
+      - {string: 4, fret: 5,  degree: "b3"}
+      - {string: 4, fret: 7,  degree: "4"}
+      - {string: 3, fret: 4,  degree: "5"}
+      - {string: 3, fret: 5,  degree: "b6"}
+      - {string: 3, fret: 7,  degree: "b7"}
+      - {string: 2, fret: 5,  degree: "1",  root: true}
+      - {string: 2, fret: 6,  degree: "b2"}
+      - {string: 2, fret: 8,  degree: "b3"}
+      - {string: 1, fret: 5,  degree: "4"}
+      - {string: 1, fret: 7,  degree: "5"}
+      - {string: 1, fret: 8,  degree: "b6"}
+
+  - id: 5
+    name: Position 5
+    caged_shape: E
+    fret_range: [7, 10]
+    notes:
+      - {string: 6, fret: 7,  degree: "5"}
+      - {string: 6, fret: 8,  degree: "b6"}
+      - {string: 6, fret: 10, degree: "b7"}
+      - {string: 5, fret: 7,  degree: "1",  root: true}
+      - {string: 5, fret: 8,  degree: "b2"}
+      - {string: 5, fret: 10, degree: "b3"}
+      - {string: 4, fret: 7,  degree: "4"}
+      - {string: 4, fret: 9,  degree: "5"}
+      - {string: 4, fret: 10, degree: "b6"}
+      - {string: 3, fret: 7,  degree: "b7"}
+      - {string: 3, fret: 9,  degree: "1",  root: true}
+      - {string: 3, fret: 10, degree: "b2"}
+      - {string: 2, fret: 8,  degree: "b3"}
+      - {string: 2, fret: 10, degree: "4"}
+      - {string: 1, fret: 8,  degree: "b6"}
+      - {string: 1, fret: 10, degree: "b7"}

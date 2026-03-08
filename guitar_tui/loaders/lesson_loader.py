@@ -22,6 +22,7 @@ from rich.text import Text
 from guitar_tui.engine.dispatcher import dispatch
 
 _DEFAULT_LESSONS_DIR = Path(__file__).parent.parent / "content" / "lessons"
+_DEFAULT_INDEX_PATH = Path(__file__).parent.parent / "content" / "index.yaml"
 
 # Matches a fenced ```diagram ... ``` block.  One capturing group returns the
 # YAML body.  re.split() with a single capturing group interleaves text/yaml.
@@ -61,6 +62,7 @@ class LessonMeta(BaseModel):
 
     # Optional
     prerequisites: list[str] = Field(default_factory=list)
+    see_also: list[str] = Field(default_factory=list)  # slugs of related lessons
     module: str | None = None
     position: int | None = None
     summary: str | None = None
@@ -108,6 +110,23 @@ class DiagramBlock:
 
 
 @dataclass
+class CurriculumOverview:
+    """Top-level curriculum introduction loaded from the index overview block."""
+
+    title: str
+    body: str  # raw Markdown
+
+
+@dataclass
+class TrackEntry:
+    """A single entry from the lesson index — one track/module in display order."""
+
+    id: str              # matches the `module:` frontmatter field
+    title: str
+    description: str = ""
+
+
+@dataclass
 class ParsedLesson:
     """A fully parsed lesson: metadata + ordered body segments."""
 
@@ -131,18 +150,26 @@ class LessonLoader:
         chords = loader.by_tag("chords")
     """
 
-    def __init__(self, lessons_dir: Path | None = None) -> None:
+    def __init__(
+        self,
+        lessons_dir: Path | None = None,
+        index_path: Path | None = None,
+    ) -> None:
         self.lessons_dir = lessons_dir or _DEFAULT_LESSONS_DIR
-        self.lessons: dict[str, ParsedLesson] = {}  # keyed by slug
+        self.index_path = index_path or _DEFAULT_INDEX_PATH
+        self.lessons: dict[str, ParsedLesson] = {}         # keyed by slug
+        self.tracks: list[TrackEntry] = []                  # ordered from index.yaml
+        self.overview: CurriculumOverview | None = None     # optional intro block
 
     def load(self) -> None:
-        """Parse all .md files in lessons_dir.
+        """Parse all .md files in lessons_dir and load the track index.
 
         Hard errors raise LessonLoadError immediately.
         Missing prerequisite slugs emit Python warnings after all files load.
         An empty lessons_dir is not an error.
         """
         self.lessons = {}
+        self.tracks, self.overview = self._load_index()
         md_files = sorted(self.lessons_dir.rglob("*.md"))
 
         # Phase 1: parse all files
@@ -156,7 +183,7 @@ class LessonLoader:
                 )
             self.lessons[slug] = lesson
 
-        # Phase 2: warn on missing prerequisites (all slugs now known)
+        # Phase 2: warn on missing prerequisites and see_also references
         known = set(self.lessons)
         for lesson in self.lessons.values():
             for prereq in lesson.meta.prerequisites:
@@ -166,8 +193,50 @@ class LessonLoader:
                         f"{prereq!r} which does not exist.",
                         stacklevel=2,
                     )
+            for ref in lesson.meta.see_also:
+                if ref not in known:
+                    warnings.warn(
+                        f"Lesson {lesson.meta.slug!r} has see_also reference "
+                        f"{ref!r} which does not exist.",
+                        stacklevel=2,
+                    )
 
-    # ── Index helpers ──────────────────────────────────────────────────────────
+    # ── Ordering helpers ───────────────────────────────────────────────────────
+
+    def ordered_track_lessons(self) -> list[tuple[TrackEntry, list[ParsedLesson]]]:
+        """Return lessons grouped by track in display order (index first, extras last).
+
+        Each tuple is (track, lessons_sorted_by_position).  Tracks with no lessons
+        are omitted.  Modules not listed in the index are appended alphabetically.
+        """
+        grouped: dict[str, list[ParsedLesson]] = {}
+        for lesson in self.lessons.values():
+            key = lesson.meta.module or "general"
+            grouped.setdefault(key, []).append(lesson)
+
+        indexed_ids = {t.id for t in self.tracks}
+        extra_ids = sorted(k for k in grouped if k not in indexed_ids)
+        all_tracks = list(self.tracks) + [
+            TrackEntry(id=k, title=k.replace("-", " ").replace("_", " ").title())
+            for k in extra_ids
+        ]
+
+        result: list[tuple[TrackEntry, list[ParsedLesson]]] = []
+        for track in all_tracks:
+            if track.id not in grouped:
+                continue
+            sorted_lessons = sorted(
+                grouped[track.id],
+                key=lambda l: (l.meta.position or 9999, l.meta.title),
+            )
+            result.append((track, sorted_lessons))
+        return result
+
+    def ordered_lessons(self) -> list[ParsedLesson]:
+        """Return all lessons in picker display order as a flat list."""
+        return [l for _, lessons in self.ordered_track_lessons() for l in lessons]
+
+    # ── Tag / difficulty helpers ───────────────────────────────────────────────
 
     def by_tag(self, tag: str) -> list[ParsedLesson]:
         """Return all lessons that include *tag* in their tags list."""
@@ -186,6 +255,30 @@ class LessonLoader:
         )
 
     # ── Private ────────────────────────────────────────────────────────────────
+
+    def _load_index(self) -> tuple[list[TrackEntry], CurriculumOverview | None]:
+        """Load track ordering and optional overview from index.yaml."""
+        if not self.index_path.exists():
+            return [], None
+        try:
+            raw = yaml.safe_load(self.index_path.read_text(encoding="utf-8"))
+        except yaml.YAMLError as exc:
+            raise LessonLoadError(f"YAML parse error in {self.index_path.name}: {exc}") from exc
+        tracks = []
+        for entry in raw.get("tracks", []):
+            tracks.append(TrackEntry(
+                id=entry["id"],
+                title=entry["title"],
+                description=entry.get("description", ""),
+            ))
+        overview: CurriculumOverview | None = None
+        raw_ov = raw.get("overview")
+        if raw_ov:
+            overview = CurriculumOverview(
+                title=raw_ov.get("title", ""),
+                body=raw_ov.get("body", ""),
+            )
+        return tracks, overview
 
     def _parse_file(self, path: Path) -> ParsedLesson:
         """Parse a single lesson file into a ParsedLesson."""

@@ -6,7 +6,7 @@ tags: [chords, barre-chords, minor-chords]
 prerequisites: [a_shape_major]
 module: barre-chords
 position: 5
-summary: Learn the A-shape minor barre — moveable minor chords with the root on string 5.
+summary: A-shape minor completes the four-shape barre system — E major, E minor, A major, and now this. With all four in hand, every major or minor chord in any key is reachable twice on the neck, once from each root string.
 ---
 
 ## The Shape
@@ -92,3 +92,7 @@ With all four shapes — E-shape major, E-shape minor, A-shape major, A-shape mi
 | D minor | fret 10 | fret 5 |
 
 Choosing which position to use comes down to where you are on the neck and what chord comes next — minimise the distance your hand has to travel between chord changes.
+
+## What's Next
+
+You now have all four essential barre shapes. The next lesson puts them together in progressions — applying all four shapes in real chord sequences and developing the fluency to move between E-shape and A-shape positions mid-song. After that, the CAGED overview shows how these shapes fit into the full five-shape system that covers every position on the neck.
