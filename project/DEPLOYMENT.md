@@ -5,7 +5,7 @@
 The repo is committed and structurally ready. Remaining work before making it public:
 
 ### Must-have
-- [ ] Verify package data includes (content/, data/, ui/app.tcss) survive a `uv build` + install cycle — hatchling should include them by default but needs a test
+- [x] Verify package data includes (content/, data/, ui/app.tcss) survive a `uv build` + install cycle — verified 2026-03-12, all 117 content files present
 - [x] Replace placeholder GitHub URL in README (`your-username/guitar-tui`) with the real repo URL once created
 - [x] Add a `LICENSE` file (README references MIT but no LICENSE file exists)
 

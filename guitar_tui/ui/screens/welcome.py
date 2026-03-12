@@ -128,7 +128,9 @@ but never lost interest in the instrument.
 [bold][2] Lessons[/bold]    Curriculum — 11 tracks, 78 lessons, open chords through song analysis.
 [bold][3] Tools[/bold]      Key and scale explorer, chord strip, reference tables.
 [bold][4] Practice[/bold]   Technique exercises and a lick library for looper use.
-[bold][q] Quit[/bold]       [dim]Number keys switch screens at any time.[/dim]\
+
+[dim]Number keys switch screens at any time. Check the footer — keys and actions change per screen.[/dim]
+[dim]This is a terminal app — no zoom button. Use a good terminal emulator and bump the font size until it feels right.[/dim]\
 """
 
 _INFO_TEXT = """\

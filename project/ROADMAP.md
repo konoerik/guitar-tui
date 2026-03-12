@@ -1,6 +1,6 @@
 # Roadmap
 
-## M0 — Project Scaffold ← current
+## M0 — Project Scaffold ✓ Complete
 
 **Goal**: Establish durable project foundation before any feature code.
 
@@ -15,7 +15,7 @@
 
 ---
 
-## M1 — Music Theory Data Layer
+## M1 — Music Theory Data Layer ✓ Complete
 
 **Goal**: Define and populate the core music data: chord voicings and scale patterns in validated YAML.
 
@@ -36,7 +36,7 @@
 
 ---
 
-## M2 — Diagram Engine
+## M2 — Diagram Engine ✓ Complete
 
 **Goal**: Build the music-agnostic rendering engine that converts DiagramSpec objects to Rich renderables.
 
@@ -57,7 +57,7 @@
 
 ---
 
-## M3 — Content Layer
+## M3 — Content Layer ✓ Complete
 
 **Goal**: Parse lesson Markdown files, dispatch diagram blocks to the engine, and expose a clean API to the TUI.
 
@@ -78,7 +78,7 @@
 
 ---
 
-## M4 — TUI Application
+## M4 — TUI Application ✓ Complete
 
 **Goal**: Wire the data, engine, and content layers into a navigable terminal application.
 
@@ -99,7 +99,7 @@
 
 ---
 
-## M5 — Interactive Features
+## M5 — Interactive Features ✓ Partial (full-neck view shipped; interactive highlighting deferred to M8)
 
 **Goal**: Add dynamic fretboard and interactive diagram exploration.
 
@@ -116,7 +116,7 @@
 
 ---
 
-## M6 — Content Expansion
+## M6 — Content Expansion ✓ Complete
 
 **Goal**: Build out a full first set of lesson modules with the Instructor persona.
 
@@ -135,7 +135,13 @@
 
 ---
 
-## M7 — Theory Web
+## M7 — Polish and Release ✓ Complete
+
+See `TASKS.md` for full breakdown. GitHub repo live at github.com/konoerik/guitar-tui.
+
+---
+
+## M8 — Theory Web
 
 **Goal**: Transform the reference area from two independent lookups (chord, scale) into
 an interconnected theory system where selecting any element reveals its musical context.

@@ -64,44 +64,6 @@ SizeWarningModal {
     color: $text;
 }
 
-#settings-card {
-    height: auto;
-    margin-top: 1;
-}
-
-#settings-card > CollapsibleTitle {
-    color: $accent;
-    text-style: bold;
-}
-
-#settings-card > Contents {
-    padding: 1 2;
-}
-
-.setting-row {
-    height: auto;
-    margin-bottom: 1;
-    align: left middle;
-}
-
-.setting-label {
-    width: 20;
-    padding: 1 0;
-    color: $text;
-}
-
-#setting-key, #setting-scale {
-    width: 24;
-}
-
-#setting-bpm {
-    width: 8;
-}
-
-#settings-autosave {
-    margin-top: 1;
-    color: $text-muted;
-}
 
 /* ── Lesson mode ─────────────────────────────────────────────────────── */
 #lessons-frame {
@@ -162,26 +124,6 @@ SizeWarningModal {
 .section-spacer { height: 1; }
 
 /* ── Lesson picker modal ─────────────────────────────────────────────── */
-LessonPickerModal {
-    align: center middle;
-}
-
-#picker-title {
-    width: 60;
-    padding: 1 2;
-    text-style: bold;
-    background: $panel;
-    border-bottom: solid $primary-darken-2;
-}
-
-#lesson-list {
-    width: 60;
-    height: auto;
-    max-height: 24;
-    background: $panel;
-    border: solid $primary-darken-2;
-    border-top: none;
-}
 
 /* ── Lesson content blocks ───────────────────────────────────────────── */
 .lesson-summary {

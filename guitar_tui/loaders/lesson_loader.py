@@ -10,7 +10,7 @@ Missing prerequisite slugs emit warnings only — see lesson_format.md rule 6.
 
 import re
 import warnings
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
 

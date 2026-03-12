@@ -6,12 +6,12 @@ from guitar_tui.ui.screens.lesson import LessonMode
 
 
 async def test_app_mounts_without_crash():
-    async with GuitarTUI().run_test() as pilot:
+    async with GuitarTUI().run_test(size=(120, 40)) as pilot:
         assert isinstance(pilot.app.screen, WelcomeScreen)
 
 
 async def test_mode_switching():
-    async with GuitarTUI().run_test() as pilot:
+    async with GuitarTUI().run_test(size=(120, 40)) as pilot:
         await pilot.press("2")
         assert isinstance(pilot.app.screen, LessonMode)
         await pilot.press("1")
@@ -19,7 +19,7 @@ async def test_mode_switching():
 
 
 async def test_lesson_loads_into_body():
-    async with GuitarTUI().run_test() as pilot:
+    async with GuitarTUI().run_test(size=(120, 40)) as pilot:
         from textual.containers import ScrollableContainer
 
         await pilot.press("2")

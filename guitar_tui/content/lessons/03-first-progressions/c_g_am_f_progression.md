@@ -3,7 +3,7 @@ title: The C–G–Am–F Progression
 slug: c_g_am_f_progression
 difficulty: beginner
 tags: [chords, progressions, major-chords, minor-chords]
-prerequisites: [open_c_chord, open_g_chord, open_am_chord, open_f_chord]
+prerequisites: [open_c_chord, open_g_chord, open_am_chord, f_major_chord]
 module: first-progressions
 position: 2
 summary: Master the four-chord progression behind some of the most recognizable songs in pop music — C, G, Am, and F.

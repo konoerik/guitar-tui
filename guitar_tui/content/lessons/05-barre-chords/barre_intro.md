@@ -3,7 +3,7 @@ title: What Is a Barre Chord?
 slug: barre_intro
 difficulty: intermediate
 tags: [chords, barre-chords, technique]
-prerequisites: [open_f_chord, open_bm_chord]
+prerequisites: [f_major_chord, bm_chord]
 module: barre-chords
 position: 1
 summary: The index-finger barre replaces the nut and makes every chord shape moveable to all 12 keys. This lesson explains the principle, why F major is the hardest starting point, and the focused daily practice that gets results in two weeks.

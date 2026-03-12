@@ -1,6 +1,6 @@
 # UI/UX Redesign — Information Architecture v2
 
-**Status**: Planned — not yet implemented
+**Status**: ✓ Implemented (M6/M7) — card-panel layout with Welcome/Lessons/Tools/Practice screens
 **Owner**: Developer (UI/engine) + Instructor (content prerequisites)
 **Rationale**: Current four-screen structure (Welcome / Lessons / Tools / Practice) reflects
 build order, not use modes. This redesign aligns the app's structure with how it is

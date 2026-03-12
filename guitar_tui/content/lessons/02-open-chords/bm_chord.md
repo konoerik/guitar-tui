@@ -1,8 +1,8 @@
 ---
-title: The Open Bm Chord
-slug: open_bm_chord
+title: The Bm Chord
+slug: bm_chord
 difficulty: beginner
-tags: [chords, open-chords, barre-chords, minor-chords]
+tags: [chords, barre-chords, minor-chords]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 9

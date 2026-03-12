@@ -65,12 +65,18 @@
 - [x] Lesson viewer: TabbedContent with Lesson (live), Practice + References (placeholders)
 - [x] Lesson loads inline via _show_lesson(); no longer pushes LessonScreen
 
-## Upcoming: M5 — Interactive Features
+## Completed: M5 — Interactive Features (partial)
 
-- [ ] Rolling-window fretboard widget
-- [ ] Interactive fretboard (note highlighting)
-- [ ] Scale degree overlay on chord diagrams
-- [ ] Position navigator for scale patterns
+Full rolling-window fretboard shipped as part of the Tools screen Key View.
+Remaining M5 items (interactive note highlighting, scale degree overlay on chord diagrams,
+dedicated position navigator) deferred to M7 Theory Web scope.
+
+- [x] Full-neck scale display with position window (FullNeckWidget)
+- [x] Position navigation via `[` / `]` keys
+- [x] Key and scale selector driving live fretboard update
+- [x] Theme-aware colors (dark/light mode)
+- [ ] Interactive fretboard note highlighting — deferred to M7
+- [ ] Scale degree overlay on chord diagrams — deferred to M7
 
 ## Completed: M6 — Content Expansion (partial)
 
@@ -115,3 +121,35 @@
 - [x] Reference tab: notes on each string — open to 12th fret (all 6 strings)
 - [x] Reference tab: diatonic chords for all 12 major keys (circle-of-fifths order)
 - Deferred: CAGED shapes and common-progressions-by-key (require chord/fretboard diagram rendering — developer scope, post-M6)
+
+## Completed: M7 — Polish and release prep
+
+### UI
+- [x] Remove Header from all screens — border titles provide context; header was duplicative and showed stale lesson titles
+- [x] Licks tab scoped to current lesson's licks (was module-wide); no-lick lessons show pointer to Practice
+- [x] Escape on Lessons screen deselects lesson only — no longer navigates to Welcome unexpectedly
+- [x] Welcome screen redesigned as three cards: intro + nav, hint of the day (32 hints, rotates daily), about/credits
+- [x] Pentatonic variants (Minor Pentatonic, Major Pentatonic, Blues) added to Key View scale selector
+- [x] Blues chord strip shows I7/IV7/V7 (dominant 7th harmony) instead of natural minor chords
+- [x] Terminal size warning: startup modal + debounced resize notification
+- [x] Chord diagram always visible in Key View (no collapse/expand on empty voicing)
+- [x] Lick cross-references: `licks:` frontmatter field + "Practice:" footer line in 11 lessons
+- [x] E minor pentatonic correctly displays at open position (not 12th fret)
+
+### Content
+- [x] US English sweep — ~40 files corrected across all tracks
+- [x] Bm and F lesson titles and slugs corrected (`bm_chord`, `f_major_chord`)
+- [x] Open Chords track title updated to "Open & Essential Chords"
+- [x] Lydian lick key mismatch note added to lesson body
+- [x] Phrygian dominant section reworded (removed out-of-scope harmonic minor reference)
+- [x] App prerequisite statement added to welcome screen
+
+### Infrastructure
+- [x] LICENSE added (MIT, © 2026 Erikton Konomi)
+- [x] GitHub repo created: github.com/konoerik/guitar-tui
+- [x] pyproject.toml: authors field, real GitHub URL in README
+- [x] Package smoke test passed — content/, data/, app.tcss all present in wheel
+- [x] Dead code removed: unused `field` import, `_TRACK_LICK_CATEGORIES`, settings panel CSS, picker modal CSS
+- [x] Bm/F lesson tags corrected (removed `open-chords` tag)
+- [x] Failing app tests fixed (SizeWarningModal was intercepting test pilot)
+- [x] New tests: lick loader (16 tests), theory/keys (24 tests), settings (10 tests) — 230 total

@@ -1,9 +1,9 @@
 ---
-title: The Open F Chord
-slug: open_f_chord
+title: The F Major Chord
+slug: f_major_chord
 difficulty: beginner
-tags: [chords, open-chords, barre-chords, major-chords]
-prerequisites: [reading_chord_diagrams, reading_tab, open_bm_chord]
+tags: [chords, barre-chords, major-chords]
+prerequisites: [reading_chord_diagrams, reading_tab, bm_chord]
 module: open-chords
 position: 10
 summary: Learn the F major chord — the full six-string barre that marks the transition from beginner to intermediate playing.

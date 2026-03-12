@@ -60,8 +60,8 @@ Within a track, lessons are ordered by `position`.
 | ✓ | open_dm_chord | The Open D Minor Chord | beginner | chord |
 | ✓ | open_g_chord | The Open G Major Chord | beginner | chord |
 | ✓ | open_c_chord | The Open C Major Chord | beginner | chord |
-| ✓ | open_bm_chord | The Open Bm Chord | beginner | chord, tab |
-| ✓ | open_f_chord | The Open F Chord | beginner | chord, tab |
+| ✓ | bm_chord | The Bm Chord | beginner | chord, tab |
+| ✓ | f_major_chord | The F Major Chord | beginner | chord, tab |
 
 > **Note**: Bm and F are technically barre chords but are taught early because they
 > appear constantly in beginner progressions. Each lesson shows finger placement,

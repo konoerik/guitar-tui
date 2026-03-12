@@ -13,20 +13,6 @@ _SEP_SENTINEL      = "__sep__"
 
 _DIFF_BADGE = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
 
-# Maps lesson track module → lick categories to surface in the Licks tab.
-# Technique and theory tracks have no direct lick category; the tab will
-# show a "none yet" message for those tracks.
-_TRACK_LICK_CATEGORIES: dict[str, list[str]] = {
-    "first-progressions": ["blues", "pentatonic"],
-    "barre-chords":       ["blues", "pentatonic"],
-    "pentatonic-scale":   ["pentatonic"],
-    "natural-minor":      ["pentatonic", "natural_minor"],
-    "major-scale":        ["pentatonic", "major"],
-    "seventh-chords":     ["blues"],
-    "modes":              ["dorian", "phrygian", "lydian", "mixolydian"],
-    "song-analysis":      ["pentatonic", "blues", "dorian", "phrygian", "lydian", "mixolydian"],
-}
-
 
 class LessonMode(Screen):
     """Two-panel lesson viewer: track tree on the left, three-tab content on the right."""
