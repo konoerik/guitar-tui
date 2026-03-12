@@ -4,6 +4,7 @@ slug: mixolydian_mode
 difficulty: intermediate
 tags: [scales, modes, major-scales]
 prerequisites: [lydian_mode]
+licks: [mixolydian_b7_phrase]
 module: modes
 position: 5
 summary: Learn the Mixolydian mode — the major scale with a flat 7th, the sound of blues-rock, classic rock, and dominant 7th harmony.
@@ -75,14 +76,16 @@ If you see a major chord immediately followed by the major chord one whole step 
 
 ## Mixolydian vs Major Pentatonic
 
-You already know the G major pentatonic (G A B D E — degrees 1 2 3 5 6). G Mixolydian adds two notes: the 4th (C) and the b7 (F). The b7 is the important addition — it converts the clean pentatonic sound into the bluesier dominant sound. When you want more colour than pentatonic but a brighter feel than the minor pentatonic, Mixolydian fills that role perfectly.
+You already know the G major pentatonic (G A B D E — degrees 1 2 3 5 6). G Mixolydian adds two notes: the 4th (C) and the b7 (F). The b7 is the important addition — it converts the clean pentatonic sound into the bluesier dominant sound. When you want more color than pentatonic but a brighter feel than the minor pentatonic, Mixolydian fills that role perfectly.
 
 ## Practice
 
 1. Run the scale from the root on string 4 (fret 5) upward through strings 3, 2, 1, then back down through strings 5 and 6.
-2. Locate both b7 notes (s5 f8 and s2 f6). These are your Mixolydian colour notes — make sure they appear in your phrases.
-3. Improvise over a G7 chord and compare the sound when you use G major pentatonic vs G Mixolydian. Notice how the b7 changes the flavour.
+2. Locate both b7 notes (s5 f8 and s2 f6). These are your Mixolydian color notes — make sure they appear in your phrases.
+3. Improvise over a G7 chord and compare the sound when you use G major pentatonic vs G Mixolydian. Notice how the b7 changes the flavor.
+
+**Mixolydian b7 Phrase** in [4] Practice is a phrase over an A Mixolydian backing that uses the b7 as a melody note — descending through the major pentatonic and landing on the b7 rather than resolving up to the root. That unexpected landing point is the sound of Mixolydian in a single moment.
 
 ## What's Next
 
-With all four modes covered, the final lesson in this track puts them into practice — how to recognise which mode a progression is calling for, how to find the characteristic note quickly in a familiar box, and how to integrate modal colour into real playing. Track 11 then applies all of this theory to complete song analysis.
+With all four modes covered, the final lesson in this track puts them into practice — how to recognize which mode a progression is calling for, how to find the characteristic note quickly in a familiar box, and how to integrate modal color into real playing. Track 11 then applies all of this theory to complete song analysis.

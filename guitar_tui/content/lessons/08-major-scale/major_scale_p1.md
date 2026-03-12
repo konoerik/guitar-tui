@@ -58,7 +58,7 @@ Most strings carry three notes; strings 2 and 1 carry two each (the high-string 
 
 ## The 7th Degree
 
-The major scale's 7th degree (B in C major, at fret 7 on the low E string) is one semitone below the root. In melody, the 7th creates tension that resolves strongly upward to the root — the most powerful resolution in major key music. Practise the pattern: play fret 7 then fret 8 on string 6 (7th → root) and listen to the pull and release.
+The major scale's 7th degree (B in C major, at fret 7 on the low E string) is one semitone below the root. In melody, the 7th creates tension that resolves strongly upward to the root — the most powerful resolution in major key music. Practice the pattern: play fret 7 then fret 8 on string 6 (7th → root) and listen to the pull and release.
 
 ## Fingering
 

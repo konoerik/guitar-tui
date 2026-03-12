@@ -108,11 +108,11 @@ lines:
 
 Notice that **D → Em** is the easiest transition in this set: the index finger barely shifts, and the ring finger lifts. Use that pair to build confidence before tackling the harder transitions.
 
-## Practising the Transitions
+## Practicing the Transitions
 
-Do not practise the full loop until each individual change feels comfortable. Work on pairs:
+Do not practice the full loop until each individual change feels comfortable. Work on pairs:
 
-1. **G → D** — the hardest. All three fingers relocate completely. Practise this pair most.
+1. **G → D** — the hardest. All three fingers relocate completely. Practice this pair most.
 2. **D → Em** — the easiest. A good pair to warm up with.
 3. **Em → C** — moderate. The index finger drops onto the B string while the other two shift up.
 4. **C → G** — satisfying once it clicks. The ring finger anchors on the A string as the others spread.
@@ -122,7 +122,7 @@ Do not practise the full loop until each individual change feels comfortable. Wo
 ## Common Problems
 
 - **Buzzing strings** — finger is not close enough to the fret wire, or is touching an adjacent string. Move the fingertip closer to the wire.
-- **Muted open strings** — a neighbouring finger is leaning into an open string. Arch more at the knuckle.
+- **Muted open strings** — a neighboring finger is leaning into an open string. Arch more at the knuckle.
 - **Slow transitions** — normal at first. Use one-minute changes daily. Speed is a byproduct of repetition, not effort.
 - **Tension in the hand** — squeeze only as hard as needed to stop the buzz. Excess grip causes fatigue and slows transitions.
 

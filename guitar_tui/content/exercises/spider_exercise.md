@@ -53,5 +53,5 @@ across the neck.
 The chromatic warm-up builds single-string strength. The spider builds
 *cross-string coordination* — your picking hand must track the fretting hand
 across strings, and your fretting fingers must stay placed without muting
-neighbouring strings. This is the primary coordination challenge in all
+neighboring strings. This is the primary coordination challenge in all
 scale playing.

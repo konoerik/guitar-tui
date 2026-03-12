@@ -91,7 +91,7 @@ With all four shapes — E-shape major, E-shape minor, A-shape major, A-shape mi
 | D major | fret 10 | fret 5 |
 | D minor | fret 10 | fret 5 |
 
-Choosing which position to use comes down to where you are on the neck and what chord comes next — minimise the distance your hand has to travel between chord changes.
+Choosing which position to use comes down to where you are on the neck and what chord comes next — minimize the distance your hand has to travel between chord changes.
 
 ## What's Next
 

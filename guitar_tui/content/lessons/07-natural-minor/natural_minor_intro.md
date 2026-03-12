@@ -4,6 +4,7 @@ slug: natural_minor_intro
 difficulty: intermediate
 tags: [scales, minor-scales, music-theory]
 prerequisites: [relative_minor, minor_pentatonic_intro]
+licks: [natural_minor_descent]
 module: natural-minor
 position: 1
 summary: Learn the seven-note natural minor scale — the full minor sound that extends the pentatonic skeleton you already know.
@@ -62,6 +63,8 @@ Playing through Position 1 of both scales back to back makes the relationship cl
 1. Learn the shape by playing from the lowest note (string 6, fret 5) to the highest (string 1, fret 8) and back. Three notes per string on most strings.
 2. Compare it to the minor pentatonic in the same region — identify which notes are the same and which are the two additions (B on string 6/1, F on string 2).
 3. Play the scale descending and focus on landing on root notes — A at fret 5 on strings 6, 4, and 1.
+
+**Natural Minor Descent** in [4] Practice is a phrase that moves stepwise down through the upper strings of Position 1, using the 2nd and b6 — the two notes the pentatonic does not have — as connecting steps. It is a direct demonstration of why the full scale produces smoother lines than the pentatonic.
 
 ## What's Next
 

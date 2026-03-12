@@ -46,7 +46,7 @@ In practice: listen for the moment near the end of a section where the music fee
 ## When the Song Modulates
 
 Some songs change key for a section (typically the bridge) and return. Signs of a key change:
-- A sudden shift in the emotional colour
+- A sudden shift in the emotional color
 - Chords appear that did not fit the original key
 - The music lands on a different resting chord
 
@@ -54,7 +54,7 @@ If you notice an unexpected chord, check whether the progression has moved to a 
 
 ## Practical Exercise
 
-For any song you want to analyse:
+For any song you want to analyze:
 
 1. Listen through once without thinking — just feel where the music rests.
 2. Write down the chords in order (even just approximate names).

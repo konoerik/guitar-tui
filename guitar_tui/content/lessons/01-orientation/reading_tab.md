@@ -26,7 +26,7 @@ lines:
         label: "strum"
 ```
 
-Each line is labelled on the left: `e  B  G  D  A  E` from top to bottom.
+Each line is labeled on the left: `e  B  G  D  A  E` from top to bottom.
 
 ## Numbers Mean Frets
 

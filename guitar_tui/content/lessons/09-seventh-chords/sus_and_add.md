@@ -16,7 +16,7 @@ A *suspended* chord replaces the 3rd with either the 2nd or the 4th. The 3rd is 
 - **Sus2** (1 – 2 – 5): Replace the 3rd with the major 2nd.
 - **Sus4** (1 – 4 – 5): Replace the 3rd with the perfect 4th.
 
-Sus chords traditionally *resolve* — the suspended note (2nd or 4th) moves to the 3rd, completing the triad. But in modern guitar music, sus chords are often left unresolved, used as colour alongside their resolved versions.
+Sus chords traditionally *resolve* — the suspended note (2nd or 4th) moves to the 3rd, completing the triad. But in modern guitar music, sus chords are often left unresolved, used as color alongside their resolved versions.
 
 ```diagram
 type: chord
@@ -60,7 +60,7 @@ An *add* chord keeps the major triad intact (1 – 3 – 5) and adds an extra no
 - **Cadd9** (C – E – G – D): C major with D added.
 - **Gadd9** (G – B – D – A): G major with A added.
 
-The result is richer and more colourful than the plain triad, but not suspended — the 3rd remains, so the major quality is fully preserved.
+The result is richer and more colorful than the plain triad, but not suspended — the 3rd remains, so the major quality is fully preserved.
 
 ```diagram
 type: chord
@@ -82,7 +82,7 @@ fingers: [2, 3, null, null, 1, 4]
 |------|---------|----------|-----------|
 | Sus2 | 1 – 2 – 5 | No | Ambiguous, airy |
 | Sus4 | 1 – 4 – 5 | No | Ambiguous, tense |
-| Add9 | 1 – 3 – 5 – 9 | Yes | Rich, colourful |
+| Add9 | 1 – 3 – 5 – 9 | Yes | Rich, colorful |
 | Triad | 1 – 3 – 5 | Yes | Plain, clear |
 
 The 3rd is the deciding factor. Sus = no 3rd (ambiguous). Add = 3rd present (flavour added without ambiguity).
@@ -91,10 +91,10 @@ The 3rd is the deciding factor. Sus = no 3rd (ambiguous). Add = 3rd present (fla
 
 **Sus4 → major resolution**: Esus4 → E or Dsus4 → D. The 4th resolves down to the 3rd — a satisfying and very common cadential gesture. Many songs end phrases this way.
 
-**Sus2 as colour**: Dsus2 and Asus2 work as substitutes for D and A in bright, open-sounding progressions. They share all notes except the 3rd, so the transition is seamless.
+**Sus2 as color**: Dsus2 and Asus2 work as substitutes for D and A in bright, open-sounding progressions. They share all notes except the 3rd, so the transition is seamless.
 
 **Cadd9 and Gadd9**: These two chords are staples of acoustic and folk guitar. Cadd9 is often used instead of plain C because it is easier to finger and sounds richer. Gadd9 (often notated G with the pinky added) is nearly identical to G major except the A note on the B string adds shimmer.
 
 ## What's Next
 
-Sus and add chords close the seventh chord track with the most practically useful extensions in acoustic and pop playing. Track 10 shifts from chords to scales — specifically modes, the seven scale flavours derived from the major scale that add the modal colour heard in rock, blues, jazz, and film music.
+Sus and add chords close the seventh chord track with the most practically useful extensions in acoustic and pop playing. Track 10 shifts from chords to scales — specifically modes, the seven scale flavors derived from the major scale that add the modal color heard in rock, blues, jazz, and film music.

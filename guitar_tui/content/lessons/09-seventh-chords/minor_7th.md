@@ -6,7 +6,7 @@ tags: [chords, seventh-chords, music-theory]
 prerequisites: [major_7th]
 module: seventh-chords
 position: 3
-summary: Learn open minor 7th voicings — the smooth, cool colour of the ii and vi chords in jazz and pop.
+summary: Learn open minor 7th voicings — the smooth, cool color of the ii and vi chords in jazz and pop.
 ---
 
 ## What Is a Minor 7th Chord?
@@ -71,7 +71,7 @@ In a major key, three of the seven diatonic chords are minor 7ths:
 
 The ii m7 → V7 → Imaj7 progression (e.g., Am7 → D7 → Gmaj7 in G major) is the most important harmonic motion in jazz. The ii m7 substitutes for IV, creates smooth voice-leading into the V7, and the V7 resolves to Imaj7.
 
-## Minor 7th as Colour
+## Minor 7th as Color
 
 Plain minor chords can feel stark or sad. Minor 7th chords soften that edge — they are melancholy without being harsh, smooth rather than heavy. Swapping Am for Am7, or Em for Em7, in a pop or folk progression instantly adds a jazz-influenced warmth.
 

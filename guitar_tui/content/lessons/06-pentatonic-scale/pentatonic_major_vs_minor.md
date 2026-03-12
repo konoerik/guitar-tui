@@ -71,7 +71,7 @@ The rule of thumb:
 - **Minor chord / minor progression** → minor pentatonic leads to resolution
 - **Major chord / major progression** → major pentatonic leads to resolution
 - **Over the I–IV–V in a major key** → major pentatonic fits naturally without any "outside" tension
-- **12-bar blues** → the minor pentatonic is traditionally favoured even over major chords, because the blues vocabulary embraces that clash — the b3 over a major chord creates the signature blues tension
+- **12-bar blues** → the minor pentatonic is traditionally favored even over major chords, because the blues vocabulary embraces that clash — the b3 over a major chord creates the signature blues tension
 
 ## The Mixing Trick
 
@@ -88,4 +88,4 @@ A practical test: play a phrase and land on the root note. If landing on A sound
 
 ## What's Next
 
-The major-vs-minor distinction gives you a two-colour palette. The final lesson in this track adds one more note to that palette — the blue note (b5), which turns the minor pentatonic into the blues scale and is the single most characteristic addition in all of blues vocabulary.
+The major-vs-minor distinction gives you a two-color palette. The final lesson in this track adds one more note to that palette — the blue note (b5), which turns the minor pentatonic into the blues scale and is the single most characteristic addition in all of blues vocabulary.

@@ -1,5 +1,5 @@
 ---
-title: Recognising Modal Progressions
+title: Recognizing Modal Progressions
 slug: modal_progressions
 difficulty: advanced
 tags: [song-analysis, modes, chord-progressions]
@@ -13,7 +13,7 @@ summary: Learn to identify when a progression is modal rather than tonal, and wh
 
 Tonal harmony resolves tension through the V → I cadence. Everything moves toward the tonic, and the V chord creates strong directional pull. Most pop, rock, country, and blues uses tonal harmony.
 
-Modal harmony *doesn't* use this V → I resolution. Instead, it establishes the tonal centre through repetition and emphasis — by staying on a chord, by repeating a two-chord loop, or by avoiding the V chord cadence entirely. The music is centred but not driven.
+Modal harmony *doesn't* use this V → I resolution. Instead, it establishes the tonal center through repetition and emphasis — by staying on a chord, by repeating a two-chord loop, or by avoiding the V chord cadence entirely. The music is centered but not driven.
 
 This distinction matters for analysis: in a modal progression, there is no "V" in the functional sense. The Roman numerals describe which scale degrees the chords sit on, but they do not imply the same functional tensions as in tonal harmony.
 
@@ -65,7 +65,7 @@ If you see a progression that matches one of these patterns and uses the indicat
 
 ## When It Is Ambiguous
 
-Many songs sit between tonal and modal. *Hotel California* is in B minor but uses a long chord loop that avoids a conventional V – i resolution — it feels modal but is often analysed as minor key. The answer is: both analyses are valid, and the scale choice (B natural minor) works either way.
+Many songs sit between tonal and modal. *Hotel California* is in B minor but uses a long chord loop that avoids a conventional V – i resolution — it feels modal but is often analyzed as minor key. The answer is: both analyses are valid, and the scale choice (B natural minor) works either way.
 
 When ambiguous, prioritise what sounds right over what is theoretically clean. The goal of song analysis is to find the tools that let you play well over the music — not to assign a single correct label.
 
@@ -82,4 +82,4 @@ When a progression loops on a major chord:
 
 ## What's Next
 
-Modal analysis extends the workflow to the full range of harmonic colour. The next lesson builds the ear side of the skill: interval recognition, chord quality identification, and tonal centre detection by sound alone — the ear training that makes all the theory you have learned audible rather than just visible.
+Modal analysis extends the workflow to the full range of harmonic color. The next lesson builds the ear side of the skill: interval recognition, chord quality identification, and tonal center detection by sound alone — the ear training that makes all the theory you have learned audible rather than just visible.

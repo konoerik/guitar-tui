@@ -68,4 +68,4 @@ The G string starts at fret 4 (index), which is one fret lower than the other st
 
 ## What's Next
 
-All five major scale positions are now in place. The next lesson maps the seven diatonic chords of C major — one chord built on each scale degree — completing the harmonic framework needed to understand and analyse any major key song.
+All five major scale positions are now in place. The next lesson maps the seven diatonic chords of C major — one chord built on each scale degree — completing the harmonic framework needed to understand and analyze any major key song.

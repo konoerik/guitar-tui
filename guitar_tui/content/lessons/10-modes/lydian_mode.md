@@ -4,6 +4,7 @@ slug: lydian_mode
 difficulty: intermediate
 tags: [scales, modes, major-scales]
 prerequisites: [phrygian_mode]
+licks: [lydian_raised_fourth]
 module: modes
 position: 4
 summary: Learn the Lydian mode — the raised 4th that makes it sound elevated, dreamy, and otherworldly compared to the major scale.
@@ -18,7 +19,7 @@ Lydian is built on the 4th degree of the major scale. It is the only mode bright
 | F Major | 1 2 3 4 5 6 7 | F G A Bb C D E |
 | F Lydian | 1 2 3 **#4** 5 6 7 | F G A **B** C D E |
 
-That single raised note — B natural instead of Bb — eliminates the perfect 4th. The perfect 4th has a slightly subdued quality; removing it in favour of the raised 4th (#4, also called the augmented 4th or tritone above the root) creates an openness, a floating sensation that gives Lydian its otherworldly character.
+That single raised note — B natural instead of Bb — eliminates the perfect 4th. The perfect 4th has a slightly subdued quality; removing it in favor of the raised 4th (#4, also called the augmented 4th or tritone above the root) creates an openness, a floating sensation that gives Lydian its otherworldly character.
 
 ## The Position
 
@@ -52,7 +53,7 @@ The #4 (B natural, fret 14 on string 5) appears once in the position. This is th
 
 ## The Sound
 
-The #4 creates a tritone above the root. In the major scale context, this interval was traditionally called *diabolus in musica* (the devil in music) due to its instability. In Lydian, it is not treated as a dissonance to resolve but as a stable and beautiful colour — the tension is converted into luminosity rather than released conventionally.
+The #4 creates a tritone above the root. In the major scale context, this interval was traditionally called *diabolus in musica* (the devil in music) due to its instability. In Lydian, it is not treated as a dissonance to resolve but as a stable and beautiful color — the tension is converted into luminosity rather than released conventionally.
 
 Lydian is heard in:
 - Joe Satriani's *Flying in a Blue Dream* — pure Lydian guitar
@@ -78,7 +79,9 @@ Lydian works well as a substitution over a major chord when you want to add spar
 
 1. Run the scale from string 6 fret 13 (root) to string 1 fret 13 (root) and back. Note that string 1 and string 6 both have the root at fret 13.
 2. Locate the #4 (fret 14 on string 5). Play: root (s6 f13) – 3rd (s5 f12) – #4 (s5 f14). Hold the #4 and listen to it shimmer.
-3. Improvise over an F major drone and emphasise the B natural (#4) as a melody note rather than a passing note.
+3. Improvise over an F major drone and emphasize the B natural (#4) as a melody note rather than a passing note.
+
+**Lydian Raised Fourth Run** in [4] Practice centers on the #4 as the peak of a phrase over a G Lydian backing — ascending through the scale to the raised 4th and sitting there before resolving. It is a direct demonstration of how to feature the characteristic note without it sounding like a mistake. Note: the lick is written in G Lydian (root at fret 15 on string 6), two frets up from the F Lydian position shown above. The shape is identical — shift it down two frets to play it in F.
 
 ## What's Next
 

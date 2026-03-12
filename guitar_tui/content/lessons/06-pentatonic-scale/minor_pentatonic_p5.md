@@ -50,7 +50,7 @@ Alternatively, some players use the index for fret 2 across all strings, with th
 ## Practice Approach
 
 1. **Land on the low E root first** (fret 5). It is the same fret as the lowest root of Position 1, so you already know this note well.
-2. **Notice the three root notes** — they give you multiple resolution points. Practise phrases that end on each one in turn.
+2. **Notice the three root notes** — they give you multiple resolution points. Practice phrases that end on each one in turn.
 3. **Connect back to Position 1** — play the high e string in Position 5 (frets 3 and 5) and continue immediately into Position 1 (frets 5 and 8). The fret 5 root on the high e is shared between the two positions. This is the seam that makes the pentatonic system a closed loop rather than a linear run.
 
 ## Connecting All Five Positions

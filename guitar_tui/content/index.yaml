@@ -8,9 +8,9 @@ overview:
   body: |-
     This curriculum is built on a single pedagogical principle: **play first, understand
     second.** The first three tracks get you making real music immediately — chord shapes,
-    strumming progressions, songs you recognise — without demanding that you understand
+    strumming progressions, songs you recognize — without demanding that you understand
     *why* it works. That understanding arrives in Track 4, once your hands already know
-    the shapes and your ear has started to recognise the sounds.
+    the shapes and your ear has started to recognize the sounds.
 
     **How the tracks are structured**
 
@@ -40,7 +40,7 @@ overview:
 
     The scale tracks (6–8) reward patience. Knowing a scale means navigating it
     freely, starting phrases on the root, and *hearing* its characteristic intervals —
-    not just memorising the dot pattern. Spend time with each position before moving on.
+    not just memorizing the dot pattern. Spend time with each position before moving on.
 
     There is no wrong pace. The curriculum is here whenever you return to it.
 
@@ -54,13 +54,14 @@ tracks:
       It takes less than an hour and is the only track with no prerequisites.
 
   - id: open-chords
-    title: "Open Chords"
+    title: "Open & Essential Chords"
     description: |-
-      The first playable milestone. Ten chord shapes — the complete set of essential
-      open-position major and minor chords — give you access to thousands of songs.
-      This is where you start making music rather than studying it. The theory behind
-      why these chords work together comes later, in Track 4; here you just learn the
-      shapes and get them under your fingers.
+      The first playable milestone. Ten chord shapes give you access to thousands of
+      songs. The first eight are open-position chords — shapes that use open strings
+      and sit near the nut. The final two (Bm and F) are introduced early because they
+      appear constantly in beginner keys; both require a barre and are harder than the
+      open shapes. Full barre technique is covered properly in Track 5 — these two
+      chords are here because you will need them before you get there.
 
   - id: first-progressions
     title: "First Progressions"
@@ -124,7 +125,7 @@ tracks:
   - id: seventh-chords
     title: "Seventh Chords"
     description: |-
-      The next layer of harmonic colour, placed here because you now have the theory
+      The next layer of harmonic color, placed here because you now have the theory
       (from Track 4) to understand what a 7th does, and the chord vocabulary (from
       Tracks 2 and 5) to put the voicings straight into use. Dominant 7ths define the
       blues sound; major 7ths appear throughout jazz-influenced pop; minor 7ths add
@@ -149,7 +150,7 @@ tracks:
       The capstone track. Everything built across Tracks 4–10 comes together as an
       analytical toolkit you can apply to any unfamiliar song: identify the key,
       determine major or minor, label the chord functions with Roman numerals, detect
-      modal colour, and select the right scale. Three complete worked analyses — a
+      modal color, and select the right scale. Three complete worked analyses — a
       major-key pop song, a minor-key rock song, and a modal progression — demonstrate
       the full workflow. After this track you have a method for learning from any
       music you encounter, which is the point at which theory becomes a permanent

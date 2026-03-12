@@ -2,12 +2,14 @@
 name = "guitar-tui"
 version = "0.1.0"
 description = "A TUI application for guitar music theory"
+authors = [{name = "Erikton Konomi"}]
 requires-python = ">=3.12"
 dependencies = [
     "textual>=1.0",
     "pyyaml>=6.0",
     "python-frontmatter>=1.1",
     "pydantic>=2.0",
+    "platformdirs>=4.0",
 ]
 
 [project.scripts]

@@ -34,6 +34,9 @@ def _position_shift(lo: int, hi: int) -> int:
         shift -= 12
     while lo + shift < 0:
         shift += 12
+    # Prefer the lowest valid placement on the neck.
+    while lo + shift - 12 >= 0:
+        shift -= 12
     return shift
 
 

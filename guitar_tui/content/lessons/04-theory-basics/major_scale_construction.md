@@ -15,7 +15,7 @@ The major scale is defined by a fixed sequence of whole steps (W = 2 semitones) 
 
 **W – W – H – W – W – W – H**
 
-This formula always produces the same *type* of scale — the characteristic bright, settled sound most people recognise as "do-re-mi." Apply it starting from any note and you get that key's major scale.
+This formula always produces the same *type* of scale — the characteristic bright, settled sound most people recognize as "do-re-mi." Apply it starting from any note and you get that key's major scale.
 
 ## Building C Major
 
@@ -90,7 +90,7 @@ The major scale is the reference point for almost all Western music theory:
 
 Once the major scale formula is in your ear and hands, every other scale and chord becomes a variation or derivation from this single pattern.
 
-## Memorising Keys
+## Memorizing Keys
 
 Start by learning C major (no sharps or flats — just the natural notes). Then learn G major (one sharp: F#) and F major (one flat: Bb). These three keys cover the most common guitar progressions. From there, each new key adds one sharp or flat to the previous key — a pattern described by the circle of fifths.
 

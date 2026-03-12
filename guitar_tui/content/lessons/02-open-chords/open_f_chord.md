@@ -18,7 +18,7 @@ F major is the most physically demanding chord in this track. The index finger m
 The 1st fret full barre is the foundation. Lay your index finger flat across all six strings at the 1st fret and strum. Every string must ring. Common adjustments:
 
 - **Roll the index finger slightly toward the nut** — the bony edge of the finger (facing toward the headstock) frets more cleanly than the soft pad.
-- **Keep the thumb behind the neck, centred** — not over the top.
+- **Keep the thumb behind the neck, centered** — not over the top.
 - **Press from the base knuckle, not the fingertip** — the entire length of the index must be active.
 
 ## Finger Placement
@@ -69,7 +69,7 @@ lines:
         label: "e"
 ```
 
-The low E and high e (both fret 1) depend entirely on the barre. If either buzzes, return to practising the barre alone before adding the other fingers.
+The low E and high e (both fret 1) depend entirely on the barre. If either buzzes, return to practicing the barre alone before adding the other fingers.
 
 ## Why the 1st Fret Is Hard
 
@@ -79,7 +79,7 @@ String tension is highest near the nut. The further up the neck you go, the easi
 
 - **Low E buzz** — the barre is not covering the outer strings firmly. Roll the index slightly toward the nut edge and increase pressure at the base knuckle.
 - **B string dead** — the barre often collapses at the B string because that is where most fingers have a natural joint crease. Adjust the index finger position until the crease moves off the B string.
-- **Hand fatigue** — this is the most physically demanding chord in the beginner set. Take breaks. Strength builds over days and weeks, not in a single session. Practise in short bursts rather than pushing through pain.
+- **Hand fatigue** — this is the most physically demanding chord in the beginner set. Take breaks. Strength builds over days and weeks, not in a single session. Practice in short bursts rather than pushing through pain.
 
 ## What's Next
 

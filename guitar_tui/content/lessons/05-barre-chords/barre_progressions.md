@@ -6,10 +6,10 @@ tags: [chords, barre-chords, chord-progressions]
 prerequisites: [a_shape_minor]
 module: barre-chords
 position: 6
-summary: Apply barre chords in common progressions — minimise hand movement and develop fluid chord changes.
+summary: Apply barre chords in common progressions — minimize hand movement and develop fluid chord changes.
 ---
 
-## The Principle: Minimise Movement
+## The Principle: Minimize Movement
 
 With barre chords, chord changes can happen on the same string set or across string sets. The most efficient approach: identify whether two chords share a root string, and choose the voicing that requires the least hand travel.
 
@@ -127,4 +127,4 @@ Barre chord changes improve through deliberate repetition of specific transition
 
 ## What's Next
 
-Fluent barre chord transitions are the foundation of playing in any key. The final lesson in this track gives you the broader picture: the CAGED system, which names and organises all five moveable chord shapes and explains how barre chord positions connect to scale positions — a relationship that pays dividends when you begin soloing in Track 06.
+Fluent barre chord transitions are the foundation of playing in any key. The final lesson in this track gives you the broader picture: the CAGED system, which names and organizes all five moveable chord shapes and explains how barre chord positions connect to scale positions — a relationship that pays dividends when you begin soloing in Track 06.

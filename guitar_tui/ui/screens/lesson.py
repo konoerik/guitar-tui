@@ -1,170 +1,272 @@
-"""LessonMode — full-screen lesson viewer with modal picker."""
+"""LessonMode — card-panel lesson viewer with inline track tree."""
 
 from textual.app import ComposeResult
-from textual.containers import ScrollableContainer
-from textual.screen import ModalScreen, Screen
-from textual.widgets import Footer, Header, Label, ListItem, ListView, Markdown, Static
+from textual.containers import Horizontal, ScrollableContainer, Vertical, VerticalScroll
+from textual.screen import Screen
+from textual.widgets import Footer, Markdown, Static, TabbedContent, TabPane, Tree
 
 from guitar_tui.loaders.lesson_loader import DiagramBlock, ParsedLesson, TextBlock
+from guitar_tui.loaders.lick_loader import ParsedLick
 
+_OVERVIEW_SENTINEL = "__overview__"
+_SEP_SENTINEL      = "__sep__"
 
-class _LessonItem(ListItem):
-    """A ListItem that carries a lesson slug."""
+_DIFF_BADGE = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
 
-    def __init__(self, label: Label, slug: str) -> None:
-        super().__init__(label)
-        self.slug = slug
-
-
-class LessonPickerModal(ModalScreen[str | None]):
-    """Overlay modal for picking a lesson from the full lesson list.
-
-    Pass ``current_slug`` to pre-scroll the list to the open lesson.
-    """
-
-    BINDINGS = [("escape", "dismiss(None)", "Close")]
-
-    def __init__(self, current_slug: str | None = None) -> None:
-        super().__init__()
-        self.current_slug = current_slug
-
-    def compose(self) -> ComposeResult:
-        yield Label("Select a Lesson", id="picker-title")
-        yield ListView(id="lesson-list")
-
-    def on_mount(self) -> None:
-        lv = self.query_one("#lesson-list", ListView)
-        badges = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
-
-        lv_index = 0
-        slug_to_lv_index: dict[str, int] = {}
-
-        for track, lessons in self.app.lesson_loader.ordered_track_lessons():
-            lv.append(ListItem(Label(f"[bold]{track.title}[/bold]"), disabled=True))
-            lv_index += 1
-            for lesson in lessons:
-                badge = badges.get(lesson.meta.difficulty, "○")
-                item = _LessonItem(Label(f"  {badge} {lesson.meta.title}"), slug=lesson.meta.slug)
-                lv.append(item)
-                slug_to_lv_index[lesson.meta.slug] = lv_index
-                lv_index += 1
-
-        if self.current_slug and self.current_slug in slug_to_lv_index:
-            lv.index = slug_to_lv_index[self.current_slug]
-
-    def on_list_view_selected(self, event: ListView.Selected) -> None:
-        if isinstance(event.item, _LessonItem):
-            self.dismiss(event.item.slug)
+# Maps lesson track module → lick categories to surface in the Licks tab.
+# Technique and theory tracks have no direct lick category; the tab will
+# show a "none yet" message for those tracks.
+_TRACK_LICK_CATEGORIES: dict[str, list[str]] = {
+    "first-progressions": ["blues", "pentatonic"],
+    "barre-chords":       ["blues", "pentatonic"],
+    "pentatonic-scale":   ["pentatonic"],
+    "natural-minor":      ["pentatonic", "natural_minor"],
+    "major-scale":        ["pentatonic", "major"],
+    "seventh-chords":     ["blues"],
+    "modes":              ["dorian", "phrygian", "lydian", "mixolydian"],
+    "song-analysis":      ["pentatonic", "blues", "dorian", "phrygian", "lydian", "mixolydian"],
+}
 
 
 class LessonMode(Screen):
-    """Full-screen lesson viewer. Press / to open lesson picker."""
+    """Two-panel lesson viewer: track tree on the left, three-tab content on the right."""
 
     BINDINGS = [
-        ("slash", "open_picker", "Open Lesson"),
-        ("[", "prev_lesson", "Previous"),
-        ("]", "next_lesson", "Next"),
         ("escape", "back", "Back"),
     ]
 
     _current_slug: str | None = None
 
     def compose(self) -> ComposeResult:
-        yield Header()
-        yield ScrollableContainer(id="lesson-body")
+        with Horizontal(id="lessons-frame"):
+            with VerticalScroll(id="lessons-nav"):
+                yield Tree("Tracks", id="lessons-tree")
+            with Vertical(id="lessons-content"):
+                with TabbedContent(id="lesson-tabs"):
+                    with TabPane("Lesson", id="tab-lesson"):
+                        yield ScrollableContainer(id="lesson-body")
+                    with TabPane("Exercises", id="tab-drills"):
+                        yield ScrollableContainer(id="drills-body")
+                    with TabPane("Licks", id="tab-licks"):
+                        yield ScrollableContainer(id="licks-body")
         yield Footer()
 
     def on_mount(self) -> None:
+        self._build_tree()
+        self.query_one("#lessons-nav").border_title = "Tracks"
+        self.query_one("#lessons-content").border_title = "Lessons"
         self._show_overview()
+
+    # ── Tree ──────────────────────────────────────────────────────────────────
+
+    def _build_tree(self) -> None:
+        tree = self.query_one("#lessons-tree", Tree)
+        tree.show_root = False
+        tree.root.add_leaf("Introduction", data=_OVERVIEW_SENTINEL)
+        tree.root.add_leaf("", data=_SEP_SENTINEL)
+        badges = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
+        for i, (track, lessons) in enumerate(
+            self.app.lesson_loader.ordered_track_lessons(), start=1
+        ):
+            branch = tree.root.add(f"{i:02d}. {track.title}", expand=False)
+            for lesson in lessons:
+                badge = badges.get(lesson.meta.difficulty, "○")
+                branch.add_leaf(f"{badge} {lesson.meta.title}", data=lesson.meta.slug)
+
+    async def on_tree_node_selected(self, event: Tree.NodeSelected) -> None:
+        data = event.node.data
+        if data == _OVERVIEW_SENTINEL:
+            self._current_slug = None
+            self.query_one("#lessons-content").border_title = "Lessons"
+            self._show_overview()
+        elif data is not None and data != _SEP_SENTINEL:
+            lesson = self.app.lesson_loader.lessons.get(data)
+            if lesson:
+                await self._load_lesson(lesson)
+
+    # ── Navigation ────────────────────────────────────────────────────────────
 
     def action_back(self) -> None:
         if self._current_slug is not None:
             self._current_slug = None
-            self.app.sub_title = "Music Theory at Your Fingertips"
+            self.query_one("#lessons-content").border_title = "Lessons"
             self._show_overview()
-        else:
-            self.app.action_goto_welcome()
 
-    async def action_open_picker(self) -> None:
-        await self.app.push_screen(
-            LessonPickerModal(current_slug=self._current_slug),
-            self._on_lesson_picked,
-        )
-
-    async def action_prev_lesson(self) -> None:
-        lesson = self._adjacent_lesson(offset=-1)
-        if lesson is not None:
-            await self._load_lesson(lesson)
-
-    async def action_next_lesson(self) -> None:
-        lesson = self._adjacent_lesson(offset=1)
-        if lesson is not None:
-            await self._load_lesson(lesson)
-
-    def _adjacent_lesson(self, offset: int) -> ParsedLesson | None:
-        """Return the lesson ``offset`` steps from the current one, or None."""
-        if self._current_slug is None:
-            return None
-        ordered = self.app.lesson_loader.ordered_lessons()
-        slugs = [l.meta.slug for l in ordered]
-        try:
-            idx = slugs.index(self._current_slug)
-        except ValueError:
-            return None
-        target = idx + offset
-        if 0 <= target < len(ordered):
-            return ordered[target]
-        return None
-
-    async def _on_lesson_picked(self, slug: str | None) -> None:
-        if slug is None:
-            return
-        lesson = self.app.lesson_loader.lessons[slug]
-        await self._load_lesson(lesson)
+    # ── Overview (no lesson selected) ─────────────────────────────────────────
 
     def _show_overview(self) -> None:
-        body = self.query_one("#lesson-body", ScrollableContainer)
-        body.remove_children()
-        body.mount(Markdown(self._build_overview_md(), classes="lesson-overview"))
-
-    def _build_overview_md(self) -> str:
         loader = self.app.lesson_loader
-        lines: list[str] = []
+        total = sum(len(ls) for _, ls in loader.ordered_track_lessons())
+        track_count = len(loader.tracks)
+        intro = (
+            f"# Introduction\n\n"
+            f"{track_count} tracks · {total} lessons · beginner → advanced\n\n"
+            "---\n\n"
+        )
         if loader.overview:
-            lines.append(f"# {loader.overview.title}\n")
-            lines.append(f"{loader.overview.body}\n")
-            lines.append("---\n")
-        lines.append("Press **/** to open a lesson.\n")
-        for i, (track, lessons) in enumerate(
-            loader.ordered_track_lessons(), start=1
-        ):
-            count = len(lessons)
-            noun = "lesson" if count == 1 else "lessons"
-            lines.append("---\n")
-            lines.append(f"### {i}. {track.title}  ·  *{count} {noun}*\n")
-            if track.description:
-                lines.append(f"{track.description}\n")
-        return "\n".join(lines)
+            intro += f"{loader.overview.body}\n\n---\n\n"
+        intro += "Expand a track on the left to see its lessons, then select one to begin."
+
+        lesson_body = self.query_one("#lesson-body", ScrollableContainer)
+        lesson_body.remove_children()
+        lesson_body.mount(Markdown(intro, classes="lesson-overview"))
+
+        drills_body = self.query_one("#drills-body", ScrollableContainer)
+        drills_body.remove_children()
+        drills_body.mount(Markdown(
+            "*Select a lesson to see related exercises.*",
+            classes="lesson-overview",
+        ))
+
+        licks_body = self.query_one("#licks-body", ScrollableContainer)
+        licks_body.remove_children()
+        licks_body.mount(Markdown(
+            "*Select a lesson to see related licks.*",
+            classes="lesson-overview",
+        ))
+
+    # ── Lesson loading ────────────────────────────────────────────────────────
 
     async def _load_lesson(self, lesson: ParsedLesson) -> None:
         self._current_slug = lesson.meta.slug
+        self.query_one("#lessons-content").border_title = lesson.meta.title
+
+        tabs = self.query_one("#lesson-tabs", TabbedContent)
+        # Orientation is informational — no drills or licks apply yet.
+        # Future: replace this with per-exercise prerequisite tags (option C).
+        practice_tabs_visible = lesson.meta.module != "orientation"
+        if practice_tabs_visible:
+            tabs.show_tab("tab-drills")
+            tabs.show_tab("tab-licks")
+        else:
+            tabs.hide_tab("tab-drills")
+            tabs.hide_tab("tab-licks")
+
+        await self._render_lesson_tab(lesson)
+        if practice_tabs_visible:
+            await self._render_drills_tab(lesson)
+            await self._render_licks_tab(lesson)
+
+        # Switch to Lesson tab and scroll to top
+        tabs.active = "tab-lesson"
+        self.query_one("#lesson-body", ScrollableContainer).scroll_home(animate=False)
+
+    async def _render_lesson_tab(self, lesson: ParsedLesson) -> None:
         body = self.query_one("#lesson-body", ScrollableContainer)
         await body.remove_children()
+        widgets = []
         if lesson.meta.summary:
-            await body.mount(Static(lesson.meta.summary, classes="lesson-summary"))
+            widgets.append(Static(lesson.meta.summary, classes="lesson-summary"))
         for block in lesson.body:
             if isinstance(block, TextBlock):
-                await body.mount(Markdown(block.content, classes="lesson-text"))
+                widgets.append(Markdown(block.content, classes="lesson-text"))
             elif isinstance(block, DiagramBlock):
-                await body.mount(Static(block.rendered, classes="lesson-diagram"))
+                widgets.append(Static(block.rendered, classes="lesson-diagram"))
         if lesson.meta.see_also:
-            titles: list[str] = []
-            for slug in lesson.meta.see_also:
-                ref_lesson = self.app.lesson_loader.lessons.get(slug)
-                if ref_lesson:
-                    titles.append(ref_lesson.meta.title)
+            titles = [
+                self.app.lesson_loader.lessons[s].meta.title
+                for s in lesson.meta.see_also
+                if s in self.app.lesson_loader.lessons
+            ]
             if titles:
-                see_also_md = "---\n\n**See Also:** " + ", ".join(titles)
-                await body.mount(Markdown(see_also_md, classes="lesson-text"))
+                widgets.append(Markdown(
+                    "---\n\n**See Also:** " + ", ".join(titles),
+                    classes="lesson-text",
+                ))
+        if lesson.meta.licks:
+            lick_titles = [
+                self.app.lick_loader.licks[s].meta.title
+                for s in lesson.meta.licks
+                if s in self.app.lick_loader.licks
+            ]
+            if lick_titles:
+                widgets.append(Markdown(
+                    "**Practice:** " + "  ·  ".join(lick_titles) + "  — see **[4] Practice**",
+                    classes="lesson-text",
+                ))
+        if widgets:
+            await body.mount(*widgets)
+
+    async def _render_drills_tab(self, lesson: ParsedLesson) -> None:
+        body = self.query_one("#drills-body", ScrollableContainer)
+        await body.remove_children()
+
+        module = lesson.meta.module or ""
+        all_exercises = list(self.app.exercise_loader.lessons.values())
+
+        # Track-specific exercises first, then technique (universal warmups)
+        specific  = [e for e in all_exercises if e.meta.module == module and module]
+        technique = [e for e in all_exercises if e.meta.module == "technique"]
+        exercises = sorted(specific, key=lambda e: (e.meta.position if e.meta.position is not None else 9999, e.meta.title)) + \
+                    sorted(technique, key=lambda e: (e.meta.position if e.meta.position is not None else 9999, e.meta.title))
+
+        if not exercises:
+            await body.mount(Markdown(
+                "*No exercises for this track yet.*",
+                classes="lesson-overview",
+            ))
+            return
+
+        widgets = []
+        for ex in exercises:
+            widgets.append(Static(f"[bold]{ex.meta.title}[/bold]", classes="section-title"))
+            if ex.meta.summary:
+                widgets.append(Static(ex.meta.summary, classes="lesson-summary"))
+            for block in ex.body:
+                if isinstance(block, TextBlock):
+                    widgets.append(Markdown(block.content, classes="lesson-text"))
+                elif isinstance(block, DiagramBlock):
+                    widgets.append(Static(block.rendered, classes="lesson-diagram"))
+            widgets.append(Static("", classes="section-spacer"))
+
+        await body.mount(*widgets)
         body.scroll_home(animate=False)
-        self.app.sub_title = lesson.meta.title
+
+    async def _render_licks_tab(self, lesson: ParsedLesson) -> None:
+        body = self.query_one("#licks-body", ScrollableContainer)
+        await body.remove_children()
+
+        lick_slugs = lesson.meta.licks
+        licks = [
+            self.app.lick_loader.licks[s]
+            for s in lick_slugs
+            if s in self.app.lick_loader.licks
+        ]
+
+        if not licks:
+            await body.mount(Markdown(
+                "*No licks for this lesson. "
+                "Browse the full library in* **[4] Practice**.",
+                classes="lesson-overview",
+            ))
+            return
+
+        widgets = []
+        for lick in licks:
+            widgets.extend(self._lick_widgets(lick))
+            widgets.append(Static("", classes="section-spacer"))
+
+        await body.mount(*widgets)
+        body.scroll_home(animate=False)
+
+    @staticmethod
+    def _lick_widgets(lick: ParsedLick) -> list:
+        badge   = _DIFF_BADGE.get(lick.meta.difficulty, "○")
+        backing = "  ·  ".join(lick.meta.backing_chords)
+        prog    = f"  ({lick.meta.backing_progression})" if lick.meta.backing_progression else ""
+        tags    = "  ".join(f"[{t}]" for t in lick.meta.tags)
+        header  = (
+            f"{badge}  {lick.meta.title}\n"
+            f"Key: {lick.meta.key}   Scale: {lick.meta.scale.replace('_', ' ')}\n"
+            f"Looper: {backing}{prog}\n"
+            f"Style: {tags}"
+        )
+        widgets = [Static(header, classes="lesson-summary")]
+        if lick.meta.summary:
+            widgets.append(Static(lick.meta.summary, classes="lick-summary"))
+        for block in lick.body:
+            if isinstance(block, TextBlock):
+                widgets.append(Markdown(block.content, classes="lesson-text"))
+            elif isinstance(block, DiagramBlock):
+                widgets.append(Static(block.rendered, classes="lesson-diagram"))
+        return widgets

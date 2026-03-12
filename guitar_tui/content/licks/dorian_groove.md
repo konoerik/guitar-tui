@@ -14,7 +14,7 @@ summary: A repeating melodic phrase over the Dm–G vamp — the i–IV movement
 
 ## The Lick
 
-A short, repeating phrase centred on D minor with a B natural — the Dorian
+A short, repeating phrase centered on D minor with a B natural — the Dorian
 signature note. The phrase moves between the A and G strings and stays in the
 lower-middle register for a warm, vocal quality.
 

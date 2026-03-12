@@ -11,7 +11,7 @@ summary: Learn to reliably distinguish major from minor tonality using the tonic
 
 ## Why This Matters
 
-C major and A minor share every note and every chord. The difference is which chord functions as the tonal centre. If a song is in C major, C is home. If it is in A minor, Am is home. This distinction changes everything: the emotional colour, the scale you use to solo, and how you label the chord functions.
+C major and A minor share every note and every chord. The difference is which chord functions as the tonal center. If a song is in C major, C is home. If it is in A minor, Am is home. This distinction changes everything: the emotional color, the scale you use to solo, and how you label the chord functions.
 
 Getting this wrong produces analyses that are technically valid but musically useless — calling a song "in C major" when it clearly resolves to Am leads you to choose the wrong scale and label the chords with the wrong Roman numerals.
 

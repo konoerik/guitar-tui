@@ -83,7 +83,7 @@ All three chords are dominant 7ths. The characteristic "blues sound" comes partl
 | I (tonic) | maj7 | Stable but lush; no tension |
 | ii | m7 | Diatonic; smooth lead-in to V |
 | V | dominant 7th | Tritone tension; demands I |
-| vi | m7 | Diatonic; gentle minor colour |
+| vi | m7 | Diatonic; gentle minor color |
 | Blues I, IV, V | dominant 7th | Gritty; creates forward momentum on every chord |
 
 Understanding these choices lets you match the harmonic vocabulary to the style — maj7 and m7 for jazz-influenced smoothness, dominant 7ths throughout for blues.

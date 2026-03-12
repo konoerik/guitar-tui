@@ -69,6 +69,84 @@ Tracked in detail in `BUGS.md`. Summarised here for prioritization.
 
 ---
 
+## Persistent settings (implementation ready)
+
+**Goal**: Store user preferences across sessions in a platform-appropriate config
+file. Unblocks the inline block toggle state, last-lesson resume, and metronome
+persistence.
+
+**File location**: resolved by `platformdirs` (new dependency — small, well-maintained):
+- macOS: `~/Library/Application Support/guitar-tui/settings.json`
+- Linux: `~/.config/guitar-tui/settings.json`
+- Windows: `%APPDATA%\guitar-tui\settings.json`
+
+**Settings model** (`guitar_tui/settings.py`):
+```python
+class AppSettings(BaseModel):
+    last_lesson: str | None = None
+    compact_mode: bool = False
+    collapsed_blocks: dict[str, list[str]] = {}  # lesson slug → collapsed block slugs
+    metronome_bpm: int = 80
+    metronome_time_sig: tuple[int, int] = (4, 4)
+    reference_key: str = "C"
+    reference_scale: str = "major"
+```
+
+**Behaviour:**
+- Load on startup in `on_mount`; missing or corrupt file → default values, never a crash
+- Validated by Pydantic on load — consistent with existing data layer pattern
+- Write on meaningful events (lesson opened, mode toggled, BPM confirmed) — not on every keypress, not only on exit
+- Settings path overridable via `GUITAR_TUI_CONFIG_DIR` env var for test isolation
+
+**Work breakdown:**
+- `guitar_tui/settings.py` — Pydantic model + `load()` / `save()` helpers: ~80 lines
+- `pyproject.toml` — add `platformdirs>=4.0` to dependencies
+- `guitar_tui/app.py` — load settings in `on_mount`, expose as `app.settings`
+- Individual screens/widgets write back to `app.settings` and call `save()` on relevant events
+- Total: ~110 lines across new + modified files
+
+**Unblocks:**
+- Inline block collapsed/expanded state (REDESIGN proposal)
+- Last-lesson resume on startup
+- Metronome BPM + time signature persistence
+- Reference screen last-used key/scale persistence
+
+**Owner**: Developer
+
+---
+
+## Metronome tool (implementation ready)
+
+**Goal**: A visual metronome in the Reference screen — keeps the player in the app during practice sessions and makes odd time signatures readable.
+
+**Scope**: Visual-only. No audio (platform fragmentation, added dependencies, asyncio jitter audible at high BPM). Audio is a future enhancement.
+
+**Feature set:**
+- BPM: 40–220, adjustable in +/-1 and +/-5 increments
+- Time signature: numerator (2–12) × denominator (2, 4, 8, 16)
+- Beat grouping for odd meters: user-configurable (e.g. 7/8 → 2+2+3 or 3+2+2 or 2+3+2); group separators shown visually
+- Beat display: current beat highlighted (●), downbeat distinct, others dim (○)
+- Tap tempo: two keypresses calculate BPM from interval
+- Start/stop toggle
+
+**Visual example (7/8, grouping 2+2+3, beat 5):**
+```
+  ○  ○  │  ○  ○  │  ○  ●  ○
+  1  2  │  3  4  │  5  6  7      92 BPM
+```
+
+**Implementation:**
+- `guitar_tui/ui/widgets/metronome.py` — `MetronomeWidget`, uses `set_interval(60 / bpm)`
+- Timer attached to widget, not to screen — survives focus changes and intra-screen navigation
+- Integrated into Reference screen (current Tools screen until redesign lands)
+- ~150–180 lines Python + CSS; no new dependencies
+
+**Future enhancement (not in scope now):** audio click via platform-specific subprocess (`afplay` macOS, `aplay` Linux); optional `bpm` field on exercise blocks that pre-sets the metronome when an exercise is opened.
+
+**Owner**: Developer
+
+---
+
 ## Lesson → lick cross-references (deferred)
 
 **Goal**: Lessons can reference relevant licks from the library so readers are pointed toward the Practice screen at the right moment.
@@ -106,6 +184,19 @@ Tracked in detail in `BUGS.md`. Summarised here for prioritization.
 
 ---
 
+## Tier 3b — Content expansion (from 2026-03-11 review)
+
+Gaps identified by the Reviewer for intermediate players. No infrastructure work required — purely new lick and lesson content.
+
+| # | Item | Area | Notes |
+|---|------|------|-------|
+| C1 | Major scale licks (Track 08) | Content | Zero lick cross-references across 7 lessons. Most significant gap — major scale is essential for classic rock, country, pop lead. Need at least one phrase per position range (lower neck, upper neck). |
+| C2 | Natural minor licks for positions 2–5 | Content | Only `natural_minor_descent` exists (covers pos 1 only). Upper-neck positions (3–5) have nothing. |
+| C3 | Pentatonic licks for positions 3, 4, 5 | Content | Positions 1 and 2 are covered. Positions 3–5 unlinked — exactly where intermediate players get stuck breaking out of the box. |
+| C4 | Expressive technique lessons | Content | Bending, vibrato, hammer-ons/pull-offs, slides are not taught anywhere. A short Techniques section (4–6 lessons) would address the intermediate plateau of knowing the right notes but not making them sound expressive. Candidate track: between Tracks 6 and 7, or as a standalone track. |
+
+---
+
 ## Tier 4 — Future milestones
 
 Larger scoped work tracked in `ROADMAP.md`. Listed here for backlog completeness.
@@ -125,3 +216,4 @@ Larger scoped work tracked in `ROADMAP.md`. Listed here for backlog completeness
 |------|------|-----------|
 | 2026-03-05 | [reviews/2026-03-05_reviewer_assessment.md](reviews/2026-03-05_reviewer_assessment.md) | M6 — 77 lessons, Tracks 1–11 |
 | 2026-03-07 | [reviews/2026-03-07_reviewer_assessment.md](reviews/2026-03-07_reviewer_assessment.md) | M6 complete — 78 lessons, Practice screen (Exercises + Licks Library) |
+| 2026-03-11 | [reviews/2026-03-11_reviewer_assessment.md](reviews/2026-03-11_reviewer_assessment.md) | Post-M6 UI redesign — card-panel nav, lick cross-references, pentatonic key view |

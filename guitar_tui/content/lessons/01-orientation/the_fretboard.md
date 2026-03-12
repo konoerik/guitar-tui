@@ -53,7 +53,7 @@ Two important exceptions: **B–C** and **E–F** are naturally only one semiton
 
 After 12 frets the note names repeat, one **octave** higher. The 12th fret of any string sounds the same note as its open string, just higher in pitch. From the 13th fret onward the pattern repeats again.
 
-The natural notes on the low E string — no sharps or flats — are the first landmarks worth memorising:
+The natural notes on the low E string — no sharps or flats — are the first landmarks worth memorizing:
 
 ```diagram
 type: fretboard

@@ -40,7 +40,7 @@ Guitar has two primary moveable barre chord shapes:
 
 **E-shape**: derived from the open E chord. The root sits on string 6 (low E). Moving this shape one fret higher raises the chord by one semitone.
 
-**A-shape**: derived from the open A chord. The root sits on string 5 (A). This gives you a second way to play the same chord — the A-shape Bb major and the E-shape Bb major produce the same chord with different voicings and tonal colours.
+**A-shape**: derived from the open A chord. The root sits on string 5 (A). This gives you a second way to play the same chord — the A-shape Bb major and the E-shape Bb major produce the same chord with different voicings and tonal colors.
 
 Together, these two shapes give you major and minor chords in every key across the entire neck.
 

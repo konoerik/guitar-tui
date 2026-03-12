@@ -54,7 +54,7 @@ If the high e sounds muted or buzzy, the ring finger is leaning into it. Tilt th
 
 - **High e muted by ring finger** — the most common issue. The ring finger tip must point directly downward, not tilt toward the high e string.
 - **Fingers not close enough to fret wires** — with three fingers sharing one fret, there is a temptation to spread them. Keep each tip as close to its wire as possible.
-- **Accidentally strumming the low E** — rest the heel of the strumming hand lightly against it, or practise angling the pick downward from the A string. The low E produces a dissonant note that muddies the chord.
+- **Accidentally strumming the low E** — rest the heel of the strumming hand lightly against it, or practice angling the pick downward from the A string. The low E produces a dissonant note that muddies the chord.
 
 ## What's Next
 

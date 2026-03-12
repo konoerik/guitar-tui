@@ -6,7 +6,7 @@ tags: [scales, major-scales]
 prerequisites: [major_scale_p2]
 module: major-scale
 position: 3
-summary: Position 3 of the major scale sits at the 12th fret and opens on the 3rd degree — the first note of one of the two natural semitone pairs (E–F in C major). The outer strings mirror each other exactly in fret pattern, which makes the shape faster to memorise.
+summary: Position 3 of the major scale sits at the 12th fret and opens on the 3rd degree — the first note of one of the two natural semitone pairs (E–F in C major). The outer strings mirror each other exactly in fret pattern, which makes the shape faster to memorize.
 ---
 
 ## Position 3 — C-Shape (frets 12–15)
@@ -39,7 +39,7 @@ positions:
 
 ## Starting on the 3rd
 
-Position 3 begins on the 3rd degree (E in C major) at fret 12 on the low E string. The first two notes ascending on the low E string are 3rd–4th (E–F, frets 12–13) — a half-step, one of the two natural semitones in the major scale. This half-step at the start of the position is immediately recognisable to the ear and is useful for identifying where you are harmonically.
+Position 3 begins on the 3rd degree (E in C major) at fret 12 on the low E string. The first two notes ascending on the low E string are 3rd–4th (E–F, frets 12–13) — a half-step, one of the two natural semitones in the major scale. This half-step at the start of the position is immediately recognizable to the ear and is useful for identifying where you are harmonically.
 
 ## Symmetry of Outer Strings
 

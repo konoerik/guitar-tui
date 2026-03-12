@@ -154,7 +154,7 @@ class LickLoader:
         for cat in ordered_cats + extra_cats:
             licks = sorted(
                 grouped[cat],
-                key=lambda l: (l.meta.position or 9999, l.meta.title),
+                key=lambda l: (l.meta.position if l.meta.position is not None else 9999, l.meta.title),
             )
             label = CATEGORY_LABELS.get(cat, cat.replace("_", " ").title())
             result.append((label, licks))

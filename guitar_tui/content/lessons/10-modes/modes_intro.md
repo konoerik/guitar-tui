@@ -11,7 +11,7 @@ summary: Understand what modes are, where they come from, and the two ways of th
 
 ## What Is a Mode?
 
-A mode is a scale built by starting the major scale on a different degree. The C major scale (C D E F G A B) contains seven notes — and each one can become the root of its own mode, producing seven distinct scales that all use the same pitches but create a different tonal centre.
+A mode is a scale built by starting the major scale on a different degree. The C major scale (C D E F G A B) contains seven notes — and each one can become the root of its own mode, producing seven distinct scales that all use the same pitches but create a different tonal center.
 
 | Degree | Mode | Notes (from C major) | Character |
 |--------|------|-----------------------|-----------|
@@ -35,7 +35,7 @@ The relative approach helps you find modes quickly on the neck. The parallel app
 
 ## The Four Characteristic Modes
 
-Locrian is almost never used in practice — its diminished 5th makes it too unstable to establish a tonal centre. The other six are all useful, but four are heard constantly in rock, blues, jazz, and pop:
+Locrian is almost never used in practice — its diminished 5th makes it too unstable to establish a tonal center. The other six are all useful, but four are heard constantly in rock, blues, jazz, and pop:
 
 - **Dorian** — the most common minor mode; has a brighter, more hopeful quality than natural minor
 - **Phrygian** — dark and exotic; heavily used in metal and flamenco
@@ -46,7 +46,7 @@ The next four lessons cover each of these in depth — one position on the neck,
 
 ## How Modes Sit on the Neck
 
-The five CAGED positions you learned for major and natural minor are the same boxes used for modes — just with a different note treated as the root. This means you do not need to learn any new shapes. You need to learn to *hear and feel* a different centre within shapes you already know.
+The five CAGED positions you learned for major and natural minor are the same boxes used for modes — just with a different note treated as the root. This means you do not need to learn any new shapes. You need to learn to *hear and feel* a different center within shapes you already know.
 
 A practical starting point: find the root note of the mode you want to play and locate it within a familiar major-scale box. That box is now your modal position for that key.
 

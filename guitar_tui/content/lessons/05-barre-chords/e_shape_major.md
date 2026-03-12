@@ -6,7 +6,7 @@ tags: [chords, barre-chords, major-chords]
 prerequisites: [barre_intro, musical_alphabet]
 module: barre-chords
 position: 2
-summary: One shape, root on the low E string, all 12 major chords — this is where the fretboard stops being a collection of open chords and becomes a system. Memorise the note names on string 6 and every major key is a position shift away.
+summary: One shape, root on the low E string, all 12 major chords — this is where the fretboard stops being a collection of open chords and becomes a system. Memorize the note names on string 6 and every major key is a position shift away.
 ---
 
 ## The Shape
@@ -72,7 +72,7 @@ The root of the E-shape major barre sits on string 6 (low E). To play any major 
 | D | 10 | D major |
 | Eb | 11 | Eb major |
 
-Memorising the note names on the low E string is the key skill — once you know where each note lives, you can play any major chord in any key instantly.
+Memorizing the note names on the low E string is the key skill — once you know where each note lives, you can play any major chord in any key instantly.
 
 ## Fingering Detail
 

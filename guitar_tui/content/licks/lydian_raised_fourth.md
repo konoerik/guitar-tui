@@ -45,7 +45,7 @@ Record **G – A**, two bars each, at a moderate tempo (85–95 BPM). This I –
 movement is the Lydian fingerprint: in G major, the II chord would be Am
 (minor). A major chord here exists because the raised fourth (C#) makes A
 major a diatonic chord in G Lydian. When A major arrives, the C# is its major
-third — the note you just emphasised locks perfectly into the chord.
+third — the note you just emphasized locks perfectly into the chord.
 
 Over G: the run ascends naturally through the tonic chord.
 Over A: the C# you land on is the major third of A — the phrase resolves
@@ -63,5 +63,5 @@ consonance-on-arrival is what makes Lydian phrases sound like they are
 
 This phrase works best at a moderate, singing tempo — let each note sustain
 rather than rushing to the next. The ascending motion suits clean tone with
-some reverb. Slide into the C# from C natural (one fret below) to emphasise
+some reverb. Slide into the C# from C natural (one fret below) to emphasize
 its raised quality — the slide makes the alteration audible.

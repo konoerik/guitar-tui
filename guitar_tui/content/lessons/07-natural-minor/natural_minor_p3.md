@@ -6,7 +6,7 @@ tags: [scales, minor-scales]
 prerequisites: [natural_minor_p2]
 module: natural-minor
 position: 4
-summary: Position 3 centres on the 12th fret octave landmark, with the root on the A string at fret 12 — easy to find and a reliable anchor for phrases. The wider fret span and a fret-13 extension make this the most technically demanding position, but also one of the most musically rich.
+summary: Position 3 centers on the 12th fret octave landmark, with the root on the A string at fret 12 — easy to find and a reliable anchor for phrases. The wider fret span and a fret-13 extension make this the most technically demanding position, but also one of the most musically rich.
 ---
 
 ## Position 3 — C-Shape (frets 9–13)
@@ -42,7 +42,7 @@ Fret 12 is the octave — every note at fret 12 is the same pitch class as the o
 
 ## The b3 Extension at Fret 13
 
-The b3 (C) at fret 13 on the B string is the only note outside the four-fret window. Reach it with the pinky while keeping the hand centred around frets 9–12. Avoid shifting the entire hand position — the stretch should come from the pinky alone.
+The b3 (C) at fret 13 on the B string is the only note outside the four-fret window. Reach it with the pinky while keeping the hand centered around frets 9–12. Avoid shifting the entire hand position — the stretch should come from the pinky alone.
 
 ## Fingering
 

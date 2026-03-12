@@ -54,4 +54,4 @@ If the open D string buzzes, a finger is resting against it. Bring the fingertip
 
 ## What's Next
 
-D major pairs naturally with its next-door neighbour: D minor. The next lesson changes just one note and dramatically shifts the mood — together D and Dm are among the most expressive chord pairs in folk, country, and pop.
+D major pairs naturally with its next-door neighbor: D minor. The next lesson changes just one note and dramatically shifts the mood — together D and Dm are among the most expressive chord pairs in folk, country, and pop.

@@ -6,7 +6,7 @@ tags: [chords, progressions, major-chords, minor-chords]
 prerequisites: [open_c_chord, open_g_chord, open_am_chord, open_f_chord]
 module: first-progressions
 position: 2
-summary: Master the four-chord progression behind some of the most recognisable songs in pop music — C, G, Am, and F.
+summary: Master the four-chord progression behind some of the most recognizable songs in pop music — C, G, Am, and F.
 ---
 
 ## Why This Progression
@@ -98,7 +98,7 @@ lines:
 
 The critical changes in this progression:
 
-1. **C → G** — a full hand reset. Every finger relocates. Practise this pair most.
+1. **C → G** — a full hand reset. Every finger relocates. Practice this pair most.
 2. **G → Am** — moderate. The ring finger anchors on the D string; the other fingers converge onto the Am shape.
 3. **Am → F** — the hardest transition if F is still unfamiliar. The index finger must lay flat as all fingers shift.
 4. **F → C** — satisfying once the barre is comfortable. The ring finger lifts from A/D to land on A alone.
@@ -107,7 +107,7 @@ Use one-minute changes: set a timer for 60 seconds and alternate just two chords
 
 ## Common Problems
 
-- **F chord buzz** — if the barre is the limiting factor, practise it daily in isolation. The barre at fret 1 is the hardest position on the neck; fret 3 or 5 (same shape, lower tension) is a good place to build strength before returning to fret 1.
+- **F chord buzz** — if the barre is the limiting factor, practice it daily in isolation. The barre at fret 1 is the hardest position on the neck; fret 3 or 5 (same shape, lower tension) is a good place to build strength before returning to fret 1.
 - **C → G transition stalling** — try lifting all fingers simultaneously and landing them in the G shape as a single unit, rather than placing fingers one by one.
 - **Am → F losing time** — slow the tempo until both chords sound clean, then gradually increase. Speed is a consequence of clean repetition.
 

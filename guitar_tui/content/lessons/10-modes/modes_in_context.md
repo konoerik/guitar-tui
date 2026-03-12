@@ -6,18 +6,18 @@ tags: [scales, modes, music-theory, improvisation]
 prerequisites: [mixolydian_mode]
 module: modes
 position: 6
-summary: Learn how to choose the right mode in practice — recognising modal progressions, applying the relative and parallel approaches, and integrating modes into real playing.
+summary: Learn how to choose the right mode in practice — recognizing modal progressions, applying the relative and parallel approaches, and integrating modes into real playing.
 ---
 
 ## The Core Question: When Do I Use a Mode?
 
-Modes are not just theoretical categories — they are sounds that certain progressions create. The right mode to play is determined by the harmonic context, not by the key signature alone. Two progressions in the key of C major can call for completely different modes if they centre on different chords.
+Modes are not just theoretical categories — they are sounds that certain progressions create. The right mode to play is determined by the harmonic context, not by the key signature alone. Two progressions in the key of C major can call for completely different modes if they center on different chords.
 
-The central skill is recognising which degree of the key the music is emphasising. That degree determines the mode.
+The central skill is recognizing which degree of the key the music is emphasizing. That degree determines the mode.
 
-## Recognising Modal Centres
+## Recognizing Modal Centers
 
-A modal centre is established when:
+A modal center is established when:
 1. A single chord is held for a long time (static harmony)
 2. A repeating two or three-chord loop keeps returning to one chord as home
 3. A progression lacks a conventional V → I cadence
@@ -38,7 +38,7 @@ All five CAGED positions of C major work for any of its seven modes, as long as 
 | A Aeolian (minor) | A | 6th degree — find A |
 | B Locrian | B | 7th degree — find B |
 
-If a song is in G Mixolydian, you can play any C major position — but anchor your phrases to G and emphasise F natural (the b7).
+If a song is in G Mixolydian, you can play any C major position — but anchor your phrases to G and emphasize F natural (the b7).
 
 ## The Parallel Approach in Practice
 
@@ -49,7 +49,7 @@ Parallel thinking compares each mode directly to the major or minor scale from t
 - Lydian = major + #4 (raise the 4th by one semitone)
 - Mixolydian = major + b7 (lower the 7th by one semitone)
 
-When you are improvising over a chord progression and want a modal colour, this is the fastest mental path: take the scale you would normally use, and alter the one defining note. You do not need to learn a new position — just sharpen or flatten one note within a familiar box.
+When you are improvising over a chord progression and want a modal color, this is the fastest mental path: take the scale you would normally use, and alter the one defining note. You do not need to learn a new position — just sharpen or flatten one note within a familiar box.
 
 ## Matching Modes to Progressions
 
@@ -65,7 +65,7 @@ The fastest way to identify the mode is to look at the chord immediately after t
 
 ## Integrating Modes into Your Playing
 
-**Step 1** — Identify the tonal centre (the chord that feels like home).
+**Step 1** — Identify the tonal center (the chord that feels like home).
 
 **Step 2** — Identify which note is characteristic. Does the progression use a major IV chord (Dorian)? A bII chord (Phrygian)? A II major chord (Lydian)? A bVII chord (Mixolydian)?
 
@@ -73,8 +73,8 @@ The fastest way to identify the mode is to look at the chord immediately after t
 
 **Step 4** — Don't overplay the characteristic note. It has the most impact when it is placed intentionally rather than landed on by accident.
 
-Modes are not formulas — they are colours. The theory helps you find them on the neck; your ear tells you when they sound right.
+Modes are not formulas — they are colors. The theory helps you find them on the neck; your ear tells you when they sound right.
 
 ## What's Next
 
-Modal thinking is the bridge between theory and expression. Track 11 applies everything from the entire curriculum — keys, chord functions, scales, and modes — to the skill of analysing real songs: finding the key, identifying the harmonic structure, and choosing the right scale to play over any progression you encounter.
+Modal thinking is the bridge between theory and expression. Track 11 applies everything from the entire curriculum — keys, chord functions, scales, and modes — to the skill of analyzing real songs: finding the key, identifying the harmonic structure, and choosing the right scale to play over any progression you encounter.

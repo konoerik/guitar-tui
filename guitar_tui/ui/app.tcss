@@ -1,19 +1,165 @@
 /* ── Global ──────────────────────────────────────────────────────────── */
 Screen { background: $surface; }
 
-/* ── Welcome screen ──────────────────────────────────────────────────── */
-#welcome-content {
-    margin: 2 4;
+/* ── Terminal size warning modal ─────────────────────────────────────── */
+SizeWarningModal {
+    align: center middle;
+}
+
+#size-warning-box {
+    width: 52;
+    height: auto;
+    border: round $warning;
+    border-title-color: $warning;
+    padding: 1 2;
+    background: $surface;
+}
+
+#size-warning-text {
     color: $text;
+}
+
+/* ── Welcome screen ──────────────────────────────────────────────────── */
+#welcome-scroll {
+    height: 1fr;
+    padding: 1 2;
+}
+
+#welcome-card {
+    height: auto;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+    padding: 1 2;
+    margin-bottom: 1;
+}
+
+#hint-card {
+    height: auto;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+    padding: 1 2;
+    margin-bottom: 1;
+}
+
+#info-card {
+    height: auto;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+    padding: 1 2;
+    margin-bottom: 1;
+}
+
+#welcome-text {
+    color: $text;
+}
+
+#hint-text {
+    color: $text;
+}
+
+#info-text {
+    color: $text;
+}
+
+#settings-card {
+    height: auto;
+    margin-top: 1;
+}
+
+#settings-card > CollapsibleTitle {
+    color: $accent;
+    text-style: bold;
+}
+
+#settings-card > Contents {
+    padding: 1 2;
+}
+
+.setting-row {
+    height: auto;
+    margin-bottom: 1;
+    align: left middle;
+}
+
+.setting-label {
+    width: 20;
+    padding: 1 0;
+    color: $text;
+}
+
+#setting-key, #setting-scale {
+    width: 24;
+}
+
+#setting-bpm {
+    width: 8;
+}
+
+#settings-autosave {
+    margin-top: 1;
+    color: $text-muted;
 }
 
 /* ── Lesson mode ─────────────────────────────────────────────────────── */
-#lesson-body { height: 1fr; padding: 0 2; }
+#lessons-frame {
+    height: 1fr;
+    padding: 1 2;
+}
+
+#lessons-nav {
+    width: 36;
+    height: 1fr;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+    padding: 0;
+    margin-right: 1;
+}
+
+#lessons-tree {
+    height: auto;
+    background: transparent;
+    padding: 0 1;
+}
+
+#lessons-content {
+    width: 1fr;
+    height: 1fr;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+}
+
+#lesson-tabs {
+    height: 1fr;
+}
+
+#lesson-tabs TabPane {
+    padding: 0;
+}
+
+#lesson-body, #drills-body, #licks-body {
+    height: 1fr;
+    padding: 1 2;
+}
 
 .lesson-overview {
-    margin: 2 2;
+    margin: 1 1;
     color: $text;
 }
+
+.section-title {
+    margin: 1 0 0 0;
+    padding: 1 2;
+    color: $accent;
+    text-style: bold;
+    border-top: solid $primary-darken-2;
+}
+
+.section-spacer { height: 1; }
 
 /* ── Lesson picker modal ─────────────────────────────────────────────── */
 LessonPickerModal {
@@ -55,7 +201,41 @@ LessonPickerModal {
 }
 .placeholder { margin: 2; color: $text-muted; }
 
-/* ── Key View (Tools screen) ─────────────────────────────────────────── */
+/* ── Tools screen ────────────────────────────────────────────────────── */
+#tools-frame {
+    height: 1fr;
+    padding: 1 2;
+}
+
+#tools-nav {
+    width: 26;
+    height: 1fr;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+    padding: 0;
+    margin-right: 1;
+}
+
+#tools-tree {
+    height: auto;
+    background: transparent;
+    padding: 0 1;
+}
+
+#tools-content {
+    width: 1fr;
+    height: 1fr;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+}
+
+#tools-switcher { height: 1fr; }
+
+/* Key View pane */
+#content-key-view { height: 1fr; }
+
 #key-controls {
     height: auto;
     padding: 1 2;
@@ -68,9 +248,7 @@ LessonPickerModal {
     margin-right: 2;
 }
 
-#key-content {
-    height: 1fr;
-}
+#key-content { height: 1fr; }
 
 #full-neck {
     height: auto;
@@ -93,114 +271,85 @@ LessonPickerModal {
 
 #chord-detail {
     height: auto;
+    min-height: 15;
     padding: 0 2 1 2;
     border-top: solid $primary-darken-2;
     color: $text;
 }
 
-/* ── Reference tab (Tools screen) ───────────────────────────────────── */
-#reference-scroll {
-    height: 1fr;
+/* Metronome pane */
+#content-metronome { height: 1fr; }
+
+MetronomeWidget {
+    height: auto;
     padding: 2 2;
 }
 
-#ref-row-1 {
+MetronomeWidget:focus {
+    border: none;
+}
+
+#metro-beat-row {
     height: auto;
-    padding-bottom: 2;
-    margin-bottom: 1;
-    border-bottom: solid $primary-darken-2;
-}
-
-#ref-row-2 {
-    height: auto;
-    margin-top: 1;
-    padding-bottom: 2;
-    margin-bottom: 1;
-    border-bottom: solid $primary-darken-2;
-}
-
-#ref-row-3 {
-    height: auto;
-    margin-top: 1;
-}
-
-#tunings-panel, #key-sigs-panel, #intervals-panel {
-    width: 1fr;
-    height: auto;
-    padding: 0 2 0 0;
-    border-right: solid $primary-darken-2;
-    color: $text;
-}
-
-#formulas-panel, #capo-panel, #scale-formula-panel {
-    width: 1fr;
-    height: auto;
-    padding: 0 0 0 3;
-    color: $text;
-}
-
-#notes-panel, #diatonic-all-keys-panel {
-    width: 100%;
-    height: auto;
-    margin-top: 2;
-    color: $text;
-}
-
-/* ── Practice screen ─────────────────────────────────────────────── */
-#exercises-scroll {
-    height: 1fr;
-    padding: 1 2;
-}
-
-.exercise-category {
-    margin-top: 2;
-    margin-bottom: 1;
-    color: $accent;
     text-style: bold;
 }
 
-.exercise-summary {
-    margin: 0 0 1 2;
-    padding: 1 2;
-    background: $boost;
-    border-left: thick $accent;
+#metro-info-row {
+    height: auto;
+    color: $text;
+}
+
+#metro-hint-row {
+    height: auto;
     color: $text-muted;
 }
 
-.exercise-text { margin: 0 0 1 2; }
-
-.exercise-diagram {
-    margin: 1 0 1 4;
-    padding: 0 1;
-    border-left: thick $accent;
-    width: auto;
+/* Reference panes — each is a standalone full-width VerticalScroll */
+#content-tunings, #content-key-sigs, #content-capo,
+#content-intervals, #content-scale-formula, #content-chord-formulas,
+#content-notes, #content-diatonic, #content-barre {
+    padding: 1 2;
 }
 
-.exercise-spacer { height: 1; }
+#tunings-panel, #key-sigs-panel, #capo-panel, #intervals-panel,
+#scale-formula-panel, #formulas-panel, #notes-panel,
+#diatonic-all-keys-panel, #barre-positions-panel {
+    color: $text;
+}
 
-#licks-layout {
+/* ── Practice screen ─────────────────────────────────────────────────── */
+#practice-frame {
     height: 1fr;
+    padding: 1 2;
 }
 
-#licks-list-pane {
+#practice-nav {
     width: 36;
     height: 1fr;
-    border-right: solid $primary-darken-2;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
+    padding: 0;
+    margin-right: 1;
 }
 
-#lick-detail-pane {
+#practice-tree {
+    height: auto;
+    background: transparent;
+    padding: 0 1;
+}
+
+#practice-content {
     width: 1fr;
     height: 1fr;
-    padding: 1 2;
+    border: round $primary;
+    border-title-color: $accent;
+    border-title-style: bold;
 }
 
-#lick-detail-header {
-    height: auto;
+#practice-body {
+    height: 1fr;
     padding: 1 2;
-    background: $panel;
-    border-bottom: solid $primary-darken-2;
-    margin-bottom: 1;
-    color: $text;
 }
 
 .lick-summary {
@@ -209,13 +358,4 @@ LessonPickerModal {
     background: $boost;
     border-left: thick $accent;
     color: $text-muted;
-}
-
-.lick-text { margin-bottom: 1; }
-
-.lick-diagram {
-    margin: 1 0 1 2;
-    padding: 0 1;
-    border-left: thick $accent;
-    width: auto;
 }

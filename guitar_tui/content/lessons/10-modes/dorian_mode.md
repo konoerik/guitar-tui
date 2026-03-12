@@ -4,6 +4,7 @@ slug: dorian_mode
 difficulty: intermediate
 tags: [scales, modes, minor-scales]
 prerequisites: [modes_intro, natural_minor_p1]
+licks: [dorian_groove]
 module: modes
 position: 2
 summary: Learn the Dorian mode — the minor mode with a natural 6th that gives it a brighter, more hopeful quality than Aeolian.
@@ -76,7 +77,9 @@ If you see a minor chord followed by a major IV chord repeatedly, you are probab
 
 1. Run the scale from string 6 fret 10 (root) down to string 1 fret 8, then back up. Three notes per string on most strings.
 2. Locate all three root notes (string 6 fret 10, string 3 fret 7, string 1 fret 10). Resolve phrases to these.
-3. Compare to A natural minor Position 1 immediately below: play pos 1 of A minor (frets 5–8), then shift to D Dorian (frets 7–10) and notice you are using the same notes but with a different tonal centre.
+3. Compare to A natural minor Position 1 immediately below: play pos 1 of A minor (frets 5–8), then shift to D Dorian (frets 7–10) and notice you are using the same notes but with a different tonal center.
+
+**Dorian Groove Phrase** in [4] Practice is a short phrase over a Dm–G vamp that uses the natural 6 as a melodic target — the note that makes the phrase sound distinctly Dorian rather than natural minor. Play it, then deliberately flatten that one note (play Bb instead of B) and hear the mode shift under your fingers.
 
 ## What's Next
 

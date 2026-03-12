@@ -6,7 +6,7 @@ tags: [music-theory, intervals, fretboard, fundamentals]
 prerequisites: [sharps_and_flats]
 module: theory-basics
 position: 3
-summary: The labels in every scale diagram in this app — "1", "b3", "5", "b7" — are interval names. Understand what intervals measure and chord formulas stop being memorisation; they become logic you can apply in any key.
+summary: The labels in every scale diagram in this app — "1", "b3", "5", "b7" — are interval names. Understand what intervals measure and chord formulas stop being memorization; they become logic you can apply in any key.
 ---
 
 ## What Is an Interval?
@@ -33,7 +33,7 @@ Starting from any root note:
 | 11 | Major 7th | 7 | one semitone below octave |
 | 12 | Octave | 8 | same note, higher |
 
-The most important intervals to recognise by ear and by fret distance are: the **perfect 5th** (7 semitones — the anchor of power chords), the **minor 3rd** (3 semitones — what makes a chord minor), and the **major 3rd** (4 semitones — what makes a chord major).
+The most important intervals to recognize by ear and by fret distance are: the **perfect 5th** (7 semitones — the anchor of power chords), the **minor 3rd** (3 semitones — what makes a chord minor), and the **major 3rd** (4 semitones — what makes a chord major).
 
 ## Intervals on the Fretboard
 
@@ -52,7 +52,7 @@ highlights:
   - {string: 6, fret: 7, label: "E",  style: "highlight"}
 ```
 
-The E notes above are all a perfect 5th above A — but they sit in different places on the neck. This is why the same interval can be fingered multiple ways, and why understanding intervals helps you navigate the neck rather than memorising isolated shapes.
+The E notes above are all a perfect 5th above A — but they sit in different places on the neck. This is why the same interval can be fingered multiple ways, and why understanding intervals helps you navigate the neck rather than memorizing isolated shapes.
 
 ## The Practical Power of Interval Knowledge
 
@@ -64,9 +64,9 @@ Two immediate applications:
 
 ## Relative Intervals vs. Absolute Notes
 
-Scale diagrams in this app label each note with its *interval* from the root ("1", "b3", "4"), not its absolute note name. This is because the same scale shape works in any key — the interval labels stay constant, only the specific notes change when you move the shape. When you see a note labelled "b3" in an A minor scale, you know it is a C (3 semitones above A). The same label in a D minor scale would be F (3 semitones above D).
+Scale diagrams in this app label each note with its *interval* from the root ("1", "b3", "4"), not its absolute note name. This is because the same scale shape works in any key — the interval labels stay constant, only the specific notes change when you move the shape. When you see a note labeled "b3" in an A minor scale, you know it is a C (3 semitones above A). The same label in a D minor scale would be F (3 semitones above D).
 
-Learning intervals is what makes scale patterns portable — it transforms a shape you have memorised into a concept you understand.
+Learning intervals is what makes scale patterns portable — it transforms a shape you have memorized into a concept you understand.
 
 ## What's Next
 

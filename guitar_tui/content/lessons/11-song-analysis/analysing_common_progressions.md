@@ -1,17 +1,17 @@
 ---
-title: Analysing Common Progressions
+title: Analyzing Common Progressions
 slug: analysing_common_progressions
 difficulty: intermediate
 tags: [song-analysis, chord-progressions, music-theory]
 prerequisites: [scale_selection, diatonic_progressions]
 module: song-analysis
 position: 6
-summary: Apply the analysis workflow to the most common chord progressions in pop, rock, and blues — recognise them on sight and know what to play.
+summary: Apply the analysis workflow to the most common chord progressions in pop, rock, and blues — recognize them on sight and know what to play.
 ---
 
 ## Why Common Progressions Matter
 
-A handful of progressions account for an enormous proportion of popular music. Once you can recognise them instantly — by ear or by Roman numeral — you can navigate a new song without needing to analyse it from scratch. You know the pattern, and you know what it implies.
+A handful of progressions account for an enormous proportion of popular music. Once you can recognize them instantly — by ear or by Roman numeral — you can navigate a new song without needing to analyze it from scratch. You know the pattern, and you know what it implies.
 
 ## The I – V – vi – IV (The Pop Progression)
 
@@ -19,7 +19,7 @@ Perhaps the most common progression in pop music. In C major: C – G – Am –
 
 - **Key:** Major
 - **Scale:** Major pentatonic or major scale
-- **Sound:** Anthemic, hopeful, universally recognisable
+- **Sound:** Anthemic, hopeful, universally recognizable
 - **Variations:** Starts on vi (vi – IV – I – V), starts on IV (IV – I – V – vi)
 
 Examples: *Let It Be* (Beatles), *With or Without You* (U2), *No Woman No Cry* (Marley), *Someone Like You* (Adele), *Frozen* (Let It Go).
@@ -53,7 +53,7 @@ The classic doo-wop and early rock 'n' roll progression. In C major: C – Am �
 - **Key:** Major
 - **Scale:** Major pentatonic or major scale
 - **Sound:** Nostalgic, circular, resolves smoothly back to I
-- **Note:** vi is a tonic-function chord — the progression is really I – I – IV – V with a minor colour on the I
+- **Note:** vi is a tonic-function chord — the progression is really I – I – IV – V with a minor color on the I
 
 Examples: *Stand by Me*, *Earth Angel*, *Blue Moon*, *Every Breath You Take*.
 
@@ -64,7 +64,7 @@ A rock progression that uses the chord one whole step below the tonic. In G: G �
 - **Key:** Mixolydian (or major with borrowed bVII)
 - **Scale:** G Mixolydian (or major pentatonic — the b7 note is not in the pentatonic)
 - **Sound:** Driving, rock, slightly modal
-- **Note:** The F chord (bVII in G) is what creates the Mixolydian flavour
+- **Note:** The F chord (bVII in G) is what creates the Mixolydian flavor
 
 Examples: *Sweet Home Alabama*, *Hey Jude* (coda), *La Grange*, *All Day and All of the Night*.
 
@@ -77,7 +77,7 @@ The defining structure of blues. In A: A7 – A7 – A7 – A7 – D7 – D7 –
 - **Sound:** The foundation of blues, rock, and much of jazz
 - **Note:** All three chords are dominant 7ths — this is unusual in major keys but defines blues harmony
 
-The minor pentatonic works over all three chords because the blues scale approach treats the key root as the only tonal centre and the scale's notes as colour regardless of which chord is playing.
+The minor pentatonic works over all three chords because the blues scale approach treats the key root as the only tonal center and the scale's notes as color regardless of which chord is playing.
 
 ## Quick-Reference Table
 
@@ -94,4 +94,4 @@ Once these are part of your muscle memory, song analysis goes from a laborious e
 
 ## What's Next
 
-Common progressions are the vocabulary. The next lesson extends the analysis to modal progressions — progressions that establish a tonal centre through repetition rather than conventional V–I resolution — where the standard analysis workflow needs a small but important adjustment.
+Common progressions are the vocabulary. The next lesson extends the analysis to modal progressions — progressions that establish a tonal center through repetition rather than conventional V–I resolution — where the standard analysis workflow needs a small but important adjustment.

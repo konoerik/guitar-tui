@@ -42,7 +42,7 @@ The b6 (F) sits on the D string at fret 3. In the context of Position 5, the D s
 
 ## Closing the Loop
 
-At fret 5 on the low E string, Position 5 ends where Position 1 begins — the root A appears on both. This is the same join structure as the pentatonic positions: each position's top note connects to the next position's first note. Playing across the boundary from Position 5 into Position 1 and back is the last connection to practise before you have full neck access.
+At fret 5 on the low E string, Position 5 ends where Position 1 begins — the root A appears on both. This is the same join structure as the pentatonic positions: each position's top note connects to the next position's first note. Playing across the boundary from Position 5 into Position 1 and back is the last connection to practice before you have full neck access.
 
 ## The Five-Position Map
 
@@ -56,7 +56,7 @@ At fret 5 on the low E string, Position 5 ends where Position 1 begins — the r
 
 ## Fingering
 
-Fret span is 2–5, but the G string has a note at fret 4 (not 3), making it index–ring–pinky on that string. The A string spans 2–3–5: index, middle, pinky. Most strings use three notes. Keep the hand comfortably centred around frets 3–4 with index reaching back to fret 2 where needed.
+Fret span is 2–5, but the G string has a note at fret 4 (not 3), making it index–ring–pinky on that string. The A string spans 2–3–5: index, middle, pinky. Most strings use three notes. Keep the hand comfortably centered around frets 3–4 with index reaching back to fret 2 where needed.
 
 ## What's Next
 

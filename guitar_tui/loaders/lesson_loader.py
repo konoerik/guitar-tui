@@ -63,6 +63,7 @@ class LessonMeta(BaseModel):
     # Optional
     prerequisites: list[str] = Field(default_factory=list)
     see_also: list[str] = Field(default_factory=list)  # slugs of related lessons
+    licks: list[str] = Field(default_factory=list)      # slugs of related licks
     module: str | None = None
     position: int | None = None
     summary: str | None = None
@@ -227,7 +228,7 @@ class LessonLoader:
                 continue
             sorted_lessons = sorted(
                 grouped[track.id],
-                key=lambda l: (l.meta.position or 9999, l.meta.title),
+                key=lambda l: (l.meta.position if l.meta.position is not None else 9999, l.meta.title),
             )
             result.append((track, sorted_lessons))
         return result

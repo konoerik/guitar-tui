@@ -1,5 +1,5 @@
 ---
-title: Analysing Chord Functions
+title: Analyzing Chord Functions
 slug: chord_function_analysis
 difficulty: intermediate
 tags: [song-analysis, music-theory, chord-progressions]
@@ -17,7 +17,7 @@ Once you know the key and quality, replace every chord name with its Roman numer
 
 **In E major:** E=I, F#m=ii, G#m=iii, A=IV, B=V, C#m=vi, D#°=vii°
 
-The progressions I–V–vi–IV and I–IV–V–I look identical in both keys. Understanding them as Roman numeral functions means you can recognise, transpose, and analyse them regardless of key.
+The progressions I–V–vi–IV and I–IV–V–I look identical in both keys. Understanding them as Roman numeral functions means you can recognize, transpose, and analyze them regardless of key.
 
 ## The Three Harmonic Functions
 
@@ -50,7 +50,7 @@ Chords: C – G – Am – F
 
 Roman numerals: I – V – vi – IV
 
-This is one of the most common progressions in pop music. Recognising it as I–V–vi–IV rather than "C–G–Am–F" lets you instantly play it in any key and recognise it in any song.
+This is one of the most common progressions in pop music. Recognizing it as I–V–vi–IV rather than "C–G–Am–F" lets you instantly play it in any key and recognize it in any song.
 
 ## Non-Diatonic Chords
 
@@ -58,7 +58,7 @@ Most pop and rock songs contain at least one chord that does not belong to the k
 
 **Borrowed chords** — chords taken from the parallel minor or major key.
 - E.g. in C major: bVII (Bb major), bVI (Ab major), iv (Fm)
-- These chords are not strange or wrong — they add colour and are extremely common.
+- These chords are not strange or wrong — they add color and are extremely common.
 
 **Secondary dominants** — a V chord applied to a chord other than I.
 - E.g. V/V (the V chord of the V chord) — in C major: A major (which is the V of D, the ii chord)
@@ -68,7 +68,7 @@ Most pop and rock songs contain at least one chord that does not belong to the k
 
 When you encounter a chord that does not fit the key's diatonic set, ask: is it borrowed? Is it a secondary dominant? Or does it signal a key change?
 
-## Labelling in Minor Keys
+## Labeling in Minor Keys
 
 Minor key analysis uses lowercase Roman numerals for minor chords. The natural minor (Aeolian) diatonic set is:
 
@@ -81,7 +81,7 @@ Common minor progressions:
 - **i – iv – V** — the minor I-IV-V
 - **i – bVI – bIII – bVII** — the "Andalusian" or minor loop (Am – F – C – G)
 
-## Practice: Labelling a Song
+## Practice: Labeling a Song
 
 Choose any song you know. Write out its chords, identify the key and quality, then replace each chord name with its Roman numeral. Check whether all chords are diatonic. If not, identify the non-diatonic chord and determine whether it is borrowed, a secondary dominant, or a signal of modulation.
 
@@ -89,4 +89,4 @@ Do this with three or four songs and the pattern recognition becomes automatic.
 
 ## What's Next
 
-Labelling chord functions with Roman numerals is the core of the analysis. The next lesson applies those labels to scale selection — the logical decision tree that tells you which scale to play over any progression you have just labelled.
+Labeling chord functions with Roman numerals is the core of the analysis. The next lesson applies those labels to scale selection — the logical decision tree that tells you which scale to play over any progression you have just labeled.

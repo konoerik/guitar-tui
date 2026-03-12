@@ -4,6 +4,7 @@ slug: phrygian_mode
 difficulty: intermediate
 tags: [scales, modes, minor-scales]
 prerequisites: [dorian_mode]
+licks: [phrygian_half_step]
 module: modes
 position: 3
 summary: Learn the Phrygian mode — defined by the half-step above the root that creates its dark, Spanish, and metal character.
@@ -51,7 +52,7 @@ The b2 (F, fret 10 on string 3) is your landmark note. It sits one fret above th
 
 ## The Sound
 
-The half-step between 1 and b2 is the darkest interval possible from the tonic. It creates immediate tension that does not resolve in a conventional tonal way — instead it *oscillates*, creating a sense of menace, drama, or exotic colour depending on the context.
+The half-step between 1 and b2 is the darkest interval possible from the tonic. It creates immediate tension that does not resolve in a conventional tonal way — instead it *oscillates*, creating a sense of menace, drama, or exotic color depending on the context.
 
 Phrygian is heard in:
 - Heavy metal riffs (metallica, Megadeth) — the dark, aggressive quality
@@ -70,14 +71,16 @@ The bII → i resolution is the Phrygian equivalent of a perfect cadence. It is 
 
 ## Phrygian Dominant
 
-A common variation — *Phrygian dominant* — uses a major chord on degree 1 while keeping the b2. This gives the scale a raised 3rd: 1 b2 3 4 5 b6 b7. It is the scale of flamenco, Middle Eastern music, and the harmonic minor sound. While technically a different mode (the 5th mode of harmonic minor), it is closely related and worth knowing once you are comfortable with Phrygian.
+A common variation — *Phrygian dominant* — uses a major chord on degree 1 while keeping the b2. This gives the scale a raised 3rd: 1 b2 3 4 5 b6 b7. It is the scale of flamenco, Middle Eastern music, and much of the classic metal and Spanish guitar vocabulary. It is closely related to Phrygian and worth knowing once you are comfortable with the standard mode — treat it as a color to add rather than a separate system to learn.
 
 ## Practice
 
 1. Run the scale from the root on string 3 (fret 9) upward through strings 2 and 1, then descend back down through strings 4, 5, 6 to the root on string 6 (fret 12).
-2. Focus on the b2 (fret 10 on string 3). Play root – b2 – root repeatedly to internalise the Phrygian colour.
+2. Focus on the b2 (fret 10 on string 3). Play root – b2 – root repeatedly to internalize the Phrygian color.
 3. Improvise over an Em vamp and deliberately land on F (the b2) — hold it briefly and resolve down to E. Notice the tension and release.
+
+**Phrygian Half-Step Descent** in [4] Practice is built around exactly that root–b2–root movement over an E Phrygian backing. The phrase descends from the b2 back to the root repeatedly, using the half-step tension as its central gesture rather than avoiding it.
 
 ## What's Next
 
-Phrygian is the darkest colour in the minor spectrum. The next lesson shifts to the brighter side: Lydian, the only mode brighter than the major scale itself, with its raised 4th creating the floating, ethereal quality heard in film scores and dreamy pop.
+Phrygian is the darkest color in the minor spectrum. The next lesson shifts to the brighter side: Lydian, the only mode brighter than the major scale itself, with its raised 4th creating the floating, ethereal quality heard in film scores and dreamy pop.

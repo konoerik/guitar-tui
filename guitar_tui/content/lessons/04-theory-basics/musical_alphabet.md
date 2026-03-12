@@ -68,4 +68,4 @@ Fret 12 is the octave — E again, one octave higher. From fret 13 onward the pa
 
 Every moveable chord and scale shape has its root on a specific string. For E-shape barre chords, the root is on string 6 — so reading the note names on the low E string tells you where to play any chord in any key. Place an E-shape major barre with the lowest finger at fret 5 (A) and you have A major. Move it to fret 8 (C) and you have C major.
 
-Memorising the natural notes on the low E and A strings — just the seven letter names without accidentals — is the single highest-leverage fretboard knowledge a guitarist can have.
+Memorizing the natural notes on the low E and A strings — just the seven letter names without accidentals — is the single highest-leverage fretboard knowledge a guitarist can have.

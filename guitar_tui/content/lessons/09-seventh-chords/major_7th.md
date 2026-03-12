@@ -15,7 +15,7 @@ A major 7th chord (written Xmaj7) takes a major chord and adds the *major* 7th �
 
 Unlike the dominant 7th, which adds a *minor* 7th (b7) and creates tension, the major 7th adds a *major* 7th and creates a lush, floating quality. There is no tritone; the chord is consonant and can sit comfortably without resolving. In jazz and pop, Imaj7 and IVmaj7 are the defining sound of a sophisticated harmonic palette.
 
-The distinction to memorise: **X7 = dominant (b7, tense) / Xmaj7 = major 7th (natural 7, dreamy)**.
+The distinction to memorize: **X7 = dominant (b7, tense) / Xmaj7 = major 7th (natural 7, dreamy)**.
 
 ## Four Core Major 7th Voicings
 
@@ -79,4 +79,4 @@ The open voicings in this lesson give you Imaj7 → IVmaj7 in the keys of E, A, 
 
 ## What's Next
 
-Major 7th chords are the lush, resolved voice of the I and IV. The next lesson adds minor 7th chords — the cooler, smoother minor colour that softens plain minor chords and provides the ii and vi sounds that are central to jazz and pop harmony.
+Major 7th chords are the lush, resolved voice of the I and IV. The next lesson adds minor 7th chords — the cooler, smoother minor color that softens plain minor chords and provides the ii and vi sounds that are central to jazz and pop harmony.

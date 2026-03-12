@@ -51,7 +51,7 @@ Most guitar music uses keys with few sharps or flats, because open-string voicin
 
 | Key | Sharps/flats | Common guitar use |
 |-----|-------------|------------------|
-| E major | 4# | "native" guitar key — all open strings harmonise |
+| E major | 4# | "native" guitar key — all open strings harmonize |
 | A major | 3# | extremely common for rock and blues |
 | D major | 2# | many folk and country songs |
 | G major | 1# | the most common beginner key |
@@ -76,6 +76,6 @@ The 12 major keys arranged by fifth-relationships form a circle. Moving clockwis
 
 **Transposing.** If you know a song in G and someone asks for it in A, you are moving two positions clockwise on the circle (adding two sharps). Every note shifts up by a major 2nd (two frets).
 
-**Chord relationships.** Keys adjacent on the circle share chords. G and D are neighbours — they share the A minor chord. Many progressions that sound natural together (G–D–Em–C, for example) are built from keys clustered on the same arc of the circle.
+**Chord relationships.** Keys adjacent on the circle share chords. G and D are neighbors — they share the A minor chord. Many progressions that sound natural together (G–D–Em–C, for example) are built from keys clustered on the same arc of the circle.
 
 **Capo use.** A capo effectively moves your key without changing your chord shapes. Capo at fret 2 and play G shapes → sounds in A. The capo transposes you clockwise by the number of semitones.

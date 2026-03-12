@@ -11,18 +11,18 @@ summary: Learn a decision tree for selecting the right scale over any chord prog
 
 ## Scale Selection Is Not Guessing
 
-Once you know the key and quality of a song, scale selection follows a logical path. There is usually one obvious choice that works everywhere in the song, and then refinements that add colour over specific chords.
+Once you know the key and quality of a song, scale selection follows a logical path. There is usually one obvious choice that works everywhere in the song, and then refinements that add color over specific chords.
 
 ## The Decision Tree
 
 **Step 1: Major or minor key?**
 
-- Major key → start with the **major pentatonic** of the key root. Add the major scale (Ionian) for more colour.
-- Minor key → start with the **minor pentatonic** of the key root. Add the natural minor (Aeolian) for more colour.
+- Major key → start with the **major pentatonic** of the key root. Add the major scale (Ionian) for more color.
+- Minor key → start with the **minor pentatonic** of the key root. Add the natural minor (Aeolian) for more color.
 
 The pentatonic scales work over almost any diatonic chord in their key because they omit the most tension-creating notes (the 4th and 7th in major, the 2nd and b6 in minor). They are a safe, effective starting point.
 
-**Step 2: Does the progression have a modal colour?**
+**Step 2: Does the progression have a modal color?**
 
 If the progression sits on a single minor chord with a major IV (Dorian), a bII (Phrygian), or similar modal signature, the pentatonic will still work but the full modal scale adds more character. Add the characteristic note of that mode.
 
@@ -30,7 +30,7 @@ If the progression sits on a single minor chord with a major IV (Dorian), a bII 
 
 If the I chord is a dominant 7th (I7), as in blues, the minor pentatonic or blues scale works over all three chords (I7, IV7, V7). This is the blues scale approach — one scale for the whole progression.
 
-**Step 4: Chord-by-chord colour?**
+**Step 4: Chord-by-chord color?**
 
 Advanced players change scales over each chord. This is called *chord-tone soloing* or *playing the changes*. It requires knowing which notes are chord tones for each chord and navigating between them as the harmony moves. This is beyond beginner scope but worth knowing exists.
 

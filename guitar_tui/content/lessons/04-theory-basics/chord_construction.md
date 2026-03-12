@@ -6,7 +6,7 @@ tags: [music-theory, chords, intervals, fundamentals]
 prerequisites: [major_scale_construction]
 module: theory-basics
 position: 6
-summary: Chords are stacked intervals, not memorised shapes — and the interval formula is what makes any shape movable. This lesson shows how major, minor, dominant 7th, and major 7th chords are built, and why the third is the note that changes everything.
+summary: Chords are stacked intervals, not memorized shapes — and the interval formula is what makes any shape movable. This lesson shows how major, minor, dominant 7th, and major 7th chords are built, and why the third is the note that changes everything.
 ---
 
 ## Chords Are Stacked Intervals
@@ -77,13 +77,13 @@ fingers: [null, null, 2, 1, 3, null]
 | Major 7th | 1 – 3 – 5 – 7 | major | major |
 | Minor 7th | 1 – b3 – 5 – b7 | minor | minor |
 
-The **third** (major or minor) is what determines whether a chord sounds happy or sad. The **seventh** (major or minor, if present) adds colour and complexity.
+The **third** (major or minor) is what determines whether a chord sounds happy or sad. The **seventh** (major or minor, if present) adds color and complexity.
 
 ## Why Guitar Shapes Work Anywhere
 
 On guitar, the same shape — the same relative finger positions — produces the same *chord type* regardless of where you play it, because the interval relationships between the strings are fixed. An open A major chord uses frets that spell out the intervals 1–3–5 starting from A. Move the root to a different note using a barre, and the same interval pattern now spells out 1–3–5 from that new root — a major chord in the new key.
 
-This is why learning the *formula* of a chord (its interval structure) is more powerful than memorising the specific frets — once you understand the recipe, the shape makes sense, and transposing to any key is a matter of moving the root to the right string and fret.
+This is why learning the *formula* of a chord (its interval structure) is more powerful than memorizing the specific frets — once you understand the recipe, the shape makes sense, and transposing to any key is a matter of moving the root to the right string and fret.
 
 ## What's Next
 

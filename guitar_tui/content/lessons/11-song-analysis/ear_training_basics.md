@@ -6,20 +6,20 @@ tags: [song-analysis, ear-training, intervals]
 prerequisites: [major_or_minor, intervals]
 module: song-analysis
 position: 8
-summary: Practical ear training for guitarists — learning to identify intervals, chord quality, and tonal centres by sound rather than by counting.
+summary: Practical ear training for guitarists — learning to identify intervals, chord quality, and tonal centers by sound rather than by counting.
 ---
 
 ## Why Ear Training Matters for Analysis
 
 All the theory in this track is only useful if you can apply it to *listening*. The fastest song analysis is done by ear — hearing the key, the quality, and the chord functions without needing to pause and calculate. Ear training bridges the gap between knowing the theory and hearing it.
 
-This lesson covers the practical ear skills most useful for song analysis: interval recognition, chord quality identification, and tonal centre detection.
+This lesson covers the practical ear skills most useful for song analysis: interval recognition, chord quality identification, and tonal center detection.
 
 ## Interval Recognition
 
-An interval is the distance between two notes. Recognising intervals by ear allows you to identify chord types, melodic movements, and the characteristic tones of scales and modes.
+An interval is the distance between two notes. Recognizing intervals by ear allows you to identify chord types, melodic movements, and the characteristic tones of scales and modes.
 
-**Method: reference song associations.** Each interval has a well-known song that opens with it. Memorise one song per interval.
+**Method: reference song associations.** Each interval has a well-known song that opens with it. Memorize one song per interval.
 
 | Interval | Sound quality | Reference song (ascending) |
 |----------|--------------|---------------------------|
@@ -50,11 +50,11 @@ The three essential chord qualities to identify by ear:
 
 **Training exercise:** Play random major and minor chords on your guitar and quiz yourself without looking. Then add dominant 7ths. Practice this until the quality distinction is immediate.
 
-## Hearing the Tonal Centre
+## Hearing the Tonal Center
 
-The tonal centre is the note that everything gravitates toward. Two exercises:
+The tonal center is the note that everything gravitates toward. Two exercises:
 
-**Drone method:** Pick a drone note (open A string is convenient). Play the 12 notes of the chromatic scale over it one at a time. Some will sound consonant (they belong to the key centred on A). Others will sound dissonant. The seven consonant notes form the scale of the key.
+**Drone method:** Pick a drone note (open A string is convenient). Play the 12 notes of the chromatic scale over it one at a time. Some will sound consonant (they belong to the key centered on A). Others will sound dissonant. The seven consonant notes form the scale of the key.
 
 **Resolution method:** Listen to a song and hum the note that feels most stable. Find that note on the guitar. That is the key note. Then determine whether it is the 1st, 3rd, or 5th of a major or minor chord — this tells you the root and quality of the tonic.
 
@@ -66,9 +66,9 @@ Relative pitch is trainable. The exercises above develop it systematically. With
 
 ## Putting Ear Training Into the Analysis Workflow
 
-When you sit down to analyse a song:
+When you sit down to analyze a song:
 
-1. Listen and identify the tonal centre by feel (drone method if unsure).
+1. Listen and identify the tonal center by feel (drone method if unsure).
 2. Identify major or minor quality of the tonic chord (chord quality by ear).
 3. Identify the first non-tonic chord — what interval is the root above the tonic? That interval pattern tells you the progression family.
 4. Confirm by playing along and checking your analysis against the recording.

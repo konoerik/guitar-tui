@@ -13,10 +13,10 @@ summary: Apply the complete song analysis workflow to three contrasting songs �
 
 By now you have all the pieces:
 
-1. **Find the tonal centre** — the chord and note that function as home
+1. **Find the tonal center** — the chord and note that function as home
 2. **Identify major or minor** — the quality of the tonic chord
 3. **Label chord functions** — Roman numerals in context
-4. **Check for modal colour** — does the progression imply a mode?
+4. **Check for modal color** — does the progression imply a mode?
 5. **Select the scale** — pentatonic base, then refine with full scale or mode
 6. **Identify any non-diatonic chords** — borrowed, secondary dominant, or modulation
 
@@ -34,7 +34,7 @@ This lesson walks through three complete analyses: a major-key pop song, a minor
 - G = I, C = IV, D = V.
 - This is I – IV – V – I: the most fundamental major-key progression.
 
-**Modal colour:** None. This is straightforward tonal harmony with a clear V – I cadence.
+**Modal color:** None. This is straightforward tonal harmony with a clear V – I cadence.
 
 **Scale choice:** G major pentatonic or G major scale. The major pentatonic captures the song's brightness perfectly; adding the major scale gives more melodic options.
 
@@ -44,7 +44,7 @@ This lesson walks through three complete analyses: a major-key pop song, a minor
 
 ## Analysis 2: *Paranoid* (Black Sabbath) — Minor Key
 
-**Key identification:** The main riff centres on E. The E power chord (E5) is the starting and returning point of the riff.
+**Key identification:** The main riff centers on E. The E power chord (E5) is the starting and returning point of the riff.
 
 **Major or minor:** E5 (power chord) is ambiguous — it has no 3rd. But the riff movement — E – D – E, then the descent through D – C – D – E — implies a minor tonality. The guitar solo uses the E minor pentatonic throughout. Key = E minor.
 
@@ -52,7 +52,7 @@ This lesson walks through three complete analyses: a major-key pop song, a minor
 - E = i, D = bVII, G = bIII.
 - This is i – bVII – bIII – bVII — all chords from the natural minor scale, moving in a flat-direction pattern.
 
-**Modal colour:** No bII (so not Phrygian). No major IV (so not Dorian). The progression is straightforward E Aeolian (natural minor).
+**Modal color:** No bII (so not Phrygian). No major IV (so not Dorian). The progression is straightforward E Aeolian (natural minor).
 
 **Scale choice:** E minor pentatonic (for the riff feel), or E natural minor for full melodic options. The original solo uses the E minor pentatonic exclusively and aggressively.
 
@@ -62,13 +62,13 @@ This lesson walks through three complete analyses: a major-key pop song, a minor
 
 ## Analysis 3: *Another Brick in the Wall, Part 2* (Pink Floyd) — Dorian
 
-**Key identification:** The main groove centres on Dm. The verse vamp is Dm only.
+**Key identification:** The main groove centers on Dm. The verse vamp is Dm only.
 
 **Major or minor:** Dm is minor. Key = D minor (but which mode?).
 
 **Chord functions:** Verse is just Dm (i). Chorus adds G major — the IV chord in D natural minor would be Gm (minor), but here it is G *major*.
 
-**Modal colour:** Major IV in a minor key = Dorian. The G major chord (IV, natural major) against a D minor tonic is the Dorian fingerprint. Key = D Dorian.
+**Modal color:** Major IV in a minor key = Dorian. The G major chord (IV, natural major) against a D minor tonic is the Dorian fingerprint. Key = D Dorian.
 
 **Scale choice:** D Dorian. The guitar solo (David Gilmour) uses the D minor pentatonic and D natural minor, but the natural 6th (B natural) of Dorian appears in the melody. The minor pentatonic is the primary tool; knowing it is Dorian tells you the B natural is available for added brightness.
 

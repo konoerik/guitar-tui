@@ -45,12 +45,22 @@ def semitone_to_note(st: int) -> str:
 # ---------------------------------------------------------------------------
 
 QUALITY_TO_SCALE: dict[str, str] = {
-    "Major":      "major",
-    "Minor":      "natural_minor",
-    "Dorian":     "dorian",
-    "Phrygian":   "phrygian",
-    "Lydian":     "lydian",
-    "Mixolydian": "mixolydian",
+    "Major":            "major",
+    "Major Pentatonic": "major_pentatonic",
+    "Minor":            "natural_minor",
+    "Minor Pentatonic": "minor_pentatonic",
+    "Blues":            "blues_scale",
+    "Dorian":           "dorian",
+    "Phrygian":         "phrygian",
+    "Lydian":           "lydian",
+    "Mixolydian":       "mixolydian",
+}
+
+# Pentatonic/blues scales share chord harmony with their parent scale.
+# Maps quality name → parent quality used for the diatonic chord strip.
+QUALITY_CHORD_PARENT: dict[str, str] = {
+    "Major Pentatonic": "Major",
+    "Minor Pentatonic": "Minor",
 }
 
 QUALITY_NAMES: list[str] = list(QUALITY_TO_SCALE.keys())
@@ -80,6 +90,13 @@ _MINOR_DEGREES: list[tuple[int, str, str]] = [
     (7,  "v",    "min"),
     (8,  "bVI",  "maj"),
     (10, "bVII", "maj"),
+]
+
+# Blues uses three dominant 7th chords — not a diatonic scale family.
+_BLUES_DEGREES: list[tuple[int, str, str]] = [
+    (0, "I7",  "dom7"),
+    (5, "IV7", "dom7"),
+    (7, "V7",  "dom7"),
 ]
 
 _MODAL_DEGREES: dict[str, list[tuple[int, str, str]]] = {
@@ -124,7 +141,7 @@ _MODAL_DEGREES: dict[str, list[tuple[int, str, str]]] = {
 
 def _chord_name(root_st: int, quality: str) -> str:
     note = semitone_to_note(root_st % 12)
-    suffix = "" if quality == "maj" else ("m" if quality == "min" else "°")
+    suffix = {"maj": "", "min": "m", "dim": "°", "dom7": "7"}.get(quality, "")
     return f"{note}{suffix}"
 
 
@@ -200,6 +217,8 @@ def diatonic_chords(root: str, quality_name: str) -> list[tuple[str, str]]:
         degrees = _MAJOR_DEGREES
     elif quality_name == "Minor":
         degrees = _MINOR_DEGREES
+    elif quality_name == "Blues":
+        degrees = _BLUES_DEGREES
     else:
         degrees = _MODAL_DEGREES.get(quality_name, _MAJOR_DEGREES)
     return [

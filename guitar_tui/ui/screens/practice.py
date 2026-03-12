@@ -3,184 +3,160 @@
 from __future__ import annotations
 
 from textual.app import ComposeResult
-from textual.containers import Horizontal, ScrollableContainer
+from textual.containers import ScrollableContainer, Horizontal, Vertical, VerticalScroll
 from textual.screen import Screen
-from textual.widgets import Footer, Header, Label, ListItem, ListView, Markdown, Static, TabbedContent, TabPane
+from textual.widgets import Footer, Markdown, Static, Tree
 
-from guitar_tui.loaders.lesson_loader import DiagramBlock, TextBlock
+from guitar_tui.loaders.lesson_loader import DiagramBlock, ParsedLesson, TextBlock
 from guitar_tui.loaders.lick_loader import ParsedLick
 
-
-# ── Lick list item ──────────────────────────────────────────────────────────────
-
-
-class _LickItem(ListItem):
-    """A ListView item that carries a lick slug."""
-
-    def __init__(self, label: Label, slug: str) -> None:
-        super().__init__(label)
-        self.slug = slug
-
-
-# ── Screen ─────────────────────────────────────────────────────────────────────
+_MODULE_ORDER = [
+    "technique", "open-chords", "natural-minor",
+    "major-scale", "seventh-chords",
+]
+_MODULE_LABELS = {
+    "technique":      "Technique",
+    "open-chords":    "Open Chords",
+    "natural-minor":  "Natural Minor",
+    "major-scale":    "Major Scale",
+    "seventh-chords": "Seventh Chords",
+}
+_DIFF_BADGE = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
 
 
 class PracticeMode(Screen):
-    """Practice hub — Exercises (scrollable drills) and Licks Library (looper-ready phrases)."""
+    """Card-panel practice screen: tree nav on the left, content on the right."""
 
-    BINDINGS = [
-        ("escape", "app.goto_welcome", "Back"),
-        ("t", "next_tab", "Switch Tab"),
-    ]
+    BINDINGS = [("escape", "app.goto_welcome", "Back")]
 
     def compose(self) -> ComposeResult:
-        yield Header()
-        with TabbedContent():
-            with TabPane("Exercises", id="tab-exercises"):
-                with ScrollableContainer(id="exercises-scroll"):
-                    pass  # populated in on_mount
-            with TabPane("Licks", id="tab-licks"):
-                with Horizontal(id="licks-layout"):
-                    with ScrollableContainer(id="licks-list-pane"):
-                        yield ListView(id="licks-list")
-                    with ScrollableContainer(id="lick-detail-pane"):
-                        yield Static("", id="lick-detail-header")
-                        yield Static("", id="lick-detail-body")
+        with Horizontal(id="practice-frame"):
+            with VerticalScroll(id="practice-nav"):
+                yield Tree("Practice", id="practice-tree")
+            with Vertical(id="practice-content"):
+                yield ScrollableContainer(id="practice-body")
         yield Footer()
 
-    # ------------------------------------------------------------------
-    # Lifecycle
-    # ------------------------------------------------------------------
-
     def on_mount(self) -> None:
-        self._build_exercises()
-        self._build_licks_list()
+        self._build_tree()
+        self.query_one("#practice-nav").border_title = "Practice"
+        self.query_one("#practice-content").border_title = "Practice"
+        self._show_overview()
 
-    # ------------------------------------------------------------------
-    # Tab switching
-    # ------------------------------------------------------------------
+    # ── Tree ──────────────────────────────────────────────────────────────────
 
-    def action_next_tab(self) -> None:
-        tc = self.query_one(TabbedContent)
-        tc.active = "tab-licks" if tc.active == "tab-exercises" else "tab-exercises"
+    def _build_tree(self) -> None:
+        tree = self.query_one("#practice-tree", Tree)
+        tree.show_root = False
 
-    # ------------------------------------------------------------------
-    # Exercises tab
-    # ------------------------------------------------------------------
+        tree.root.add_leaf("Introduction", data=("overview",))
+        tree.root.add_leaf("", data=None)  # spacer
 
-    def _build_exercises(self) -> None:
-        loader = self.app.exercise_loader
-        pane = self.query_one("#exercises-scroll", ScrollableContainer)
-
-        # Group by module (technique / scale / chord), ordered deliberately
-        module_order = ["technique", "scale", "chord"]
-        module_labels = {
-            "technique": "Technique",
-            "scale":     "Scale",
-            "chord":     "Chord",
-        }
-
-        grouped: dict[str, list] = {}
-        for lesson in loader.lessons.values():
+        # Exercises branch
+        ex_branch = tree.root.add("Exercises", expand=False)
+        grouped: dict[str, list[ParsedLesson]] = {}
+        for lesson in self.app.exercise_loader.lessons.values():
             key = lesson.meta.module or "other"
             grouped.setdefault(key, []).append(lesson)
 
-        ordered = [m for m in module_order if m in grouped]
-        extras  = sorted(m for m in grouped if m not in module_order)
-
-        widgets = []
+        ordered = [m for m in _MODULE_ORDER if m in grouped]
+        extras  = sorted(m for m in grouped if m not in _MODULE_ORDER)
         for module in ordered + extras:
-            label = module_labels.get(module, module.replace("-", " ").title())
+            label = _MODULE_LABELS.get(module, module.replace("-", " ").title())
             exercises = sorted(
                 grouped[module],
-                key=lambda l: (l.meta.position or 9999, l.meta.title),
+                key=lambda l: (l.meta.position if l.meta.position is not None else 9999, l.meta.title),
             )
-            widgets.append(Static(f"── {label} Exercises ──", classes="exercise-category"))
+            cat = ex_branch.add(label, expand=False)
             for ex in exercises:
-                if ex.meta.summary:
-                    widgets.append(Static(ex.meta.summary, classes="exercise-summary"))
-                for block in ex.body:
-                    if isinstance(block, TextBlock):
-                        widgets.append(Markdown(block.content, classes="exercise-text"))
-                    elif isinstance(block, DiagramBlock):
-                        widgets.append(Static(block.rendered, classes="exercise-diagram"))
-                widgets.append(Static("", classes="exercise-spacer"))
+                badge = _DIFF_BADGE.get(ex.meta.difficulty, "○")
+                cat.add_leaf(f"{badge} {ex.meta.title}", data=("exercise", ex.meta.slug))
 
-        pane.mount(*widgets)
-
-    # ------------------------------------------------------------------
-    # Licks tab — list
-    # ------------------------------------------------------------------
-
-    def _build_licks_list(self) -> None:
-        lv = self.query_one("#licks-list", ListView)
-        lv_items: list[ListItem] = []
-
+        # Licks branch
+        lick_branch = tree.root.add("Licks", expand=False)
         for category_label, licks in self.app.lick_loader.by_category():
-            lv_items.append(
-                ListItem(Label(f"[bold]{category_label}[/bold]"), disabled=True)
-            )
+            cat = lick_branch.add(category_label, expand=False)
             for lick in licks:
-                tags = "  " + "  ".join(f"[{t}]" for t in lick.meta.tags[:2])
-                item = _LickItem(
-                    Label(f"  {lick.meta.title}{tags}"),
-                    slug=lick.meta.slug,
-                )
-                lv_items.append(item)
+                badge = _DIFF_BADGE.get(lick.meta.difficulty, "○")
+                cat.add_leaf(f"{badge} {lick.meta.title}", data=("lick", lick.meta.slug))
 
-        for item in lv_items:
-            lv.append(item)
-
-        # Show first lick automatically if any exist
-        first = next(
-            (l for ls in (licks for _, licks in self.app.lick_loader.by_category()) for l in ls),
-            None,
-        )
-        if first:
-            self._show_lick(first)
-
-    def on_list_view_selected(self, event: ListView.Selected) -> None:
-        if isinstance(event.item, _LickItem):
-            lick = self.app.lick_loader.licks.get(event.item.slug)
+    async def on_tree_node_selected(self, event: Tree.NodeSelected) -> None:
+        data = event.node.data
+        if data is None:
+            return
+        kind = data[0]
+        if kind == "overview":
+            self.query_one("#practice-content").border_title = "Practice"
+            self._show_overview()
+        elif kind == "exercise":
+            ex = self.app.exercise_loader.lessons.get(data[1])
+            if ex:
+                self.query_one("#practice-content").border_title = ex.meta.title
+                await self._show_exercise(ex)
+        elif kind == "lick":
+            lick = self.app.lick_loader.licks.get(data[1])
             if lick:
-                self._show_lick(lick)
+                self.query_one("#practice-content").border_title = lick.meta.title
+                await self._show_lick(lick)
 
-    # ------------------------------------------------------------------
-    # Licks tab — detail
-    # ------------------------------------------------------------------
+    # ── Content rendering ─────────────────────────────────────────────────────
 
-    def _show_lick(self, lick: ParsedLick) -> None:
-        # Build header block
-        diff_badge = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}.get(
-            lick.meta.difficulty, "○"
+    def _show_overview(self) -> None:
+        body = self.query_one("#practice-body", ScrollableContainer)
+        body.remove_children()
+        ex_count   = len(self.app.exercise_loader.lessons)
+        lick_count = len(self.app.lick_loader.licks)
+        md = (
+            "# Practice\n\n"
+            f"{ex_count} exercises · {lick_count} licks\n\n"
+            "---\n\n"
+            "**Exercises** are technique drills. Use them with a metronome "
+            "at the BPM specified in each exercise before moving on.\n\n"
+            "**Licks** are musical phrases with backing chord suggestions. "
+            "Record the backing on a looper and practice the phrase over it. "
+            "Focus on expression — tone, timing, and dynamics — not just the notes.\n\n"
+            "Expand **Exercises** or **Licks** in the tree to browse by category."
         )
+        body.mount(Markdown(md, classes="lesson-overview"))
+
+    async def _show_exercise(self, ex: ParsedLesson) -> None:
+        body = self.query_one("#practice-body", ScrollableContainer)
+        await body.remove_children()
+        widgets = []
+        if ex.meta.summary:
+            widgets.append(Static(ex.meta.summary, classes="lesson-summary"))
+        for block in ex.body:
+            if isinstance(block, TextBlock):
+                widgets.append(Markdown(block.content, classes="lesson-text"))
+            elif isinstance(block, DiagramBlock):
+                widgets.append(Static(block.rendered, classes="lesson-diagram"))
+        if widgets:
+            await body.mount(*widgets)
+        body.scroll_home(animate=False)
+
+    async def _show_lick(self, lick: ParsedLick) -> None:
+        body = self.query_one("#practice-body", ScrollableContainer)
+        await body.remove_children()
+
+        badge   = _DIFF_BADGE.get(lick.meta.difficulty, "○")
         backing = "  ·  ".join(lick.meta.backing_chords)
         prog    = f"  ({lick.meta.backing_progression})" if lick.meta.backing_progression else ""
-        style_tags = "  ".join(f"[{t}]" for t in lick.meta.tags)
+        tags    = "  ".join(f"[{t}]" for t in lick.meta.tags)
+        header  = (
+            f"{badge}  {lick.meta.title}\n"
+            f"Key: {lick.meta.key}   Scale: {lick.meta.scale.replace('_', ' ')}\n"
+            f"Looper: {backing}{prog}\n"
+            f"Style: {tags}"
+        )
 
-        header_lines = [
-            f"{diff_badge}  {lick.meta.title}",
-            f"Key: {lick.meta.key}   Scale: {lick.meta.scale.replace('_', ' ')}",
-            f"Looper: {backing}{prog}",
-            f"Style: {style_tags}",
-            "",
-        ]
-        self.query_one("#lick-detail-header", Static).update("\n".join(header_lines))
-
-        # Rebuild body widgets — remove old, mount new
-        detail_pane = self.query_one("#lick-detail-pane", ScrollableContainer)
-        # Clear everything except the header and body statics
-        for w in detail_pane.query(".lick-body-block"):
-            w.remove()
-
-        widgets = []
+        widgets = [Static(header, classes="lesson-summary")]
         if lick.meta.summary:
-            widgets.append(Static(lick.meta.summary, classes="lick-body-block lick-summary"))
+            widgets.append(Static(lick.meta.summary, classes="lick-summary"))
         for block in lick.body:
             if isinstance(block, TextBlock):
-                widgets.append(Markdown(block.content, classes="lick-body-block lick-text"))
+                widgets.append(Markdown(block.content, classes="lesson-text"))
             elif isinstance(block, DiagramBlock):
-                widgets.append(Static(block.rendered, classes="lick-body-block lick-diagram"))
+                widgets.append(Static(block.rendered, classes="lesson-diagram"))
 
-        detail_pane.mount(*widgets)
-        detail_pane.scroll_home(animate=False)
+        await body.mount(*widgets)
+        body.scroll_home(animate=False)

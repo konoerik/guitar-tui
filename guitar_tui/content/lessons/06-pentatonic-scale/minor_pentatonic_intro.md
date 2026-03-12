@@ -4,6 +4,7 @@ slug: minor_pentatonic_intro
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales]
 prerequisites: [reading_scale_diagrams, open_g_chord]
+licks: [pent_box1_run, pent_bend_release]
 module: pentatonic-scale
 position: 1
 summary: The minor pentatonic is the scale most lead guitarists learn first — five notes, five positions across the neck, and the sound of blues, rock, and pop soloing. Position 1 is the box shape where every guitarist starts.
@@ -42,6 +43,8 @@ positions:
 1. Learn the shape with strict alternate picking (down-up)
 2. Start slowly with a metronome and increase speed gradually
 3. Focus on the root notes — they are your melodic anchor
+
+Once the shape is in your fingers, take it to music. **Box 1 Ascending Run** in [4] Practice uses exactly this position ascending to the root — a clean first phrase to play over an A minor backing. **Bend and Release** introduces the essential blues technique of bending from the 4th up toward the 5th, all within Position 1.
 
 ## What's Next
 

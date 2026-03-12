@@ -15,7 +15,7 @@ Bm is technically a barre chord, but it appears so often in beginner keys that i
 
 ## Barre Technique
 
-Before placing the full chord, practise the barre alone. Lay your index finger flat across all five strings (A through high e) at the 2nd fret. Press firmly — the index finger must fret all five strings cleanly without any assistance from the other fingers.
+Before placing the full chord, practice the barre alone. Lay your index finger flat across all five strings (A through high e) at the 2nd fret. Press firmly — the index finger must fret all five strings cleanly without any assistance from the other fingers.
 
 Strum just those five strings and check that every string rings. This is the foundation; the other fingers sit on top of it.
 
@@ -84,7 +84,7 @@ This produces a Bm5 voicing that sounds close enough for practice while you buil
 
 - **Barre strings buzzing** — insufficient index finger pressure, or the finger is bending at the joint. Straighten the index and press from the base knuckle.
 - **Ring and pinky not reaching fret 4** — the wrist needs to rotate under the neck. Drop the wrist lower (toward the floor), which opens the hand and makes fret 4 much more reachable.
-- **Thumb position** — for barre chords, the thumb should be roughly centred behind the neck, opposite the middle finger. A thumb creeping over the top of the neck kills barre strength.
+- **Thumb position** — for barre chords, the thumb should be roughly centered behind the neck, opposite the middle finger. A thumb creeping over the top of the neck kills barre strength.
 
 ## What's Next
 

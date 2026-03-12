@@ -52,7 +52,7 @@ The fret span here (12–15) is four frets. Use strict one-finger-per-fret:
 - Fret 14: ring
 - Fret 15: pinky
 
-String 4 (D) has only two notes (frets 12, 14 — index and ring, skipping middle). String 3 (G) also has two notes (frets 12, 14). The B string starts at fret 13 rather than 12 — the position begins one fret higher on that string than on the others, which is the expected behaviour at the B string boundary.
+String 4 (D) has only two notes (frets 12, 14 — index and ring, skipping middle). String 3 (G) also has two notes (frets 12, 14). The B string starts at fret 13 rather than 12 — the position begins one fret higher on that string than on the others, which is the expected behavior at the B string boundary.
 
 ## What's Next
 

@@ -9,7 +9,7 @@ backing_chords: [G, D, Em, C]
 backing_progression: "I – V – vi – IV"
 category: major
 position: 1
-summary: An ascending walk through G major pentatonic in open position — bright, resolved, and immediately recognisable as country or pop. Every note sits consonant against every chord.
+summary: An ascending walk through G major pentatonic in open position — bright, resolved, and immediately recognizable as country or pop. Every note sits consonant against every chord.
 ---
 
 ## The Lick

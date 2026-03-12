@@ -4,6 +4,7 @@ slug: minor_pentatonic_p2
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales]
 prerequisites: [minor_pentatonic_intro]
+licks: [pent_position2_run]
 module: pentatonic-scale
 position: 2
 summary: Position 2 begins exactly where Position 1 ends on the low E string — learning that overlap is the key to linking all five shapes. The root sits mid-shape on the D string, giving phrases a sinking, resolved quality that blues players use constantly.
@@ -44,8 +45,10 @@ Use the standard one-finger-per-fret approach for this position: the index finge
 ## Practice Approach
 
 1. **Learn the shape slowly**, string by string from low E to high e and back.
-2. **Find the root notes first** — D string fret 7 and B string fret 10. Practise starting and ending phrases on these two points.
+2. **Find the root notes first** — D string fret 7 and B string fret 10. Practice starting and ending phrases on these two points.
 3. **Connect to Position 1** — play the top of Position 1 (high e, fret 8, degree b3) then continue directly into Position 2. The two notes on the low E string (fret 8 and fret 10) give you the bridge.
+
+**Position 2 Connector Run** in [4] Practice is a phrase built around exactly that 1→2 handoff, descending from Position 2 back into the root territory of Position 1. It is a good first real phrase to learn from this position.
 
 ## What This Position Sounds Like
 
@@ -53,4 +56,4 @@ Because the root does not sit at the bottom of the shape, phrases in Position 2 
 
 ## What's Next
 
-Position 2 extends your range above Position 1. The next lesson, Position 3, centres on the 12th-fret octave — one of the easiest landmarks on the guitar to find — and connects the mid-neck zone to the upper register.
+Position 2 extends your range above Position 1. The next lesson, Position 3, centers on the 12th-fret octave — one of the easiest landmarks on the guitar to find — and connects the mid-neck zone to the upper register.

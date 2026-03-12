@@ -54,7 +54,7 @@ On the B string, the index shifts up to fret 13 rather than staying at fret 12 �
 
 ## Practice Approach
 
-1. **Memorise the B string exception** first — it is the most common source of errors in Position 4.
+1. **Memorize the B string exception** first — it is the most common source of errors in Position 4.
 2. **Work the low E and A stretches** as a dedicated exercise: plant the index at fret 12 and reach the pinky to fret 15, alternating between them on each string.
 3. **Connect from Position 3** — Position 3 ends at fret 12 across most strings; Position 4 begins there. The 12th fret is the handoff point.
 

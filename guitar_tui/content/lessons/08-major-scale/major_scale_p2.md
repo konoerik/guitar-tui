@@ -54,4 +54,4 @@ The D string starts at fret 9 (index), then 10 (middle), then 12 (pinky). The G 
 
 ## What's Next
 
-Position 2 introduces the upper-neck zone. Position 3 (next) centres on the 12th fret and opens on the 3rd degree — the first note of one of the major scale's two natural half-step pairs, immediately giving the position a recognisable harmonic character.
+Position 2 introduces the upper-neck zone. Position 3 (next) centers on the 12th fret and opens on the 3rd degree — the first note of one of the major scale's two natural half-step pairs, immediately giving the position a recognizable harmonic character.

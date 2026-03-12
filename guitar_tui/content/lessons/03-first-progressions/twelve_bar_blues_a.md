@@ -4,6 +4,7 @@ slug: twelve_bar_blues_a
 difficulty: beginner
 tags: [chords, progressions, blues, major-chords]
 prerequisites: [a_d_e_progression]
+licks: [pent_blues_turnaround, blues_tritone_pass]
 module: first-progressions
 position: 4
 summary: Learn the 12-bar blues form in A — the structure behind blues, rock and roll, and countless jazz standards.
@@ -140,12 +141,14 @@ A common variation adds D in the second bar, giving bars 1–2 a I–IV–I–I 
 
 Both forms are standard. The quick-change version has more harmonic movement early in the form and is common in uptempo blues and shuffle styles.
 
-## Practising the Form
+## Practicing the Form
 
 1. **Count while you play.** The 12-bar pattern is easy to lose track of in the heat of playing. Count "one two three four" aloud for each bar and say the chord name on beat 1 of each change.
-2. **Loop without stopping.** The form repeats — when you reach bar 12, bar 1 follows immediately. Practise the transition from bar 12 (E) back to bar 1 (A) as a smooth loop.
+2. **Loop without stopping.** The form repeats — when you reach bar 12, bar 1 follows immediately. Practice the transition from bar 12 (E) back to bar 1 (A) as a smooth loop.
 3. **Record yourself.** Even a phone recording lets you hear whether your chord changes land on the beat, which is easy to miss when you are focused on the shapes.
 
 ## Why This Matters
 
-The 12-bar blues is a musical grammar. Once the form is in your ears and hands, you will recognise it everywhere — in BB King, Chuck Berry, Eric Clapton, Led Zeppelin, and beyond. It is also the direct framework for the minor pentatonic scale you will learn in the pentatonic track: position 1 of the A minor pentatonic sits perfectly over this progression and is how most rock guitarists approach their first improvised solo.
+The 12-bar blues is a musical grammar. Once the form is in your ears and hands, you will recognize it everywhere — in BB King, Chuck Berry, Eric Clapton, Led Zeppelin, and beyond. It is also the direct framework for the minor pentatonic scale you will learn in the pentatonic track: position 1 of the A minor pentatonic sits perfectly over this progression and is how most rock guitarists approach their first improvised solo.
+
+Two licks in [4] Practice are written specifically for this form. **Blues Turnaround** covers bars 11–12 — the moment in bar 12 where the E chord creates tension that pulls back to A. **Tritone Pass** demonstrates the A7→D7 move in bars 4–5 using the blues scale. Once you can play through the form cleanly, try either lick over the relevant bars.

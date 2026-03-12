@@ -65,9 +65,9 @@ same groups-of-three pattern.
 Running a scale straight up and down is rarely musical. Sequences impose
 rhythmic and melodic structure on the same notes — the overlapping groups
 create a sense of forward motion and natural phrase endings. Almost every
-recognisable blues and rock lick is built from a sequence applied to a
+recognizable blues and rock lick is built from a sequence applied to a
 pentatonic position. Mastering sequences of three is the first step toward
-hearing those licks not as patterns to memorise but as consequences of a
+hearing those licks not as patterns to memorize but as consequences of a
 simple rule applied to a scale you already know.
 
 ## Progression

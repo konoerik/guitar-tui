@@ -89,7 +89,7 @@ The IV chord (D) and V chord (E) share notes with the I chord (A). That shared n
 
 1. **A → D** — moderate. All three fingers lift and regroup. The move from three adjacent frets (A) to a triangular cluster (D) requires deliberate practice.
 2. **D → E** — easy. The D shape shifts down one string and expands slightly. Many players find this the smoothest change in the set.
-3. **E → A** — moderate. The hand fully resets. Practise lifting from E while mentally preparing the A fingering before your pick reaches the strings.
+3. **E → A** — moderate. The hand fully resets. Practice lifting from E while mentally preparing the A fingering before your pick reaches the strings.
 
 ## Common Problems
 

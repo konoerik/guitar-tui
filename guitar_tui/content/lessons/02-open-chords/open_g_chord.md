@@ -56,4 +56,4 @@ lines:
 
 ## What's Next
 
-G major pairs with C major (the next lesson) and D major to form the I–IV–V of the key of G — one of the most common guitar progressions. The G→C transition is one of the larger hand repositions in beginner chords; it is worth practising the change in isolation before moving on.
+G major pairs with C major (the next lesson) and D major to form the I–IV–V of the key of G — one of the most common guitar progressions. The G→C transition is one of the larger hand repositions in beginner chords; it is worth practicing the change in isolation before moving on.

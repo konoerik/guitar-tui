@@ -83,7 +83,7 @@ For C major: the C-shape is at frets 1–3, the A-shape picks up at frets 3–5,
 
 ## Why CAGED Matters for Lead Guitar
 
-The CAGED system is most powerful not just for chord voicings but for understanding *scale positions*. The five positions of any pentatonic scale, major scale, or mode align with the five CAGED shapes. A scale position labelled "E-shape" in the scale diagrams in this app corresponds to the fret region where the E-shape chord for that key lives.
+The CAGED system is most powerful not just for chord voicings but for understanding *scale positions*. The five positions of any pentatonic scale, major scale, or mode align with the five CAGED shapes. A scale position labeled "E-shape" in the scale diagrams in this app corresponds to the fret region where the E-shape chord for that key lives.
 
 This means: when you are soloing over an A major chord and the chord player is using an A-shape voicing, you can use the A-shape scale position in the same fret region — your notes will directly reinforce the chord tones because they are drawn from the same position of the neck.
 

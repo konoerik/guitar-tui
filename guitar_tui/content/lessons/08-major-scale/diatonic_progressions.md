@@ -11,7 +11,7 @@ summary: The I, IV, V, and vi chords appear in almost every song you know — no
 
 ## What Makes a Progression Diatonic?
 
-A *diatonic* progression uses only the seven chords that belong to a single key — no borrowed chords, no chromatic movement. These progressions sound natural and resolved because every chord reinforces the same tonal centre. They are the grammar of tonal music: learn the grammar and you can hear the structure of almost any song.
+A *diatonic* progression uses only the seven chords that belong to a single key — no borrowed chords, no chromatic movement. These progressions sound natural and resolved because every chord reinforces the same tonal center. They are the grammar of tonal music: learn the grammar and you can hear the structure of almost any song.
 
 ## The Four-Chord Core
 
@@ -93,7 +93,7 @@ The ii chord (Am in G major) and iii chord (Bm in G major) add sophistication:
 
 ## The V → I Resolution
 
-The most important harmonic movement is V → I (D → G in the key of G). The V chord contains the 7th degree of the key (F# in G major) — the note that sits one half-step below the root and resolves strongly upward. Every time V resolves to I, you hear that F# → G pull. Recognising this resolution by ear is the foundation of hearing harmonic function in music.
+The most important harmonic movement is V → I (D → G in the key of G). The V chord contains the 7th degree of the key (F# in G major) — the note that sits one half-step below the root and resolves strongly upward. Every time V resolves to I, you hear that F# → G pull. Recognizing this resolution by ear is the foundation of hearing harmonic function in music.
 
 ## Transposing the Pattern
 
@@ -101,4 +101,4 @@ The same Roman numeral relationships hold in every key. I–V–vi–IV in A maj
 
 ## What's Next
 
-Diatonic progressions are the backbone of Western music. Track 09 extends the harmonic palette with seventh chords — dominant 7th, major 7th, minor 7th, and suspended voicings — adding the colour and sophistication that distinguishes jazz, soul, and blues harmony from straight triadic playing.
+Diatonic progressions are the backbone of Western music. Track 09 extends the harmonic palette with seventh chords — dominant 7th, major 7th, minor 7th, and suspended voicings — adding the color and sophistication that distinguishes jazz, soul, and blues harmony from straight triadic playing.
