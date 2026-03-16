@@ -177,6 +177,7 @@ class ToolsMode(Screen):
         self._build_notes_on_strings_panel()
         self._build_diatonic_all_keys_panel()
         self._build_barre_positions_panel()
+        self.query_one("#key-select", Select).focus()
 
     # ── Tree ──────────────────────────────────────────────────────────────────
 

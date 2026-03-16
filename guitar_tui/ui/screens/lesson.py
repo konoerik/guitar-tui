@@ -42,6 +42,7 @@ class LessonMode(Screen):
         self.query_one("#lessons-nav").border_title = "Tracks"
         self.query_one("#lessons-content").border_title = "Lessons"
         self._show_overview()
+        self.query_one("#lesson-body", ScrollableContainer).focus()
 
     # ── Tree ──────────────────────────────────────────────────────────────────
 
@@ -133,9 +134,11 @@ class LessonMode(Screen):
             await self._render_drills_tab(lesson)
             await self._render_licks_tab(lesson)
 
-        # Switch to Lesson tab and scroll to top
+        # Switch to Lesson tab, scroll to top, and focus content
         tabs.active = "tab-lesson"
-        self.query_one("#lesson-body", ScrollableContainer).scroll_home(animate=False)
+        body = self.query_one("#lesson-body", ScrollableContainer)
+        body.scroll_home(animate=False)
+        body.focus()
 
     async def _render_lesson_tab(self, lesson: ParsedLesson) -> None:
         body = self.query_one("#lesson-body", ScrollableContainer)

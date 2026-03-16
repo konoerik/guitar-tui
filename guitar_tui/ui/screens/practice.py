@@ -42,6 +42,7 @@ class PracticeMode(Screen):
         self.query_one("#practice-nav").border_title = "Practice"
         self.query_one("#practice-content").border_title = "Practice"
         self._show_overview()
+        self.query_one("#practice-body", ScrollableContainer).focus()
 
     # ── Tree ──────────────────────────────────────────────────────────────────
 
