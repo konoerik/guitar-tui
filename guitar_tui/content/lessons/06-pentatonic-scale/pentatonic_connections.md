@@ -4,7 +4,7 @@ slug: pentatonic_connections
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales, fretboard]
 prerequisites: [minor_pentatonic_p5]
-licks: [pent_box1_run, pent_position2_run, pent_bend_release]
+licks: [pent_box1_run, pent_position2_run, pent_bend_release, pent_position3_run, pent_position4_run, pent_position5_run]
 module: pentatonic-scale
 position: 6
 summary: See how all five positions of the A minor pentatonic form an unbroken chain across the entire neck.

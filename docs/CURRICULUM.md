@@ -288,24 +288,26 @@ needed to perform the exercise correctly.
 | ✓ | spider_exercise | Spider Exercise | beginner | tab |
 | ✓ | one_minute_changes | One-Minute Chord Changes | beginner | chord ×2 |
 | ✓ | alternate_picking | Alternate Picking on One String | beginner | tab |
-| ○ | string_skipping | String Skipping | intermediate | tab |
-| ○ | position_shifts | Position Shifts Across the Neck | intermediate | tab, fretboard |
+| ✓ | string_skipping | String Skipping | intermediate | tab |
+| ✓ | position_shifts | Position Shifts Across the Neck | intermediate | tab |
 
 ### Scale Exercises
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
 | ✓ | pentatonic_sequences | Pentatonic in Sequences of Three | intermediate | tab |
-| ○ | pentatonic_licks_1 | Five Essential Pentatonic Licks | intermediate | tab ×5 |
-| ○ | major_scale_sequences | Major Scale Sequences | intermediate | scale, tab |
-| ○ | three_notes_per_string | Three Notes Per String | advanced | scale, tab |
+| ✓ | major_scale_three_nps | Major Scale — Three Notes Per String | intermediate | tab |
+| ✓ | natural_minor_positions | Natural Minor Position Linking | intermediate | tab |
+| ✓ | pentatonic_licks_1 | Five Essential Pentatonic Licks | intermediate | tab ×5 |
+| ✓ | major_scale_sequences | Major Scale Sequences — Diatonic Thirds | intermediate | tab |
 
 ### Chord Exercises
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
 | ✓ | barre_strength | Barre Chord Strength Builder | intermediate | chord ×2 |
-| ○ | seventh_voicings | 7th Chord Voicing Practice | intermediate | chord ×4 |
+| ✓ | seventh_voicings | 7th Chord Voicing Practice | intermediate | chord ×4 |
+| ✓ | open_chord_arpeggio | Open Chord Arpeggio Drill | beginner | chord, tab |
 | ○ | chord_melody_intro | Simple Chord Melody | advanced | tab |
 
 ---
@@ -324,17 +326,26 @@ major, natural_minor, dorian, phrygian, lydian, mixolydian.
 | ✓ | pent_box1_run | Box 1 Ascending Run | A | minor_pentatonic | pentatonic |
 | ✓ | pent_bend_release | Bend and Release | A | minor_pentatonic | pentatonic |
 | ✓ | pent_blues_turnaround | Blues Turnaround | A | minor_pentatonic | pentatonic |
+| ✓ | pent_position2_run | Position 2 Connector Run | A | minor_pentatonic | pentatonic |
+| ✓ | pent_position3_run | Position 3 — Dark Run | A | minor_pentatonic | pentatonic |
+| ✓ | pent_position4_run | Position 4 — High-Energy Ascent | A | minor_pentatonic | pentatonic |
+| ✓ | pent_position5_run | Position 5 — Neck Connector | A | minor_pentatonic | pentatonic |
 | ✓ | blues_tritone_pass | Tritone Passing Tone | A | blues_scale | blues |
+| ✓ | blues_bb_king_box | The B.B. King Box | A | minor_pentatonic | blues |
 | ✓ | major_pent_country_walk | Country Walk | G | major_pentatonic | major |
+| ✓ | major_scale_lower_run | Major Scale Lower-Neck Run | G | major | major |
+| ✓ | major_scale_upper_phrase | Major Scale Upper-Neck Phrase | G | major | major |
 | ✓ | natural_minor_descent | Natural Minor Descent | A | natural_minor | natural_minor |
+| ✓ | natural_minor_pos2 | Natural Minor Position 2 — Night Walk | A | natural_minor | natural_minor |
+| ✓ | natural_minor_pos3 | Natural Minor Position 3 — Rising Phrase | A | natural_minor | natural_minor |
+| ✓ | natural_minor_pos4 | Natural Minor Position 4 — Classical Descent | A | natural_minor | natural_minor |
+| ✓ | natural_minor_pos5 | Natural Minor Position 5 — Half-Step Rise | A | natural_minor | natural_minor |
 | ✓ | dorian_groove | Dorian Groove Phrase | D | dorian | dorian |
 | ✓ | phrygian_half_step | Phrygian Half-Step Descent | E | phrygian | phrygian |
 | ✓ | lydian_raised_fourth | Lydian Raised Fourth Run | G | lydian | lydian |
 | ✓ | mixolydian_b7_phrase | Mixolydian b7 Phrase | A | mixolydian | mixolydian |
-| ○ | pent_position2_run | Position 2 Connector Run | A | minor_pentatonic | pentatonic |
-| ○ | blues_bb_king_box | The B.B. King Box | A | minor_pentatonic | blues |
-| ○ | phrygian_flamenco | Flamenco Rasgueado Pattern | E | phrygian | phrygian |
-| ○ | mixolydian_chord_riff | Mixolydian Chord-Riff Hybrid | G | mixolydian | mixolydian |
+| ✓ | phrygian_flamenco | Phrygian Flamenco Run | E | phrygian | phrygian |
+| ✓ | mixolydian_chord_riff | Mixolydian Chord-Riff Hybrid | G | mixolydian | mixolydian |
 
 ---
 
@@ -406,5 +417,5 @@ written.
 | 11 — Song Analysis | 9 | 9 | 0 |
 | **Total** | **78** | **78** | **0** |
 
-Exercises: 13 planned, 6 complete (4 technique, 1 scale, 1 chord).
-Licks: 10 complete, 4 planned.
+Exercises: 14 complete (6 technique, 2 scale/pentatonic, 2 major-scale, 1 natural-minor, 1 barre, 1 seventh-chords, 1 open-chords).
+Licks: 23 complete.

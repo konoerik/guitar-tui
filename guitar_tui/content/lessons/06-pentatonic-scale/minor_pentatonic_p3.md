@@ -4,6 +4,7 @@ slug: minor_pentatonic_p3
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales]
 prerequisites: [minor_pentatonic_p2]
+licks: [pent_position3_run]
 module: pentatonic-scale
 position: 3
 summary: Position 3 is anchored around the 12th fret — the octave landmark every guitarist can find instantly. The upper-neck register is brighter and more cutting, and the A-string root at fret 12 is always one step away as a landing point.

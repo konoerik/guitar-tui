@@ -4,6 +4,7 @@ slug: major_scale_p1
 difficulty: intermediate
 tags: [scales, major-scales]
 prerequisites: [major_scale_construction, natural_minor_p1]
+licks: [major_scale_lower_run]
 module: major-scale
 position: 1
 summary: The major scale in Position 1 — bright, settled, and built around fret 8 on string 6. Seven notes per octave versus the pentatonic's five, with the 7th degree sitting one semitone below the root and creating a built-in pull toward home on every phrase.

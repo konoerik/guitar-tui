@@ -4,6 +4,7 @@ slug: natural_minor_p2
 difficulty: intermediate
 tags: [scales, minor-scales]
 prerequisites: [natural_minor_p1]
+licks: [natural_minor_pos2]
 module: natural-minor
 position: 3
 summary: Position 2 of the natural minor is one of the denser positions — 16 notes across six strings — with the flat 6th appearing prominently on the A string. Descending runs through the upper strings here have a rich, characteristic minor color.

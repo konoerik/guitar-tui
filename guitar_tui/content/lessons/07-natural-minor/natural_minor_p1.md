@@ -4,6 +4,7 @@ slug: natural_minor_p1
 difficulty: intermediate
 tags: [scales, minor-scales]
 prerequisites: [natural_minor_intro]
+licks: [natural_minor_descent]
 module: natural-minor
 position: 2
 summary: Position 1 of the natural minor adds the 2nd and flat 6th to the pentatonic you already know at this fret. The b6 on the B string is the most distinctive new note — its half-step resolution down to the 5th is the sound of natural minor melody.

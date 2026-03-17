@@ -4,6 +4,7 @@ slug: minor_pentatonic_p4
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales]
 prerequisites: [minor_pentatonic_p3]
+licks: [pent_position4_run]
 module: pentatonic-scale
 position: 4
 summary: Position 4 lives above the 12th fret with both roots sitting in the middle of the shape, not at the bottom. Phrases naturally descend to find the root here — a falling, expressive quality that suits slower, blues-inflected playing.

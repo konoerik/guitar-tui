@@ -4,6 +4,7 @@ slug: major_scale_p2
 difficulty: intermediate
 tags: [scales, major-scales]
 prerequisites: [major_scale_p1]
+licks: [major_scale_upper_phrase]
 module: major-scale
 position: 2
 summary: Position 2 of the major scale opens with the 7th degree on the lower strings — ascending runs carry a built-in tension that resolves to the root on the very next fret. It's also the Dorian mode starting position, so this shape does double duty when modes come up in Track 10.

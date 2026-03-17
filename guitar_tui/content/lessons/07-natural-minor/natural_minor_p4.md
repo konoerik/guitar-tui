@@ -4,6 +4,7 @@ slug: natural_minor_p4
 difficulty: intermediate
 tags: [scales, minor-scales]
 prerequisites: [natural_minor_p3]
+licks: [natural_minor_pos4]
 module: natural-minor
 position: 5
 summary: Position 4 sits in the upper neck with the flat 6th appearing as the second note on both outer strings — immediately after the 5th. That adjacency gives descending phrases a classical, resolved minor character right from the opening note.

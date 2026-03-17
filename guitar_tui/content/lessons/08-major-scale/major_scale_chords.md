@@ -4,6 +4,7 @@ slug: major_scale_chords
 difficulty: intermediate
 tags: [scales, major-scales, chords, music-theory]
 prerequisites: [major_scale_p1, chord_construction, roman_numerals]
+licks: [major_scale_lower_run, major_scale_upper_phrase]
 module: major-scale
 position: 6
 summary: Build a chord on every degree of C major and understand the full harmonic palette of major keys.

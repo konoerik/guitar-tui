@@ -4,28 +4,10 @@
 <!-- Current sprint items. Keep this short — 5-10 items max.
      If it grows beyond that, move lower-priority items to Backlog. -->
 
-- [ ] REDESIGN Step 1 (Developer): implement `licks:` frontmatter field on `LessonMeta` + lesson view "Practice:" footer rendering; update `schemas/lesson_format.md`
-- [ ] REDESIGN Step 1 (Developer): add `n`/`p` next/previous lesson navigation within track
-- [ ] REDESIGN Step 1 (Instructor): add `licks:` to ~10–12 relevant lessons (`minor_pentatonic_intro`, `blues_scale`, `major_pentatonic_intro`, `natural_minor_intro`, `dorian_mode`, `phrygian_mode`, `lydian_mode`, `mixolydian_mode`, `twelve_bar_blues_a`, `pentatonic_connections`)
-- [ ] REDESIGN Step 1 (Instructor): write missing exercises — Track 2 (clean-ringing arpeggio drill), Track 7 (position-linking drill), Track 8 (three-notes-per-string intro), Track 9 (`seventh_voicings`)
+### Open decisions
 
-
-## Backlog
-<!-- Accepted but not yet active. Load this section only when planning or prioritizing. -->
-
-### REDESIGN Steps 2–5
-
-- REDESIGN Step 2 — Study screen: add Drills + Lick sub-tabs to lesson right pane; contextual exercise filtering by track; welcome content as no-selection default state with "browse all licks" panel; handle empty states for lessons with no exercises/licks
-- REDESIGN Step 3 — Reference screen spatial layout: eliminate two-tab structure; quick panels (barre positions, key signatures, capo chart) visible without scrolling at ≥120 cols; extended tables scroll below. **Blocked by**: terminal size minimum settled first.
-- REDESIGN Step 4 — Navigation cutover: retire `[1]`–`[4]` top-level bindings; introduce `s`/`r`/`a`/`q`; remove Practice as standalone screen
-- REDESIGN Step 5 — Analyze placeholder screen: slot reserved; binding active; placeholder content shown until Songbook is built
-
-### Open decisions (from REDESIGN)
-
-- Terminal size minimum — settle on `MIN_COLS`/`MIN_ROWS` empirically; add startup modal + resize notification; document in welcome screen. Unblocks REDESIGN Step 3.
 - `uv.lock` in `.gitignore` — currently ignored; removing gives reproducible installs. Decide before next release.
-- Lesson picker — current modal works; persistent sidebar is a future refinement. Revisit with Study screen redesign.
-- Track progress indicator (`3 / 9`) in lesson header — low effort once `n`/`p` navigation exists.
+- Track progress indicator (`3 / 9`) in lesson header — low effort; useful context for learners.
 
 ### M8 — Theory Web
 
@@ -41,9 +23,6 @@
 
 ### Content gaps (Tier 3b)
 
-- Major scale licks (Track 08) — most significant gap; zero lick cross-references across 7 lessons; need phrases for lower and upper neck
-- Natural minor lick coverage for positions 2–5 (only `natural_minor_descent` exists, covers position 1 only)
-- Pentatonic lick coverage for positions 3, 4, 5 (positions 1 and 2 covered; intermediate players get stuck here)
 - Expressive techniques lessons — bending, vibrato, hammer-ons/pull-offs, slides; candidate track between Tracks 6 and 7 (4–6 lessons)
 
 ### Release
@@ -65,7 +44,7 @@
 - Artist area — style profiles with original licks and exercises. Candidates: Knopfler, Clapton, Hendrix, BB King, Gilmour
 - Styles area — genre-organized theory profiles (Blues, Rock, Jazz, Country, Funk, Classical Fingerstyle)
 - Chord Builder / Interval Explorer — interactive utility; root + intervals → chord name; evaluates whether fretboard-based or abstract interval builder
-- Prev/next lesson navigation shortcuts `[`/`]` or `n`/`p` (already in REDESIGN Step 1 as `n`/`p`)
+- Prev/next lesson navigation shortcuts — not planned; tree click is sufficient
 - Numerical lesson navigation — jump to lesson by number from lesson picker
 - Advanced harmony — jazz, secondary dominants, borrowed chords, chord substitution (post-M8 curriculum extension)
 
@@ -85,3 +64,5 @@
 - M6 — Content Expansion: 78 lessons across 11 tracks, Practice screen, reference section, barre position finder ✓
 - Post-M6 — Tier 1–3 additions: strumming basics, FEAT-003/005/006/008, welcome screen redesign, diatonic chord strip interactive ✓
 - M7 — Polish and Release: metronome widget, terminal size warning, lick cross-references (`licks:` frontmatter), US English sweep, GitHub live, 230 tests ✓
+- REDESIGN Step 1 (Instructor): added `licks:` to 12 lessons; authored 9 lick files; all exercises complete ✓
+- REDESIGN (complete): Exercises + Licks tabs in lesson view, contextual filtering, lick library in Practice screen; `[1]–[4]` nav retained; Tools screen kept as-is ✓

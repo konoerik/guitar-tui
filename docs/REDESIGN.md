@@ -1,6 +1,6 @@
 # UI/UX Redesign — Information Architecture v2
 
-**Status**: ✓ Implemented (M6/M7) — card-panel layout with Welcome/Lessons/Tools/Practice screens
+**Status**: ✓ Complete — Exercises/Licks tabs in lesson view, lick library in Practice, `[1]–[4]` nav retained, Tools screen kept as-is
 **Owner**: Developer (UI/engine) + Instructor (content prerequisites)
 **Rationale**: Current four-screen structure (Welcome / Lessons / Tools / Practice) reflects
 build order, not use modes. This redesign aligns the app's structure with how it is
@@ -23,7 +23,7 @@ actually used.
 ### `[s]` Study  *(merges current Lessons + Practice)*
 
 **Left pane** — lesson navigator (unchanged from current Lessons screen)
-- Track tree, `/` to open picker, `n`/`p` for next/previous lesson within track
+- Track tree, `/` to open picker
 
 **Right pane** — three fixed sub-tabs, in this order:
 
@@ -141,8 +141,6 @@ where appropriate (Study sub-tabs).
 | Key | Action |
 |-----|--------|
 | `/` | Open lesson picker |
-| `n` | Next lesson in track |
-| `p` | Previous lesson in track |
 | `1` | Lesson tab |
 | `2` | Drills tab |
 | `3` | Lick tab |
@@ -210,7 +208,6 @@ until the final cutover.
 
 ### Step 1 — Content + navigation groundwork (no structural change)
 - Developer: implement `licks:` frontmatter field + lesson screen rendering
-- Developer: add `n`/`p` next/previous lesson navigation
 - Instructor: add `licks:` to relevant lessons
 - Instructor: write missing exercises for Tracks 2, 7, 8, 9
 

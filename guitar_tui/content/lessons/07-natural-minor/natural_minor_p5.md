@@ -4,6 +4,7 @@ slug: natural_minor_p5
 difficulty: intermediate
 tags: [scales, minor-scales]
 prerequisites: [natural_minor_p4]
+licks: [natural_minor_pos5]
 module: natural-minor
 position: 6
 summary: Position 5 closes the five-position cycle, reconnecting to Position 1 at fret 5 on the low E string. The flat 6th sits on the D string in a three-note sequence that highlights the expressive half-step between the 5th and b6 — a sound central to natural minor melody.

@@ -4,6 +4,7 @@ slug: natural_minor_p3
 difficulty: intermediate
 tags: [scales, minor-scales]
 prerequisites: [natural_minor_p2]
+licks: [natural_minor_pos3]
 module: natural-minor
 position: 4
 summary: Position 3 centers on the 12th fret octave landmark, with the root on the A string at fret 12 — easy to find and a reliable anchor for phrases. The wider fret span and a fret-13 extension make this the most technically demanding position, but also one of the most musically rich.

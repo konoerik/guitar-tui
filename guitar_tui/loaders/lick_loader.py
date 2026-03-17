@@ -45,7 +45,7 @@ CATEGORY_ORDER = [
 CATEGORY_LABELS: dict[str, str] = {
     "pentatonic":   "Minor Pentatonic",
     "blues":        "Blues Scale",
-    "major":        "Major Pentatonic",
+    "major":        "Major",
     "natural_minor": "Natural Minor",
     "dorian":       "Dorian",
     "phrygian":     "Phrygian",
