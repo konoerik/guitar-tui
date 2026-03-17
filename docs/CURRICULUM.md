@@ -18,8 +18,8 @@ The app has five distinct content areas. Each maps to a section of the UI.
 | **Lessons** | Sequential, module-based learning content |
 | **Reference** | Non-sequential quick-access charts and chord/scale libraries |
 | **Exercises** | Focused technique drills with diagrams |
-| **Songbook** | Theory analysis of real songs (see IDEAS.md) |
-| **Artists** | Style profiles and original exercises (see IDEAS.md) |
+| **Songbook** | Theory analysis of real songs (see PLAN.md — future ideas) |
+| **Artists** | Style profiles and original exercises (see PLAN.md — future ideas) |
 
 ---
 

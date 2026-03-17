@@ -25,11 +25,11 @@ TUI Layer       guitar_tui/ui/          Screens, widgets, stylesheet
 
 ## Personas
 
-Three distinct roles share this codebase. See [PERSONAS.md](project/PERSONAS.md) for full details.
+Three distinct roles share this codebase. See [PERSONAS.md](docs/PERSONAS.md) for full details.
 
 - **Developer** — owns engine, loaders, UI, schemas, tooling
-- **Instructor** — owns `guitar_tui/data/` and `guitar_tui/content/`; [CURRICULUM.md](project/CURRICULUM.md) is the Instructor's primary planning document — read it before adding any lesson or reference content
-- **Reviewer** — external perspective; periodic assessments live in `project/reviews/`
+- **Instructor** — owns `guitar_tui/data/` and `guitar_tui/content/`; [CURRICULUM.md](docs/CURRICULUM.md) is the Instructor's primary planning document — read it before adding any lesson or reference content
+- **Reviewer** — external perspective; periodic assessments live in `docs/reviews/`
 
 ## Key Commands
 
@@ -62,11 +62,11 @@ uv run textual run --dev guitar_tui/app.py
 
 ## Session Resumption
 
-1. Read `project/BACKLOG.md` — find the highest-priority unchecked item
-2. Read `project/TASKS.md` — review milestone history and current milestone context
-3. Read `project/ROADMAP.md` — review the current milestone's acceptance criteria
+1. Read `docs/CONTEXT.md` — current focus and next action
+2. Read `docs/PLAN.md` — find the highest-priority unchecked item in Active
+3. Read `docs/ROADMAP.md` — review the current phase's goals if needed
 4. Check `schemas/` if working on content or engine boundary code
-5. Check `project/DECISIONS.md` before questioning an established pattern — the trade-offs were considered during planning
+5. Check `docs/ARCHITECTURE.md` § Decisions before questioning an established pattern — the trade-offs were considered during planning
 
 ## Critical Rules
 
