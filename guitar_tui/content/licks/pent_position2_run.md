@@ -14,9 +14,10 @@ summary: A run that starts in position 1, crosses into position 2, and resolves 
 
 ## The Lick
 
-The phrase begins in A minor pentatonic position 1 (root at fret 5, low E),
-ascends to the top of the position, then crosses into position 2 territory
-on the B and high e strings before resolving back down to the root.
+The phrase begins in A minor pentatonic position 1 — starting on the G string
+(fret 5, C) — ascends to the top of the position, then crosses into position 2
+territory on the B and high e strings before resolving back down to the root.
+Position 1 root is A at fret 5 on the low E string.
 
 ```diagram
 type: tab

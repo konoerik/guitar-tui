@@ -197,6 +197,41 @@ class TestHighFretNumbers:
         widths = {len(r) for r in string_rows}
         assert len(widths) == 1
 
+    def test_single_digit_fret_label_alignment_in_two_digit_context(self) -> None:
+        """Single-digit frets in a two-digit tab must align with their labels.
+
+        When max_fret_width=2, a single-digit fret (e.g. 7) must be left-justified
+        so the digit sits at column position 1 — the same position that center()
+        places a one-char label. rjust would push it to position 2, causing a
+        one-character misalignment between the fret and its label.
+        """
+        spec = TabSpec.model_validate({
+            "type": "tab",
+            "lines": [
+                {
+                    "beats": [
+                        {"notes": [None, None, None, None, None, 7], "label": "E"},
+                        {"notes": [None, None, None, None, None, 10], "label": "D"},
+                    ]
+                }
+            ],
+        })
+        text = render_tab(spec)
+        lines = text.plain.splitlines()
+        # Label row is the last line (no | delimiters)
+        label_row = lines[-1]
+        string_rows = [l for l in lines if "|" in l]
+        e_row = string_rows[0]  # high e string, top row
+
+        # Find position of "7" in the e string row
+        fret_pos = e_row.index("7")
+        # Find position of "E" in the label row — must equal fret_pos
+        label_pos = label_row.index("E")
+        assert fret_pos == label_pos, (
+            f"Fret '7' at col {fret_pos} but label 'E' at col {label_pos}; "
+            f"e_row={e_row!r}, label_row={label_row!r}"
+        )
+
 
 # ── TabLine validation (FEAT-001) ─────────────────────────────────────────────
 

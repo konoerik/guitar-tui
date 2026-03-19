@@ -7,7 +7,7 @@ Column width:
     max_fret_width = max digit width across all non-null notes (default 1)
     col_width      = max_fret_width + 2   (1 leading dash + number + 1 trailing dash)
 
-Note column:   '─' + str(n).rjust(max_fret_width) + '─' + '─' * col_width * (duration - 1)
+Note column:   '─' + str(n).ljust(max_fret_width) + '─' + '─' * col_width * (duration - 1)
 Null column:   '─' * col_width * duration
 
 String row:    '{label} |' + columns ['|' between measures] + '|'
@@ -46,7 +46,7 @@ def _render_tab_line(tab_line: TabLine, col_width: int, max_fret_width: int) -> 
         for beat in measure.beats:
             beat_width = col_width * beat.duration
             if beat.rest:
-                rest_col = "─" + "r".rjust(max_fret_width) + "─"
+                rest_col = "─" + "r".ljust(max_fret_width) + "─"
                 sustain = "─" * (col_width * (beat.duration - 1))
                 for row_idx in range(len(rows)):
                     rows[row_idx] += rest_col + sustain
@@ -56,7 +56,7 @@ def _render_tab_line(tab_line: TabLine, col_width: int, max_fret_width: int) -> 
             for row_idx, (notes_idx, _) in enumerate(_STRING_DISPLAY):
                 note = beat.notes[notes_idx]
                 if note is not None:
-                    note_col = "─" + str(note).rjust(max_fret_width) + "─"
+                    note_col = "─" + str(note).ljust(max_fret_width) + "─"
                     sustain = "─" * (col_width * (beat.duration - 1))
                     rows[row_idx] += note_col + sustain
                 else:
