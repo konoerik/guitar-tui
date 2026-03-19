@@ -57,13 +57,13 @@ lines:
         label: "E"
         duration: 2
   - beats:
-      - notes: [null, null, null, 7, null, null]
+      - notes: [null, 5, null, null, null, null]
         label: "5. D"
+      - notes: [null, 7, null, null, null, null]
+        label: "E"
       - notes: [null, null, null, 5, null, null]
         label: "C"
-      - notes: [null, null, null, null, 5, null]
-        label: "E"
-      - notes: [null, null, null, null, null, 5]
+      - notes: [null, null, 7, null, null, null]
         label: "A"
         duration: 2
 ```
@@ -76,7 +76,7 @@ lines:
 
 **Lick 4 — Low End**: Strings 6 and 5, the "heavy" version. Root (A) → b3 (C) → 4th (D) → 5th (E). An ascending low-register phrase with weight and drive.
 
-**Lick 5 — Resolution**: Same contour as Lick 1 but with a longer hold. G string C → E on B string → A root. The two-beat A at the end makes this a clear ending phrase, not a connector.
+**Lick 5 — Resolution from Below**: Climbs from the 4th (D) through the 5th (E) on the A string, crosses to the b3 (C) on the G string, and lands on the root (A) at the top of the D string. An ascending resolution that arrives from below rather than descending — the opposite motion to Lick 1.
 
 ## Rules
 

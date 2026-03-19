@@ -31,7 +31,7 @@ lines:
         label: "D"
       - notes: [null, null, null, null, 13, null]
         label: "C"
-      - notes: [null, null, null, null, 14, null]
+      - notes: [null, null, null, 14, null, null]
         label: "A"
         duration: 2
 ```
@@ -44,7 +44,7 @@ Set up: Am – F – G – Am, one bar each.
 
 - **Tempo**: 75–95 BPM
 - **Feel**: Smooth, flowing eighth notes — let each note ring clearly before moving to the next string
-- **Phrasing**: Begin on the G (b7, high e fret 15) on beat 1 of the Am bar. The phrase resolves to A (root, B string fret 14) on beat 1 of the final Am bar — a strong resolution that anchors the phrase.
+- **Phrasing**: Begin on the G (b7, high e fret 15) on beat 1 of the Am bar. The phrase resolves to A (root, G string fret 14) on beat 1 of the final Am bar — a strong resolution that anchors the phrase.
 
 ## Why This Works
 
@@ -57,4 +57,4 @@ The backing progression i – VI – VII – i is a common minor cadence in rock
 - **Hand position**: anchor the first finger at fret 12 for the duration of the phrase — do not shift.
 - **The F (high e fret 13)**: play this with the middle finger, then release immediately to the index on fret 12. Keep the motion small and controlled — the half-step is the point, not speed.
 - **String change (e → B)**: after fret 12 on the high e, the next note is fret 15 on the B string. Use the pinky. The jump of three strings is the only athletic moment in the phrase; use an upstroke on the B string to keep the hand relaxed.
-- **Final note**: hold the root A (B string fret 14) for the full two beats. Adding a small vibrato here — a slow, wide oscillation — lets the phrase settle and signals a clear ending.
+- **Final note**: hold the root A (G string fret 14) for the full two beats. Adding a small vibrato here — a slow, wide oscillation — lets the phrase settle and signals a clear ending.

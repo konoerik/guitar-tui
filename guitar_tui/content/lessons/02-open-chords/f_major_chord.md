@@ -11,7 +11,7 @@ summary: Learn the F major chord — the full six-string barre that marks the tr
 
 ## About This Chord
 
-F major is the most physically demanding chord in this track. The index finger must barre all six strings at the 1st fret — the hardest position on the neck because the strings are furthest from the nut and require the most pressure. Many beginners take weeks or months to play F cleanly. That is normal.
+F major is a barre chord, not an open shape — but it appears so often alongside G, C, and Am that it belongs here rather than waiting until Track 05. It is the most physically demanding chord in this track. The index finger must barre all six strings at the 1st fret — the hardest position on the neck because the strings are furthest from the nut and require the most pressure. Many beginners take weeks or months to play F cleanly. That is normal.
 
 ## Barre Technique
 
