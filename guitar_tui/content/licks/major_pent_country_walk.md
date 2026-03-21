@@ -23,17 +23,11 @@ title: Country Walk — G major pentatonic
 lines:
   - beats:
       - notes: [3, null, null, null, null, null]
-        label: "G"
       - notes: [5, null, null, null, null, null]
-        label: "A"
       - notes: [null, 2, null, null, null, null]
-        label: "B"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
       - notes: [null, null, 2, null, null, null]
-        label: "E"
       - notes: [null, null, 5, null, null, null]
-        label: "G"
 ```
 
 **G major pentatonic: G – A – B – D – E (no C, no F#).**

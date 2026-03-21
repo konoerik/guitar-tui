@@ -22,21 +22,13 @@ title: "Phrygian Flamenco Run — E Phrygian, open position"
 lines:
   - beats:
       - notes: [null, null, null, null, null, 3]
-        label: "G"
       - notes: [null, null, null, null, null, 1]
-        label: "F"
       - notes: [null, null, null, null, null, 0]
-        label: "E"
       - notes: [null, null, null, null, 3, null]
-        label: "D"
       - notes: [null, null, null, null, 1, null]
-        label: "C"
       - notes: [null, null, null, null, 0, null]
-        label: "B"
       - notes: [null, null, null, 2, null, null]
-        label: "A"
       - notes: [null, null, null, 0, null, null]
-        label: "G"
         duration: 2
 ```
 

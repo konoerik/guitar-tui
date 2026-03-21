@@ -96,6 +96,10 @@ class TabBeat(BaseModel):
     label: str | None = None
     duration: int = Field(default=1, ge=1)  # number of beats the note rings for
     rest: bool = False  # if True, beat is a rest; notes are ignored in rendering
+    bend: bool = False  # whole-step bend; appends 'b' suffix (e.g. 7b)
+    bend_target: int | None = Field(default=None, ge=0)  # target fret pitch; appends 'b{n}' (e.g. 7b9)
+    vibrato: bool = False  # vibrato; appends '~' suffix (e.g. 7~)
+    technique: Literal["h", "p", "/", "\\"] | None = None  # connector from previous beat
 
     @field_validator("notes")
     @classmethod

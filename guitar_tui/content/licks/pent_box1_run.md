@@ -23,15 +23,10 @@ title: Box 1 Ascending Run — A minor pentatonic
 lines:
   - beats:
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, null, 7, null, null]
-        label: "D"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, null, 8, null]
-        label: "G"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
 ```
 
 ## Looper Setup

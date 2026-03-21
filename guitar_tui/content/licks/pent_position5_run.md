@@ -22,21 +22,13 @@ title: "Pentatonic Position 5 — Neck Connector"
 lines:
   - beats:
       - notes: [null, null, null, 2, null, null]
-        label: "A"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, null, null, 3, null]
-        label: "D"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, null, null, 3]
-        label: "G"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [5, null, null, null, null, null]
-        label: "A"
       - notes: [8, null, null, null, null, null]
-        label: "C"
         duration: 2
 ```
 

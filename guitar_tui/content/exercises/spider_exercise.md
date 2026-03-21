@@ -21,21 +21,13 @@ title: Spider Exercise — position 1 (frets 1–4)
 lines:
   - beats:
       - notes: [1, null, null, null, null, null]
-        label: "1"
       - notes: [null, 2, null, null, null, null]
-        label: "2"
       - notes: [null, null, 3, null, null, null]
-        label: "3"
       - notes: [null, null, null, 4, null, null]
-        label: "4"
-      - notes: [null, 2, null, null, null, null]
-        label: "2"
-      - notes: [null, null, 3, null, null, null]
-        label: "3"
-      - notes: [null, null, null, 4, null, null]
-        label: "4"
-      - notes: [null, null, null, null, 5, null]
-        label: "4"
+      - notes: [null, 1, null, null, null, null]
+      - notes: [null, null, 2, null, null, null]
+      - notes: [null, null, null, 3, null, null]
+      - notes: [null, null, null, null, 4, null]
 ```
 
 The pattern shifts one string per group of four notes, climbing diagonally

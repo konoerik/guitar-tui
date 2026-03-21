@@ -22,22 +22,14 @@ title: "Major Scale Lower-Neck Run"
 lines:
   - beats:
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, null, 3]
-        label: "G"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, null, 7, null]
-        label: "F#"
       - notes: [null, null, null, null, 8, null]
-        label: "G"
         duration: 2
       - notes: [null, null, null, 4, null, null]
-        label: "B"
       - notes: [null, null, null, 2, null, null]
-        label: "A"
       - notes: [null, null, 5, null, null, null]
-        label: "G"
         duration: 2
 ```
 

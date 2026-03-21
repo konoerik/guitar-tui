@@ -22,21 +22,13 @@ title: "Natural Minor Position 2 — Night Walk"
 lines:
   - beats:
       - notes: [null, 10, null, null, null, null]
-        label: "G"
       - notes: [null, 8, null, null, null, null]
-        label: "F"
       - notes: [null, 7, null, null, null, null]
-        label: "E"
       - notes: [null, null, 7, null, null, null]
-        label: "A"
       - notes: [null, null, 9, null, null, null]
-        label: "B"
       - notes: [null, null, null, 7, null, null]
-        label: "D"
       - notes: [null, null, null, 9, null, null]
-        label: "E"
       - notes: [null, null, null, null, 10, null]
-        label: "A"
         duration: 2
 ```
 

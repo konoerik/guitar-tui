@@ -18,21 +18,13 @@ title: Major Scale Diatonic Thirds — A major, strings 6+5
 lines:
   - beats:
       - notes: [5, null, null, null, null, null]
-        label: "A"
       - notes: [null, 4, null, null, null, null]
-        label: "C#"
       - notes: [7, null, null, null, null, null]
-        label: "B"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
       - notes: [null, 4, null, null, null, null]
-        label: "C#"
       - notes: [null, 7, null, null, null, null]
-        label: "E"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
       - notes: [null, 9, null, null, null, null]
-        label: "F#"
         duration: 2
 ```
 

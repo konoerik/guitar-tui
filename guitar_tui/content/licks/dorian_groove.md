@@ -24,17 +24,11 @@ title: Dorian Groove — D Dorian over Dm – G
 lines:
   - beats:
       - notes: [null, 5, null, null, null, null]
-        label: "D"
       - notes: [null, 7, null, null, null, null]
-        label: "E"
       - notes: [null, null, null, 4, null, null]
-        label: "B"
       - notes: [null, null, null, 2, null, null]
-        label: "A"
       - notes: [null, null, 5, null, null, null]
-        label: "G"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
 ```
 
 **D Dorian = D E F G A B C. The B natural (G string fret 4) is the major 6th — the note that would be Bb in D natural minor.**

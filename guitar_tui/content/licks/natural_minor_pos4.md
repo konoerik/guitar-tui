@@ -22,17 +22,11 @@ title: "Natural Minor Position 4 — Classical Descent"
 lines:
   - beats:
       - notes: [null, null, null, null, null, 15]
-        label: "G"
       - notes: [null, null, null, null, null, 13]
-        label: "F"
       - notes: [null, null, null, null, null, 12]
-        label: "E"
       - notes: [null, null, null, null, 15, null]
-        label: "D"
       - notes: [null, null, null, null, 13, null]
-        label: "C"
       - notes: [null, null, null, 14, null, null]
-        label: "A"
         duration: 2
 ```
 

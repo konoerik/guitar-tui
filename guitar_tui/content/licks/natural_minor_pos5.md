@@ -22,21 +22,13 @@ title: "Natural Minor Position 5 — Half-Step Rise"
 lines:
   - beats:
       - notes: [null, null, null, null, null, 3]
-        label: "G"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, 2, null]
-        label: "B"
       - notes: [null, null, null, null, 3, null]
-        label: "C"
       - notes: [null, null, null, 2, null, null]
-        label: "E"
       - notes: [null, null, null, 3, null, null]
-        label: "F"
       - notes: [null, null, null, 5, null, null]
-        label: "G"
       - notes: [null, null, 2, null, null, null]
-        label: "A"
         duration: 2
 ```
 

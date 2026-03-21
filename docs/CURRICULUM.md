@@ -184,6 +184,22 @@ Within a track, lessons are ordered by `position`.
 
 ---
 
+### Track 12 — Expressive Techniques
+
+*Left-hand techniques that add pitch variation, flow, and character to melodic playing.*
+
+| Status | Slug | Title | Difficulty | Diagrams needed |
+|--------|------|-------|------------|-----------------|
+| ✓ | string_bending | String Bending | intermediate | tab |
+| ✓ | vibrato_technique | Vibrato | intermediate | tab |
+| ✓ | hammer_ons_pull_offs | Hammer-ons and Pull-offs | intermediate | tab |
+| ✓ | slides | Slides | intermediate | tab |
+| ✓ | combining_techniques | Combining Expressive Techniques | intermediate | tab |
+
+> **Note**: Positioned between Tracks 6 (Pentatonic) and 7 (Natural Minor) in the learning arc — prerequisites point to `minor_pentatonic_intro`, and the lick library now uses proper bend/vibrato/technique notation.
+
+---
+
 ### Track 11 — Song Analysis
 
 *Reverse-engineering the theory of real music. Builds on Tracks 4–8. Requires the
@@ -346,6 +362,8 @@ major, natural_minor, dorian, phrygian, lydian, mixolydian.
 | ✓ | mixolydian_b7_phrase | Mixolydian b7 Phrase | A | mixolydian | mixolydian |
 | ✓ | phrygian_flamenco | Phrygian Flamenco Run | E | phrygian | phrygian |
 | ✓ | mixolydian_chord_riff | Mixolydian Chord-Riff Hybrid | G | mixolydian | mixolydian |
+| ✓ | legato_phrase | Legato Phrase | A | minor_pentatonic | pentatonic |
+| ✓ | slide_connector | Slide Connector | A | minor_pentatonic | pentatonic |
 
 ---
 
@@ -415,7 +433,8 @@ written.
 | 9 — Seventh Chords | 5 | 5 | 0 |
 | 10 — Modes | 6 | 6 | 0 |
 | 11 — Song Analysis | 9 | 9 | 0 |
-| **Total** | **78** | **78** | **0** |
+| 12 — Expressive Techniques | 5 | 5 | 0 |
+| **Total** | **83** | **83** | **0** |
 
 Exercises: 14 complete (6 technique, 2 scale/pentatonic, 2 major-scale, 1 natural-minor, 1 barre, 1 seventh-chords, 1 open-chords).
-Licks: 23 complete.
+Licks: 25 complete (added legato_phrase and slide_connector; pent_bend_release and blues_bb_king_box updated with proper notation).

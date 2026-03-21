@@ -25,17 +25,11 @@ title: Phrygian Half-Step Descent — E Phrygian
 lines:
   - beats:
       - notes: [null, 7, null, null, null, null]
-        label: "E"
       - notes: [null, 8, null, null, null, null]
-        label: "F"
       - notes: [null, 7, null, null, null, null]
-        label: "E"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
       - notes: [null, null, 4, null, null, null]
-        label: "B"
       - notes: [null, 5, null, null, null, null]
-        label: "E"
 ```
 
 **E Phrygian = E F G A B C D. The F natural (A string fret 8, or low E string fret 1) is the b2 — it would be F# in E major.**

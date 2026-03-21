@@ -22,21 +22,13 @@ title: "Pentatonic Position 3 — Dark Run"
 lines:
   - beats:
       - notes: [null, null, null, 9, null, null]
-        label: "E"
       - notes: [null, null, null, 12, null, null]
-        label: "G"
       - notes: [null, null, null, null, 10, null]
-        label: "A"
       - notes: [null, null, null, null, 13, null]
-        label: "C"
       - notes: [null, null, null, null, null, 12]
-        label: "E"
       - notes: [null, null, null, null, null, 10]
-        label: "D"
       - notes: [null, null, null, null, 13, null]
-        label: "C"
       - notes: [null, null, null, null, 10, null]
-        label: "A"
         duration: 2
 ```
 

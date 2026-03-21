@@ -24,13 +24,9 @@ title: Tritone Pass — A blues scale over A7 → D7
 lines:
   - beats:
       - notes: [null, null, null, 7, null, null]
-        label: "D"
       - notes: [null, 7, null, null, null, null]
-        label: "E"
       - notes: [null, 6, null, null, null, null]
-        label: "Eb"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
 ```
 
 **A string fret 7 = E (5th). Fret 6 = Eb (b5, the blue note). Fret 5 = D (root of D7).**

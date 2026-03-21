@@ -23,17 +23,11 @@ title: Natural Minor Descent — A natural minor
 lines:
   - beats:
       - notes: [null, null, null, null, null, 8]
-        label: "C"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, 8, null]
-        label: "G"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, 7, null, null]
-        label: "D"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
 ```
 
 **A natural minor: A B C D E F G. This phrase uses C A G E D C — all scale tones.**

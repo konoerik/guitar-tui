@@ -18,53 +18,33 @@ title: Five Essential Pentatonic Licks — A minor pentatonic, position 1
 lines:
   - beats:
       - notes: [null, null, null, 7, null, null]
-        label: "1. D"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
         duration: 2
   - beats:
       - notes: [null, null, 5, null, null, null]
-        label: "2. G"
       - notes: [null, null, 7, null, null, null]
-        label: "A"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, null, 7, null, null]
-        label: "D"
         duration: 2
   - beats:
       - notes: [null, null, null, null, null, 5]
-        label: "3. A"
       - notes: [null, null, null, null, null, 8]
-        label: "C"
       - notes: [null, null, null, null, 8, null]
-        label: "G"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
         duration: 2
   - beats:
       - notes: [5, null, null, null, null, null]
-        label: "4. A"
       - notes: [8, null, null, null, null, null]
-        label: "C"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
       - notes: [null, 7, null, null, null, null]
-        label: "E"
         duration: 2
   - beats:
       - notes: [null, 5, null, null, null, null]
-        label: "5. D"
       - notes: [null, 7, null, null, null, null]
-        label: "E"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, 7, null, null, null]
-        label: "A"
         duration: 2
 ```
 

@@ -24,25 +24,16 @@ lines:
   - measures:
       - beats:
           - notes: [8, null, null, null, null, null]
-            label: "C"
           - notes: [10, null, null, null, null, null]
-            label: "D"
           - notes: [12, null, null, null, null, null]
-            label: "E"
       - beats:
           - notes: [null, 8, null, null, null, null]
-            label: "F"
           - notes: [null, 10, null, null, null, null]
-            label: "G"
           - notes: [null, 12, null, null, null, null]
-            label: "A"
       - beats:
           - notes: [null, null, 9, null, null, null]
-            label: "B"
           - notes: [null, null, 10, null, null, null]
-            label: "C"
           - notes: [null, null, 12, null, null, null]
-            label: "D"
 ```
 
 Continue the pattern across all six strings, then descend.

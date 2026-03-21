@@ -25,21 +25,13 @@ title: Position 1 → 2 connector — A minor pentatonic
 lines:
   - beats:
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, null, 7, null, null]
-        label: "D"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, null, 8, null]
-        label: "G"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, null, 8]
-        label: "C"
       - notes: [null, null, null, null, null, 10]
-        label: "D"
       - notes: [null, null, null, null, null, 8]
-        label: "C"
 ```
 
 The D note on the high e string (fret 10) is the first note that belongs

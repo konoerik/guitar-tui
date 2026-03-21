@@ -27,25 +27,16 @@ lines:
   - measures:
       - beats:
           - notes: [5, null, null, null, null, null]
-            label: "A"
           - notes: [8, null, null, null, null, null]
-            label: "C"
           - notes: [null, 5, null, null, null, null]
-            label: "D"
       - beats:
           - notes: [8, null, null, null, null, null]
-            label: "C"
           - notes: [null, 5, null, null, null, null]
-            label: "D"
           - notes: [null, 7, null, null, null, null]
-            label: "E"
       - beats:
           - notes: [null, 5, null, null, null, null]
-            label: "D"
           - notes: [null, 7, null, null, null, null]
-            label: "E"
           - notes: [null, null, 5, null, null, null]
-            label: "G"
 ```
 
 After completing the ascent through position 1, reverse and descend in the

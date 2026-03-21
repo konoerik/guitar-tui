@@ -22,21 +22,13 @@ title: "Mixolydian Chord-Riff Hybrid — G Mixolydian"
 lines:
   - beats:
       - notes: [3, null, null, null, null, null]
-        label: "G"
       - notes: [null, 2, null, null, null, null]
-        label: "B"
       - notes: [null, null, 0, null, null, null]
-        label: "D"
       - notes: [null, null, 2, null, null, null]
-        label: "E"
       - notes: [null, null, 3, null, null, null]
-        label: "F"
       - notes: [null, 3, null, null, null, null]
-        label: "C"
       - notes: [null, 2, null, null, null, null]
-        label: "B"
       - notes: [3, null, null, null, null, null]
-        label: "G"
         duration: 2
 ```
 

@@ -22,23 +22,14 @@ title: "Pentatonic Position 4 — High-Energy Ascent"
 lines:
   - beats:
       - notes: [null, 12, null, null, null, null]
-        label: "A"
       - notes: [null, 15, null, null, null, null]
-        label: "C"
       - notes: [null, null, 12, null, null, null]
-        label: "D"
       - notes: [null, null, 14, null, null, null]
-        label: "E"
       - notes: [null, null, null, 12, null, null]
-        label: "G"
       - notes: [null, null, null, 14, null, null]
-        label: "A"
       - notes: [null, null, null, null, 13, null]
-        label: "C"
       - notes: [null, null, null, null, null, 12]
-        label: "E"
       - notes: [null, null, null, null, null, 15]
-        label: "G"
         duration: 2
 ```
 

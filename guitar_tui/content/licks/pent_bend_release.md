@@ -24,17 +24,16 @@ title: Bend and Release — A minor pentatonic over A7
 lines:
   - beats:
       - notes: [null, null, null, null, 8, null]
-        label: "bend"
+        bend: true
+        bend_target: 10
         duration: 2
       - notes: [null, null, null, null, 8, null]
-        label: "rel"
         duration: 2
       - notes: [null, null, null, 7, null, null]
-        label: "D"
         duration: 2
 ```
 
-**Fret 8 B string = G. Bend up a whole step to reach A (the root of A7).**
+**Fret 8 on the B string = G. Bend up a whole step (shown as `8b10`) to reach A — the root of A7.**
 
 ## Looper Setup
 

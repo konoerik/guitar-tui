@@ -24,17 +24,11 @@ title: Lydian Raised Fourth Run — G Lydian
 lines:
   - beats:
       - notes: [null, null, null, null, null, 3]
-        label: "G"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, 4, null]
-        label: "B"
       - notes: [null, null, null, null, 6, null]
-        label: "C#"
       - notes: [null, null, null, null, 7, null]
-        label: "D"
       - notes: [null, null, null, 9, null, null]
-        label: "E"
 ```
 
 **G Lydian = G A B C# D E F#. The C# (where C natural would be in G major) is the raised fourth — the note that gives Lydian its characteristic lift and brightness.**

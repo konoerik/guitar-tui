@@ -26,22 +26,14 @@ lines:
   - measures:
       - beats:
           - notes: [null, null, null, null, 5, null]
-            label: "E"
           - notes: [null, null, null, null, 7, null]
-            label: "F"
           - notes: [null, null, null, null, null, 5]
-            label: "A"
           - notes: [null, null, null, null, null, 7]
-            label: "B"
       - beats:
           - notes: [null, null, null, null, null, 8]
-            label: "C"
           - notes: [null, null, null, 7, null, null]
-            label: "C"
           - notes: [null, null, null, 9, null, null]
-            label: "D"
           - notes: [null, null, null, null, 8, null]
-            label: "E"
 ```
 
 The C note appears in both positions — it is the seam. Once you can cross it

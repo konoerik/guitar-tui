@@ -25,17 +25,11 @@ title: Blues Turnaround — A minor pentatonic, bars 11–12
 lines:
   - beats:
       - notes: [null, null, null, null, null, 8]
-        label: "G"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, 7, null]
-        label: "G"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, 7, null, null]
-        label: "E"
       - notes: [5, null, null, null, null, null]
-        label: "A"
 ```
 
 **This figure spans bars 11–12 of the 12-bar blues — the "turnaround" that sends the progression back to bar 1 (I7).**

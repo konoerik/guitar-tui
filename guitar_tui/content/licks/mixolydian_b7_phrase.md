@@ -25,17 +25,11 @@ title: Mixolydian b7 Phrase — A Mixolydian
 lines:
   - beats:
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, null, 7]
-        label: "B"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, null, 7, null]
-        label: "F#"
       - notes: [null, null, null, null, 8, null]
-        label: "G"
       - notes: [null, null, null, 7, null, null]
-        label: "A"
 ```
 
 **A Mixolydian = A B C# D E F# G. The G natural (where G# would be in A major) is the b7 — the note that gives this mode its slightly bluesy, unresolved quality even though the tonic chord is major.**

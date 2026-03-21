@@ -20,22 +20,14 @@ lines:
   - measures:
       - beats:
           - notes: [1, null, null, null, null, null]
-            label: "1"
           - notes: [2, null, null, null, null, null]
-            label: "2"
           - notes: [3, null, null, null, null, null]
-            label: "3"
           - notes: [4, null, null, null, null, null]
-            label: "4"
       - beats:
           - notes: [4, null, null, null, null, null]
-            label: "4"
           - notes: [3, null, null, null, null, null]
-            label: "3"
           - notes: [2, null, null, null, null, null]
-            label: "2"
           - notes: [1, null, null, null, null, null]
-            label: "1"
 ```
 
 After completing all 6 strings going up, reverse: high e back down to low E.

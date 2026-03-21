@@ -92,6 +92,16 @@
 
 ---
 
+### D8 — Tab renderer: technique connectors produce a gap before the source note
+
+**Date:** 2026-03-19
+**Context:** Standard guitar tab writes hammer-ons, pull-offs, and slides by placing the technique character directly between two adjacent fret numbers — `5h8`, `8p5`, `5/9`. The tab renderer encodes these as two separate beats: beat 1 (the source note, plain) and beat 2 (the destination note, with `technique` replacing its leading dash). Beat 1 renders as `─5─` (with a trailing dash); beat 2 renders as `h8─`. Combined output is `─5─h8─`, which has a single `─` between `5` and `h` — a visible gap absent from strict traditional notation. Bends do not have this gap because `bend`/`bend_target` are suffixes on a single beat (`─5b7─`), so source and destination are encoded in one column.
+**Decision:** Accept the gap as an inherent trade-off of the two-beat encoding for technique connectors. Do not add look-ahead logic to suppress beat 1's trailing dash when beat 2 carries a technique connector.
+**Alternatives considered:** Look-ahead in `_render_tab_line` — when rendering beat N's trailing dash, check whether beat N+1 has a `technique` set and, if so, omit the trailing dash to produce `─5h8─`. This would require either a two-pass render or passing ahead context, adding complexity for a minor visual improvement. Rejected because `─5─h8─` is still readable and unambiguous to any guitarist familiar with tab.
+**Consequences:** Bends (`5b7`) and technique connectors (`5h8`) are visually asymmetric — bends are compact, connectors have a gap. This is documented here so it is not mistaken for a bug. If look-ahead suppression is added in the future, existing tests in `TestTechniqueConnectors` would need to be updated. The gap does not affect correctness or readability in practice.
+
+---
+
 ### D7 — Textual as the TUI framework
 
 **Decision**: The application is built on [Textual](https://textual.textualize.io/) (not urwid, blessed, curtsies, or raw curses).

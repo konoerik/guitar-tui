@@ -1,8 +1,8 @@
 # Context
 <!-- Updated by /wrap at session end. Edit manually if needed. Keep it under 8 lines. -->
 
-**Current focus:** Content gaps closed — all planned licks and exercises complete
-**Last session:** Wrote natural_minor_pos4/5, phrygian_flamenco, mixolydian_chord_riff licks; wrote string_skipping, position_shifts, pentatonic_licks_1, major_scale_sequences exercises; CURRICULUM updated; 23 licks, 14 exercises total
+**Current focus:** M8 Theory Web and REDESIGN Step 1 (n/p lesson nav, lick cross-references in UI)
+**Last session:** Refined label convention (contextual, not mechanical); updated `schemas/diagram_spec.md`; swept all 45 exercise/lick/lesson files — labels stripped from exercises and licks, kept or removed contextually in lessons; D/U restored in `alternate_picking.md`
 **Blocking:** none
-**Next action:** Choose next milestone — M8 Theory Web or PyPI release prep
-<!-- wrapped: 2026-03-16 -->
+**Next action:** Pick up REDESIGN Step 1 — n/p lesson navigation or persistent settings (`AppSettings`)
+<!-- wrapped: 2026-03-21 -->

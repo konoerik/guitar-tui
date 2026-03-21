@@ -22,21 +22,13 @@ title: "Natural Minor Position 3 — Rising Phrase"
 lines:
   - beats:
       - notes: [null, null, null, 9, null, null]
-        label: "E"
       - notes: [null, null, null, 10, null, null]
-        label: "F"
       - notes: [null, null, null, 12, null, null]
-        label: "G"
       - notes: [null, null, null, null, 10, null]
-        label: "A"
       - notes: [null, null, null, null, 12, null]
-        label: "B"
       - notes: [null, null, null, null, null, 8]
-        label: "C"
       - notes: [null, null, null, null, null, 10]
-        label: "D"
       - notes: [null, null, null, null, null, 12]
-        label: "E"
         duration: 2
 ```
 

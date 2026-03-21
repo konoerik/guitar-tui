@@ -20,17 +20,11 @@ title: G Major — arpeggio check (low E to high e)
 lines:
   - beats:
       - notes: [3, null, null, null, null, null]
-        label: "E"
       - notes: [null, 2, null, null, null, null]
-        label: "A"
       - notes: [null, null, 0, null, null, null]
-        label: "D"
       - notes: [null, null, null, 0, null, null]
-        label: "G"
       - notes: [null, null, null, null, 0, null]
-        label: "B"
       - notes: [null, null, null, null, null, 3]
-        label: "e"
 ```
 
 Repeat for every open chord shape you know. Run through the full set:

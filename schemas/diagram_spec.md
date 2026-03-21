@@ -186,12 +186,39 @@ Exactly one of `beats` or `measures` must be provided.
 
 #### TabBeat object
 
-| Field      | Type            | Required | Description |
-|------------|-----------------|----------|-------------|
-| `notes`    | list[int\|null] | yes      | 6 values (low E → high e). Integer = fret number; `null` = string not played this beat. Ignored when `rest: true`. |
-| `label`    | string          | no       | Beat label shown below the staff (e.g., `"G"`, `"1"`, `"&"`). Defaults to `"rest"` when `rest: true`. |
-| `duration` | int             | no       | Number of beats the note rings for (default: `1`). Expands the column by `duration × col_width`. |
-| `rest`     | bool            | no       | If `true`, renders a rest symbol (`r`) on all strings instead of fret numbers (default: `false`). |
+| Field        | Type                        | Required | Description |
+|--------------|-----------------------------|----------|-------------|
+| `notes`      | list[int\|null]             | yes      | 6 values (low E → high e). Integer = fret number; `null` = string not played this beat. Ignored when `rest: true`. |
+| `label`      | string                      | no       | Beat label shown below the staff. See **Label convention** below. |
+| `duration`   | int                         | no       | Number of beats the note rings for (default: `1`). Expands the column by `duration × col_width`. |
+| `rest`       | bool                        | no       | If `true`, renders a rest symbol (`r`) on all strings instead of fret numbers (default: `false`). |
+| `bend`       | bool                        | no       | If `true`, appends `b` to the fret number in the staff (default: `false`). |
+| `bend_target`| int                         | no       | Target fret pitch for the bend. Renders as `8b10` (fret 8 bent to pitch of fret 10). Only meaningful when `bend: true`. |
+| `vibrato`    | bool                        | no       | If `true`, appends `~` to the fret number in the staff (default: `false`). May combine with `bend`. |
+| `technique`  | `"h"` \| `"p"` \| `"/"` \| `"\\"` \| null | no | Replaces the leading `─` of the beat's column with the technique connector on strings that have a note. `h` = hammer-on, `p` = pull-off, `/` = slide up, `\` = slide down. |
+
+#### Label convention
+
+Labels appear below the staff and are placed using **collision detection** into up to two rows (row A and row B). Each label is left-aligned starting directly under the fret digit of its beat. Row A is filled first; a label goes to row B only when it would overlap the previous row-A label. Only rows that contain at least one label are output.
+
+**Labels should match what the diagram is teaching.** A label earns its place when it adds information the staff characters and surrounding prose do not already convey. Apply the following rules by context:
+
+- **Technique-focused lessons** (hammer-ons, bends, slides, etc.) — label the teaching point: `pick`, `bend`, `rel`, `vib`, `bend~`. Technique characters (`h`, `p`, `/`, `\`) already appear as leading characters in the staff — do not echo them as labels below.
+- **Note/scale-focused lessons** (fretboard geography, scale degrees) — note names or degree labels (`A`, `b3`, `5`, etc.) are appropriate when mapping fret numbers to note identity is the lesson's purpose.
+- **Advanced and combining lessons** — use labels sparingly; by this point the reader has the vocabulary and clean tab is less cluttered.
+- **Exercises and licks** — no labels. Drill material assumes prior knowledge; the player needs clean tab, not annotation.
+
+| Label | Meaning |
+|-------|---------|
+| `pick` | Explicit pick attack — use when distinguishing a picked note from a legato continuation matters |
+| `bend` | String bend — use on the beat where the bend is initiated |
+| `rel`  | Release — use on the post-bend beat where the pitch returns |
+| `vib`  | Vibrato |
+| `bend~` | Bend held with vibrato (single beat combining both) |
+| `1` `2` `3` `4` | Beat numbers |
+| `rest` | Default label for `rest: true` beats |
+
+Do not use `h`, `p`, `/`, `\` as labels — those characters already appear in the staff. In strumming exercises, `D` and `U` mean down-strum and up-strum — those are acceptable.
 
 ### Examples
 
@@ -211,6 +238,45 @@ lines:
         label: "3"
       - notes: [null, null, 0, null, null, null]
         label: "4"
+```
+
+```yaml
+# Bend and release with vibrato
+type: tab
+title: Whole-Step Bend — B string
+lines:
+  - beats:
+      - notes: [null, null, null, null, 8, null]
+        label: "bend"
+        bend: true
+        bend_target: 10
+        duration: 2
+      - notes: [null, null, null, null, 8, null]
+        label: "rel"
+        duration: 2
+      - notes: [null, null, null, null, 7, null]
+        label: "vib"
+        vibrato: true
+        duration: 2
+```
+
+```yaml
+# Legato run with hammer-ons and pull-offs
+type: tab
+title: Legato Run — A minor pentatonic
+lines:
+  - beats:
+      - notes: [null, null, null, null, 5, null]
+        label: "pick"
+      - notes: [null, null, null, null, 7, null]
+        technique: "h"
+        label: "h"
+      - notes: [null, null, null, null, 8, null]
+        technique: "h"
+        label: "h"
+      - notes: [null, null, null, null, 5, null]
+        technique: "p"
+        label: "p"
 ```
 
 ```yaml

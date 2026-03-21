@@ -21,22 +21,14 @@ lines:
   - measures:
       - beats:
           - notes: [null, null, null, null, 5, null]
-            label: "E"
           - notes: [null, null, null, null, 8, null]
-            label: "G"
           - notes: [null, null, null, null, null, 5]
-            label: "A"
           - notes: [null, null, null, null, null, 8]
-            label: "C"
       - beats:
           - notes: [null, null, null, null, 8, null]
-            label: "G"
           - notes: [null, null, null, null, 10, null]
-            label: "A"
           - notes: [null, null, null, null, null, 8]
-            label: "C"
           - notes: [null, null, null, null, null, 10]
-            label: "D"
             duration: 2
 ```
 

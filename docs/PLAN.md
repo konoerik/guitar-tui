@@ -23,7 +23,6 @@
 
 ### Content gaps (Tier 3b)
 
-- Expressive techniques lessons — bending, vibrato, hammer-ons/pull-offs, slides; candidate track between Tracks 6 and 7 (4–6 lessons)
 
 ### Release
 
@@ -33,6 +32,7 @@
 ### Low priority
 
 - FEAT-007: chord diagram tuning-aware string labels — not needed until alternate tuning lessons are written
+- **Tab renderer: suppress trailing dash before technique connector** — `─5─h8─` has a gap that `─5b7─` does not (ADR-D8). Fix approach: second pass over the rendered staff rows — after all beats are written, scan each string row for `─` immediately before `h`/`p`/`/`/`\` and remove it. Requires no look-ahead during render; operates on the completed string. Update `TestTechniqueConnectors` tests if implemented.
 - Thumb notation — `fingers` accepts integers 1–4 only; classical/fingerstyle thumb (T) not supported; no planned lesson requires it
 - Multi-barre chords — `ChordSpec.barre` is a single `BarreDef`; advanced jazz voicings with two independent partial barres not supported
 - Metronome audio click (afplay macOS / aplay Linux) — deferred; platform fragmentation and asyncio jitter at high BPM
@@ -66,3 +66,7 @@
 - M7 — Polish and Release: metronome widget, terminal size warning, lick cross-references (`licks:` frontmatter), US English sweep, GitHub live, 230 tests ✓
 - REDESIGN Step 1 (Instructor): added `licks:` to 12 lessons; authored 9 lick files; all exercises complete ✓
 - REDESIGN (complete): Exercises + Licks tabs in lesson view, contextual filtering, lick library in Practice screen; `[1]–[4]` nav retained; Tools screen kept as-is ✓
+- Bend notation in tab renderer: `bend`/`bend_target`/`vibrato` suffixes + `technique` connectors (`h`, `p`, `/`, `\`) on `TabBeat`; col_width auto-expands for suffix length; 30 new tests ✓
+- Track 12 — Expressive Techniques: 5 lessons (string_bending, vibrato_technique, hammer_ons_pull_offs, slides, combining_techniques) + 2 licks; label convention (Option A) applied; slide notation bug fixed; spider exercise corrected ✓
+- Two-row collision-detection label system in tab renderer; Option A label convention documented in `schemas/diagram_spec.md`; ADR-D8 recorded ✓
+- Label convention sweep: refined to contextual rules; swept 45 files (14 exercises, 25 licks, 6 lessons); D/U preserved in `alternate_picking.md` ✓

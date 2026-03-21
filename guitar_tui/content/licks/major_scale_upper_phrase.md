@@ -22,22 +22,14 @@ title: "Major Scale Upper-Neck Phrase"
 lines:
   - beats:
       - notes: [null, null, null, null, null, 5]
-        label: "A"
       - notes: [null, null, null, null, null, 7]
-        label: "B"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, null, 7, null]
-        label: "F#"
       - notes: [null, null, null, null, 8, null]
-        label: "G"
         duration: 2
       - notes: [null, null, null, 4, null, null]
-        label: "B"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, null, 7, null, null]
-        label: "D"
         duration: 2
 ```
 

@@ -20,21 +20,13 @@ title: String Skipping — A minor pentatonic, position 1
 lines:
   - beats:
       - notes: [5, null, null, null, null, null]
-        label: "A"
       - notes: [null, null, 5, null, null, null]
-        label: "G"
       - notes: [null, 5, null, null, null, null]
-        label: "D"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, 7, null, null, null]
-        label: "A"
       - notes: [null, null, null, null, 5, null]
-        label: "E"
       - notes: [null, null, null, 5, null, null]
-        label: "C"
       - notes: [null, null, null, null, null, 5]
-        label: "A"
         duration: 2
 ```
 
