@@ -4,10 +4,6 @@
 <!-- Current sprint items. Keep this short — 5-10 items max.
      If it grows beyond that, move lower-priority items to Backlog. -->
 
-### Open decisions
-
-- `uv.lock` in `.gitignore` — commit before PyPI release for reproducible contributor/CI installs.
-
 ### M8 — Theory Web
 
 - Scale view: select scale → all 5 positions (navigable) + diatonic chord panel (with diagrams) + common progressions + cross-references to lessons
@@ -17,7 +13,6 @@
 
 ### Infrastructure
 
-- Persistent settings (`platformdirs`, `AppSettings` Pydantic model in `guitar_tui/settings.py`) — unblocks inline block toggle state, last-lesson resume, metronome BPM persistence, reference key/scale persistence
 - Inline content blocks — `exercise` and `lick` slug references in lesson Markdown; two-pass loading (loaders independent, resolved in `on_mount`); evaluate alongside Study screen redesign before implementing
 
 ### Content gaps (Tier 3b) — staged
@@ -109,4 +104,8 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 - Two-row collision-detection label system in tab renderer; Option A label convention documented in `schemas/diagram_spec.md`; ADR-D8 recorded ✓
 - Label convention sweep: refined to contextual rules; swept 45 files (14 exercises, 25 licks, 6 lessons); D/U preserved in `alternate_picking.md` ✓
 - Persistent settings wired: BPM persists on every change (not just stop); last lesson restored on re-open; `action_back` clears saved lesson ✓
-- Track progress indicator `[3 / 9]` in lesson border title ✓
+- Track progress indicator `[pos / total]` in lesson border title (left-anchored) ✓
+- uv.lock committed; removed from .gitignore ✓
+- Community standards: CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md, bug + feature issue templates ✓
+- Curriculum planned: Tracks 13–16 scoped (Phrasing, Rhythm Depth, Ear Training, Sounds and Scales Around the World) ✓
+- Audio feature scoped and stored as single future milestone (metronome + tuning + intervals + playback, one library) ✓

@@ -200,6 +200,83 @@ Within a track, lessons are ordered by `position`.
 
 ---
 
+### Track 13 — Phrasing and Musicality
+
+*Turning technique vocabulary into musical expression. Covers phrase shape, space, motif development, and rhythmic placement. Learning arc position: after Track 12.*
+
+**Notation note:** Fully achievable with current engine. `rest: true` handles space/silence; `measures` + multi-`lines` handle longer phrases; `duration` and beat labels handle rhythmic placement.
+
+| Status | Slug | Title | Difficulty | Diagrams needed |
+|--------|------|-------|------------|-----------------|
+| ○ | phrase_shape | The Shape of a Phrase | intermediate | tab |
+| ○ | question_and_answer | Question and Answer Phrasing | intermediate | tab |
+| ○ | space_and_silence | Space and Silence | intermediate | tab |
+| ○ | motif_development | Motif Development | intermediate | tab |
+| ○ | rhythmic_placement | Rhythmic Placement | intermediate | tab |
+| ○ | building_a_solo | Building a Solo | intermediate | tab |
+
+> **Note**: `combining_techniques` (Track 12) is effectively the first lesson of this arc — prerequisites chain naturally. Exercises: 2–3 phrase-shape drills. Licks: 3–4 new (question-answer phrase, space/rest phrase, motif example).
+
+---
+
+### Track 14 — Rhythm Depth
+
+*Subdivision awareness, syncopation, strumming texture, and rhythmic lead playing. Learning arc position: between Tracks 6 and 7 — players learning to improvise need rhythm vocabulary simultaneously.*
+
+**Notation notes:** D/U labels handle strumming patterns. `rest: true` + labels handle syncopation. Palm muting: no P.M. staff notation exists; use `caption:` field + prose (consistent with how ASCII tab handles this generally). Ghost strokes: approximate with `rest: true` + prose distinction.
+
+| Status | Slug | Title | Difficulty | Diagrams needed |
+|--------|------|-------|------------|-----------------|
+| ○ | subdivisions | Subdivisions — Quarters, Eighths, and Sixteenths | beginner | tab |
+| ○ | syncopation | Syncopation and the Backbeat | intermediate | tab |
+| ○ | sixteenth_strumming | 16th-Note Strumming Patterns | intermediate | tab |
+| ○ | palm_muting | Palm Muting | intermediate | tab |
+| ○ | ghost_strokes | Ghost Strokes and Rhythmic Muting | intermediate | tab |
+| ○ | rhythm_in_leads | Rhythm in Lead Playing | intermediate | tab |
+
+> **Note**: Exercises: 3–4 (16th-note strumming drill, syncopation exercise, palm-muting pattern). Licks: 2–3 (syncopated pentatonic phrase, rhythmically displaced lick).
+
+---
+
+### Track 16 — Sounds and Scales Around the World
+
+*Why does flamenco sound Spanish? Why does gypsy jazz never seem to resolve? Why does a whole-tone scale feel like it's floating? Each lesson starts from a sound the player recognises and traces it back to the interval or scale responsible. Learning arc position: standalone; most valuable after Track 10 (Modes), but accessible from Track 7 onward.*
+
+**Notation note:** Each new scale requires a YAML data file following the existing scale pattern. ~5–6 new files. Scale diagrams (existing type) handle all visual content; tab licks use existing format.
+
+**Framing note:** Not all musical character is scale-driven. Bossa nova's sound is jazz harmony + Brazilian rhythm, not a distinctive scale — this is noted explicitly rather than forcing a lesson where the premise doesn't hold. The track leads with the listening question, not the scale name.
+
+| Status | Slug | Title | Distinctive interval | Cultural context |
+|--------|------|-------|---------------------|-----------------|
+| ○ | harmonic_minor_sound | The Sound of Harmonic Minor | Augmented 2nd (b6→7) | Classical, metal, gypsy jazz |
+| ○ | phrygian_dominant | Phrygian Dominant — The Spanish Sound | b2 over major I | Flamenco, Middle Eastern, gypsy jazz |
+| ○ | hungarian_minor | Hungarian Minor — The Gypsy Sound | Two augmented 2nds | Romani music, Eastern European |
+| ○ | whole_tone_scale | The Whole Tone Scale — Floating and Unresolved | No half steps, no resolution | Debussy, impressionist jazz, film |
+| ○ | diminished_scale | The Diminished Scale — Tension and Symmetry | Symmetric whole-half / half-whole | Jazz, dramatic passages, horror film |
+| ○ | japanese_pentatonic | Japanese and East Asian Pentatonics | b2, omitted 3rd | Japanese koto music, game music, East Asian folk |
+
+> **Data requirements:** `harmonic_minor.yaml`, `phrygian_dominant.yaml`, `hungarian_minor.yaml`, `whole_tone.yaml`, `diminished.yaml`, `japanese_pentatonic.yaml` — all new files, ~5 positions each (or fewer for symmetric scales). Licks: 1 per lesson, looper-ready, capturing the characteristic phrase shape of each tradition.
+
+---
+
+### Track 15 — Ear Training
+
+*How to develop relative pitch — interval recognition, chord quality, transcription method, and singing what you play. Learning arc position: standalone; can begin after Track 4.*
+
+**App limitation:** The app has no audio. This track teaches *how* to train your ear — methods, frameworks, and systematic practice routines — but the actual listening practice happens outside the app with the player's instrument and looper. This constraint is stated explicitly in the first lesson. The looper setup already present in the lick library partially bridges this: "looper ear exercises" instruct the player to record a phrase and listen back with specific attention targets, turning the looper into an ear training tool.
+
+| Status | Slug | Title | Difficulty | Diagrams needed |
+|--------|------|-------|------------|-----------------|
+| ○ | ear_training_approach | How Ear Training Works | intermediate | tab (interval examples) |
+| ○ | interval_recognition | Interval Recognition | intermediate | tab |
+| ○ | chord_quality_by_ear | Chord Quality by Ear | intermediate | chord |
+| ○ | transcription_basics | Transcription Basics | intermediate | — |
+| ○ | singing_what_you_play | Singing What You Play | intermediate | — |
+
+> **Note**: Mostly prose with minimal diagrams. A `listening_exercise:` section (Markdown convention, no engine change) could be added to lick files for the looper-as-ear-training format. No new diagram types needed.
+
+---
+
 ### Track 11 — Song Analysis
 
 *Reverse-engineering the theory of real music. Builds on Tracks 4–8. Requires the
@@ -434,7 +511,11 @@ written.
 | 10 — Modes | 6 | 6 | 0 |
 | 11 — Song Analysis | 9 | 9 | 0 |
 | 12 — Expressive Techniques | 5 | 5 | 0 |
-| **Total** | **83** | **83** | **0** |
+| 13 — Phrasing and Musicality | 6 | 0 | 0 |
+| 14 — Rhythm Depth | 6 | 0 | 0 |
+| 15 — Ear Training | 5 | 0 | 0 |
+| 16 — Sounds and Scales Around the World | 6 | 0 | 0 |
+| **Total** | **106** | **83** | **0** |
 
-Exercises: 14 complete (6 technique, 2 scale/pentatonic, 2 major-scale, 1 natural-minor, 1 barre, 1 seventh-chords, 1 open-chords).
-Licks: 25 complete (added legato_phrase and slide_connector; pent_bend_release and blues_bb_king_box updated with proper notation).
+Exercises: 14 complete; ~10 planned for Tracks 13–14.
+Licks: 25 complete; ~5–7 planned for Tracks 13–14.
