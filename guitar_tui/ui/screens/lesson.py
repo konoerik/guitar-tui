@@ -37,11 +37,15 @@ class LessonMode(Screen):
                         yield ScrollableContainer(id="licks-body")
         yield Footer()
 
-    def on_mount(self) -> None:
+    async def on_mount(self) -> None:
         self._build_tree()
         self.query_one("#lessons-nav").border_title = "Tracks"
-        self.query_one("#lessons-content").border_title = "Lessons"
-        self._show_overview()
+        last = self.app.settings.last_lesson
+        if last and last in self.app.lesson_loader.lessons:
+            await self._load_lesson(self.app.lesson_loader.lessons[last])
+        else:
+            self.query_one("#lessons-content").border_title = "Lessons"
+            self._show_overview()
         self.query_one("#lesson-body", ScrollableContainer).focus()
 
     # ── Tree ──────────────────────────────────────────────────────────────────
@@ -76,6 +80,8 @@ class LessonMode(Screen):
     def action_back(self) -> None:
         if self._current_slug is not None:
             self._current_slug = None
+            self.app.settings.last_lesson = None
+            self.app.save_settings()
             self.query_one("#lessons-content").border_title = "Lessons"
             self._show_overview()
 
@@ -114,9 +120,21 @@ class LessonMode(Screen):
 
     # ── Lesson loading ────────────────────────────────────────────────────────
 
+    def _track_progress(self, lesson: ParsedLesson) -> str:
+        """Return a ' [pos / total]' string for the lesson's position in its track."""
+        for _, lessons in self.app.lesson_loader.ordered_track_lessons():
+            slugs = [l.meta.slug for l in lessons]
+            if lesson.meta.slug in slugs:
+                pos = slugs.index(lesson.meta.slug) + 1
+                return f"[{pos} / {len(lessons)}]  "
+        return ""
+
     async def _load_lesson(self, lesson: ParsedLesson) -> None:
         self._current_slug = lesson.meta.slug
-        self.query_one("#lessons-content").border_title = lesson.meta.title
+        self.app.settings.last_lesson = lesson.meta.slug
+        self.app.save_settings()
+        progress = self._track_progress(lesson)
+        self.query_one("#lessons-content").border_title = progress + lesson.meta.title
 
         tabs = self.query_one("#lesson-tabs", TabbedContent)
         # Orientation is informational — no drills or licks apply yet.

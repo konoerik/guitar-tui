@@ -6,8 +6,7 @@
 
 ### Open decisions
 
-- `uv.lock` in `.gitignore` — currently ignored; removing gives reproducible installs. Decide before next release.
-- Track progress indicator (`3 / 9`) in lesson header — low effort; useful context for learners.
+- `uv.lock` in `.gitignore` — commit before PyPI release for reproducible contributor/CI installs.
 
 ### M8 — Theory Web
 
@@ -21,12 +20,31 @@
 - Persistent settings (`platformdirs`, `AppSettings` Pydantic model in `guitar_tui/settings.py`) — unblocks inline block toggle state, last-lesson resume, metronome BPM persistence, reference key/scale persistence
 - Inline content blocks — `exercise` and `lick` slug references in lesson Markdown; two-pass loading (loaders independent, resolved in `on_mount`); evaluate alongside Study screen redesign before implementing
 
-### Content gaps (Tier 3b)
+### Content gaps (Tier 3b) — staged
+
+**Stage 1** (highest value, no new notation or infrastructure needed):
+- Track 14 core (4 lessons): `subdivisions`, `syncopation`, `sixteenth_strumming`, `palm_muting` — D/U labels + `rest: true` + `caption:` covers everything; palm muting uses `caption:` + prose workaround
+- Track 13 core (3 lessons): `phrase_shape`, `question_and_answer`, `space_and_silence`
+
+**Stage 2** (complete both technique-adjacent tracks):
+- Track 13 remaining (3 lessons): `motif_development`, `rhythmic_placement`, `building_a_solo`
+- Track 14 remaining (2 lessons): `ghost_strokes`, `rhythm_in_leads`
+- Track 13–14 exercises (~7) and licks (~5–7)
+
+**Stage 3** (ear training — constrained by no-audio):
+- Track 15 (5 lessons): ear training guide; explicit about app limitation; looper-as-ear-training format
+- Optional: add `listening_exercise:` Markdown section convention to lick files (no engine change)
+
+**Stage 4** (world sounds — requires new YAML data files):
+- Track 16 — Sounds and Scales Around the World (6 lessons): harmonic minor, Phrygian dominant, Hungarian minor, whole tone, diminished, Japanese pentatonic
+- Data prerequisites: ~6 new scale YAML files before lessons can be written
+- 1 lick per lesson (looper-ready, captures characteristic phrase shape of each tradition)
+
+
 
 
 ### Release
 
-- Screenshot or screen recording in README — ASCII art chord grid is a placeholder; a real screenshot would dramatically improve first impressions
 - PyPI publication: `uv build` + install smoke test → `uv publish`; update README install instructions from `git+https://...` to `uv tool install guitar-tui`
 
 ### Low priority
@@ -37,6 +55,26 @@
 - Multi-barre chords — `ChordSpec.barre` is a single `BarreDef`; advanced jazz voicings with two independent partial barres not supported
 - Metronome audio click (afplay macOS / aplay Linux) — deferred; platform fragmentation and asyncio jitter at high BPM
 - Lesson → lick cross-references: `licks:` field already in REDESIGN Step 1; typed inline links (`[lesson:slug]`) deferred
+
+### Future ideas — Audio (reevaluate as a single feature milestone)
+
+If audio is added, implement it as one coherent feature rather than piecemeal — one library (`miniaudio`) covers all use cases. Adding audio only for the metronome and revisiting later risks doing the dependency and architecture work twice.
+
+**Use cases in priority order:**
+- **Metronome click** — high/low PCM click; precision-timed dedicated thread (not asyncio); graceful degradation when no audio device
+- **Tuning reference tones** — 6 sustained sine waves (E2 A2 D3 G3 B3 E4); simple but high value for beginners
+- **Interval demonstration** — two simultaneous tones; directly supports ear training (Track 15) and intervals lesson (Track 4); closes the biggest gap in audio-dependent pedagogy
+- **Scale/lick playback** — sequential tones from tab fret+string data using `f = 82.41 × 2^(n/12)`; sine waves for simplicity, sampled guitar for quality (samples are larger to bundle)
+- **Chord playback** — polyphonic; useful for harmony/seventh chord lessons
+
+**Architecture notes:**
+- All pitched content generated programmatically from frequency formula — no sample files needed except click WAVs
+- Dedicated audio thread with `time.perf_counter()` for metronome timing — separate from Textual event loop
+- Graceful degradation required: app must function fully without audio (SSH, headless, CI)
+- Audio files (click WAVs if bundled) must live inside `guitar_tui/` — hatchling includes them in the wheel
+- Adds `miniaudio` as 5th dependency; justified by breadth of use across metronome, tuning, ear training, and playback
+
+**Estimated effort:** ~20–30 hrs total for all use cases together; ~14–19 hrs for metronome alone (see Developer notes from 2026-03-21 session). Doing it once for all use cases is significantly more efficient than staged additions.
 
 ### Future ideas (post-M8)
 
@@ -70,3 +108,5 @@
 - Track 12 — Expressive Techniques: 5 lessons (string_bending, vibrato_technique, hammer_ons_pull_offs, slides, combining_techniques) + 2 licks; label convention (Option A) applied; slide notation bug fixed; spider exercise corrected ✓
 - Two-row collision-detection label system in tab renderer; Option A label convention documented in `schemas/diagram_spec.md`; ADR-D8 recorded ✓
 - Label convention sweep: refined to contextual rules; swept 45 files (14 exercises, 25 licks, 6 lessons); D/U preserved in `alternate_picking.md` ✓
+- Persistent settings wired: BPM persists on every change (not just stop); last lesson restored on re-open; `action_back` clears saved lesson ✓
+- Track progress indicator `[3 / 9]` in lesson border title ✓

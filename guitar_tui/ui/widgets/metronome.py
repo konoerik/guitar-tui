@@ -83,6 +83,7 @@ class MetronomeWidget(Widget):
         if self.running:
             self._stop_timer()
             self._start_timer()
+        self.app.settings.metronome_bpm = bpm  # keep in-memory; persisted on stop or quit
 
     def watch_beats(self, beats: int) -> None:
         self.current_beat = 0
