@@ -138,6 +138,9 @@ _INFO_TEXT = """\
 
 github.com/konoerik/guitar-tui
 
+[dim]Developed with AI (Claude): code, lessons, and diagrams. Content is machine-checked against
+music theory and reviewed, but mistakes are possible — corrections welcome on GitHub.[/dim]
+
 [dim]Recommended terminal size: 110 × 36 or larger.[/dim]\
 """
 

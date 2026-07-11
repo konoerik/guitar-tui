@@ -4,6 +4,19 @@
 <!-- Current sprint items. Keep this short — 5-10 items max.
      If it grows beyond that, move lower-priority items to Backlog. -->
 
+### Agreed order of work (2026-07-11, post-audit review)
+
+1. **PyPI release** (see Release below) — one command away; 0.1.x = content additions thereafter
+2. **Content-verification test** — port the audit script into pytest: recompute pitch classes for
+   every chord voicing, scale-position note, and lick tab against the stated name/degree/key+scale;
+   assert box completeness against declared `fret_range`. Makes the catalog self-verifying — the
+   2026-07-11 audit showed hand-authored content drifts in ways rendering checks cannot catch.
+3. **Track 14 core** (Stage 1 below) — rhythm is the curriculum's biggest pedagogical gap: 1 rhythm
+   lesson in 84; players plateau on time feel, not harmony. Slots between Tracks 6–7 in the arc.
+4. **Track 13 core** (Stage 1 below) — phrasing turns the 26-lick library from patterns into music
+5. **M8 Theory Web** — fold Track 16's 6 new scale YAML files in as scale-view test material
+6. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
+
 ### M8 — Theory Web
 
 - Scale view: select scale → all 5 positions (navigable) + diatonic chord panel (with diagrams) + common progressions + cross-references to lessons
