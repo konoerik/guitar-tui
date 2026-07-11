@@ -324,7 +324,7 @@ Renders a full or partial fretboard overview — horizontal strings, with note l
 |----------|--------|----------|-------------|
 | `string` | int    | yes      | String number: 1 (high e) – 6 (low E) |
 | `fret`   | int    | yes      | Fret number |
-| `label`  | string | no       | Text to display inside the dot (first character shown; replaces the style marker) |
+| `label`  | string | no       | Text to display inside the dot (up to 2 chars shown, e.g. `"F#"`; replaces the style marker) |
 | `style`  | string | no       | Visual style: `"root"`, `"highlight"`, `"muted"` (default: `"highlight"`) |
 
 ### Examples

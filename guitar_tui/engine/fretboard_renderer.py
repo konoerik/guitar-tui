@@ -9,8 +9,9 @@ Style markers:
     ●   highlight (default)
     ×   muted
 
-When a FretNote.label is set, the 1-char label replaces the style marker
-inside the dot position.  Multi-char label truncation is enforced here.
+When a FretNote.label is set, the label (up to 2 chars, e.g. "F#") replaces
+the style marker inside the dot position; longer labels are truncated to 2
+chars.  The column stays 5 chars wide: '──F──' / '──F#─'.
 """
 
 from rich.text import Text
@@ -39,10 +40,9 @@ _COL_EMPTY = "──┼──"
 def _col(note: FretNote) -> str:
     """Return the 5-char column string for a highlighted fret note."""
     if note.label is not None:
-        char = note.label[:1]
-    else:
-        char = _STYLE_CHARS.get(note.style, "●")
-    return f"──{char}──"
+        label = note.label[:2]
+        return f"──{label}──" if len(label) == 1 else f"──{label}─"
+    return f"──{_STYLE_CHARS.get(note.style, '●')}──"
 
 
 def render_fretboard(spec: FretboardSpec) -> Text:

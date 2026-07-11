@@ -99,8 +99,8 @@ class TestLabels:
         text = render_fretboard(spec)
         assert "●" in text.plain
 
-    def test_label_truncated_to_one_char(self) -> None:
-        # Multi-char label → only first char shown in M2
+    def test_two_char_label_shown_in_full(self) -> None:
+        # Accidentals like "Ab" / "F#" must not lose their second character
         spec = FretboardSpec.model_validate({
             "type": "fretboard",
             "highlights": [
@@ -110,8 +110,32 @@ class TestLabels:
         text = render_fretboard(spec)
         lines = text.plain.splitlines()
         e_row = next(l for l in lines if l.startswith("E "))
-        # "A" should appear but not "Ab" as a substring of the column
-        assert "──A──" in e_row
+        assert "──Ab─" in e_row
+
+    def test_label_longer_than_two_chars_truncated(self) -> None:
+        spec = FretboardSpec.model_validate({
+            "type": "fretboard",
+            "highlights": [
+                {"string": 6, "fret": 5, "label": "Abc"},
+            ],
+        })
+        text = render_fretboard(spec)
+        e_row = next(l for l in text.plain.splitlines() if l.startswith("E "))
+        assert "──Ab─" in e_row
+        assert "Abc" not in e_row
+
+    def test_two_char_label_keeps_rows_aligned(self) -> None:
+        spec = FretboardSpec.model_validate({
+            "type": "fretboard",
+            "fret_range": [0, 3],
+            "highlights": [
+                {"string": 6, "fret": 1, "label": "F"},
+                {"string": 6, "fret": 2, "label": "F#"},
+            ],
+        })
+        lines = render_fretboard(spec).plain.splitlines()
+        string_rows = [l for l in lines if l and l[0] in "eBGDAE"]
+        assert len({len(r) for r in string_rows}) == 1
 
 
 # ── Style markers ──────────────────────────────────────────────────────────────
