@@ -27,9 +27,11 @@ A terminal application for guitar music theory. Structured lessons, interactive 
 ## Install
 
 ```bash
-uv tool install git+https://github.com/konoerik/guitar-tui.git
+uv tool install guitar-tui
 guitar-tui
 ```
+
+Or with pip: `pip install guitar-tui`
 
 Or clone and run locally:
 

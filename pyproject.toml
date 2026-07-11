@@ -2,7 +2,22 @@
 name = "guitar-tui"
 version = "0.1.0"
 description = "A TUI application for guitar music theory"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{name = "Erikton Konomi"}]
+keywords = ["guitar", "music-theory", "tui", "textual", "terminal", "chords", "scales", "fretboard"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Topic :: Multimedia :: Sound/Audio",
+]
 requires-python = ">=3.12"
 dependencies = [
     "textual>=1.0",
@@ -11,6 +26,10 @@ dependencies = [
     "pydantic>=2.0",
     "platformdirs>=4.0",
 ]
+
+[project.urls]
+Repository = "https://github.com/konoerik/guitar-tui"
+Issues = "https://github.com/konoerik/guitar-tui/issues"
 
 [project.scripts]
 guitar-tui = "guitar_tui.app:main"

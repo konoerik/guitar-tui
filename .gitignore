@@ -30,3 +30,6 @@ Thumbs.db
 *.swp
 *.swo
 .claude/archive/
+
+# Secrets — never commit; see .env.example
+.env
