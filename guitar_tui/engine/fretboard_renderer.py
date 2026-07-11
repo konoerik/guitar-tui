@@ -9,9 +9,8 @@ Style markers:
     ●   highlight (default)
     ×   muted
 
-When show_notes=True or a FretNote.label is set, the 1-char label replaces the
-style marker inside the dot position.  Multi-char label truncation is enforced
-here; richer display is deferred to M4.
+When a FretNote.label is set, the 1-char label replaces the style marker
+inside the dot position.  Multi-char label truncation is enforced here.
 """
 
 from rich.text import Text
@@ -37,7 +36,7 @@ _STYLE_CHARS: dict[str, str] = {
 _COL_EMPTY = "──┼──"
 
 
-def _col(note: FretNote, show_notes: bool) -> str:
+def _col(note: FretNote) -> str:
     """Return the 5-char column string for a highlighted fret note."""
     if note.label is not None:
         char = note.label[:1]
@@ -74,7 +73,7 @@ def render_fretboard(spec: FretboardSpec) -> Text:
             if note is None:
                 row += _COL_EMPTY
             else:
-                row += _col(note, spec.show_notes)
+                row += _col(note)
         lines.append(row)
 
     if spec.caption:

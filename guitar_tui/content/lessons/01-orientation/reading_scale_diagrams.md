@@ -55,7 +55,7 @@ positions:
 | `●` | A note in the scale |
 | `■` | A **root note** — the note the scale is named after |
 
-Root notes are your melodic anchors. Phrases that begin and end on a root note sound resolved. In the diagram above, three `■` markers appear at the 5th fret — those are all `A` notes, the root of the A minor pentatonic.
+Root notes are your melodic anchors. Phrases that begin and end on a root note sound resolved. In the diagram above there are three `■` markers — two at the 5th fret (low `E` and high `e` strings) and one at the 7th fret (`D` string). All three are `A` notes, the root of the A minor pentatonic.
 
 ## The Fret Range
 

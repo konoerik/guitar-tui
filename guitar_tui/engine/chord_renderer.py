@@ -4,13 +4,13 @@ Renders a ChordSpec into a Rich Text object.  The output is a vertical grid
 (nut at top) with string labels, open/muted markers, fret dots, and optional
 barre indicators.
 
-Grid geometry (all rows are 25 chars wide):
-    Header row:   ' E  A  D  G  B  e  '  (string labels)
-    Marker row:   ' ○     ○  ○        '  (○ open, X muted, ' ' fretted)
-    Nut row:      '╒══╤══╤══╤══╤══╕'    (when base_fret == 1)
-    Content row:  '│● │  │  │  │  │  │'  (dots, barres, or empty)
-    Separator:    '├──┼──┼──┼──┼──┤'
-    Bottom row:   '└──┴──┴──┴──┴──┘'
+Grid geometry (all rows are 25 chars wide — 6 cells of 3 chars + 7 borders):
+    Header row:   '  E   A   D   G   B   e  '  (string labels, cell-centered)
+    Marker row:   '  ○       ○   ○          '  (○ open, X muted, ' ' fretted)
+    Nut row:      '╒═══╤═══╤═══╤═══╤═══╤═══╕'  (when base_fret == 1)
+    Content row:  '│ ● │   │   │   │   │   │'  (dots, barres, or empty)
+    Separator:    '├───┼───┼───┼───┼───┼───┤'
+    Bottom row:   '└───┴───┴───┴───┴───┴───┘'
 """
 
 from rich.text import Text
@@ -76,10 +76,12 @@ def render_chord(spec: ChordSpec) -> Text:
     for row in range(1, num_rows + 1):
         cells: list[str] = []
         for i, fret in enumerate(spec.frets):
+            # Barre strings are numbered 1 = high e .. 6 = low E (same convention
+            # as ScaleNote/FretNote); frets-array index i runs 0 = low E .. 5 = high e.
             if (
                 spec.barre is not None
                 and spec.barre.fret == row
-                and (spec.barre.from_string - 1) <= i <= (spec.barre.to_string - 1)
+                and (6 - spec.barre.to_string) <= i <= (6 - spec.barre.from_string)
             ):
                 cells.append(" ▬ ")
             elif fret is not None and fret == row:

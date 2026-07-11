@@ -48,10 +48,10 @@ fingers: [null, 1, 2, 3, null, null]
 
 ## Sus Chord Shape Relationships
 
-- **Dsus2 vs D**: D has fret 3 on B string (D = root). Dsus2 opens the B string (E = the 2nd of D). The high e stays open (E, same note one octave up).
-- **Dsus4 vs D**: D has open B string in some voicings, or fret 3. Dsus4 frets B string at 3 (G = the 4th of D) and high e at 3 (G). The 3rd (F#) is completely absent.
-- **Asus2 vs A**: A major frets D and G strings at fret 2. Asus2 opens the B string (B = the 2nd of A), removing the C# (3rd). Minimal shape change.
-- **Esus4 vs E**: E has D string at fret 2 (E = root). Esus4 adds fret 2 on G string (A = the 4th of E). The B and G strings are lifted from open (fret 0 and 1 in E major) to fret 2 — an easy one-finger addition to E major.
+- **Dsus2 vs D**: D has fret 2 on the high e string (F# = the 3rd). Dsus2 opens the high e (E = the 2nd of D, one octave up), removing the 3rd. The B string stays at fret 3 (D = root).
+- **Dsus4 vs D**: D has fret 2 on the high e string (F# = the 3rd). Dsus4 moves it up to fret 3 (G = the 4th of D). The 3rd (F#) is completely absent.
+- **Asus2 vs A**: A major frets the D, G, and B strings at fret 2. Asus2 opens the B string (B = the 2nd of A), removing the C# (3rd). Minimal shape change.
+- **Esus4 vs E**: E has fret 1 on the G string (G# = the 3rd). Esus4 moves it up to fret 2 (A = the 4th of E) — a one-finger, one-fret change. The D string stays at fret 2.
 
 ## Add Chords — Extending Without Suspending
 
@@ -71,9 +71,9 @@ fingers: [null, 3, 2, null, 4, null]
 
 ```diagram
 type: chord
-title: Gsus4
-frets: [3, 3, 0, 0, 3, 3]
-fingers: [2, 3, null, null, 1, 4]
+title: Gadd9
+frets: [3, 2, 0, 2, 0, 3]
+fingers: [2, 1, null, 3, null, 4]
 ```
 
 ## Sus vs Add — The Key Difference
@@ -93,7 +93,7 @@ The 3rd is the deciding factor. Sus = no 3rd (ambiguous). Add = 3rd present (fla
 
 **Sus2 as color**: Dsus2 and Asus2 work as substitutes for D and A in bright, open-sounding progressions. They share all notes except the 3rd, so the transition is seamless.
 
-**Cadd9 and Gadd9**: These two chords are staples of acoustic and folk guitar. Cadd9 is often used instead of plain C because it is easier to finger and sounds richer. Gadd9 (often notated G with the pinky added) is nearly identical to G major except the A note on the B string adds shimmer.
+**Cadd9 and Gadd9**: These two chords are staples of acoustic and folk guitar. Cadd9 is often used instead of plain C because it is easier to finger and sounds richer. Gadd9 is nearly identical to G major except the A note on the G string (fret 2) adds shimmer.
 
 ## What's Next
 

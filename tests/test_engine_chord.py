@@ -208,3 +208,49 @@ class TestValidation:
     def test_missing_frets_raises(self) -> None:
         with pytest.raises(ValidationError):
             ChordSpec.model_validate({"type": "chord"})
+
+
+# ── partial barre string orientation ───────────────────────────────────────────
+
+
+class TestPartialBarreOrientation:
+    """Barre strings use 1 = high e .. 6 = low E, like ScaleNote/FretNote.
+
+    Bm: frets [null,2,4,4,3,2], barre fret 2 across strings 1-5 — the barre
+    must cover A through high e and must NOT appear on the muted low E column.
+    """
+
+    spec = make_chord(
+        [None, 2, 4, 4, 3, 2],
+        title="B Minor",
+        fingers=[None, 1, 3, 4, 2, 1],
+        barre={"fret": 2, "from": 1, "to": 5, "finger": 1},
+    )
+
+    def _row(self, fret_row: int) -> str:
+        lines = render_chord(self.spec).plain.splitlines()
+        # title, blank, header, marker, nut, then rows alternate content/separator
+        return lines[4 + 2 * fret_row - 1]
+
+    def test_barre_absent_on_low_e_column(self) -> None:
+        row2 = self._row(2)
+        cells = row2.split("│")[1:-1]
+        assert cells[0].strip() == "", f"low E cell should be empty, got {cells[0]!r}"
+
+    def test_barre_covers_a_through_high_e(self) -> None:
+        row2 = self._row(2)
+        cells = row2.split("│")[1:-1]
+        for idx in range(1, 6):
+            assert "▬" in cells[idx], f"cell {idx} should be barred: {row2!r}"
+
+    def test_mini_barre_top_two_strings(self) -> None:
+        # Dm7: barre strings 1-2 = high e and B columns only
+        spec = make_chord(
+            [None, None, 0, 2, 1, 1],
+            barre={"fret": 1, "from": 1, "to": 2, "finger": 1},
+        )
+        lines = render_chord(spec).plain.splitlines()
+        row1 = lines[3]  # header, marker, nut, first content row (no title)
+        cells = row1.split("│")[1:-1]
+        assert "▬" in cells[4] and "▬" in cells[5], f"top two strings barred: {row1!r}"
+        assert all("▬" not in cells[i] for i in range(4)), f"lower strings clear: {row1!r}"

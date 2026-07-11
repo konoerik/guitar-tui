@@ -22,6 +22,7 @@ fret_range: [9, 13]
 positions:
   - {string: 6, fret: 10, degree: "4"}
   - {string: 6, fret: 12, degree: "5"}
+  - {string: 6, fret: 13, degree: "b6"}
   - {string: 5, fret: 10, degree: "b7"}
   - {string: 5, fret: 12, degree: "1",  root: true}
   - {string: 4, fret: 9,  degree: "2"}
@@ -35,6 +36,7 @@ positions:
   - {string: 2, fret: 13, degree: "b3"}
   - {string: 1, fret: 10, degree: "4"}
   - {string: 1, fret: 12, degree: "5"}
+  - {string: 1, fret: 13, degree: "b6"}
 ```
 
 ## The 12th Fret Landmark

@@ -894,3 +894,41 @@ class TestTwoRowLabels:
         label_rows = self._label_rows(spec)
         assert len(label_rows) == 1
         assert "h" in label_rows[0]
+
+
+# ── mixed-width beats ──────────────────────────────────────────────────────────
+
+
+class TestMixedWidthBeats:
+    def test_chord_beat_with_mixed_digit_frets_has_no_spaces(self) -> None:
+        """A beat mixing 1- and 2-digit frets pads short notes with dashes, not spaces."""
+        spec = TabSpec.model_validate({
+            "type": "tab",
+            "lines": [{
+                "beats": [
+                    {"notes": [3, None, None, None, None, 12]},
+                ]
+            }],
+        })
+        lines = render_tab(spec).plain.splitlines()
+        staff = [l for l in lines if "|" in l]
+        for row in staff:
+            body = row[3:]
+            assert " " not in body.rstrip(), f"space inside staff row: {row!r}"
+        e_row = staff[-1]  # low E
+        assert "─3──" in e_row
+
+    def test_bend_note_beside_plain_note_has_no_spaces(self) -> None:
+        """A bend suffix on one note of a chord widens the beat; others pad with dashes."""
+        spec = TabSpec.model_validate({
+            "type": "tab",
+            "lines": [{
+                "beats": [
+                    {"notes": [None, None, None, 5, 7, None], "bend": True, "bend_target": 9},
+                ]
+            }],
+        })
+        lines = render_tab(spec).plain.splitlines()
+        staff = [l for l in lines if "|" in l]
+        for row in staff:
+            assert " " not in row[3:].rstrip(), f"space inside staff row: {row!r}"

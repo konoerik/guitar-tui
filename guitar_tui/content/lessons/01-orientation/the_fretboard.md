@@ -29,7 +29,6 @@ These are the *open string* notes — the pitch you hear when you play a string 
 type: fretboard
 title: Open String Notes — Standard Tuning
 fret_range: [0, 3]
-show_notes: true
 highlights:
   - {string: 6, fret: 0, label: "E", style: "root"}
   - {string: 5, fret: 0, label: "A", style: "root"}
@@ -59,7 +58,6 @@ The natural notes on the low E string — no sharps or flats — are the first l
 type: fretboard
 title: Natural Notes — Low E String
 fret_range: [0, 12]
-show_notes: true
 highlights:
   - {string: 6, fret: 0,  label: "E", style: "root"}
   - {string: 6, fret: 1,  label: "F"}

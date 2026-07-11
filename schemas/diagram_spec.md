@@ -50,8 +50,8 @@ Renders a chord box diagram (vertical grid, nut at top).
 | Field    | Type | Required | Description |
 |----------|------|----------|-------------|
 | `fret`   | int  | yes      | Which fret the barre covers |
-| `from`   | int  | yes      | Starting string (1 = low E) |
-| `to`     | int  | yes      | Ending string (6 = high e) |
+| `from`   | int  | yes      | Starting string (1 = high e; same numbering as ScaleNote/FretNote) |
+| `to`     | int  | yes      | Ending string (6 = low E); must be ≥ `from` |
 | `finger` | int  | no       | Finger number for the barre (usually 1) |
 
 ### Valid Values
@@ -121,7 +121,7 @@ Renders a scale pattern on a fretboard grid (horizontal strings, vertical frets)
 |-------------|-------------------|----------|-------------|
 | `root`      | string            | yes      | Root note: `A`–`G`, optionally `#` or `b` (e.g., `"C"`, `"F#"`, `"Bb"`) |
 | `positions` | list[ScaleNote]   | yes      | List of notes to highlight (see below) |
-| `fret_range`| [int, int]        | no       | `[low, high]` fret range to display. Omit to auto-compute from the min/max frets in `positions`. Use `[0, 12]` for a full-neck view. |
+| `fret_range`| [int, int]        | no       | `[low, high]` fret range to display. Omit to auto-compute from the min/max frets in `positions`. Use `[0, 12]` for a full-neck view. When given, every note in `positions` must fall inside it — an out-of-range note is a validation error, not a silent drop. |
 | `highlight_root` | bool        | no       | Whether to visually distinguish root notes (default: true) |
 
 #### ScaleNote object
@@ -315,9 +315,8 @@ Renders a full or partial fretboard overview — horizontal strings, with note l
 | Field        | Type           | Required | Description |
 |--------------|----------------|----------|-------------|
 | `highlights` | list[FretNote] | yes      | Notes to highlight on the fretboard |
-| `fret_range` | [int, int]     | no       | `[low, high]` fret range (default: `[0, 12]`) |
+| `fret_range` | [int, int]     | no       | `[low, high]` fret range (default: `[0, 12]`). Every highlight must fall inside it — an out-of-range highlight is a validation error, not a silent drop |
 | `tuning`     | string         | no       | Tuning key from `tunings.yaml` (default: `"standard"`) |
-| `show_notes` | bool           | no       | Show note names in dots (default: false, shows dots only) |
 
 #### FretNote object
 
@@ -325,7 +324,7 @@ Renders a full or partial fretboard overview — horizontal strings, with note l
 |----------|--------|----------|-------------|
 | `string` | int    | yes      | String number: 1 (high e) – 6 (low E) |
 | `fret`   | int    | yes      | Fret number |
-| `label`  | string | no       | Text to display inside the dot (overrides `show_notes`) |
+| `label`  | string | no       | Text to display inside the dot (first character shown; replaces the style marker) |
 | `style`  | string | no       | Visual style: `"root"`, `"highlight"`, `"muted"` (default: `"highlight"`) |
 
 ### Examples
@@ -334,7 +333,6 @@ Renders a full or partial fretboard overview — horizontal strings, with note l
 type: fretboard
 title: Natural Notes — Low E String
 fret_range: [0, 12]
-show_notes: true
 highlights:
   - {string: 6, fret: 0, label: "E", style: "root"}
   - {string: 6, fret: 2, label: "F#"}

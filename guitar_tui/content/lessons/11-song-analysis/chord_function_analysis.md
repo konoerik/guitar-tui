@@ -77,9 +77,9 @@ i – ii° – bIII – iv – v – bVI – bVII
 However, in practice, the v chord is often raised to V (major dominant) to create a stronger V – i cadence. This is the harmonic minor influence and is conventional in most Western minor-key music.
 
 Common minor progressions:
-- **i – bVII – bVI – V** — the minor scale descending cadence (Am – G – F – E)
+- **i – bVII – bVI – V** — the descending "Andalusian" cadence (Am – G – F – E)
 - **i – iv – V** — the minor I-IV-V
-- **i – bVI – bIII – bVII** — the "Andalusian" or minor loop (Am – F – C – G)
+- **i – bVI – bIII – bVII** — the minor pop loop (Am – F – C – G)
 
 ## Practice: Labeling a Song
 

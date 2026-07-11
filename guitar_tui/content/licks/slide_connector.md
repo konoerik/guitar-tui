@@ -21,8 +21,8 @@ type: tab
 title: A Minor Pentatonic — Slide Connector
 lines:
   - beats:
-      - notes: [null, null, null, 5, null, null]
-      - notes: [null, null, null, 7, null, null]
+      - notes: [null, null, 5, null, null, null]
+      - notes: [null, null, 7, null, null, null]
         technique: "h"
       - notes: [null, null, null, null, 5, null]
       - notes: [null, null, null, null, 8, null]

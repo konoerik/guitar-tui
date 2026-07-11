@@ -34,6 +34,7 @@ positions:
   - {string: 6, fret: 8,  degree: "b3"}
   - {string: 5, fret: 5,  degree: "4"}
   - {string: 5, fret: 7,  degree: "5"}
+  - {string: 5, fret: 8,  degree: "b6"}
   - {string: 4, fret: 5,  degree: "b7"}
   - {string: 4, fret: 7,  degree: "1",  root: true}
   - {string: 3, fret: 5,  degree: "b3"}
@@ -57,6 +58,7 @@ positions:
   - {string: 6, fret: 8,  degree: "1",  root: true}
   - {string: 5, fret: 5,  degree: "2"}
   - {string: 5, fret: 7,  degree: "3"}
+  - {string: 5, fret: 8,  degree: "4"}
   - {string: 4, fret: 5,  degree: "5"}
   - {string: 4, fret: 7,  degree: "6"}
   - {string: 3, fret: 5,  degree: "1",  root: true}

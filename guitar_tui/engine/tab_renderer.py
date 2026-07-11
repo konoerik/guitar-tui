@@ -144,7 +144,7 @@ def _render_tab_line(tab_line: TabLine) -> str:
             beat_width = col_width * beat.duration
 
             if beat.rest:
-                rest_col = "─" + "r".ljust(note_str_width) + "─"
+                rest_col = "─" + "r".ljust(note_str_width, "─") + "─"
                 sustain = "─" * (col_width * (beat.duration - 1))
                 for row_idx in range(len(rows)):
                     rows[row_idx] += rest_col + sustain
@@ -155,7 +155,7 @@ def _render_tab_line(tab_line: TabLine) -> str:
                 note = beat.notes[notes_idx]
                 if note is not None:
                     note_str = _build_note_str(note, beat)
-                    note_col = leading + note_str.ljust(note_str_width) + "─"
+                    note_col = leading + note_str.ljust(note_str_width, "─") + "─"
                     sustain = "─" * (col_width * (beat.duration - 1))
                     rows[row_idx] += note_col + sustain
                 else:

@@ -48,9 +48,9 @@ fingers: [3, 2, null, null, null, 1]
 ## The Shape Relationship
 
 Compare each 7th chord to its major version:
-- **E7 vs E**: E has G# on the G string (fret 1). E7 removes it, letting the G string ring open (G natural = the b7 of E).
+- **E7 vs E**: E frets the D string at fret 2 (E = root). E7 lifts that finger, letting the D string ring open (D = the b7 of E). The G# on the G string stays.
 - **A7 vs A**: A has fret 2 on the G string (A = root). A7 opens the G string (G = b7 of A).
-- **G7 vs G**: G adds F on the high e string (fret 1) to a G major shape — that F is the b7.
+- **G7 vs G**: G has fret 3 on the high e string (G = root). G7 moves it down to fret 1 (F = the b7).
 - **D7 vs D**: D has fret 3 on the B string (D = root). D7 moves it to fret 1 (C = b7 of D).
 
 In each case, adding or moving one note transforms the major chord into a dominant 7th.

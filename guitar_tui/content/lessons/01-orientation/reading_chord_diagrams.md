@@ -58,8 +58,8 @@ When a chord sits above the 1st fret, the top border changes from the double-lin
 ```diagram
 type: chord
 title: A Minor (5th position)
-frets: [1, 1, 3, 3, 2, 1]
-fingers: [1, 1, 3, 4, 2, 1]
+frets: [1, 3, 3, 1, 1, 1]
+fingers: [1, 3, 4, 1, 1, 1]
 base_fret: 5
 barre:
   fret: 1

@@ -106,7 +106,7 @@ These all use only diatonic chords:
 
 ## Key Transposition
 
-In any minor key, the chord pattern is identical — only the names change. In D minor: i=Dm, II°=E°, III=F, iv=Gm, v=Am, VI=Bb, VII=C. The relationships and the progressions remain the same.
+In any minor key, the chord pattern is identical — only the names change. In D minor: i=Dm, ii°=E°, III=F, iv=Gm, v=Am, VI=Bb, VII=C. The relationships and the progressions remain the same.
 
 ## What's Next
 

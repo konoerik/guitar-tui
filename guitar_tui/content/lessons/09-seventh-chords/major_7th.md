@@ -51,9 +51,9 @@ fingers: [3, 2, null, null, null, 4]
 
 Compare each major 7th to its dominant 7th and plain major versions:
 
-- **Emaj7 vs E7 vs E**: E7 has an open G string (G = b7). Emaj7 frets the G string at 1 (G# = major 7th of E). Only one note changes between E7 and Emaj7.
+- **Emaj7 vs E7 vs E**: E7 has an open D string (D = b7). Emaj7 frets the D string at 1 (D# = major 7th of E). Only one note changes between E7 and Emaj7.
 - **Amaj7 vs A7 vs A**: A7 opens the G string (G = b7). Amaj7 frets G string at fret 1 (G# = major 7th of A) — same pattern as E.
-- **Dmaj7 vs D**: D frets the B string at fret 3 (D = root). Dmaj7 moves it to fret 2 (C# = major 7th of D). The high e stays at fret 2 (E = 9th, also present in D). Result: three strings at fret 2.
+- **Dmaj7 vs D**: D frets the B string at fret 3 (D = root). Dmaj7 moves it to fret 2 (C# = major 7th of D). The high e stays at fret 2 (F# = the 3rd, same as in D). Result: three strings at fret 2.
 - **Gmaj7 vs G**: G major uses the pinky on the high e at fret 3 (G = root). Gmaj7 moves it to fret 2 (F# = major 7th). One finger drop, one fret lower.
 
 In each case, the major 7th chord simply adjusts or adds the note one half-step below the octave root.

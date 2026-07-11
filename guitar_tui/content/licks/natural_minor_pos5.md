@@ -21,14 +21,14 @@ type: tab
 title: "Natural Minor Position 5 — Half-Step Rise"
 lines:
   - beats:
-      - notes: [null, null, null, null, null, 3]
-      - notes: [null, null, null, null, null, 5]
-      - notes: [null, null, null, null, 2, null]
-      - notes: [null, null, null, null, 3, null]
-      - notes: [null, null, null, 2, null, null]
-      - notes: [null, null, null, 3, null, null]
-      - notes: [null, null, null, 5, null, null]
+      - notes: [3, null, null, null, null, null]
+      - notes: [5, null, null, null, null, null]
+      - notes: [null, 2, null, null, null, null]
+      - notes: [null, 3, null, null, null, null]
       - notes: [null, null, 2, null, null, null]
+      - notes: [null, null, 3, null, null, null]
+      - notes: [null, null, 5, null, null, null]
+      - notes: [null, null, null, 2, null, null]
         duration: 2
 ```
 

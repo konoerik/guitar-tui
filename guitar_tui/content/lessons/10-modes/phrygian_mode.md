@@ -33,6 +33,7 @@ fret_range: [9, 13]
 positions:
   - {string: 6, fret: 10, degree: "b7"}
   - {string: 6, fret: 12, degree: "1",  root: true}
+  - {string: 6, fret: 13, degree: "b2"}
   - {string: 5, fret: 10, degree: "b3"}
   - {string: 5, fret: 12, degree: "4"}
   - {string: 4, fret: 9,  degree: "5"}
@@ -46,6 +47,7 @@ positions:
   - {string: 2, fret: 13, degree: "b6"}
   - {string: 1, fret: 10, degree: "b7"}
   - {string: 1, fret: 12, degree: "1",  root: true}
+  - {string: 1, fret: 13, degree: "b2"}
 ```
 
 The b2 (F, fret 10 on string 3) is your landmark note. It sits one fret above the root (E at fret 9). Playing root → b2 → root (fret 9, 10, 9) immediately signals Phrygian to any listener.
@@ -55,7 +57,7 @@ The b2 (F, fret 10 on string 3) is your landmark note. It sits one fret above th
 The half-step between 1 and b2 is the darkest interval possible from the tonic. It creates immediate tension that does not resolve in a conventional tonal way — instead it *oscillates*, creating a sense of menace, drama, or exotic color depending on the context.
 
 Phrygian is heard in:
-- Heavy metal riffs (metallica, Megadeth) — the dark, aggressive quality
+- Heavy metal riffs (Metallica, Megadeth) — the dark, aggressive quality
 - Flamenco guitar — the half-step movement is central to the *cante jondo* tradition
 - Film scores — tension, suspense, and ancient/exotic settings
 

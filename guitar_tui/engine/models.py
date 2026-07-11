@@ -15,6 +15,9 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 class BarreDef(BaseModel):
     """A barre across one or more strings at a given fret.
 
+    Strings are numbered 1 = high e .. 6 = low E (same convention as
+    ScaleNote and FretNote); from_string <= to_string.
+
     YAML uses 'from' and 'to' (Python keywords), so aliases are required.
     populate_by_name=True allows using either field name or alias.
     """
@@ -84,6 +87,18 @@ class ScaleSpec(BaseModel):
     positions: list[ScaleNote]
     fret_range: tuple[int, int] | None = None  # auto-computed from positions if None
     highlight_root: bool = True
+
+    @model_validator(mode="after")
+    def positions_within_range(self) -> "ScaleSpec":
+        if self.fret_range is not None:
+            lo, hi = self.fret_range
+            for n in self.positions:
+                if not (lo <= n.fret <= hi):
+                    raise ValueError(
+                        f"note (string {n.string}, fret {n.fret}) is outside "
+                        f"fret_range [{lo}, {hi}] and would not be rendered"
+                    )
+        return self
 
 
 # ── Tab ───────────────────────────────────────────────────────────────────────
@@ -176,7 +191,17 @@ class FretboardSpec(BaseModel):
     highlights: list[FretNote]
     fret_range: tuple[int, int] = (0, 12)
     tuning: str = "standard"
-    show_notes: bool = False
+
+    @model_validator(mode="after")
+    def highlights_within_range(self) -> "FretboardSpec":
+        lo, hi = self.fret_range
+        for n in self.highlights:
+            if not (lo <= n.fret <= hi):
+                raise ValueError(
+                    f"highlight (string {n.string}, fret {n.fret}) is outside "
+                    f"fret_range [{lo}, {hi}] and would not be rendered"
+                )
+        return self
 
 
 # ── Discriminated union ────────────────────────────────────────────────────────

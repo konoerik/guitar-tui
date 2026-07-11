@@ -14,7 +14,7 @@ summary: A short descending phrase that steps from the root down to the b2 — t
 
 ## The Lick
 
-Five notes descending through E Phrygian, opening on the root (E), stepping
+Six notes descending through E Phrygian, opening on the root (E), stepping
 up to F (the b2), then resolving back down through D and B to a low E. The
 F natural on fret 1 of the low E string is the Phrygian fingerprint — it is
 a half step above the root, which in E major would be F#.
@@ -28,8 +28,8 @@ lines:
       - notes: [null, 8, null, null, null, null]
       - notes: [null, 7, null, null, null, null]
       - notes: [null, 5, null, null, null, null]
-      - notes: [null, null, 4, null, null, null]
-      - notes: [null, 5, null, null, null, null]
+      - notes: [7, null, null, null, null, null]
+      - notes: [0, null, null, null, null, null]
 ```
 
 **E Phrygian = E F G A B C D. The F natural (A string fret 8, or low E string fret 1) is the b2 — it would be F# in E major.**

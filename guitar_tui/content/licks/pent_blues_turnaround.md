@@ -26,10 +26,12 @@ lines:
   - beats:
       - notes: [null, null, null, null, null, 8]
       - notes: [null, null, null, null, null, 5]
-      - notes: [null, null, null, null, 7, null]
+      - notes: [null, null, null, null, 8, null]
       - notes: [null, null, null, null, 5, null]
       - notes: [null, null, null, 7, null, null]
       - notes: [5, null, null, null, null, null]
+      - notes: [0, null, null, null, null, null]
+        technique: "p"
 ```
 
 **This figure spans bars 11–12 of the 12-bar blues — the "turnaround" that sends the progression back to bar 1 (I7).**

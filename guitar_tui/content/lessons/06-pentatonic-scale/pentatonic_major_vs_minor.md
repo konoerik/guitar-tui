@@ -78,7 +78,7 @@ The rule of thumb:
 The most expressive approach is to use both. Over an A minor chord progression, you can:
 
 1. Start a phrase with A minor pentatonic (dark, bluesy)
-2. Resolve it to C (the major 3rd of A minor is the relative major root) using a C major pentatonic phrase (bright landing)
+2. Resolve it to C (the minor 3rd of A, and the root of the relative major) using a C major pentatonic phrase (bright landing)
 
 This shifting between minor and relative major pentatonic within a single phrase is what gives blues-rock solos their sense of motion and narrative — tension built with minor, release via major.
 

@@ -66,7 +66,7 @@ The exception: if the progression modulates (changes key), you must change scale
 
 **Song 2:** *Smoke on the Water* — G minor riff, I – bIII – IV movement. Key: G minor. Scale: G minor pentatonic or G natural minor. The minor pentatonic captures the riff's character perfectly.
 
-**Song 3:** *Purple Haze* — E Phrygian/blues hybrid. The opening F#-G movement implies Phrygian; the solo uses the E minor pentatonic throughout. Both choices are correct for different sections.
+**Song 3:** *Purple Haze* — E blues. The riff is built around the E7#9 "Hendrix chord" — a dominant chord with a b3 clash on top — and the solo uses the E minor pentatonic and blues scale throughout. The key is E, but the language is blues rather than any single diatonic mode.
 
 The right scale choice always depends on context, but this framework gives you a starting point that is correct the vast majority of the time.
 

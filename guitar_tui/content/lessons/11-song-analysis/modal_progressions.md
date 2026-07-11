@@ -65,7 +65,7 @@ If you see a progression that matches one of these patterns and uses the indicat
 
 ## When It Is Ambiguous
 
-Many songs sit between tonal and modal. *Hotel California* is in B minor but uses a long chord loop that avoids a conventional V – i resolution — it feels modal but is often analyzed as minor key. The answer is: both analyses are valid, and the scale choice (B natural minor) works either way.
+Many songs sit between tonal and modal. *Hotel California* is in B minor but uses a long chord loop that avoids a conventional V – i resolution — it feels modal but is often analyzed as minor key. The answer is: both analyses are valid, and B natural minor is the base scale either way — just watch the F# major chord, whose A# sits outside the scale and asks for a harmonic-minor color for that bar.
 
 When ambiguous, prioritise what sounds right over what is theoretically clean. The goal of song analysis is to find the tools that let you play well over the music — not to assign a single correct label.
 

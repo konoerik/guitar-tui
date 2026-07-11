@@ -21,7 +21,7 @@ The second option (same fret, change shape from E to A) is faster and requires n
 
 ## I – IV – V in A (Barre Chord Version)
 
-All three chords played as E-shape barres, ascending the neck:
+The I as an E-shape barre at the 5th fret; the IV and V as A-shape barres at the 5th and 7th frets — minimal hand travel between all three:
 
 ```diagram
 type: chord
@@ -51,14 +51,14 @@ barre:
 
 ```diagram
 type: chord
-title: E Major — V (E-shape, 7th fret)
+title: E Major — V (A-shape, 7th fret)
 base_fret: 7
-frets: [1, 3, 3, 2, 1, 1]
-fingers: [1, 3, 4, 2, 1, 1]
+frets: [null, 1, 3, 3, 3, 1]
+fingers: [null, 1, 3, 3, 3, 1]
 barre:
   fret: 1
   from_string: 1
-  to_string: 6
+  to_string: 5
   finger: 1
 ```
 

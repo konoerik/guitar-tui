@@ -22,6 +22,7 @@ fret_range: [9, 13]
 positions:
   - {string: 6, fret: 10, degree: "2"}
   - {string: 6, fret: 12, degree: "3"}
+  - {string: 6, fret: 13, degree: "4"}
   - {string: 5, fret: 10, degree: "5"}
   - {string: 5, fret: 12, degree: "6"}
   - {string: 4, fret: 9,  degree: "7"}
@@ -35,6 +36,7 @@ positions:
   - {string: 2, fret: 13, degree: "1",  root: true}
   - {string: 1, fret: 10, degree: "2"}
   - {string: 1, fret: 12, degree: "3"}
+  - {string: 1, fret: 13, degree: "4"}
 ```
 
 ## The B String Offset

@@ -59,16 +59,19 @@ fret → B**.
 
 ## Quick Sanity Check — 12th Fret Harmonics
 
-Once the strings are tuned, verify each string with a harmonic:
+Once the strings are tuned, verify each string's intonation with a harmonic:
 
 1. Touch the string lightly directly above the 12th fret wire — do not press
    down, just rest your fingertip on the string.
-2. Pick the string and immediately lift your finger.
-3. The harmonic pitch should match the open string exactly.
+2. Pick the string and immediately lift your finger. The chime you hear is the
+   12th-fret harmonic — always exactly one octave above the open string.
+3. Now press the string down at the 12th fret and pick it normally. The
+   fretted note should match the harmonic exactly.
 
-If it sounds sharp or flat compared to the open string, the string's intonation
-is off — this is a setup issue that requires adjusting the saddle, not the
-tuning peg. A well-set-up guitar will pass this check on every string.
+If the fretted note sounds sharp or flat compared to the harmonic, the
+string's intonation is off — a setup issue that requires adjusting the
+saddle, not the tuning peg. A well-set-up guitar will pass this check on
+every string.
 
 ## In Practice
 

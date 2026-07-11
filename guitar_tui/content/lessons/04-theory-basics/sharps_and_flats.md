@@ -28,7 +28,6 @@ Knowing note names on both the low E string and the A string unlocks all barre c
 type: fretboard
 title: Note Names — A String (frets 0–12)
 fret_range: [0, 12]
-show_notes: true
 highlights:
   - {string: 5, fret: 0,  label: "A",  style: "root"}
   - {string: 5, fret: 1,  label: "Bb"}

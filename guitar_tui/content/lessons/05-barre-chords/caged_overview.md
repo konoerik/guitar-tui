@@ -48,8 +48,13 @@ barre:
 type: chord
 title: C Major — G-shape (5th fret)
 base_fret: 5
-frets: [3, 1, null, null, 1, 3]
-fingers: [4, 1, null, null, 2, 3]
+frets: [4, 3, 1, 1, 1, 4]
+fingers: [3, 2, 1, 1, 1, 4]
+barre:
+  fret: 1
+  from_string: 2
+  to_string: 4
+  finger: 1
 ```
 
 ```diagram
@@ -69,8 +74,8 @@ barre:
 type: chord
 title: C Major — D-shape (10th fret)
 base_fret: 10
-frets: [null, null, 1, 3, 3, 3]
-fingers: [null, null, 1, 2, 3, 4]
+frets: [null, null, 1, 3, 4, 3]
+fingers: [null, null, 1, 2, 4, 3]
 ```
 
 Five voicings of C major, spread across the neck from open position to the 13th fret. The full 12-fret octave cycle repeats above that.

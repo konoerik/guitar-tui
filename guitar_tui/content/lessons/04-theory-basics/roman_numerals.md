@@ -89,7 +89,7 @@ In minor keys, the tonic chord is lowercase (i — a minor chord). The most comm
 | III | C |
 | VII | G |
 
-The lowercase numerals indicate minor chords; uppercase indicate major chords borrowed from the parallel or relative major. This is the basis of the Am–F–C–G progression heard in countless rock and pop songs.
+The lowercase numerals indicate minor chords; uppercase indicate major chords — all of them diatonic to the natural minor scale. This is the basis of the Am–F–C–G progression heard in countless rock and pop songs.
 
 ## What's Next
 

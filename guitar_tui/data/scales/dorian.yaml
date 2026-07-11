@@ -37,6 +37,7 @@ positions:
       - {string: 3, fret: 10, degree: "b3"}
       - {string: 2, fret: 8,  degree: "4"}
       - {string: 2, fret: 10, degree: "5"}
+      - {string: 1, fret: 7,  degree: "6"}
       - {string: 1, fret: 8,  degree: "b7"}
       - {string: 1, fret: 10, degree: "1",  root: true}
 
@@ -47,6 +48,7 @@ positions:
     notes:
       - {string: 6, fret: 10, degree: "1",  root: true}
       - {string: 6, fret: 12, degree: "2"}
+      - {string: 6, fret: 13, degree: "b3"}
       - {string: 5, fret: 10, degree: "4"}
       - {string: 5, fret: 12, degree: "5"}
       - {string: 4, fret: 9,  degree: "6"}
@@ -60,6 +62,7 @@ positions:
       - {string: 2, fret: 13, degree: "b7"}
       - {string: 1, fret: 10, degree: "1",  root: true}
       - {string: 1, fret: 12, degree: "2"}
+      - {string: 1, fret: 13, degree: "b3"}
 
   - id: 3
     name: Position 3
@@ -77,6 +80,7 @@ positions:
       - {string: 4, fret: 15, degree: "b3"}
       - {string: 3, fret: 12, degree: "4"}
       - {string: 3, fret: 14, degree: "5"}
+      - {string: 2, fret: 12, degree: "6"}
       - {string: 2, fret: 13, degree: "b7"}
       - {string: 2, fret: 15, degree: "1",  root: true}
       - {string: 1, fret: 12, degree: "2"}
@@ -88,6 +92,7 @@ positions:
     caged_shape: A
     fret_range: [1, 5]
     notes:
+      - {string: 6, fret: 1,  degree: "b3"}
       - {string: 6, fret: 3,  degree: "4"}
       - {string: 6, fret: 5,  degree: "5"}
       - {string: 5, fret: 2,  degree: "6"}
@@ -102,6 +107,7 @@ positions:
       - {string: 2, fret: 1,  degree: "b7"}
       - {string: 2, fret: 3,  degree: "1",  root: true}
       - {string: 2, fret: 5,  degree: "2"}
+      - {string: 1, fret: 1,  degree: "b3"}
       - {string: 1, fret: 3,  degree: "4"}
       - {string: 1, fret: 5,  degree: "5"}
 

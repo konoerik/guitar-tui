@@ -13,7 +13,7 @@ summary: Seven letter names, twelve notes, one repeating cycle — and why E–F
 
 Music uses only seven letter names: **A B C D E F G**. After G, the cycle begins again at A. These seven letters name the seven *natural notes* — the white keys on a piano, the notes with no sharps or flats.
 
-Between most adjacent natural notes there is a gap of one semitone called an *accidental*:
+Between most adjacent natural notes sits one in-between note — an *accidental* — one semitone away from each neighbor:
 
 ```
 A – A# – B – C – C# – D – D# – E – F – F# – G – G# – A …
@@ -45,7 +45,6 @@ The low E string is the best place to learn note names because the root notes of
 type: fretboard
 title: Note Names — Low E String (frets 0–12)
 fret_range: [0, 12]
-show_notes: true
 highlights:
   - {string: 6, fret: 0,  label: "E",  style: "root"}
   - {string: 6, fret: 1,  label: "F"}

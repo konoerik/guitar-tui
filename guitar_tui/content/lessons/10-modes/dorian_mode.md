@@ -45,11 +45,12 @@ positions:
   - {string: 3, fret: 10, degree: "b3"}
   - {string: 2, fret: 8,  degree: "4"}
   - {string: 2, fret: 10, degree: "5"}
+  - {string: 1, fret: 7,  degree: "6"}
   - {string: 1, fret: 8,  degree: "b7"}
   - {string: 1, fret: 10, degree: "1",  root: true}
 ```
 
-Notice that the 6th (B, fret 9 on string 4) appears once in the middle of the shape. That note is your signpost — it is what makes this Dorian and not natural minor.
+Notice the 6th (B) — at fret 9 on string 4 in the middle of the shape, and again at fret 7 on both E strings. That note is your signpost — it is what makes this Dorian and not natural minor.
 
 ## Finding It on the Neck
 
@@ -68,7 +69,7 @@ Listen for Dorian in: Santana's *Oye Como Va*, Pink Floyd's *Another Brick in th
 The chord built on the 4th degree of a Dorian key is a major chord (IV). This IV major in a minor context is Dorian's harmonic fingerprint. Common Dorian progressions:
 
 - **i – IV** — the simplest Dorian sound (e.g. Dm – G in D Dorian)
-- **i – VII – IV** — three-chord Dorian loop (Dm – C – G)
+- **i – bVII – IV** — three-chord Dorian loop (Dm – C – G)
 - **i – bVII – IV – i** — full Dorian cadence
 
 If you see a minor chord followed by a major IV chord repeatedly, you are probably in Dorian. Play D Dorian over any of these.

@@ -45,7 +45,7 @@ Set up: G – D – Em – C, one bar each.
 
 ## Why This Works
 
-The phrase ascends in two waves: first through the high e and B strings (A–B–E–F#–G), then continuing on the G string (B–C–D). Each wave ends a step higher than where it started. The F#–G half-step in the first wave gives an immediate major-key signal; the B–C–D continuation extends the phrase naturally across the next three scale degrees.
+The phrase moves in three short rising cells, each starting lower than the last ended: A–B on the high e string, E–F#–G on the B string, then B–C–D on the G string — a cascading contour rather than a straight line. The F#–G half-step in the second cell gives an immediate major-key signal; the B–C–D cell extends the phrase across the next three scale degrees.
 
 The ending on D (G string fret 7) leaves the phrase harmonically open — the 5th of G, which wants to resolve back to the root. This makes the looper repeat feel natural and satisfying.
 

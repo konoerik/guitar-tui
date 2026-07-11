@@ -42,6 +42,7 @@ positions:
   - {string: 4, fret: 15, degree: "1",  root: true}
   - {string: 3, fret: 12, degree: "2"}
   - {string: 3, fret: 14, degree: "3"}
+  - {string: 2, fret: 12, degree: "#4"}
   - {string: 2, fret: 13, degree: "5"}
   - {string: 2, fret: 15, degree: "6"}
   - {string: 1, fret: 12, degree: "7"}
@@ -49,7 +50,7 @@ positions:
   - {string: 1, fret: 15, degree: "2"}
 ```
 
-The #4 (B natural, fret 14 on string 5) appears once in the position. This is the defining note — it is one semitone above where you would expect the 4th to sit in a standard major box. When improvising, landing on this note and sustaining it against a major chord beneath you creates the unmistakeable Lydian sound.
+The #4 (B natural) appears at fret 14 on string 5 and at fret 12 on string 2. This is the defining note — it is one semitone above where you would expect the 4th to sit in a standard major box. When improvising, landing on this note and sustaining it against a major chord beneath you creates the unmistakeable Lydian sound.
 
 ## The Sound
 
@@ -81,7 +82,7 @@ Lydian works well as a substitution over a major chord when you want to add spar
 2. Locate the #4 (fret 14 on string 5). Play: root (s6 f13) – 3rd (s5 f12) – #4 (s5 f14). Hold the #4 and listen to it shimmer.
 3. Improvise over an F major drone and emphasize the B natural (#4) as a melody note rather than a passing note.
 
-**Lydian Raised Fourth Run** in [4] Practice centers on the #4 as the peak of a phrase over a G Lydian backing — ascending through the scale to the raised 4th and sitting there before resolving. It is a direct demonstration of how to feature the characteristic note without it sounding like a mistake. Note: the lick is written in G Lydian (root at fret 15 on string 6), two frets up from the F Lydian position shown above. The shape is identical — shift it down two frets to play it in F.
+**Lydian Raised Fourth Run** in [4] Practice centers on the #4 as the peak of a phrase over a G Lydian backing — ascending through the scale to the raised 4th and sitting there before resolving. It is a direct demonstration of how to feature the characteristic note without it sounding like a mistake. Note: the lick is written in G Lydian in the lower position (frets 4–7), not in the fret-12 F Lydian box shown above. The interval structure is the same — find the root and the #4 in any box and the idea transfers.
 
 ## What's Next
 

@@ -15,9 +15,10 @@ where the same notes appear in both shapes. Finding and playing through these
 overlaps is how you stop thinking in boxes and start thinking in one continuous
 scale.
 
-Start in Position 1 (A natural minor, root at fret 5 low E). Ascend to the
-top of Position 1, then continue into Position 2 without stopping — the
-top notes of Position 1 are also the bottom notes of Position 2.
+Start at the top of Position 1 (A natural minor, frets 5–8) on the B string.
+Ascend through the top strings of Position 1, then continue up the high e
+string into Position 2 without stopping — the top notes of Position 1 are
+also the bottom notes of Position 2.
 
 ```diagram
 type: tab
@@ -26,14 +27,14 @@ lines:
   - measures:
       - beats:
           - notes: [null, null, null, null, 5, null]
-          - notes: [null, null, null, null, 7, null]
-          - notes: [null, null, null, null, null, 5]
-          - notes: [null, null, null, null, null, 7]
-      - beats:
-          - notes: [null, null, null, null, null, 8]
-          - notes: [null, null, null, 7, null, null]
-          - notes: [null, null, null, 9, null, null]
+          - notes: [null, null, null, null, 6, null]
           - notes: [null, null, null, null, 8, null]
+          - notes: [null, null, null, null, null, 5]
+      - beats:
+          - notes: [null, null, null, null, null, 7]
+          - notes: [null, null, null, null, null, 8]
+          - notes: [null, null, null, null, null, 10]
+            duration: 2
 ```
 
 The C note appears in both positions — it is the seam. Once you can cross it

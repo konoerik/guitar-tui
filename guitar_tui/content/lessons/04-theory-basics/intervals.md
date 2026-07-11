@@ -42,14 +42,13 @@ On a single string, counting intervals is simple — each fret is one semitone. 
 ```diagram
 type: fretboard
 title: Perfect 5th from A — Multiple Positions
-fret_range: [0, 7]
-show_notes: true
+fret_range: [0, 9]
 highlights:
   - {string: 5, fret: 0, label: "A",  style: "root"}
   - {string: 5, fret: 7, label: "E",  style: "highlight"}
   - {string: 4, fret: 2, label: "E",  style: "highlight"}
   - {string: 3, fret: 9, label: "E",  style: "highlight"}
-  - {string: 6, fret: 7, label: "E",  style: "highlight"}
+  - {string: 2, fret: 5, label: "E",  style: "highlight"}
 ```
 
 The E notes above are all a perfect 5th above A — but they sit in different places on the neck. This is why the same interval can be fingered multiple ways, and why understanding intervals helps you navigate the neck rather than memorizing isolated shapes.

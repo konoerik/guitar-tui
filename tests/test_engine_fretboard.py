@@ -1,5 +1,8 @@
 """Tests for the full fretboard renderer (M2)."""
 
+import pytest
+from pydantic import ValidationError
+
 from guitar_tui.engine.fretboard_renderer import render_fretboard
 from guitar_tui.engine.models import FretboardSpec
 
@@ -13,7 +16,6 @@ def natural_notes_low_e() -> FretboardSpec:
         "type": "fretboard",
         "title": "Natural Notes — Low E String",
         "fret_range": [0, 12],
-        "show_notes": True,
         "highlights": [
             {"string": 6, "fret": 0,  "label": "E", "style": "root"},
             {"string": 6, "fret": 2,  "label": "F#"},
@@ -71,15 +73,13 @@ class TestNaturalNotesLowE:
         assert "┼" in text.plain
 
 
-# ── show_notes flag ────────────────────────────────────────────────────────────
+# ── labels ─────────────────────────────────────────────────────────────────────
 
 
-class TestShowNotes:
-    def test_label_shown_when_show_notes_false_but_label_set(self) -> None:
-        # A FretNote with an explicit label is always shown regardless of show_notes
+class TestLabels:
+    def test_label_shown_when_set(self) -> None:
         spec = FretboardSpec.model_validate({
             "type": "fretboard",
-            "show_notes": False,
             "highlights": [
                 {"string": 6, "fret": 5, "label": "A"},
             ],
@@ -92,7 +92,6 @@ class TestShowNotes:
     def test_style_marker_used_when_no_label(self) -> None:
         spec = FretboardSpec.model_validate({
             "type": "fretboard",
-            "show_notes": False,
             "highlights": [
                 {"string": 6, "fret": 5, "style": "highlight"},
             ],
@@ -177,3 +176,27 @@ class TestDefaultFretRange:
         header = text.plain.splitlines()[0]
         assert "0" in header
         assert "12" in header
+
+
+# ── fret_range validation ──────────────────────────────────────────────────────
+
+
+class TestFretRangeValidation:
+    def test_highlight_outside_range_is_rejected(self) -> None:
+        with pytest.raises(ValidationError, match="outside"):
+            FretboardSpec.model_validate({
+                "type": "fretboard",
+                "fret_range": [0, 7],
+                "highlights": [{"string": 3, "fret": 9}],
+            })
+
+    def test_highlight_at_range_edges_is_accepted(self) -> None:
+        spec = FretboardSpec.model_validate({
+            "type": "fretboard",
+            "fret_range": [5, 8],
+            "highlights": [
+                {"string": 6, "fret": 5},
+                {"string": 1, "fret": 8},
+            ],
+        })
+        assert len(spec.highlights) == 2

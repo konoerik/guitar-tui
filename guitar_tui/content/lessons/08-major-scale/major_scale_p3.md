@@ -30,6 +30,7 @@ positions:
   - {string: 4, fret: 15, degree: "4"}
   - {string: 3, fret: 12, degree: "5"}
   - {string: 3, fret: 14, degree: "6"}
+  - {string: 2, fret: 12, degree: "7"}
   - {string: 2, fret: 13, degree: "1",  root: true}
   - {string: 2, fret: 15, degree: "2"}
   - {string: 1, fret: 12, degree: "3"}

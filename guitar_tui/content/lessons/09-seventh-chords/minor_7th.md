@@ -55,8 +55,8 @@ fingers: [null, 1, null, 2, null, 3]
 Compare each minor 7th to its plain minor version:
 
 - **Em7 vs Em**: Em frets the A string at fret 2 (B = 5th) and the D string at fret 2 (E = root). Em7 keeps only A string fret 2; all other strings ring open. The D (open D string) is the b7 of E.
-- **Am7 vs Am**: Am frets the G string at fret 2 (C# — wait, no: A minor has C natural, so G string fret 2 = A = root). Am7 opens the G string (G = b7 of A). One finger lifted.
-- **Dm7 vs Dm**: Dm has the B string at fret 3 (D = root). Dm7 moves it to fret 1 (C = b7 of D) and mini-barres the top two strings. The high e at fret 1 is also C.
+- **Am7 vs Am**: Am frets the G string at fret 2 (A, one octave above the root). Am7 opens the G string (G = b7 of A). One finger lifted.
+- **Dm7 vs Dm**: Dm has the B string at fret 3 (D = root). Dm7 moves it to fret 1 (C = b7 of D) and mini-barres the top two strings — the high e at fret 1 is F, the b3.
 - **Bm7 vs Bm**: Standard Bm is a barre chord (fret 2). Bm7 is a striking open-string shape: A string fret 2 (B = root), open D (D = b3), G string fret 2 (A = b7), open B (B = root), high e fret 2 (F# = 5th). It avoids the barre entirely.
 
 ## Diatonic Role

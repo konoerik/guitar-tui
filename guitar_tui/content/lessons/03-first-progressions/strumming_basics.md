@@ -72,17 +72,17 @@ motion that suits minor-key material.
 
 ## Pattern 3: The Folk Strum (D DU UDU)
 
-The most widely used beginner pattern in pop and folk. Seven strokes across
-four beats, with one ghost strum on the "and" of beat 2:
+The most widely used beginner pattern in pop and folk. Six strokes across
+four beats, with one ghost strum on beat 3:
 
 ```
-Count:   1     and   2     and        and   3     and   4     and
-Strum:   D           D      U               U     D      U
+Count:   1     and   2     and   3     and   4     and
+Strum:   D           D      U           U    D      U
 ```
 
 Written compactly: **D  DU  UDU**
 
-The gap on the "and" of 2 — where your hand moves up but misses the strings —
+The gap on beat 3 — where your hand moves down but misses the strings —
 is what gives the pattern its characteristic lilt and forward motion. Practice
 it slowly with G – D – Em – C before increasing tempo. This pattern underlies
 an enormous number of pop songs.

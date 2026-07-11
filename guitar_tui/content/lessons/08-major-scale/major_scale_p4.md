@@ -19,6 +19,7 @@ title: C Major — Position 4
 root: C
 fret_range: [1, 5]
 positions:
+  - {string: 6, fret: 1,  degree: "4"}
   - {string: 6, fret: 3,  degree: "5"}
   - {string: 6, fret: 5,  degree: "6"}
   - {string: 5, fret: 2,  degree: "7"}
@@ -33,6 +34,7 @@ positions:
   - {string: 2, fret: 1,  degree: "1",  root: true}
   - {string: 2, fret: 3,  degree: "2"}
   - {string: 2, fret: 5,  degree: "3"}
+  - {string: 1, fret: 1,  degree: "4"}
   - {string: 1, fret: 3,  degree: "5"}
   - {string: 1, fret: 5,  degree: "6"}
 ```

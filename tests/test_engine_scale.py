@@ -160,3 +160,22 @@ class TestHighlightRootDisabled:
         text = render_scale(spec)
         assert "■" not in text.plain
         assert "●" in text.plain
+
+
+class TestFretRangeValidation:
+    def test_note_outside_explicit_range_is_rejected(self) -> None:
+        with pytest.raises(ValidationError, match="outside"):
+            ScaleSpec.model_validate({
+                "type": "scale",
+                "root": "A",
+                "fret_range": [5, 8],
+                "positions": [{"string": 6, "fret": 10}],
+            })
+
+    def test_no_range_means_no_containment_check(self) -> None:
+        spec = ScaleSpec.model_validate({
+            "type": "scale",
+            "root": "A",
+            "positions": [{"string": 6, "fret": 10}],
+        })
+        assert spec.fret_range is None

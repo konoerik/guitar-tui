@@ -97,8 +97,8 @@ These four chords dominate popular music:
 | Numeral | In C | In G | In D |
 |---------|------|------|------|
 | I | C | G | D |
-| IV | F | C | A |
-| V | G | D | E |
+| IV | F | C | G |
+| V | G | D | A |
 | vi | Am | Em | Bm |
 
 Once you know the diatonic chord quality pattern, you can derive the chords of any major key in seconds.
