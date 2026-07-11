@@ -22,9 +22,11 @@ DONE_CONTENT=$(echo "$DONE_CONTENT" | sed '/./,$!d' | sed -e :a -e '/^\s*$/{ $d;
 
 if [[ -n "$DONE_CONTENT" ]]; then
   mkdir -p "$ARCHIVE_DIR"
-  echo "" >> "$ARCHIVE_FILE"
-  echo "## Archived $(date +%Y-%m-%d)" >> "$ARCHIVE_FILE"
-  echo "$DONE_CONTENT" >> "$ARCHIVE_FILE"
+  {
+    echo ""
+    echo "## Archived $(date +%Y-%m-%d)"
+    echo "$DONE_CONTENT"
+  } >> "$ARCHIVE_FILE"
 
   awk '
     /^## Done/ { print; in_done=1; next }
