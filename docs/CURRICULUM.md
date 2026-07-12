@@ -248,14 +248,14 @@ Within a track, lessons are ordered by `position`.
 
 | Status | Slug | Title | Distinctive interval | Cultural context |
 |--------|------|-------|---------------------|-----------------|
-| ○ | harmonic_minor_sound | The Sound of Harmonic Minor | Augmented 2nd (b6→7) | Classical, metal, gypsy jazz |
-| ○ | phrygian_dominant | Phrygian Dominant — The Spanish Sound | b2 over major I | Flamenco, Middle Eastern, gypsy jazz |
-| ○ | hungarian_minor | Hungarian Minor — The Gypsy Sound | Two augmented 2nds | Romani music, Eastern European |
-| ○ | whole_tone_scale | The Whole Tone Scale — Floating and Unresolved | No half steps, no resolution | Debussy, impressionist jazz, film |
-| ○ | diminished_scale | The Diminished Scale — Tension and Symmetry | Symmetric whole-half / half-whole | Jazz, dramatic passages, horror film |
-| ○ | japanese_pentatonic | Japanese and East Asian Pentatonics | b2, omitted 3rd | Japanese koto music, game music, East Asian folk |
+| ✓ | harmonic_minor_sound | The Sound of Harmonic Minor | Augmented 2nd (b6→7) | Classical, metal, gypsy jazz |
+| ✓ | phrygian_dominant | Phrygian Dominant — The Spanish Sound | b2 over major I | Flamenco, Middle Eastern, gypsy jazz |
+| ✓ | hungarian_minor | Hungarian Minor — The Gypsy Sound | Two augmented 2nds | Romani music, Eastern European |
+| ✓ | whole_tone_scale | The Whole Tone Scale — Floating and Unresolved | No half steps, no resolution | Debussy, impressionist jazz, film |
+| ✓ | diminished_scale | The Diminished Scale — Tension and Symmetry | Symmetric whole-half / half-whole | Jazz, dramatic passages, horror film |
+| ✓ | japanese_pentatonic | Japanese and East Asian Pentatonics | b2, omitted 3rd | Japanese koto music, game music, East Asian folk |
 
-> **Data requirements:** `harmonic_minor.yaml`, `phrygian_dominant.yaml`, `hungarian_minor.yaml`, `whole_tone.yaml`, `diminished.yaml`, `japanese_pentatonic.yaml` — all new files, ~5 positions each (or fewer for symmetric scales). Licks: 1 per lesson, looper-ready, capturing the characteristic phrase shape of each tradition.
+> **Data requirements:** ✓ done 2026-07-12 — all six scale YAML files shipped with M8 (the Japanese pentatonic file is named `hirajoshi.yaml` after the specific koto tuning taught, rather than the generic `japanese_pentatonic.yaml`). Licks: ✓ 1 per lesson (gypsy_cadence_run, spanish_descent, hungarian_aug_seconds, floating_whole_tone, diminished_tension_line, koto_phrase), all looper-ready, category `world`.
 
 ---
 
@@ -499,7 +499,7 @@ written.
 
 | Track | Lessons planned | Complete | Stubs |
 |-------|----------------|----------|-------|
-| 1 — Orientation | 4 | 4 | 0 |
+| 1 — Orientation | 5 | 5 | 0 |
 | 2 — Open Chords | 10 | 10 | 0 |
 | 3 — First Progressions | 6 | 6 | 0 |
 | 4 — Theory Basics | 8 | 8 | 0 |
@@ -511,11 +511,11 @@ written.
 | 10 — Modes | 6 | 6 | 0 |
 | 11 — Song Analysis | 9 | 9 | 0 |
 | 12 — Expressive Techniques | 5 | 5 | 0 |
-| 13 — Phrasing and Musicality | 6 | 0 | 0 |
-| 14 — Rhythm Depth | 6 | 0 | 0 |
+| 13 — Phrasing and Musicality | 6 | 6 | 0 |
+| 14 — Rhythm Depth | 6 | 6 | 0 |
 | 15 — Ear Training | 5 | 0 | 0 |
-| 16 — Sounds and Scales Around the World | 6 | 0 | 0 |
-| **Total** | **106** | **83** | **0** |
+| 16 — Sounds and Scales Around the World | 6 | 6 | 0 |
+| **Total** | **107** | **102** | **0** |
 
 Exercises: 14 complete; ~10 planned for Tracks 13–14.
 Licks: 25 complete; ~5–7 planned for Tracks 13–14.

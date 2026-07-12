@@ -54,10 +54,12 @@
 - Track 15 (5 lessons): ear training guide; explicit about app limitation; looper-as-ear-training format
 - Optional: add `listening_exercise:` Markdown section convention to lick files (no engine change)
 
-**Stage 4** (world sounds):
-- Track 16 — Sounds and Scales Around the World (6 lessons): harmonic minor, Phrygian dominant, Hungarian minor, whole tone, diminished, Japanese pentatonic
-- ~~Data prerequisites~~ ✓ done 2026-07-12 — all 6 scale YAML files shipped with M8; lessons unblocked
-- 1 lick per lesson (looper-ready, captures characteristic phrase shape of each tradition)
+**Stage 4** (world sounds): ✓ **complete 2026-07-12**
+- [x] Track 16 — 6 lessons in `16-world-scales` (harmonic_minor_sound, phrygian_dominant,
+  hungarian_minor, whole_tone_scale, diminished_scale, japanese_pentatonic); diagrams generated
+  from the verified scale YAMLs; all cross-linked via theory_refs into the Theory Web
+- [x] 6 looper licks (category `world` → "World Scales" branch in Practice); every note
+  verified against its scale by the content suite
 
 
 

@@ -184,3 +184,14 @@ tracks:
       strumming built on the constant-motion rule, and palm muting for textural
       control. Pedagogically it pairs naturally with the scale tracks — improvising
       players need rhythmic vocabulary at the same time as note vocabulary.
+
+  - id: world-scales
+    title: "Sounds and Scales Around the World"
+    description: |-
+      Why does flamenco sound Spanish? Why does a whole-tone scale feel like
+      floating? Each lesson starts from a sound you already recognize and traces
+      it back to the interval responsible: harmonic minor's augmented 2nd,
+      Phrygian dominant's half step over a major chord, Hungarian minor's doubled
+      leap, the two symmetric scales, and the Japanese hirajoshi pentatonic.
+      Standalone — most valuable after Modes, but accessible any time after the
+      Natural Minor track. Every scale here is explorable in the Theory Web.
