@@ -1,8 +1,8 @@
 # Context
 <!-- Updated by /wrap at session end. Edit manually if needed. Keep it under 8 lines. -->
 
-**Current focus:** Exercises-tab redesign decision, then M8 Theory Web (+ Track 16 scale data)
-**Last session:** Audit (~30 fixes) → PyPI 0.1.0 released (tag v0.1.0) → Stages 1+2 complete: Tracks 13–14 fully shipped (12 lessons, 7 exercises, 5 licks; 96 lessons / 30 licks total) → content-verification pytest (875 tests) → exercise module fix; Exercises-tab redesign decision now unblocked (specific exercises exist).
-**Blocking:** none
-**Next action:** decide + implement Exercises-tab redesign (PLAN Infrastructure), then start M8 data layer
+**Current focus:** M8 Theory Web (+ Track 16 scale data folded in); Key View enhancements as on-ramp
+**Last session:** Audit → PyPI 0.1.0 released → Tracks 13–14 complete (Stages 1+2) → verification pytest → Exercises-tab redesign shipped (track drills only; Warm-ups in Practice) → chord_melody_intro → Tools evaluated: Key View coverage fixed (enharmonic lookup, 12 dim voicings, tone fallback; 0 dead-ends). 892 tests, 96 lessons, 65 chords.
+**Blocking:** none — 5 commits unpushed
+**Next action:** push to GitHub; then Key View enhancements or M8 data layer (see PLAN ## Active + Infrastructure "Tools section improvements")
 <!-- wrapped: 2026-07-11 -->

@@ -109,6 +109,7 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 - Content gaps Stage 2: Tracks 13–14 complete — 5 lessons (motif_development, rhythmic_placement, building_a_solo, ghost_strokes, rhythm_in_leads), 7 exercises (4 rhythm + 3 phrasing modules), 5 licks (Phrasing + Rhythm categories); 96 lessons, 30 licks, 875 tests ✓
 - Exercises tab redesign: lesson tab now shows track-specific drills only (licks model); universal warmups relabeled "Warm-ups" in Practice tree; Practice module order/labels updated for all 9 exercise modules; overview text explains the split ✓
 - chord_melody_intro exercise: Ode to Joy chord-melody arrangement (module seventh-chords, advanced) — last open Chord Exercises item ✓
+- Tools/Key View correctness: enharmonic chord lookup (C#↔Db, Abm↔G#m), 12 moveable diminished voicings (data), chord-tone fallback for missing voicings — "(no voicing)" dead-ends 23% → 0% ✓
 
 - M0 — Project Scaffold: uv project, CLAUDE.md, schemas, hello-world app ✓
 - M1 — Data Layer: Pydantic chord/scale models, YAML data, startup validation, tests ✓
