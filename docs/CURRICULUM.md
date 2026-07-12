@@ -208,9 +208,9 @@ Within a track, lessons are ordered by `position`.
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
-| ○ | phrase_shape | The Shape of a Phrase | intermediate | tab |
-| ○ | question_and_answer | Question and Answer Phrasing | intermediate | tab |
-| ○ | space_and_silence | Space and Silence | intermediate | tab |
+| ✓ | phrase_shape | The Shape of a Phrase | intermediate | tab |
+| ✓ | question_and_answer | Question and Answer Phrasing | intermediate | tab |
+| ✓ | space_and_silence | Space and Silence | intermediate | tab |
 | ○ | motif_development | Motif Development | intermediate | tab |
 | ○ | rhythmic_placement | Rhythmic Placement | intermediate | tab |
 | ○ | building_a_solo | Building a Solo | intermediate | tab |
@@ -227,10 +227,10 @@ Within a track, lessons are ordered by `position`.
 
 | Status | Slug | Title | Difficulty | Diagrams needed |
 |--------|------|-------|------------|-----------------|
-| ○ | subdivisions | Subdivisions — Quarters, Eighths, and Sixteenths | beginner | tab |
-| ○ | syncopation | Syncopation and the Backbeat | intermediate | tab |
-| ○ | sixteenth_strumming | 16th-Note Strumming Patterns | intermediate | tab |
-| ○ | palm_muting | Palm Muting | intermediate | tab |
+| ✓ | subdivisions | Subdivisions — Quarters, Eighths, and Sixteenths | beginner | tab |
+| ✓ | syncopation | Syncopation and the Backbeat | intermediate | tab |
+| ✓ | sixteenth_strumming | 16th-Note Strumming Patterns | intermediate | tab |
+| ✓ | palm_muting | Palm Muting | intermediate | tab |
 | ○ | ghost_strokes | Ghost Strokes and Rhythmic Muting | intermediate | tab |
 | ○ | rhythm_in_leads | Rhythm in Lead Playing | intermediate | tab |
 

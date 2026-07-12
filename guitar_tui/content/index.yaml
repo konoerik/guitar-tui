@@ -155,3 +155,32 @@ tracks:
       the full workflow. After this track you have a method for learning from any
       music you encounter, which is the point at which theory becomes a permanent
       part of how you hear.
+
+  - id: expressive-techniques
+    title: "Expressive Techniques"
+    description: |-
+      The left-hand vocabulary that turns notes into voices: bending, vibrato,
+      hammer-ons and pull-offs, and slides. These techniques add pitch movement and
+      continuity that picking alone cannot produce — they are what makes a guitar
+      "sing." Pedagogically this track belongs right after the pentatonic scale:
+      every example lives in position 1 shapes you already know, and every lick in
+      the library from here on uses this notation.
+
+  - id: phrasing
+    title: "Phrasing & Musicality"
+    description: |-
+      Technique and scales are vocabulary; phrasing is speech. This track covers the
+      contour of a phrase, the question-and-answer structure that underlies melodic
+      music from field hollers to blues solos, and the deliberate use of space —
+      the skills that make improvisation sound composed. Nothing here is technically
+      difficult; everything here is what listeners actually notice.
+
+  - id: rhythm
+    title: "Rhythm Depth"
+    description: |-
+      Most players plateau on time feel, not on harmony. This track builds the
+      rhythm skills the chord and scale tracks assume: subdivision awareness
+      (quarters, eighths, sixteenths), syncopation and the backbeat, sixteenth-note
+      strumming built on the constant-motion rule, and palm muting for textural
+      control. Pedagogically it pairs naturally with the scale tracks — improvising
+      players need rhythmic vocabulary at the same time as note vocabulary.

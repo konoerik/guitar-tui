@@ -11,9 +11,11 @@
    every chord voicing, scale-position note, and lick tab against the stated name/degree/key+scale;
    assert box completeness against declared `fret_range`. Makes the catalog self-verifying — the
    2026-07-11 audit showed hand-authored content drifts in ways rendering checks cannot catch.
-3. **Track 14 core** (Stage 1 below) — rhythm is the curriculum's biggest pedagogical gap: 1 rhythm
-   lesson in 84; players plateau on time feel, not harmony. Slots between Tracks 6–7 in the arc.
-4. **Track 13 core** (Stage 1 below) — phrasing turns the 26-lick library from patterns into music
+3. ~~**Track 14 core**~~ ✓ done 2026-07-11 — `subdivisions`, `syncopation`, `sixteenth_strumming`,
+   `palm_muting` shipped (module `rhythm`, dir `14-rhythm`); tracks registered in index.yaml
+   (incl. previously-unregistered `expressive-techniques`)
+4. ~~**Track 13 core**~~ ✓ done 2026-07-11 — `phrase_shape`, `question_and_answer`,
+   `space_and_silence` shipped (module `phrasing`, dir `13-phrasing`)
 5. **M8 Theory Web** — fold Track 16's 6 new scale YAML files in as scale-view test material
 6. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
 
@@ -30,9 +32,7 @@
 
 ### Content gaps (Tier 3b) — staged
 
-**Stage 1** (highest value, no new notation or infrastructure needed):
-- Track 14 core (4 lessons): `subdivisions`, `syncopation`, `sixteenth_strumming`, `palm_muting` — D/U labels + `rest: true` + `caption:` covers everything; palm muting uses `caption:` + prose workaround
-- Track 13 core (3 lessons): `phrase_shape`, `question_and_answer`, `space_and_silence`
+**Stage 1** ✓ done 2026-07-11 (7 lessons shipped; see Agreed order items 3–4)
 
 **Stage 2** (complete both technique-adjacent tracks):
 - Track 13 remaining (3 lessons): `motif_development`, `rhythmic_placement`, `building_a_solo`
@@ -57,6 +57,7 @@
 
 ### Low priority
 
+- **GitHub Actions release workflow** — build + publish to PyPI on tag push (`uv build` / `uv publish` with a `PYPI_API_TOKEN` repo secret or trusted publishing); replaces the manual `.env` + `uv publish` flow. Not urgent — manual flow works.
 - FEAT-007: chord diagram tuning-aware string labels — not needed until alternate tuning lessons are written
 - **Tab renderer: suppress trailing dash before technique connector** — `─5─h8─` has a gap that `─5b7─` does not (ADR-D8). Fix approach: second pass over the rendered staff rows — after all beats are written, scan each string row for `─` immediately before `h`/`p`/`/`/`\` and remove it. Requires no look-ahead during render; operates on the completed string. Update `TestTechniqueConnectors` tests if implemented.
 - Thumb notation — `fingers` accepts integers 1–4 only; classical/fingerstyle thumb (T) not supported; no planned lesson requires it
