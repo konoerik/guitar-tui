@@ -3,6 +3,7 @@ title: The G–D–Em–C Progression
 slug: g_d_em_c_progression
 difficulty: beginner
 tags: [chords, progressions, major-chords, minor-chords]
+theory_refs: [progression:pop_four_chord]
 prerequisites: [open_g_chord]
 module: first-progressions
 position: 1

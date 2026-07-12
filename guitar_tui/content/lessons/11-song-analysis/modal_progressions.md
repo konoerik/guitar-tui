@@ -3,6 +3,7 @@ title: Recognizing Modal Progressions
 slug: modal_progressions
 difficulty: advanced
 tags: [song-analysis, modes, chord-progressions]
+theory_refs: [progression:dorian_vamp, progression:phrygian_vamp, progression:mixolydian_vamp]
 prerequisites: [analysing_common_progressions, modes_in_context]
 module: song-analysis
 position: 7

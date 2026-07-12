@@ -1,0 +1,158 @@
+# Common chord progressions — Theory Web data.
+#
+# Schema: schemas/progression_format.md
+# quality must be one of the degree-table families (Major, Minor, Blues,
+# Dorian, Phrygian, Lydian, Mixolydian); numerals must be spelled exactly
+# as in theory/keys.py degree tables. The loader validates both on startup.
+
+progressions:
+  # ── Major ────────────────────────────────────────────────────────────────
+  - id: three_chord
+    name: "I–IV–V"
+    quality: Major
+    numerals: ["I", "IV", "V"]
+    description: >
+      The three-chord workhorse behind folk, country, early rock and roll,
+      and thousands of campfire songs. If a song has three chords, it is
+      almost certainly this.
+    lessons: [one_four_five, a_d_e_progression, diatonic_progressions]
+
+  - id: pop_four_chord
+    name: "I–V–vi–IV"
+    quality: Major
+    numerals: ["I", "V", "vi", "IV"]
+    description: >
+      The four-chord pop loop — decades of hit songs share this exact
+      sequence. Starts bright, dips into the relative minor, resolves home.
+    lessons: [g_d_em_c_progression, c_g_am_f_progression]
+
+  - id: axis
+    name: "vi–IV–I–V"
+    quality: Major
+    numerals: ["vi", "IV", "I", "V"]
+    description: >
+      The same four chords as I–V–vi–IV but started from the minor vi,
+      which tilts the whole loop melancholy. Common in ballads and
+      minor-leaning pop.
+    lessons: [analysing_common_progressions]
+
+  - id: doo_wop
+    name: "I–vi–IV–V"
+    quality: Major
+    numerals: ["I", "vi", "IV", "V"]
+    description: >
+      The "50s progression" — doo-wop, early rock ballads, and standards.
+      The vi adds a wistful step between home and the IV–V turnaround.
+    lessons: []
+
+  - id: jazz_cadence
+    name: "ii–V–I"
+    quality: Major
+    numerals: ["ii", "V", "I"]
+    description: >
+      The fundamental jazz cadence. Played with seventh chords
+      (iim7–V7–Imaj7) it is the building block of most jazz standards.
+    lessons: [seventh_progressions]
+
+  # ── Minor ────────────────────────────────────────────────────────────────
+  - id: minor_pop
+    name: "i–bVI–bIII–bVII"
+    quality: Minor
+    numerals: ["i", "bVI", "bIII", "bVII"]
+    description: >
+      The minor-key pop loop (Am–F–C–G in A minor) — the same chords as the
+      major-key axis progression, heard from the minor side.
+    lessons: []
+
+  - id: minor_three_chord
+    name: "i–iv–v"
+    quality: Minor
+    numerals: ["i", "iv", "v"]
+    description: >
+      Natural minor's answer to I–IV–V. Darker and unresolved; many songs
+      sharpen the v into a major V for a stronger pull home.
+    lessons: []
+
+  - id: andalusian
+    name: "i–bVII–bVI"
+    quality: Minor
+    numerals: ["i", "bVII", "bVI"]
+    description: >
+      A descending stepwise vamp with a Spanish flavor. The full Andalusian
+      cadence continues down to a major V borrowed from harmonic minor.
+    lessons: [modal_progressions]
+
+  # ── Blues ────────────────────────────────────────────────────────────────
+  - id: twelve_bar
+    name: "12-Bar Blues (I7–IV7–V7)"
+    quality: Blues
+    numerals: ["I7", "IV7", "V7"]
+    description: >
+      Twelve bars, three dominant seventh chords: four bars of I7, two of
+      IV7, two of I7, then V7–IV7–I7–V7. The single most important form in
+      blues, rock, and jazz.
+    lessons: [twelve_bar_blues_a]
+
+  - id: harmonic_minor_cadence
+    name: "i–V–i (Harmonic Minor)"
+    quality: Harmonic Minor
+    numerals: ["i", "V", "i"]
+    description: >
+      The reason harmonic minor exists: raising the 7th turns the weak minor
+      v into a true dominant V that pulls hard back to i.
+    lessons: []
+
+  # ── Modes ────────────────────────────────────────────────────────────────
+  - id: dorian_vamp
+    name: "i–IV (Dorian)"
+    quality: Dorian
+    numerals: ["i", "IV"]
+    description: >
+      A minor chord with a major IV — the pairing that defines the Dorian
+      sound in funk, rock, and jam grooves.
+    lessons: [dorian_mode, modal_progressions]
+
+  - id: phrygian_vamp
+    name: "i–bII (Phrygian)"
+    quality: Phrygian
+    numerals: ["i", "bII"]
+    description: >
+      The half-step shove between i and the major chord a fret above it —
+      flamenco and metal both live on this tension.
+    lessons: [phrygian_mode, modal_progressions]
+
+  - id: mixolydian_vamp
+    name: "I–bVII (Mixolydian)"
+    quality: Mixolydian
+    numerals: ["I", "bVII"]
+    description: >
+      A major I rocking against the major chord a whole step below.
+      Classic rock's favorite two-chord engine.
+    lessons: [mixolydian_mode, modal_progressions]
+
+  - id: mixolydian_rock
+    name: "I–bVII–IV"
+    quality: Mixolydian
+    numerals: ["I", "bVII", "IV"]
+    description: >
+      Extends the Mixolydian vamp with the IV — the three-chord shape of
+      countless stadium rock choruses.
+    lessons: [mixolydian_mode]
+
+  - id: phrygian_dominant_vamp
+    name: "I–bII (Phrygian Dominant)"
+    quality: Phrygian Dominant
+    numerals: ["I", "bII"]
+    description: >
+      Two major chords a half step apart — the Spanish/flamenco cadence
+      sound, sharpened by the major 3rd in the home chord.
+    lessons: []
+
+  - id: lydian_vamp
+    name: "I–II (Lydian)"
+    quality: Lydian
+    numerals: ["I", "II"]
+    description: >
+      Two major chords a whole step apart above the same tonal center —
+      the floating, film-score brightness of Lydian.
+    lessons: [lydian_mode]

@@ -3,6 +3,7 @@ title: Diatonic Chord Progressions
 slug: diatonic_progressions
 difficulty: intermediate
 tags: [chords, major-scales, chord-progressions, music-theory]
+theory_refs: [scale:major, progression:three_chord]
 prerequisites: [major_scale_chords, minor_scale_chords]
 module: major-scale
 position: 7

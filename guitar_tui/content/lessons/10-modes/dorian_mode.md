@@ -3,6 +3,7 @@ title: The Dorian Mode
 slug: dorian_mode
 difficulty: intermediate
 tags: [scales, modes, minor-scales]
+theory_refs: [scale:dorian, progression:dorian_vamp]
 prerequisites: [modes_intro, natural_minor_p1]
 licks: [dorian_groove]
 module: modes

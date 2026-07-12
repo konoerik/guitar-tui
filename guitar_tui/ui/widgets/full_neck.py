@@ -12,10 +12,14 @@ from rich.text import Text
 from textual.reactive import reactive
 from textual.widgets import Static
 
-from guitar_tui.theory.keys import note_to_semitone
+from guitar_tui.theory.keys import note_to_semitone, semitone_to_note
+from guitar_tui.theory.web import fit_position_shift, transposition_offset
 
 # String labels displayed top-to-bottom (string 1 = high e, 6 = low E).
 _LABELS: dict[int, str] = {1: "e", 2: "B", 3: "G", 4: "D", 5: "A", 6: "E"}
+
+# Open-string pitch classes (standard tuning), keyed by string number.
+_OPEN_ST: dict[int, int] = {1: 4, 2: 11, 3: 7, 4: 2, 5: 9, 6: 4}
 
 # Column layout constants.
 _PREFIX   = 4
@@ -28,20 +32,13 @@ def _col_start(fret: int) -> int:
     return _PREFIX + fret * _COL
 
 
-def _position_shift(lo: int, hi: int) -> int:
-    shift = 0
-    while hi + shift > _MAX_FRET:
-        shift -= 12
-    while lo + shift < 0:
-        shift += 12
-    # Prefer the lowest valid placement on the neck.
-    while lo + shift - 12 >= 0:
-        shift -= 12
-    return shift
-
-
-_DARK_COLORS  = {"root": "bold red",      "tone": "cyan",      "bracket": "yellow"}
-_LIGHT_COLORS = {"root": "bold dark_red", "tone": "dark_cyan", "bracket": "dark_goldenrod"}
+_DARK_COLORS  = {
+    "root": "bold red", "tone": "cyan", "bracket": "yellow", "char": "bold magenta",
+}
+_LIGHT_COLORS = {
+    "root": "bold dark_red", "tone": "dark_cyan", "bracket": "dark_goldenrod",
+    "char": "bold dark_magenta",
+}
 
 
 class FullNeckWidget(Static):
@@ -50,6 +47,8 @@ class FullNeckWidget(Static):
     root_note:        reactive[str] = reactive("A",             layout=True)
     scale_name:       reactive[str] = reactive("natural_minor", layout=True)
     current_position: reactive[int] = reactive(1,              layout=True)
+    # (semitones above root, interval symbol) — mode's characteristic note.
+    characteristic:   reactive[tuple[int, str] | None] = reactive(None, layout=True)
 
     def on_mount(self) -> None:
         self.watch(self.app, "theme", self._on_theme_changed)
@@ -70,6 +69,9 @@ class FullNeckWidget(Static):
     def watch_current_position(self, _: int) -> None:
         self._refresh()
 
+    def watch_characteristic(self, _: tuple[int, str] | None) -> None:
+        self._refresh()
+
     def _refresh(self) -> None:
         self.update(self._build())
 
@@ -79,8 +81,12 @@ class FullNeckWidget(Static):
             return Text(f"  (scale '{self.scale_name}' not loaded)")
 
         scale  = loader.scales[self.scale_name]
-        offset = (note_to_semitone(self.root_note) - note_to_semitone(scale.key)) % 12
+        offset = transposition_offset(self.root_note, scale.key)
         colors = self._colors()
+
+        char_st: int | None = None
+        if self.characteristic is not None:
+            char_st = (note_to_semitone(self.root_note) + self.characteristic[0]) % 12
 
         # Build note map — all notes in a position shifted as a unit.
         note_map: dict[tuple[int, int], bool] = {}
@@ -88,7 +94,7 @@ class FullNeckWidget(Static):
         for pos in scale.positions:
             lo_raw = pos.fret_range[0] + offset
             hi_raw = pos.fret_range[1] + offset
-            shift  = _position_shift(lo_raw, hi_raw)
+            shift  = fit_position_shift(lo_raw, hi_raw, _MAX_FRET)
             for note in pos.notes:
                 nf = note.fret + offset + shift
                 if 0 <= nf <= _MAX_FRET:
@@ -114,6 +120,8 @@ class FullNeckWidget(Static):
                 if key in note_map:
                     if note_map[key]:
                         t.append("■", style=colors["root"])
+                    elif char_st is not None and (_OPEN_ST[string] + fret) % 12 == char_st:
+                        t.append("◆", style=colors["char"])
                     else:
                         t.append("●", style=colors["tone"])
                 else:
@@ -130,7 +138,11 @@ class FullNeckWidget(Static):
         t.append("■", style=colors["root"])
         t.append(f" root ({self.root_note})   ")
         t.append("●", style=colors["tone"])
-        t.append(f" scale tone   ◀ [ / ] ▶   position {cur_idx + 1} of {n_pos}")
+        t.append(" scale tone   ")
+        if char_st is not None and self.characteristic is not None:
+            t.append("◆", style=colors["char"])
+            t.append(f" {self.characteristic[1]} ({semitone_to_note(char_st)})   ")
+        t.append(f"◀ [ / ] ▶   position {cur_idx + 1} of {n_pos}")
 
         return t
 

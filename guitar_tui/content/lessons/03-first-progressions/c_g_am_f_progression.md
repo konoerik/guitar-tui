@@ -3,6 +3,7 @@ title: The C–G–Am–F Progression
 slug: c_g_am_f_progression
 difficulty: beginner
 tags: [chords, progressions, major-chords, minor-chords]
+theory_refs: [progression:pop_four_chord]
 prerequisites: [open_c_chord, open_g_chord, open_am_chord, f_major_chord]
 module: first-progressions
 position: 2

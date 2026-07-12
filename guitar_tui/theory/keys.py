@@ -6,6 +6,8 @@ It is intentionally separate from the engine layer, which is music-agnostic.
 
 from __future__ import annotations
 
+from dataclasses import dataclass
+
 # ---------------------------------------------------------------------------
 # Chromatic scale — guitar-friendly enharmonic spellings
 # ---------------------------------------------------------------------------
@@ -67,6 +69,7 @@ _CHORD_TONE_INTERVALS: dict[str, tuple[int, ...]] = {
     "":  (0, 4, 7),
     "m": (0, 3, 7),
     "°": (0, 3, 6),
+    "+": (0, 4, 8),
     "7": (0, 4, 7, 10),
 }
 
@@ -92,15 +95,21 @@ def chord_tones(chord_name: str) -> list[str] | None:
 # ---------------------------------------------------------------------------
 
 QUALITY_TO_SCALE: dict[str, str] = {
-    "Major":            "major",
-    "Major Pentatonic": "major_pentatonic",
-    "Minor":            "natural_minor",
-    "Minor Pentatonic": "minor_pentatonic",
-    "Blues":            "blues_scale",
-    "Dorian":           "dorian",
-    "Phrygian":         "phrygian",
-    "Lydian":           "lydian",
-    "Mixolydian":       "mixolydian",
+    "Major":             "major",
+    "Major Pentatonic":  "major_pentatonic",
+    "Minor":             "natural_minor",
+    "Minor Pentatonic":  "minor_pentatonic",
+    "Blues":             "blues_scale",
+    "Dorian":            "dorian",
+    "Phrygian":          "phrygian",
+    "Lydian":            "lydian",
+    "Mixolydian":        "mixolydian",
+    "Harmonic Minor":    "harmonic_minor",
+    "Phrygian Dominant": "phrygian_dominant",
+    "Hungarian Minor":   "hungarian_minor",
+    "Whole Tone":        "whole_tone",
+    "Diminished (W–H)":  "diminished",
+    "Hirajoshi":         "hirajoshi",
 }
 
 # Pentatonic/blues scales share chord harmony with their parent scale.
@@ -146,6 +155,33 @@ _BLUES_DEGREES: list[tuple[int, str, str]] = [
     (7, "V7",  "dom7"),
 ]
 
+# Harmonic minor and its 5th mode have standard tertian harmony.
+_HARMONIC_MINOR_DEGREES: list[tuple[int, str, str]] = [
+    (0,  "i",     "min"),
+    (2,  "ii°",   "dim"),
+    (3,  "bIII+", "aug"),
+    (5,  "iv",    "min"),
+    (7,  "V",     "maj"),
+    (8,  "bVI",   "maj"),
+    (11, "vii°",  "dim"),
+]
+
+_PHRYGIAN_DOMINANT_DEGREES: list[tuple[int, str, str]] = [
+    (0,  "I",    "maj"),
+    (1,  "bII",  "maj"),
+    (4,  "iii°", "dim"),
+    (5,  "iv",   "min"),
+    (7,  "v°",   "dim"),
+    (8,  "bVI+", "aug"),
+    (10, "bvii", "min"),
+]
+
+# Symmetric and gapped scales don't stack into a usable triad-per-degree set;
+# the Key View shows no chord strip for these.
+_NO_DEGREE_QUALITIES: frozenset[str] = frozenset(
+    {"Hungarian Minor", "Whole Tone", "Diminished (W–H)", "Hirajoshi"}
+)
+
 _MODAL_DEGREES: dict[str, list[tuple[int, str, str]]] = {
     "Dorian": [
         (0,  "i",    "min"),
@@ -188,7 +224,7 @@ _MODAL_DEGREES: dict[str, list[tuple[int, str, str]]] = {
 
 def _chord_name(root_st: int, quality: str) -> str:
     note = semitone_to_note(root_st % 12)
-    suffix = {"maj": "", "min": "m", "dim": "°", "dom7": "7"}.get(quality, "")
+    suffix = {"maj": "", "min": "m", "dim": "°", "aug": "+", "dom7": "7"}.get(quality, "")
     return f"{note}{suffix}"
 
 
@@ -254,21 +290,105 @@ def capo_chart() -> tuple[list[str], list[list[str]]]:
 
 
 # ---------------------------------------------------------------------------
+# Key context — parent major key, relative naming, accidentals
+# ---------------------------------------------------------------------------
+
+# Semitones from the selected root UP to the parent major key's root.
+# E.g. D Dorian is the 2nd mode of C major: C is 10 semitones above D (mod 12).
+_PARENT_MAJOR_OFFSET: dict[str, int] = {
+    "Major":            0,
+    "Major Pentatonic": 0,
+    "Minor":            3,
+    "Minor Pentatonic": 3,
+    "Blues":            3,
+    "Dorian":           10,
+    "Phrygian":         8,
+    "Lydian":           7,
+    "Mixolydian":       5,
+}
+
+# Major key spelling by semitone, per circle-of-fifths convention (_KEY_SIGS).
+_MAJOR_KEY_BY_ST: dict[int, tuple[str, str, int]] = {
+    note_to_semitone(major): (major, minor, count)
+    for major, minor, count, _ in _KEY_SIGS
+}
+
+
+@dataclass(frozen=True)
+class KeyContext:
+    """Context for a root + quality: parent major key and how to name it."""
+
+    parent_major: str        # e.g. "C" for A Minor or D Dorian
+    relative_label: str      # "relative minor" | "relative major" | "parent major"
+    relative_name: str       # e.g. "Am", "C"
+    accidental_count: int    # >0 sharps, <0 flats, 0 none
+
+
+def key_context(root: str, quality_name: str) -> KeyContext | None:
+    """Return the KeyContext for a root and quality, or None if unknown."""
+    offset = _PARENT_MAJOR_OFFSET.get(quality_name)
+    if offset is None:
+        return None
+    parent_st = (note_to_semitone(root) + offset) % 12
+    parent_major, relative_minor, count = _MAJOR_KEY_BY_ST[parent_st]
+    if quality_name in ("Major", "Major Pentatonic"):
+        return KeyContext(parent_major, "relative minor", relative_minor, count)
+    if quality_name in ("Minor", "Minor Pentatonic", "Blues"):
+        return KeyContext(parent_major, "relative major", parent_major, count)
+    return KeyContext(parent_major, "parent major", parent_major, count)
+
+
+# Characteristic note per quality: (semitones above root, interval symbol).
+# The note that distinguishes each mode from plain major/minor; for blues,
+# the b5 "blue note". Symbols match the Intervals reference table.
+CHARACTERISTIC_NOTE: dict[str, tuple[int, str]] = {
+    "Dorian":            (9,  "6"),
+    "Phrygian":          (1,  "b2"),
+    "Lydian":            (6,  "#4"),
+    "Mixolydian":        (10, "b7"),
+    "Blues":             (6,  "b5"),
+    "Harmonic Minor":    (11, "7"),
+    "Phrygian Dominant": (4,  "3"),
+    "Hungarian Minor":   (6,  "#4"),
+}
+
+
+# ---------------------------------------------------------------------------
 # Diatonic chord construction
 # ---------------------------------------------------------------------------
+
+# Qualities that have a degree table (usable in progressions data).
+DEGREE_QUALITIES: tuple[str, ...] = (
+    "Major", "Minor", "Blues", "Dorian", "Phrygian", "Lydian", "Mixolydian",
+    "Harmonic Minor", "Phrygian Dominant",
+)
+
+
+def _degrees_for(quality_name: str) -> list[tuple[int, str, str]]:
+    if quality_name == "Major":
+        return _MAJOR_DEGREES
+    if quality_name == "Minor":
+        return _MINOR_DEGREES
+    if quality_name == "Blues":
+        return _BLUES_DEGREES
+    if quality_name == "Harmonic Minor":
+        return _HARMONIC_MINOR_DEGREES
+    if quality_name == "Phrygian Dominant":
+        return _PHRYGIAN_DOMINANT_DEGREES
+    if quality_name in _NO_DEGREE_QUALITIES:
+        return []
+    return _MODAL_DEGREES.get(quality_name, _MAJOR_DEGREES)
+
+
+def valid_numerals(quality_name: str) -> list[str]:
+    """The roman numerals available in a quality's degree table."""
+    return [roman for _, roman, _ in _degrees_for(quality_name)]
+
 
 def diatonic_chords(root: str, quality_name: str) -> list[tuple[str, str]]:
     """Return [(roman_numeral, chord_name), ...] for a given root and quality."""
     root_st = note_to_semitone(root)
-    if quality_name == "Major":
-        degrees = _MAJOR_DEGREES
-    elif quality_name == "Minor":
-        degrees = _MINOR_DEGREES
-    elif quality_name == "Blues":
-        degrees = _BLUES_DEGREES
-    else:
-        degrees = _MODAL_DEGREES.get(quality_name, _MAJOR_DEGREES)
     return [
         (roman, _chord_name(root_st + offset, q))
-        for offset, roman, q in degrees
+        for offset, roman, q in _degrees_for(quality_name)
     ]

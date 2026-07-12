@@ -3,6 +3,7 @@ title: 7th Chord Progressions
 slug: seventh_progressions
 difficulty: intermediate
 tags: [chords, seventh-chords, chord-progressions, music-theory]
+theory_refs: [progression:jazz_cadence]
 prerequisites: [minor_7th]
 module: seventh-chords
 position: 4

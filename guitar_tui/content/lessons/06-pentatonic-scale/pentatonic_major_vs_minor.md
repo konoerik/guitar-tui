@@ -3,6 +3,7 @@ title: Major vs Minor Pentatonic
 slug: pentatonic_major_vs_minor
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales, major-scales, music-theory]
+theory_refs: [scale:major_pentatonic, scale:minor_pentatonic]
 prerequisites: [major_pentatonic_intro, minor_pentatonic_p5]
 module: pentatonic-scale
 position: 8

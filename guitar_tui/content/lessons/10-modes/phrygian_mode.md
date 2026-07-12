@@ -3,6 +3,7 @@ title: The Phrygian Mode
 slug: phrygian_mode
 difficulty: intermediate
 tags: [scales, modes, minor-scales]
+theory_refs: [scale:phrygian, progression:phrygian_vamp]
 prerequisites: [dorian_mode]
 licks: [phrygian_half_step]
 module: modes

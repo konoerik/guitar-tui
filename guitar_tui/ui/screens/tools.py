@@ -10,7 +10,9 @@ from textual.widgets import ContentSwitcher, Footer, Select, Static, Tree
 
 from guitar_tui.engine.chord_renderer import render_chord
 from guitar_tui.engine.models import BarreDef, ChordSpec
+from guitar_tui.loaders.models import ChordEntry
 from guitar_tui.theory.keys import (
+    CHARACTERISTIC_NOTE,
     KEY_NAMES,
     QUALITY_CHORD_PARENT,
     QUALITY_NAMES,
@@ -19,10 +21,12 @@ from guitar_tui.theory.keys import (
     chord_tones,
     diatonic_chords,
     enharmonic_name,
+    key_context,
     key_signatures,
     note_to_semitone,
     semitone_to_note,
 )
+from guitar_tui.theory.web import realize_progression
 from guitar_tui.ui.widgets.full_neck import FullNeckWidget
 from guitar_tui.ui.widgets.metronome import MetronomeWidget
 
@@ -108,12 +112,14 @@ class ToolsMode(Screen):
         ("]", "next_position", "Pos ▶"),
         ("comma", "prev_chord", "◀ Chord"),
         ("full_stop", "next_chord", "Chord ▶"),
+        ("v", "next_voicing", "Voicing"),
     ]
 
     def __init__(self) -> None:
         super().__init__()
         self._position: int = 1
         self._chord_idx: int = 0
+        self._voicing_idx: int = 0
         self._chords: list[tuple[str, str]] = []
         self._chord_strip_note: str = ""
 
@@ -138,11 +144,13 @@ class ToolsMode(Screen):
                                 id="quality-select",
                                 prompt="Scale/Mode…",
                             )
+                        yield Static("", id="key-context")
                         with ScrollableContainer(id="key-content"):
                             yield FullNeckWidget(id="full-neck")
                         with ScrollableContainer(id="chord-row"):
                             yield Static("", id="chord-strip")
                             yield Static("", id="chord-detail")
+                            yield Static("", id="key-related")
                     # ── Metronome ─────────────────────────────────────────
                     with Vertical(id="content-metronome"):
                         yield MetronomeWidget()
@@ -212,7 +220,9 @@ class ToolsMode(Screen):
     # ── Bindings guard (position/chord only active on Key View) ───────────────
 
     def check_action(self, action: str, parameters: tuple[object, ...]) -> bool | None:
-        if action in ("prev_position", "next_position", "prev_chord", "next_chord"):
+        if action in (
+            "prev_position", "next_position", "prev_chord", "next_chord", "next_voicing",
+        ):
             switcher = self.query_one("#tools-switcher", ContentSwitcher)
             return switcher.current == "content-key-view"
         return True
@@ -223,12 +233,14 @@ class ToolsMode(Screen):
         if event.value is not Select.NULL:
             self._position = 1
             self._chord_idx = 0
+            self._voicing_idx = 0
             self._sync()
 
     def action_prev_chord(self) -> None:
         if not self._chords:
             return
         self._chord_idx = (self._chord_idx - 1) % len(self._chords)
+        self._voicing_idx = 0
         self._render_chord_strip()
         self._update_chord_detail()
 
@@ -236,8 +248,15 @@ class ToolsMode(Screen):
         if not self._chords:
             return
         self._chord_idx = (self._chord_idx + 1) % len(self._chords)
+        self._voicing_idx = 0
         self._render_chord_strip()
         self._update_chord_detail()
+
+    def action_next_voicing(self) -> None:
+        entry = self._current_chord_entry()
+        if entry is not None and len(entry.voicings) > 1:
+            self._voicing_idx = (self._voicing_idx + 1) % len(entry.voicings)
+            self._update_chord_detail()
 
     def action_prev_position(self) -> None:
         n_pos = self._n_positions()
@@ -392,7 +411,23 @@ class ToolsMode(Screen):
         neck.root_note        = key
         neck.scale_name       = scale_name
         neck.current_position = self._position
+        neck.characteristic   = CHARACTERISTIC_NOTE.get(quality)
+        self._update_key_context(key, quality)
         self._update_chord_strip(key, quality)
+
+    def _update_key_context(self, key: str, quality: str) -> None:
+        ctx = key_context(key, quality)
+        if ctx is None:
+            # Not a mode of a major key (harmonic minor, symmetric scales, …).
+            line = f"  {key} {quality}"
+        else:
+            sig = (
+                f"{ctx.accidental_count}♯" if ctx.accidental_count > 0
+                else f"{abs(ctx.accidental_count)}♭" if ctx.accidental_count < 0
+                else "0♯"
+            )
+            line = f"  {key} {quality} · {ctx.relative_label} {ctx.relative_name} · {sig}"
+        self.query_one("#key-context", Static).update(Text(line, style="dim"))
 
     def _sync_position(self) -> None:
         self.query_one("#full-neck", FullNeckWidget).current_position = self._position
@@ -406,8 +441,35 @@ class ToolsMode(Screen):
         else:
             self._chord_strip_note = ""
         self._chords = diatonic_chords(key, chord_quality)
+        if not self._chords:
+            # Symmetric / gapped scales have no triad-per-degree chord set.
+            self._chord_strip_note = "  (no diatonic chord set for this scale)"
+            self.query_one("#chord-detail", Static).update("")
         self._render_chord_strip()
         self._update_chord_detail()
+        self._update_related(key, quality, chord_quality)
+
+    def _update_related(self, key: str, quality: str, chord_quality: str) -> None:
+        """Theory Web panel: progressions realized in this key + related lessons."""
+        t = Text()
+        progressions = self.app.data_loader.progressions_for(chord_quality)
+        if progressions:
+            t.append(f"\n  Progressions in {key} {chord_quality}\n", style="bold")
+            for prog in progressions:
+                realized = realize_progression(key, prog.quality, prog.numerals)
+                t.append(f"  {prog.name:<24}", style="dim")
+                t.append("  ".join(chord for _, chord in realized))
+                t.append("\n")
+        scale_name = QUALITY_TO_SCALE.get(quality)
+        if scale_name is not None:
+            lessons = self.app.lesson_loader.by_theory_ref(f"scale:{scale_name}")
+            if lessons:
+                titles = " · ".join(l.meta.title for l in lessons[:4])
+                more = f"  (+{len(lessons) - 4} more)" if len(lessons) > 4 else ""
+                t.append("\n  Lessons: ", style="bold")
+                t.append(f"{titles}{more}  ", style="")
+                t.append("→ [2] Lessons\n", style="dim")
+        self.query_one("#key-related", Static).update(t)
 
     def _render_chord_strip(self) -> None:
         t = Text("  ")
@@ -420,10 +482,9 @@ class ToolsMode(Screen):
             t.append(self._chord_strip_note, style="dim")
         self.query_one("#chord-strip", Static).update(t)
 
-    def _update_chord_detail(self) -> None:
-        widget = self.query_one("#chord-detail", Static)
+    def _current_chord_entry(self) -> ChordEntry | None:
         if not self._chords:
-            return
+            return None
         _, chord_name = self._chords[self._chord_idx]
         entry = self.app.data_loader.chords.get(chord_name)
         if entry is None:
@@ -431,6 +492,14 @@ class ToolsMode(Screen):
             alt = enharmonic_name(chord_name)
             if alt is not None:
                 entry = self.app.data_loader.chords.get(alt)
+        return entry
+
+    def _update_chord_detail(self) -> None:
+        widget = self.query_one("#chord-detail", Static)
+        if not self._chords:
+            return
+        _, chord_name = self._chords[self._chord_idx]
+        entry = self._current_chord_entry()
         if entry is None:
             tones = chord_tones(chord_name)
             if tones:
@@ -441,7 +510,8 @@ class ToolsMode(Screen):
             else:
                 widget.update(f"  {chord_name}\n  (no voicing)")
             return
-        voicing = entry.voicings[0]
+        n_voicings = len(entry.voicings)
+        voicing = entry.voicings[self._voicing_idx % n_voicings]
         barre = None
         if voicing.barre:
             barre = BarreDef(
@@ -458,4 +528,11 @@ class ToolsMode(Screen):
             base_fret=voicing.base_fret,
             barre=barre,
         )
-        widget.update(render_chord(spec))
+        diagram = render_chord(spec)
+        if n_voicings > 1:
+            idx = self._voicing_idx % n_voicings
+            diagram.append(
+                f"\n  {voicing.label} · voicing {idx + 1}/{n_voicings} · v cycles",
+                style="dim",
+            )
+        widget.update(diagram)

@@ -3,6 +3,7 @@ title: Minor Pentatonic — Position 2
 slug: minor_pentatonic_p2
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales]
+theory_refs: [scale:minor_pentatonic]
 prerequisites: [minor_pentatonic_intro]
 licks: [pent_position2_run]
 module: pentatonic-scale

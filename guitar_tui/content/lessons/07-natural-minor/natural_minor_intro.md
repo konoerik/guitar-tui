@@ -3,6 +3,7 @@ title: The Natural Minor Scale
 slug: natural_minor_intro
 difficulty: intermediate
 tags: [scales, minor-scales, music-theory]
+theory_refs: [scale:natural_minor]
 prerequisites: [relative_minor, minor_pentatonic_intro]
 licks: [natural_minor_descent]
 module: natural-minor

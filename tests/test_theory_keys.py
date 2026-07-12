@@ -3,10 +3,12 @@
 import pytest
 
 from guitar_tui.theory.keys import (
+    CHARACTERISTIC_NOTE,
     KEY_NAMES,
     QUALITY_NAMES,
     capo_chart,
     diatonic_chords,
+    key_context,
     key_signatures,
     note_to_semitone,
     semitone_to_note,
@@ -208,10 +210,16 @@ def test_quality_names_non_empty():
     assert len(QUALITY_NAMES) > 0
 
 
+_NO_CHORD_QUALITIES = {"Hungarian Minor", "Whole Tone", "Diminished (W–H)", "Hirajoshi"}
+
+
 def test_all_qualities_produce_chords():
     for quality in QUALITY_NAMES:
         chords = diatonic_chords("A", quality)
-        assert len(chords) > 0, f"No chords for quality {quality!r}"
+        if quality in _NO_CHORD_QUALITIES:
+            assert chords == [], f"Expected no chord set for {quality!r}"
+        else:
+            assert len(chords) > 0, f"No chords for quality {quality!r}"
 
 
 class TestEnharmonicName:
@@ -242,3 +250,145 @@ class TestChordTones:
         from guitar_tui.theory.keys import chord_tones
         assert chord_tones("Cmaj9#11") is None
         assert chord_tones("") is None
+
+
+# ── Key context (Key View header) ──────────────────────────────────────────────
+
+
+class TestKeyContext:
+    def test_a_minor_relative_major_c(self) -> None:
+        ctx = key_context("A", "Minor")
+        assert ctx is not None
+        assert ctx.parent_major == "C"
+        assert ctx.relative_label == "relative major"
+        assert ctx.relative_name == "C"
+        assert ctx.accidental_count == 0
+
+    def test_c_major_relative_minor_am(self) -> None:
+        ctx = key_context("C", "Major")
+        assert ctx is not None
+        assert ctx.relative_label == "relative minor"
+        assert ctx.relative_name == "Am"
+        assert ctx.accidental_count == 0
+
+    def test_modes_of_c_share_parent_major(self) -> None:
+        for root, quality in [
+            ("D", "Dorian"), ("E", "Phrygian"), ("F", "Lydian"), ("G", "Mixolydian"),
+        ]:
+            ctx = key_context(root, quality)
+            assert ctx is not None
+            assert ctx.parent_major == "C", f"{root} {quality}"
+            assert ctx.relative_label == "parent major"
+            assert ctx.accidental_count == 0
+
+    def test_e_minor_has_one_sharp(self) -> None:
+        ctx = key_context("E", "Minor")
+        assert ctx is not None
+        assert ctx.parent_major == "G"
+        assert ctx.accidental_count == 1
+
+    def test_f_major_has_one_flat(self) -> None:
+        ctx = key_context("F", "Major")
+        assert ctx is not None
+        assert ctx.accidental_count == -1
+        assert ctx.relative_name == "Dm"
+
+    def test_pentatonics_match_parent_quality(self) -> None:
+        assert key_context("A", "Minor Pentatonic") == key_context("A", "Minor")
+        assert key_context("C", "Major Pentatonic") == key_context("C", "Major")
+
+    def test_blues_uses_relative_major(self) -> None:
+        ctx = key_context("A", "Blues")
+        assert ctx is not None
+        assert ctx.relative_label == "relative major"
+        assert ctx.relative_name == "C"
+
+    def test_unknown_quality_returns_none(self) -> None:
+        assert key_context("C", "Klezmer") is None
+
+    def test_all_selector_combinations_covered(self) -> None:
+        # Qualities derived from the major scale have a key context; scales
+        # outside the major-key system (harmonic minor family, symmetric,
+        # hirajoshi) intentionally return None.
+        outside_major_system = {
+            "Harmonic Minor", "Phrygian Dominant", "Hungarian Minor",
+            "Whole Tone", "Diminished (W–H)", "Hirajoshi",
+        }
+        for key in KEY_NAMES:
+            for quality in QUALITY_NAMES:
+                ctx = key_context(key, quality)
+                if quality in outside_major_system:
+                    assert ctx is None, f"{key} {quality}"
+                else:
+                    assert ctx is not None, f"{key} {quality}"
+
+    def test_enharmonic_parent_spelling(self) -> None:
+        # Eb Minor -> parent F# major (6 sharps) per circle-of-fifths table.
+        ctx = key_context("Eb", "Minor")
+        assert ctx is not None
+        assert ctx.parent_major == "F#"
+        assert ctx.accidental_count == 6
+
+
+# ── Characteristic notes ───────────────────────────────────────────────────────
+
+
+class TestCharacteristicNote:
+    def test_mode_intervals_and_symbols(self) -> None:
+        assert CHARACTERISTIC_NOTE["Dorian"] == (9, "6")
+        assert CHARACTERISTIC_NOTE["Phrygian"] == (1, "b2")
+        assert CHARACTERISTIC_NOTE["Lydian"] == (6, "#4")
+        assert CHARACTERISTIC_NOTE["Mixolydian"] == (10, "b7")
+        assert CHARACTERISTIC_NOTE["Blues"] == (6, "b5")
+
+    def test_plain_scales_have_no_characteristic(self) -> None:
+        for quality in ("Major", "Minor", "Major Pentatonic", "Minor Pentatonic"):
+            assert quality not in CHARACTERISTIC_NOTE
+
+    def test_characteristic_note_is_in_scale(self) -> None:
+        # The characteristic pitch must actually occur in the quality's chords/scale
+        # family — spot-check via diatonic spelling: D Dorian's 6 is B.
+        assert semitone_to_note((note_to_semitone("D") + 9) % 12) == "B"
+        # E Phrygian's b2 is F.
+        assert semitone_to_note((note_to_semitone("E") + 1) % 12) == "F"
+
+
+# ── Track 16 scale families ────────────────────────────────────────────────────
+
+
+class TestWorldScaleDegrees:
+    def test_harmonic_minor_chords_a(self) -> None:
+        chords = diatonic_chords("A", "Harmonic Minor")
+        table = dict(chords)
+        assert table["i"] == "Am"
+        assert table["V"] == "E"        # the raised 7th creates a true dominant
+        assert table["bIII+"] == "C+"
+        assert table["vii°"] == "Ab°"   # G#° spelled via fixed chromatic table
+
+    def test_phrygian_dominant_chords_e(self) -> None:
+        chords = diatonic_chords("E", "Phrygian Dominant")
+        table = dict(chords)
+        assert table["I"] == "E"        # major I — the defining sound
+        assert table["bII"] == "F"
+        assert table["bVI+"] == "C+"
+
+    def test_augmented_chord_tones(self) -> None:
+        from guitar_tui.theory.keys import chord_tones
+        assert chord_tones("C+") == ["C", "E", "Ab"]  # G# spelled Ab
+
+    def test_new_scales_in_quality_map(self) -> None:
+        for quality, scale in [
+            ("Harmonic Minor", "harmonic_minor"),
+            ("Phrygian Dominant", "phrygian_dominant"),
+            ("Hungarian Minor", "hungarian_minor"),
+            ("Whole Tone", "whole_tone"),
+            ("Diminished (W–H)", "diminished"),
+            ("Hirajoshi", "hirajoshi"),
+        ]:
+            from guitar_tui.theory.keys import QUALITY_TO_SCALE
+            assert QUALITY_TO_SCALE[quality] == scale
+
+    def test_new_characteristic_notes(self) -> None:
+        assert CHARACTERISTIC_NOTE["Harmonic Minor"] == (11, "7")
+        assert CHARACTERISTIC_NOTE["Phrygian Dominant"] == (4, "3")
+        assert CHARACTERISTIC_NOTE["Hungarian Minor"] == (6, "#4")

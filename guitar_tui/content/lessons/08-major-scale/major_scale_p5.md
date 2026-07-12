@@ -3,6 +3,7 @@ title: Major Scale — Position 5
 slug: major_scale_p5
 difficulty: intermediate
 tags: [scales, major-scales]
+theory_refs: [scale:major]
 prerequisites: [major_scale_p4]
 module: major-scale
 position: 5

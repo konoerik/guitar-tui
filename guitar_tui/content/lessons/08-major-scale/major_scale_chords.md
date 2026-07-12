@@ -3,6 +3,7 @@ title: Chords of the Major Scale
 slug: major_scale_chords
 difficulty: intermediate
 tags: [scales, major-scales, chords, music-theory]
+theory_refs: [scale:major]
 prerequisites: [major_scale_p1, chord_construction, roman_numerals]
 licks: [major_scale_lower_run, major_scale_upper_phrase]
 module: major-scale

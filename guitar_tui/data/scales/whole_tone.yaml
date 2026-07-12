@@ -1,0 +1,46 @@
+# Whole Tone — six notes, all a whole step apart.
+# Fully symmetric: the pattern repeats every 2 frets, so two positions
+# cover every fingering. Dreamlike, unresolved — no perfect 5th anywhere.
+# key: C  — Notes: C D E F# G# Bb
+#
+# String numbering: 1 = high e, 6 = low E
+
+name: whole_tone
+full_name: Whole Tone
+key: C
+intervals: ["1", "2", "3", "#4", "#5", "b7"]
+
+positions:
+  - id: 1
+    name: Position 1
+    fret_range: [2, 5]
+    notes:
+      - {string: 6, fret: 2,  degree: "#4"}
+      - {string: 6, fret: 4,  degree: "#5"}
+      - {string: 5, fret: 3,  degree: "1",  root: true}
+      - {string: 5, fret: 5,  degree: "2"}
+      - {string: 4, fret: 2,  degree: "3"}
+      - {string: 4, fret: 4,  degree: "#4"}
+      - {string: 3, fret: 3,  degree: "b7"}
+      - {string: 3, fret: 5,  degree: "1",  root: true}
+      - {string: 2, fret: 3,  degree: "2"}
+      - {string: 2, fret: 5,  degree: "3"}
+      - {string: 1, fret: 2,  degree: "#4"}
+      - {string: 1, fret: 4,  degree: "#5"}
+
+  - id: 2
+    name: Position 2
+    fret_range: [7, 10]
+    notes:
+      - {string: 6, fret: 8,  degree: "1",  root: true}
+      - {string: 6, fret: 10, degree: "2"}
+      - {string: 5, fret: 7,  degree: "3"}
+      - {string: 5, fret: 9,  degree: "#4"}
+      - {string: 4, fret: 8,  degree: "b7"}
+      - {string: 4, fret: 10, degree: "1",  root: true}
+      - {string: 3, fret: 7,  degree: "2"}
+      - {string: 3, fret: 9,  degree: "3"}
+      - {string: 2, fret: 7,  degree: "#4"}
+      - {string: 2, fret: 9,  degree: "#5"}
+      - {string: 1, fret: 8,  degree: "1",  root: true}
+      - {string: 1, fret: 10, degree: "2"}

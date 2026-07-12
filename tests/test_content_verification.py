@@ -66,6 +66,12 @@ _SCALE_FORMULAS: dict[str, list[int]] = {
     "phrygian": [0, 1, 3, 5, 7, 8, 10],
     "lydian": [0, 2, 4, 6, 7, 9, 11],
     "mixolydian": [0, 2, 4, 5, 7, 9, 10],
+    "harmonic_minor": [0, 2, 3, 5, 7, 8, 11],
+    "phrygian_dominant": [0, 1, 4, 5, 7, 8, 10],
+    "hungarian_minor": [0, 2, 3, 6, 7, 8, 11],
+    "whole_tone": [0, 2, 4, 6, 8, 10],
+    "diminished": [0, 2, 3, 5, 6, 8, 9, 11],
+    "hirajoshi": [0, 2, 3, 7, 8],
 }
 
 # Licks that intentionally use notes outside their declared scale (chromatic

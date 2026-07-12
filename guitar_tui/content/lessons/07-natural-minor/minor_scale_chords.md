@@ -3,6 +3,7 @@ title: Chords of the Minor Scale
 slug: minor_scale_chords
 difficulty: intermediate
 tags: [scales, minor-scales, chords, music-theory]
+theory_refs: [scale:natural_minor]
 prerequisites: [natural_minor_p1, chord_construction, roman_numerals]
 module: natural-minor
 position: 7

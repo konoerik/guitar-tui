@@ -52,6 +52,7 @@ Every lesson file has two parts:
 | `prerequisites` | list[string] | `[]`    | List of lesson slugs that should be completed first. |
 | `see_also`      | list[string] | `[]`    | Related lesson slugs. Shown as a "See Also" line at the bottom of the lesson view. Missing slugs emit a warning. |
 | `licks`         | list[string] | `[]`    | Related lick slugs from the lick library. Shown as a "Practice:" line at the bottom of the lesson view with a pointer to [4] Practice. Missing slugs emit a warning at startup. |
+| `theory_refs`   | list[string] | `[]`    | Theory Web references this lesson teaches or uses. Format: `scale:<scale_name>` (DataLoader scale key, e.g. `scale:major`), `chord:<chord_name>` (e.g. `chord:Am`), or `progression:<id>` (e.g. `progression:pop_four_chord`). Format is validated at load; the Theory Web views use the reverse index (`LessonLoader.by_theory_ref`) to link back to lessons. |
 | `module`        | string       | `null`  | Module this lesson belongs to (e.g., `"open-chords"`). |
 | `position`      | int          | `null`  | Ordering within module (lower = earlier). |
 | `summary`       | string       | `null`  | One-sentence summary shown in lesson list. |

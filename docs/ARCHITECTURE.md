@@ -92,6 +92,16 @@
 
 ---
 
+### D11 — Theory Web data layer: validated progressions YAML, Major/Minor-only memberships, namespaced theory_refs
+
+**Date:** 2026-07-12
+**Context:** M8's Theory Web needs three relationship datasets that did not exist: common progressions per key family, chord→key membership with function, and links from theory entities back to lessons. Each could be hardcoded, derived, or authored as data, and each needed a validation story consistent with "startup failure over silent corruption."
+**Decision:** (1) Progressions are Instructor-authored YAML (`guitar_tui/data/progressions.yaml`, schema in `schemas/progression_format.md`); the loader validates each entry's quality against `theory.keys.DEGREE_QUALITIES` and every numeral against that quality's degree table at startup, so a typo'd numeral fails fast instead of rendering wrong chords. The file is optional-if-absent (minimal test data dirs omit it) but always ships in the packaged data dir, guarded by a test. (2) `theory.web.chord_memberships()` computes chord→key membership over Major and Minor families only: every mode shares its pitch collection with a major key, so including modes would repeat each membership seven ways. (3) Lessons declare Theory Web links via a namespaced `theory_refs` frontmatter field (`scale:major`, `chord:Am`, `progression:pop_four_chord`); format is validated at load and `LessonLoader` builds a reverse index in curriculum order.
+**Alternatives considered:** Hardcoding progressions in Python — rejected; progression choice is music-pedagogy content and belongs to the Instructor as data. Validating progression lesson slugs in the DataLoader — rejected; the data loader would gain a dependency on the lesson loader, so cross-loader slug integrity is asserted by the test suite instead. Deriving lesson links from tags — rejected; tags are topical, not referential, and would produce false links.
+**Consequences:** `DataLoader` now imports `theory.keys` (music-knowledge validation stays out of the engine, which remains agnostic). Membership qualities are a parameter, so modal membership can be added later without API change. `theory_refs` is populated incrementally — lessons without it simply don't appear in Theory Web cross-references.
+
+---
+
 ### D10 — Diagram specs hard-fail on out-of-range notes; labels are the only note-name mechanism
 
 **Date:** 2026-07-11

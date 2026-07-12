@@ -29,6 +29,7 @@ _DEFAULT_INDEX_PATH = Path(__file__).parent.parent / "content" / "index.yaml"
 _DIAGRAM_BLOCK_RE = re.compile(r"```diagram\n(.*?)```", re.DOTALL)
 
 _SLUG_RE = re.compile(r"^[a-z0-9_]+$")
+_THEORY_REF_RE = re.compile(r"^(scale|chord|progression):[^\s:]+$")
 
 
 # ── Exception ──────────────────────────────────────────────────────────────────
@@ -64,6 +65,8 @@ class LessonMeta(BaseModel):
     prerequisites: list[str] = Field(default_factory=list)
     see_also: list[str] = Field(default_factory=list)  # slugs of related lessons
     licks: list[str] = Field(default_factory=list)      # slugs of related licks
+    # Theory Web references: "scale:major", "chord:Am", "progression:pop_four_chord"
+    theory_refs: list[str] = Field(default_factory=list)
     module: str | None = None
     position: int | None = None
     summary: str | None = None
@@ -88,6 +91,17 @@ class LessonMeta(BaseModel):
     def tags_non_empty(cls, v: list) -> list:
         if not v:
             raise ValueError("tags must have at least one entry")
+        return v
+
+    @field_validator("theory_refs")
+    @classmethod
+    def theory_refs_valid(cls, v: list[str]) -> list[str]:
+        for ref in v:
+            if not _THEORY_REF_RE.match(ref):
+                raise ValueError(
+                    f"theory_refs entries must look like 'scale:major', "
+                    f"'chord:Am', or 'progression:pop_four_chord'; got {ref!r}"
+                )
         return v
 
 
@@ -161,6 +175,7 @@ class LessonLoader:
         self.lessons: dict[str, ParsedLesson] = {}         # keyed by slug
         self.tracks: list[TrackEntry] = []                  # ordered from index.yaml
         self.overview: CurriculumOverview | None = None     # optional intro block
+        self.theory_ref_index: dict[str, list[str]] = {}    # "scale:major" → [slug, …]
 
     def load(self) -> None:
         """Parse all .md files in lessons_dir and load the track index.
@@ -201,6 +216,12 @@ class LessonLoader:
                         f"{ref!r} which does not exist.",
                         stacklevel=2,
                     )
+
+        # Phase 3: build the Theory Web reverse index (ref → lesson slugs)
+        self.theory_ref_index = {}
+        for lesson in self.ordered_lessons():
+            for ref in lesson.meta.theory_refs:
+                self.theory_ref_index.setdefault(ref, []).append(lesson.meta.slug)
 
     # ── Ordering helpers ───────────────────────────────────────────────────────
 
@@ -246,6 +267,11 @@ class LessonLoader:
     def by_difficulty(self, difficulty: str) -> list[ParsedLesson]:
         """Return all lessons with the given difficulty level."""
         return [l for l in self.lessons.values() if l.meta.difficulty == difficulty]
+
+    def by_theory_ref(self, ref: str) -> list[ParsedLesson]:
+        """Return lessons that declare *ref* (e.g. "scale:major") in theory_refs,
+        in curriculum display order."""
+        return [self.lessons[slug] for slug in self.theory_ref_index.get(ref, [])]
 
     def by_module(self, module: str) -> list[ParsedLesson]:
         """Return all lessons in *module*, sorted by position (nulls last)."""

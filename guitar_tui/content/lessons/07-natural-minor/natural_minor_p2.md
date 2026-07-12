@@ -3,6 +3,7 @@ title: Natural Minor — Position 2
 slug: natural_minor_p2
 difficulty: intermediate
 tags: [scales, minor-scales]
+theory_refs: [scale:natural_minor]
 prerequisites: [natural_minor_p1]
 licks: [natural_minor_pos2]
 module: natural-minor

@@ -12,9 +12,12 @@ from pydantic import ValidationError
 from guitar_tui.loaders.models import (
     ChordEntry,
     ChordLibrary,
+    Progression,
+    ProgressionLibrary,
     ScalePattern,
     Tuning,
 )
+from guitar_tui.theory.keys import DEGREE_QUALITIES, valid_numerals
 
 _DEFAULT_DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -39,12 +42,18 @@ class DataLoader:
         self.chords: dict[str, ChordEntry] = {}
         self.scales: dict[str, ScalePattern] = {}
         self.tunings: dict[str, Tuning] = {}
+        self.progressions: dict[str, Progression] = {}
 
     def load(self) -> None:
         """Load and validate all data. Raises DataLoadError on any failure."""
         self._load_tunings()
         self._load_chords()
         self._load_scales()
+        self._load_progressions()
+
+    def progressions_for(self, quality: str) -> list[Progression]:
+        """Progressions applicable to a quality, in file order."""
+        return [p for p in self.progressions.values() if p.quality == quality]
 
     # ── private ───────────────────────────────────────────────────────────────
 
@@ -90,6 +99,33 @@ class DataLoader:
                     f"Invalid scale data in {path}: {exc}"
                 ) from exc
             self.scales[scale.name] = scale
+
+    def _load_progressions(self) -> None:
+        path = self.data_dir / "progressions.yaml"
+        if not path.exists():
+            # Optional file: test fixtures build minimal data dirs without it.
+            # The packaged data dir always ships one (see test_data_loader).
+            return
+        raw: dict = self._read_yaml(path)
+        try:
+            library = ProgressionLibrary(**raw)
+        except (ValidationError, TypeError) as exc:
+            raise DataLoadError(f"Invalid progression data in {path}: {exc}") from exc
+        for prog in library.progressions:
+            if prog.id in self.progressions:
+                raise DataLoadError(f"Duplicate progression id '{prog.id}' in {path}")
+            if prog.quality not in DEGREE_QUALITIES:
+                raise DataLoadError(
+                    f"Progression '{prog.id}' in {path}: unknown quality "
+                    f"'{prog.quality}' (expected one of {', '.join(DEGREE_QUALITIES)})"
+                )
+            unknown = [n for n in prog.numerals if n not in valid_numerals(prog.quality)]
+            if unknown:
+                raise DataLoadError(
+                    f"Progression '{prog.id}' in {path}: numerals {unknown} are not "
+                    f"in the {prog.quality} degree table"
+                )
+            self.progressions[prog.id] = prog
 
     @staticmethod
     def _read_yaml(path: Path) -> dict:

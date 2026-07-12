@@ -3,6 +3,7 @@ title: The Mixolydian Mode
 slug: mixolydian_mode
 difficulty: intermediate
 tags: [scales, modes, major-scales]
+theory_refs: [scale:mixolydian, progression:mixolydian_vamp]
 prerequisites: [lydian_mode]
 licks: [mixolydian_b7_phrase]
 module: modes

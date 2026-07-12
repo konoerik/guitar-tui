@@ -3,6 +3,7 @@ title: The Lydian Mode
 slug: lydian_mode
 difficulty: intermediate
 tags: [scales, modes, major-scales]
+theory_refs: [scale:lydian, progression:lydian_vamp]
 prerequisites: [phrygian_mode]
 licks: [lydian_raised_fourth]
 module: modes

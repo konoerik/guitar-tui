@@ -3,6 +3,7 @@ title: Major Pentatonic — Position 1
 slug: major_pentatonic_intro
 difficulty: intermediate
 tags: [scales, pentatonic, major-scales]
+theory_refs: [scale:major_pentatonic]
 prerequisites: [minor_pentatonic_intro]
 licks: [major_pent_country_walk]
 module: pentatonic-scale

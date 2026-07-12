@@ -3,6 +3,7 @@ title: The Blues Scale
 slug: blues_scale
 difficulty: intermediate
 tags: [scales, blues, pentatonic, minor-scales]
+theory_refs: [scale:blues_scale]
 prerequisites: [pentatonic_major_vs_minor]
 licks: [blues_bb_king_box, blues_tritone_pass, pent_blues_turnaround]
 module: pentatonic-scale

@@ -1,0 +1,96 @@
+# Hirajoshi — Japanese pentatonic (koto tuning).
+# Five notes with two half-step colors (b3 and b6); sparse and striking.
+# key: A  — Notes: A B C E F
+#
+# String numbering: 1 = high e, 6 = low E
+
+name: hirajoshi
+full_name: Hirajoshi
+key: A
+intervals: ["1", "2", "b3", "5", "b6"]
+
+positions:
+  - id: 1
+    name: Position 1
+    fret_range: [5, 8]
+    notes:
+      - {string: 6, fret: 5,  degree: "1",  root: true}
+      - {string: 6, fret: 7,  degree: "2"}
+      - {string: 6, fret: 8,  degree: "b3"}
+      - {string: 5, fret: 7,  degree: "5"}
+      - {string: 5, fret: 8,  degree: "b6"}
+      - {string: 4, fret: 7,  degree: "1",  root: true}
+      - {string: 3, fret: 5,  degree: "b3"}
+      - {string: 2, fret: 5,  degree: "5"}
+      - {string: 2, fret: 6,  degree: "b6"}
+      - {string: 1, fret: 5,  degree: "1",  root: true}
+      - {string: 1, fret: 7,  degree: "2"}
+      - {string: 1, fret: 8,  degree: "b3"}
+
+  - id: 2
+    name: Position 2
+    fret_range: [7, 10]
+    notes:
+      - {string: 6, fret: 7,  degree: "2"}
+      - {string: 6, fret: 8,  degree: "b3"}
+      - {string: 5, fret: 7,  degree: "5"}
+      - {string: 5, fret: 8,  degree: "b6"}
+      - {string: 4, fret: 7,  degree: "1",  root: true}
+      - {string: 4, fret: 9,  degree: "2"}
+      - {string: 4, fret: 10, degree: "b3"}
+      - {string: 3, fret: 9,  degree: "5"}
+      - {string: 3, fret: 10, degree: "b6"}
+      - {string: 2, fret: 10, degree: "1",  root: true}
+      - {string: 1, fret: 7,  degree: "2"}
+      - {string: 1, fret: 8,  degree: "b3"}
+
+  - id: 3
+    name: Position 3
+    fret_range: [9, 13]
+    notes:
+      - {string: 6, fret: 12, degree: "5"}
+      - {string: 6, fret: 13, degree: "b6"}
+      - {string: 5, fret: 12, degree: "1",  root: true}
+      - {string: 4, fret: 9,  degree: "2"}
+      - {string: 4, fret: 10, degree: "b3"}
+      - {string: 3, fret: 9,  degree: "5"}
+      - {string: 3, fret: 10, degree: "b6"}
+      - {string: 2, fret: 10, degree: "1",  root: true}
+      - {string: 2, fret: 12, degree: "2"}
+      - {string: 2, fret: 13, degree: "b3"}
+      - {string: 1, fret: 12, degree: "5"}
+      - {string: 1, fret: 13, degree: "b6"}
+
+  - id: 4
+    name: Position 4
+    fret_range: [12, 15]
+    notes:
+      - {string: 6, fret: 12, degree: "5"}
+      - {string: 6, fret: 13, degree: "b6"}
+      - {string: 5, fret: 12, degree: "1",  root: true}
+      - {string: 5, fret: 14, degree: "2"}
+      - {string: 5, fret: 15, degree: "b3"}
+      - {string: 4, fret: 14, degree: "5"}
+      - {string: 4, fret: 15, degree: "b6"}
+      - {string: 3, fret: 14, degree: "1",  root: true}
+      - {string: 2, fret: 12, degree: "2"}
+      - {string: 2, fret: 13, degree: "b3"}
+      - {string: 1, fret: 12, degree: "5"}
+      - {string: 1, fret: 13, degree: "b6"}
+
+  - id: 5
+    name: Position 5
+    fret_range: [0, 3]
+    notes:
+      - {string: 6, fret: 0,  degree: "5"}
+      - {string: 6, fret: 1,  degree: "b6"}
+      - {string: 5, fret: 0,  degree: "1",  root: true}
+      - {string: 5, fret: 2,  degree: "2"}
+      - {string: 5, fret: 3,  degree: "b3"}
+      - {string: 4, fret: 2,  degree: "5"}
+      - {string: 4, fret: 3,  degree: "b6"}
+      - {string: 3, fret: 2,  degree: "1",  root: true}
+      - {string: 2, fret: 0,  degree: "2"}
+      - {string: 2, fret: 1,  degree: "b3"}
+      - {string: 1, fret: 0,  degree: "5"}
+      - {string: 1, fret: 1,  degree: "b6"}

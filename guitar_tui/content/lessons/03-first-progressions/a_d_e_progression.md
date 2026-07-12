@@ -3,6 +3,7 @@ title: The A–D–E Progression
 slug: a_d_e_progression
 difficulty: beginner
 tags: [chords, progressions, major-chords, blues]
+theory_refs: [progression:three_chord]
 prerequisites: [open_a_chord, open_d_chord, open_e_chord]
 module: first-progressions
 position: 3

@@ -190,6 +190,11 @@ SizeWarningModal {
     margin-right: 2;
 }
 
+#key-context {
+    height: 1;
+    padding: 0 2;
+}
+
 #key-content { height: 1fr; }
 
 #full-neck {

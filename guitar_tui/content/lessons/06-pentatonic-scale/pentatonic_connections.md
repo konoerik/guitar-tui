@@ -3,6 +3,7 @@ title: Connecting the Five Positions
 slug: pentatonic_connections
 difficulty: intermediate
 tags: [scales, pentatonic, minor-scales, fretboard]
+theory_refs: [scale:minor_pentatonic]
 prerequisites: [minor_pentatonic_p5]
 licks: [pent_box1_run, pent_position2_run, pent_bend_release, pent_position3_run, pent_position4_run, pent_position5_run]
 module: pentatonic-scale

@@ -147,6 +147,47 @@ class ScalePattern(BaseModel):
     positions: list[ScalePosition]
 
 
+# ── Progression models ────────────────────────────────────────────────────────
+
+class Progression(BaseModel):
+    """A common chord progression expressed as roman numerals.
+
+    quality: key family the numerals refer to ("Major", "Minor", "Blues", or a
+             mode name). Must have a degree table in theory.keys — the loader
+             validates both the quality and each numeral against it.
+    numerals: roman numerals exactly as spelled in the degree tables
+              (e.g. "vii°", "bVII", "I7").
+    lessons: slugs of lessons that teach or feature this progression.
+    """
+
+    id: str
+    name: str                            # display name, e.g. "I–V–vi–IV"
+    quality: str
+    numerals: list[str]
+    description: str = ""
+    lessons: list[str] = Field(default_factory=list)
+
+    @field_validator("id")
+    @classmethod
+    def id_slug(cls, v: str) -> str:
+        if not v or not all(c.islower() or c.isdigit() or c == "_" for c in v):
+            raise ValueError(f"id must match [a-z0-9_]+, got {v!r}")
+        return v
+
+    @field_validator("numerals")
+    @classmethod
+    def numerals_non_empty(cls, v: list) -> list:
+        if not v:
+            raise ValueError("numerals must have at least one entry")
+        return v
+
+
+class ProgressionLibrary(BaseModel):
+    """Top-level wrapper for the progressions YAML file."""
+
+    progressions: list[Progression]
+
+
 # ── Tuning models ─────────────────────────────────────────────────────────────
 
 class Tuning(BaseModel):

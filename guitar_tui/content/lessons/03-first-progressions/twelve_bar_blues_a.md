@@ -3,6 +3,7 @@ title: 12-Bar Blues in A
 slug: twelve_bar_blues_a
 difficulty: beginner
 tags: [chords, progressions, blues, major-chords]
+theory_refs: [progression:twelve_bar, scale:blues_scale]
 prerequisites: [a_d_e_progression]
 licks: [pent_blues_turnaround, blues_tritone_pass]
 module: first-progressions

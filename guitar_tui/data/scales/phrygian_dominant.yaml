@@ -1,0 +1,111 @@
+# Phrygian Dominant — 5th mode of harmonic minor.
+# Major 3rd over a Phrygian shell: flamenco, klezmer, surf, and metal.
+# key: E  — Notes: E F G# A B C D
+#
+# String numbering: 1 = high e, 6 = low E
+
+name: phrygian_dominant
+full_name: Phrygian Dominant
+key: E
+intervals: ["1", "b2", "3", "4", "5", "b6", "b7"]
+
+positions:
+  - id: 1
+    name: Position 1
+    fret_range: [0, 3]
+    notes:
+      - {string: 6, fret: 0,  degree: "1",  root: true}
+      - {string: 6, fret: 1,  degree: "b2"}
+      - {string: 5, fret: 0,  degree: "4"}
+      - {string: 5, fret: 2,  degree: "5"}
+      - {string: 5, fret: 3,  degree: "b6"}
+      - {string: 4, fret: 0,  degree: "b7"}
+      - {string: 4, fret: 2,  degree: "1",  root: true}
+      - {string: 4, fret: 3,  degree: "b2"}
+      - {string: 3, fret: 1,  degree: "3"}
+      - {string: 3, fret: 2,  degree: "4"}
+      - {string: 2, fret: 0,  degree: "5"}
+      - {string: 2, fret: 1,  degree: "b6"}
+      - {string: 2, fret: 3,  degree: "b7"}
+      - {string: 1, fret: 0,  degree: "1",  root: true}
+      - {string: 1, fret: 1,  degree: "b2"}
+
+  - id: 2
+    name: Position 2
+    fret_range: [4, 7]
+    notes:
+      - {string: 6, fret: 4,  degree: "3"}
+      - {string: 6, fret: 5,  degree: "4"}
+      - {string: 6, fret: 7,  degree: "5"}
+      - {string: 5, fret: 5,  degree: "b7"}
+      - {string: 5, fret: 7,  degree: "1",  root: true}
+      - {string: 4, fret: 6,  degree: "3"}
+      - {string: 4, fret: 7,  degree: "4"}
+      - {string: 3, fret: 4,  degree: "5"}
+      - {string: 3, fret: 5,  degree: "b6"}
+      - {string: 3, fret: 7,  degree: "b7"}
+      - {string: 2, fret: 5,  degree: "1",  root: true}
+      - {string: 2, fret: 6,  degree: "b2"}
+      - {string: 1, fret: 4,  degree: "3"}
+      - {string: 1, fret: 5,  degree: "4"}
+      - {string: 1, fret: 7,  degree: "5"}
+
+  - id: 3
+    name: Position 3
+    fret_range: [7, 10]
+    notes:
+      - {string: 6, fret: 7,  degree: "5"}
+      - {string: 6, fret: 8,  degree: "b6"}
+      - {string: 6, fret: 10, degree: "b7"}
+      - {string: 5, fret: 7,  degree: "1",  root: true}
+      - {string: 5, fret: 8,  degree: "b2"}
+      - {string: 4, fret: 7,  degree: "4"}
+      - {string: 4, fret: 9,  degree: "5"}
+      - {string: 4, fret: 10, degree: "b6"}
+      - {string: 3, fret: 7,  degree: "b7"}
+      - {string: 3, fret: 9,  degree: "1",  root: true}
+      - {string: 3, fret: 10, degree: "b2"}
+      - {string: 2, fret: 9,  degree: "3"}
+      - {string: 2, fret: 10, degree: "4"}
+      - {string: 1, fret: 7,  degree: "5"}
+      - {string: 1, fret: 8,  degree: "b6"}
+      - {string: 1, fret: 10, degree: "b7"}
+
+  - id: 4
+    name: Position 4
+    fret_range: [9, 12]
+    notes:
+      - {string: 6, fret: 10, degree: "b7"}
+      - {string: 6, fret: 12, degree: "1",  root: true}
+      - {string: 5, fret: 11, degree: "3"}
+      - {string: 5, fret: 12, degree: "4"}
+      - {string: 4, fret: 9,  degree: "5"}
+      - {string: 4, fret: 10, degree: "b6"}
+      - {string: 4, fret: 12, degree: "b7"}
+      - {string: 3, fret: 9,  degree: "1",  root: true}
+      - {string: 3, fret: 10, degree: "b2"}
+      - {string: 2, fret: 9,  degree: "3"}
+      - {string: 2, fret: 10, degree: "4"}
+      - {string: 2, fret: 12, degree: "5"}
+      - {string: 1, fret: 10, degree: "b7"}
+      - {string: 1, fret: 12, degree: "1",  root: true}
+
+  - id: 5
+    name: Position 5
+    fret_range: [12, 15]
+    notes:
+      - {string: 6, fret: 12, degree: "1",  root: true}
+      - {string: 6, fret: 13, degree: "b2"}
+      - {string: 5, fret: 12, degree: "4"}
+      - {string: 5, fret: 14, degree: "5"}
+      - {string: 5, fret: 15, degree: "b6"}
+      - {string: 4, fret: 12, degree: "b7"}
+      - {string: 4, fret: 14, degree: "1",  root: true}
+      - {string: 4, fret: 15, degree: "b2"}
+      - {string: 3, fret: 13, degree: "3"}
+      - {string: 3, fret: 14, degree: "4"}
+      - {string: 2, fret: 12, degree: "5"}
+      - {string: 2, fret: 13, degree: "b6"}
+      - {string: 2, fret: 15, degree: "b7"}
+      - {string: 1, fret: 12, degree: "1",  root: true}
+      - {string: 1, fret: 13, degree: "b2"}

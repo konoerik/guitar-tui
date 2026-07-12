@@ -3,6 +3,7 @@ title: Analyzing Common Progressions
 slug: analysing_common_progressions
 difficulty: intermediate
 tags: [song-analysis, chord-progressions, music-theory]
+theory_refs: [progression:pop_four_chord, progression:axis]
 prerequisites: [scale_selection, diatonic_progressions]
 module: song-analysis
 position: 6

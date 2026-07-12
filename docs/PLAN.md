@@ -12,10 +12,11 @@
 
 ### M8 — Theory Web
 
-- Scale view: select scale → all 5 positions (navigable) + diatonic chord panel (with diagrams) + common progressions + cross-references to lessons
-- Chord view: select chord → all voicings + keys/scales it belongs to + chord function in those keys + cross-references
-- Song Analysis workflow UI: key + mode → scale, diatonic chords, common progressions, suggested positions, links to lessons and Theory Web
-- Data layer: model scale-to-chord relationships (diatonic chord sets from interval formulas); chord-to-key membership; scale transposition support
+- [x] Data layer (2026-07-12, ADR D11): `theory/web.py` (chord_memberships, realize_progression, transposition helpers); `data/progressions.yaml` (16 progressions, validated vs degree tables at startup, `schemas/progression_format.md`); `theory_refs` lesson frontmatter + reverse index (35 lessons tagged)
+- [x] Scale view (2026-07-12) — shipped as Key View extension: positions navigable (existed), diatonic chord strip (existed), + progressions realized in key + lesson cross-refs (`#key-related` panel); 6 world scales selectable (harmonic minor + Phrygian dominant with full degree tables incl. augmented chords; symmetric/gapped scales show "(no diatonic chord set)")
+- [x] Track 16 scale YAML (2026-07-12): 6 files generated from interval formulas (`harmonic_minor`, `phrygian_dominant`, `hungarian_minor`, `whole_tone`, `diminished`, `hirajoshi`), verified by content suite; Track 16 *lessons* still to write (Stage 4 below)
+- [ ] Chord view: select chord → all voicings + keys/scales it belongs to + chord function in those keys (chord_memberships is ready) + cross-references; needs the link-row + history-stack navigation pattern
+- [ ] Song Analysis workflow UI: key + mode → scale, diatonic chords, common progressions, suggested positions, links to lessons and Theory Web
 
 ### Infrastructure
 
@@ -28,9 +29,9 @@
   on one authoring convention for content files.
 - **Tools section improvements** (evaluated 2026-07-11; correctness fixes shipped same day —
   enharmonic chord lookup, 12 moveable diminished voicings, chord-tone fallback). Remaining:
-  - **Key View enhancements**: voicing cycling in the chord detail (only `voicings[0]` shown);
-    context line above the neck ("A Minor · relative major C · 0♯"); highlight each mode's
-    characteristic note on the neck (ties to Track 10)
+  - [x] **Key View enhancements** (2026-07-12): voicing cycling (`v` key, 24 multi-voicing
+    chords); context line above the neck; characteristic note (◆) for modes, blues, and the
+    harmonic-minor family
   - **Reference-tables visual overhaul — fold into M8** (Theory Web rebuilds this area; don't
     polish twice): shared Rich Text style system (theme-aware, like full_neck's palette);
     quality-colored Diatonic Chords table; Notes-on-Strings with dimmed accidentals + inlay-fret
@@ -48,9 +49,9 @@
 - Track 15 (5 lessons): ear training guide; explicit about app limitation; looper-as-ear-training format
 - Optional: add `listening_exercise:` Markdown section convention to lick files (no engine change)
 
-**Stage 4** (world sounds — requires new YAML data files):
+**Stage 4** (world sounds):
 - Track 16 — Sounds and Scales Around the World (6 lessons): harmonic minor, Phrygian dominant, Hungarian minor, whole tone, diminished, Japanese pentatonic
-- Data prerequisites: ~6 new scale YAML files before lessons can be written
+- ~~Data prerequisites~~ ✓ done 2026-07-12 — all 6 scale YAML files shipped with M8; lessons unblocked
 - 1 lick per lesson (looper-ready, captures characteristic phrase shape of each tradition)
 
 

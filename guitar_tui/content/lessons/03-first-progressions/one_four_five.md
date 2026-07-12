@@ -3,6 +3,7 @@ title: The I–IV–V Progression
 slug: one_four_five
 difficulty: beginner
 tags: [chords, progressions, music-theory, blues]
+theory_refs: [progression:three_chord]
 prerequisites: [twelve_bar_blues_a, open_g_chord, open_c_chord, open_d_chord]
 module: first-progressions
 position: 5
