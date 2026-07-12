@@ -18,15 +18,10 @@
 - [x] Chord view (2026-07-12): all voicings side by side (+ labels), spelled tones, key functions as an OptionList (Enter jumps to Key View landing on the chord's strip slot), tagged lessons; `g` in Key View opens the current chord; `backspace` pops the navigation history stack
 - [x] Song Analysis workflow UI (2026-07-12): key + quality → scale, transposed position spans (suggests lowest), key context, diatonic chords, progressions realized in key, lessons; "Explore" links into Key View / Chord View with history back
 
-### Bugs — M8 shipped 2026-07-12; triage these now
+### Bugs
 
-- **BUG (2026-07-12): Key View neck diagram overflows vertically** — after adding the
-  `#key-context` line and the `#key-related` panel, the full-neck diagram no longer fits the
-  viewport height and requires scrolling. Likely cause: `#chord-row` (`max-height: 32`) now
-  holds strip + chord detail + related panel and takes more vertical space, shrinking
-  `#key-content` (1fr). Candidate fixes: lower `#chord-row` max-height; move the related
-  panel into a collapsible or side-by-side layout with the chord detail; or make
-  `#key-content` min-height fit the 6-string neck + bracket + legend (~10 rows).
+- [x] **Key View neck overflow** — fixed 2026-07-12: `#chord-row` capped at 55% + `#key-content`
+  min-height 12; regression test pins zero neck scroll down to MIN_COLS×MIN_ROWS.
 
 ### Infrastructure
 
