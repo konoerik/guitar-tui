@@ -18,6 +18,16 @@
 - [ ] Chord view: select chord → all voicings + keys/scales it belongs to + chord function in those keys (chord_memberships is ready) + cross-references; needs the link-row + history-stack navigation pattern
 - [ ] Song Analysis workflow UI: key + mode → scale, diatonic chords, common progressions, suggested positions, links to lessons and Theory Web
 
+### Bugs — triage after M8
+
+- **BUG (2026-07-12): Key View neck diagram overflows vertically** — after adding the
+  `#key-context` line and the `#key-related` panel, the full-neck diagram no longer fits the
+  viewport height and requires scrolling. Likely cause: `#chord-row` (`max-height: 32`) now
+  holds strip + chord detail + related panel and takes more vertical space, shrinking
+  `#key-content` (1fr). Candidate fixes: lower `#chord-row` max-height; move the related
+  panel into a collapsible or side-by-side layout with the chord detail; or make
+  `#key-content` min-height fit the 6-string neck + bracket + legend (~10 rows).
+
 ### Infrastructure
 
 - **Evaluate line wraps in lesson prose** — this is a TUI: the Markdown/Static widgets wrap text
