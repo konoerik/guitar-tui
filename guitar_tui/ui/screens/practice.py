@@ -11,15 +11,19 @@ from guitar_tui.loaders.lesson_loader import DiagramBlock, ParsedLesson, TextBlo
 from guitar_tui.loaders.lick_loader import ParsedLick
 
 _MODULE_ORDER = [
-    "technique", "open-chords", "natural-minor",
-    "major-scale", "seventh-chords",
+    "technique", "open-chords", "barre-chords", "pentatonic-scale",
+    "natural-minor", "major-scale", "seventh-chords", "phrasing", "rhythm",
 ]
 _MODULE_LABELS = {
-    "technique":      "Technique",
-    "open-chords":    "Open Chords",
-    "natural-minor":  "Natural Minor",
-    "major-scale":    "Major Scale",
-    "seventh-chords": "Seventh Chords",
+    "technique":        "Warm-ups",
+    "open-chords":      "Open Chords",
+    "barre-chords":     "Barre Chords",
+    "pentatonic-scale": "Pentatonic Scale",
+    "natural-minor":    "Natural Minor",
+    "major-scale":      "Major Scale",
+    "seventh-chords":   "Seventh Chords",
+    "phrasing":         "Phrasing",
+    "rhythm":           "Rhythm",
 }
 _DIFF_BADGE = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
 
@@ -111,12 +115,16 @@ class PracticeMode(Screen):
             "# Practice\n\n"
             f"{ex_count} exercises · {lick_count} licks\n\n"
             "---\n\n"
-            "**Exercises** are technique drills. Use them with a metronome "
-            "at the BPM specified in each exercise before moving on.\n\n"
+            "**Exercises** are drills, grouped by track. Use them with a metronome "
+            "at the BPM specified in each exercise before moving on. The **Warm-ups** "
+            "group holds universal session starters — chromatic, spider, and picking "
+            "drills worth a few minutes at the top of any practice session.\n\n"
             "**Licks** are musical phrases with backing chord suggestions. "
             "Record the backing on a looper and practice the phrase over it. "
             "Focus on expression — tone, timing, and dynamics — not just the notes.\n\n"
-            "Expand **Exercises** or **Licks** in the tree to browse by category."
+            "Expand **Exercises** or **Licks** in the tree to browse by category. "
+            "Track-specific exercises and each lesson's licks also appear inside "
+            "the lesson view's tabs."
         )
         body.mount(Markdown(md, classes="lesson-overview"))
 

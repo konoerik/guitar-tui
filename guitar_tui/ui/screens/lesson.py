@@ -201,15 +201,17 @@ class LessonMode(Screen):
         module = lesson.meta.module or ""
         all_exercises = list(self.app.exercise_loader.lessons.values())
 
-        # Track-specific exercises first, then technique (universal warmups)
-        specific  = [e for e in all_exercises if e.meta.module == module and module]
-        technique = [e for e in all_exercises if e.meta.module == "technique"]
-        exercises = sorted(specific, key=lambda e: (e.meta.position if e.meta.position is not None else 9999, e.meta.title)) + \
-                    sorted(technique, key=lambda e: (e.meta.position if e.meta.position is not None else 9999, e.meta.title))
+        # Track-specific exercises only — universal warm-ups live in the
+        # Practice screen's Warm-ups section (curated relevance, like licks).
+        exercises = sorted(
+            [e for e in all_exercises if module and e.meta.module == module],
+            key=lambda e: (e.meta.position if e.meta.position is not None else 9999, e.meta.title),
+        )
 
         if not exercises:
             await body.mount(Markdown(
-                "*No exercises for this track yet.*",
+                "*No track-specific exercises for this track. "
+                "Warm-ups and the full drill library live in **[4] Practice**.*",
                 classes="lesson-overview",
             ))
             return
@@ -225,6 +227,12 @@ class LessonMode(Screen):
                 elif isinstance(block, DiagramBlock):
                     widgets.append(Static(block.rendered, classes="lesson-diagram"))
             widgets.append(Static("", classes="section-spacer"))
+
+        widgets.append(Markdown(
+            "*Session warm-ups (chromatic, spider, picking drills) live in "
+            "**[4] Practice → Warm-ups**.*",
+            classes="lesson-overview",
+        ))
 
         await body.mount(*widgets)
         body.scroll_home(animate=False)

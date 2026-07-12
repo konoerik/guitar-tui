@@ -401,7 +401,7 @@ needed to perform the exercise correctly.
 | ✓ | barre_strength | Barre Chord Strength Builder | intermediate | chord ×2 |
 | ✓ | seventh_voicings | 7th Chord Voicing Practice | intermediate | chord ×4 |
 | ✓ | open_chord_arpeggio | Open Chord Arpeggio Drill | beginner | chord, tab |
-| ○ | chord_melody_intro | Simple Chord Melody | advanced | tab |
+| ✓ | chord_melody_intro | Simple Chord Melody | advanced | tab |
 
 ---
 

@@ -26,12 +26,8 @@
   Text, Static summaries, welcome/info cards); (b) whether source-file hard-wrapping conventions
   (some files ~75-col wrapped, some single-line paragraphs) have any rendering effect, and settle
   on one authoring convention for content files.
-- **Exercises tab redesign (evaluate after Stage 2)** — today every lesson's Exercises tab appends
-  all six universal `technique` warmups, so most tracks show identical content. Proposed direction:
-  lesson tab shows track-specific drills only (the licks model — curated relevance); universal
-  warmups move to the Practice screen as a "Warm-ups" section; empty tab shows a pointer to
-  `[4] Practice`. Related earlier idea: per-exercise `requires`/`min_track` field. Decide once
-  Stage 2's ~7 track-specific exercises exist and the tab has real specific content to show.
+- **Evaluate Tools section** — user noticed issues to review (details TBD next session); sweep the
+  key/scale explorer, chord strip, and reference tables for correctness and UX.
 - Inline content blocks — `exercise` and `lick` slug references in lesson Markdown; two-pass loading (loaders independent, resolved in `on_mount`); evaluate alongside Study screen redesign before implementing
 
 ### Content gaps (Tier 3b) — staged
@@ -100,6 +96,8 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 - Content gaps Stage 1: Track 14 rhythm core (4 lessons) + Track 13 phrasing core (3 lessons); phrasing/rhythm/expressive-techniques tracks registered in index.yaml ✓
 - Exercise module-field fix: barre_strength → barre-chords, pentatonic_licks_1/pentatonic_sequences → pentatonic-scale (were orphaned, never shown on their tracks) ✓
 - Content gaps Stage 2: Tracks 13–14 complete — 5 lessons (motif_development, rhythmic_placement, building_a_solo, ghost_strokes, rhythm_in_leads), 7 exercises (4 rhythm + 3 phrasing modules), 5 licks (Phrasing + Rhythm categories); 96 lessons, 30 licks, 875 tests ✓
+- Exercises tab redesign: lesson tab now shows track-specific drills only (licks model); universal warmups relabeled "Warm-ups" in Practice tree; Practice module order/labels updated for all 9 exercise modules; overview text explains the split ✓
+- chord_melody_intro exercise: Ode to Joy chord-melody arrangement (module seventh-chords, advanced) — last open Chord Exercises item ✓
 
 - M0 — Project Scaffold: uv project, CLAUDE.md, schemas, hello-world app ✓
 - M1 — Data Layer: Pydantic chord/scale models, YAML data, startup validation, tests ✓
