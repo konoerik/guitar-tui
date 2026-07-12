@@ -3,7 +3,7 @@ title: Barre Chord Strength Builder
 slug: barre_strength
 difficulty: intermediate
 tags: [technique, barre-chords, chord-changes, left-hand, strength]
-module: chord
+module: barre-chords
 position: 1
 summary: Alternating between E-shape and A-shape barre chords on the same root — builds the hand strength and shape memory needed to make barre chords reliable under time pressure.
 ---

@@ -3,7 +3,7 @@ title: Pentatonic in Sequences of Three
 slug: pentatonic_sequences
 difficulty: intermediate
 tags: [scale, pentatonic, sequences, phrasing, musicality]
-module: scale
+module: pentatonic-scale
 position: 1
 summary: Playing the pentatonic scale in groups of three consecutive notes — the simplest way to turn a scale pattern into a musical phrase instead of a boring run.
 ---

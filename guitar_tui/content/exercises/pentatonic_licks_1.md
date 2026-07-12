@@ -3,7 +3,7 @@ title: Five Essential Pentatonic Licks
 slug: pentatonic_licks_1
 difficulty: intermediate
 tags: [scale, pentatonic, phrasing, musicality, vocabulary, licks]
-module: scale
+module: pentatonic-scale
 position: 2
 summary: Five short melodic phrases from A minor pentatonic position 1 — the building blocks of blues and rock vocabulary. Learn them as vocabulary, not patterns.
 ---

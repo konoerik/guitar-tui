@@ -92,6 +92,26 @@
 
 ---
 
+### D10 — Diagram specs hard-fail on out-of-range notes; labels are the only note-name mechanism
+
+**Date:** 2026-07-11
+**Context:** The fretboard renderer silently dropped any highlight outside `fret_range`, and the scale renderer did the same for positions — the 2026-07-11 audit found a lesson diagram losing a note this way with no signal. Separately, `FretboardSpec.show_notes` was documented ("show note names in dots") but never implemented; content set it expecting behavior that labels were actually providing.
+**Decision:** `FretboardSpec` (always) and `ScaleSpec` (when `fret_range` is explicit) validate range containment at model level — an out-of-range note raises `ValidationError` at load, consistent with the "startup failure over silent corruption" rule. `show_notes` was removed from the spec, renderer, content, and schema doc; explicit `label` fields (up to 2 chars, e.g. `"F#"`) are the single mechanism for note names.
+**Alternatives considered:** Implementing `show_notes` by deriving note names from tuning — rejected because it would inject music knowledge into the music-agnostic engine. Renderer-side clamping/warnings — rejected as silent-ish; validation errors surface immediately during content authoring.
+**Consequences:** Content authors must widen `fret_range` or remove the note; nothing renders partially. Pydantic ignores unknown fields, so stale `show_notes:` keys in external content would not break loading.
+
+---
+
+### D9 — Barre strings use the 1 = high e convention (matching ScaleNote/FretNote)
+
+**Date:** 2026-07-11
+**Context:** `BarreDef.from_string`/`to_string` were documented in `schemas/diagram_spec.md` as 1 = low E, and the chord renderer implemented that — but every partial barre actually authored (Bm, all A-shape voicings in `barre_chords.yaml`, Dm7's mini-barre) used 1 = high e, the standard guitar numbering already used by `ScaleNote.string` and `FretNote.string`. Full six-string barres masked the conflict; every partial barre rendered shifted onto the wrong strings, including across muted strings.
+**Decision:** Strings in `BarreDef` are numbered 1 = high e … 6 = low E, like every other string-numbered field in the spec. The renderer maps string *n* to frets-array index `6 − n` (the frets array remains index 0 = low E). Schema doc corrected; regression tests pin the orientation.
+**Alternatives considered:** Keeping the schema-as-written and rewriting all content — rejected: the content encoded the authors' (correct, conventional) intent; the doc was the artifact in error, and standard guitar string numbering should win.
+**Consequences:** One spec-wide convention for string numbers (1 = high e) with a single documented exception: flat per-string *arrays* (`frets`, `fingers`, `dot_labels`, tab `notes`) run low-to-high by index. Any future string-numbered field must use the 1 = high e convention.
+
+---
+
 ### D8 — Tab renderer: technique connectors produce a gap before the source note
 
 **Date:** 2026-03-19
