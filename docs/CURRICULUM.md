@@ -211,9 +211,9 @@ Within a track, lessons are ordered by `position`.
 | ✓ | phrase_shape | The Shape of a Phrase | intermediate | tab |
 | ✓ | question_and_answer | Question and Answer Phrasing | intermediate | tab |
 | ✓ | space_and_silence | Space and Silence | intermediate | tab |
-| ○ | motif_development | Motif Development | intermediate | tab |
-| ○ | rhythmic_placement | Rhythmic Placement | intermediate | tab |
-| ○ | building_a_solo | Building a Solo | intermediate | tab |
+| ✓ | motif_development | Motif Development | intermediate | tab |
+| ✓ | rhythmic_placement | Rhythmic Placement | intermediate | tab |
+| ✓ | building_a_solo | Building a Solo | intermediate | tab |
 
 > **Note**: `combining_techniques` (Track 12) is effectively the first lesson of this arc — prerequisites chain naturally. Exercises: 2–3 phrase-shape drills. Licks: 3–4 new (question-answer phrase, space/rest phrase, motif example).
 
@@ -231,8 +231,8 @@ Within a track, lessons are ordered by `position`.
 | ✓ | syncopation | Syncopation and the Backbeat | intermediate | tab |
 | ✓ | sixteenth_strumming | 16th-Note Strumming Patterns | intermediate | tab |
 | ✓ | palm_muting | Palm Muting | intermediate | tab |
-| ○ | ghost_strokes | Ghost Strokes and Rhythmic Muting | intermediate | tab |
-| ○ | rhythm_in_leads | Rhythm in Lead Playing | intermediate | tab |
+| ✓ | ghost_strokes | Ghost Strokes and Rhythmic Muting | intermediate | tab |
+| ✓ | rhythm_in_leads | Rhythm in Lead Playing | intermediate | tab |
 
 > **Note**: Exercises: 3–4 (16th-note strumming drill, syncopation exercise, palm-muting pattern). Licks: 2–3 (syncopated pentatonic phrase, rhythmically displaced lick).
 

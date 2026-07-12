@@ -1,8 +1,8 @@
 # Context
 <!-- Updated by /wrap at session end. Edit manually if needed. Keep it under 8 lines. -->
 
-**Current focus:** Content gaps Stage 2 — Track 13/14 remaining lessons + exercises/licks
-**Last session:** Full audit (~30 fixes) → PyPI 0.1.0 released + pushed (tag v0.1.0) → Stage 1 shipped (7 lessons; 91 total, 14 tracks) → content-verification pytest added (563 checks, 850 total) → exercise module-field fix; decided: Exercises-tab redesign deferred until after Stage 2 (see PLAN Infrastructure).
+**Current focus:** Exercises-tab redesign decision, then M8 Theory Web (+ Track 16 scale data)
+**Last session:** Audit (~30 fixes) → PyPI 0.1.0 released (tag v0.1.0) → Stages 1+2 complete: Tracks 13–14 fully shipped (12 lessons, 7 exercises, 5 licks; 96 lessons / 30 licks total) → content-verification pytest (875 tests) → exercise module fix; Exercises-tab redesign decision now unblocked (specific exercises exist).
 **Blocking:** none
-**Next action:** Stage 2 — Track 13 remaining (motif_development, rhythmic_placement, building_a_solo), Track 14 remaining (ghost_strokes, rhythm_in_leads), then ~7 exercises + ~5 licks
+**Next action:** decide + implement Exercises-tab redesign (PLAN Infrastructure), then start M8 data layer
 <!-- wrapped: 2026-07-11 -->

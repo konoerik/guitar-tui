@@ -6,10 +6,9 @@
 
 ### Agreed order of work (2026-07-11, post-audit review)
 
-1. **Content gaps Stage 2** (see below) — remaining Track 13/14 lessons + exercises/licks;
-   new content must pass `tests/test_content_verification.py`
-2. **M8 Theory Web** — fold Track 16's 6 new scale YAML files in as scale-view test material
-3. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
+1. **M8 Theory Web** — fold Track 16's 6 new scale YAML files in as scale-view test material;
+   revisit the Exercises-tab redesign decision (Infrastructure below) before or alongside
+2. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
 
 ### M8 — Theory Web
 
@@ -20,6 +19,13 @@
 
 ### Infrastructure
 
+- **Evaluate line wraps in lesson prose** — this is a TUI: the Markdown/Static widgets wrap text
+  to widget width, and the size warning already guarantees ≥110 cols for tables/diagrams. There is
+  therefore no reason for content to fight "runaway sentences" — prose can be written naturally and
+  wrap. Audit: (a) whether any rendered surface fails to wrap (diagram captions inside rendered
+  Text, Static summaries, welcome/info cards); (b) whether source-file hard-wrapping conventions
+  (some files ~75-col wrapped, some single-line paragraphs) have any rendering effect, and settle
+  on one authoring convention for content files.
 - **Exercises tab redesign (evaluate after Stage 2)** — today every lesson's Exercises tab appends
   all six universal `technique` warmups, so most tracks show identical content. Proposed direction:
   lesson tab shows track-specific drills only (the licks model — curated relevance); universal
@@ -30,10 +36,6 @@
 
 ### Content gaps (Tier 3b) — staged
 
-**Stage 2** (complete both technique-adjacent tracks):
-- Track 13 remaining (3 lessons): `motif_development`, `rhythmic_placement`, `building_a_solo`
-- Track 14 remaining (2 lessons): `ghost_strokes`, `rhythm_in_leads`
-- Track 13–14 exercises (~7) and licks (~5–7)
 
 **Stage 3** (ear training — constrained by no-audio):
 - Track 15 (5 lessons): ear training guide; explicit about app limitation; looper-as-ear-training format
@@ -97,6 +99,7 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 - Content-verification pytest: 563 mathematical checks over all diagrams, licks, and data; mutation-verified ✓
 - Content gaps Stage 1: Track 14 rhythm core (4 lessons) + Track 13 phrasing core (3 lessons); phrasing/rhythm/expressive-techniques tracks registered in index.yaml ✓
 - Exercise module-field fix: barre_strength → barre-chords, pentatonic_licks_1/pentatonic_sequences → pentatonic-scale (were orphaned, never shown on their tracks) ✓
+- Content gaps Stage 2: Tracks 13–14 complete — 5 lessons (motif_development, rhythmic_placement, building_a_solo, ghost_strokes, rhythm_in_leads), 7 exercises (4 rhythm + 3 phrasing modules), 5 licks (Phrasing + Rhythm categories); 96 lessons, 30 licks, 875 tests ✓
 
 - M0 — Project Scaffold: uv project, CLAUDE.md, schemas, hello-world app ✓
 - M1 — Data Layer: Pydantic chord/scale models, YAML data, startup validation, tests ✓
