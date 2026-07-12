@@ -246,7 +246,12 @@ SizeWarningModal {
     margin: 0 2;
 }
 
-#key-content { height: 1fr; }
+/* min-height keeps the full neck (header + 6 strings + bracket + legend +
+   padding) visible; the chord row scrolls internally instead. */
+#key-content {
+    height: 1fr;
+    min-height: 12;
+}
 
 #full-neck {
     height: auto;
@@ -256,7 +261,7 @@ SizeWarningModal {
 
 #chord-row {
     height: auto;
-    max-height: 32;
+    max-height: 55%;
     border-top: solid $primary-darken-2;
     background: $panel;
 }

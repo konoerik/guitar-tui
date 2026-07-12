@@ -235,3 +235,26 @@ async def test_all_world_scales_render():
             rendered = neck._build().plain
             assert "not loaded" not in rendered, quality
             assert "■" in rendered, quality  # roots plotted
+
+
+# ── Layout regression: neck must fit without scrolling ─────────────────────────
+
+
+async def test_neck_fully_visible_at_minimum_size():
+    """Regression: the chord row must never starve the neck viewport.
+
+    The full-neck diagram (header + 6 strings + bracket + legend) has to be
+    fully visible without scrolling, down to the app's minimum supported
+    terminal size (MIN_COLS x MIN_ROWS).
+    """
+    from guitar_tui.app import MIN_COLS, MIN_ROWS
+
+    for size in [(MIN_COLS, MIN_ROWS), (120, 40), (140, 50)]:
+        async with GuitarTUI().run_test(size=size) as pilot:
+            screen = await _goto_tools(pilot)
+            key_content = screen.query_one("#key-content")
+            assert key_content.max_scroll_y == 0, (
+                f"neck viewport scrolls at terminal size {size}: "
+                f"container={key_content.size.height} "
+                f"virtual={key_content.virtual_size.height}"
+            )
