@@ -212,3 +212,33 @@ def test_all_qualities_produce_chords():
     for quality in QUALITY_NAMES:
         chords = diatonic_chords("A", quality)
         assert len(chords) > 0, f"No chords for quality {quality!r}"
+
+
+class TestEnharmonicName:
+    def test_sharp_to_flat(self) -> None:
+        from guitar_tui.theory.keys import enharmonic_name
+        assert enharmonic_name("C#") == "Db"
+        assert enharmonic_name("C#m") == "Dbm"
+        assert enharmonic_name("Ab") == "G#"
+        assert enharmonic_name("Abm") == "G#m"
+        assert enharmonic_name("Eb7") == "D#7"
+
+    def test_natural_roots_return_none(self) -> None:
+        from guitar_tui.theory.keys import enharmonic_name
+        assert enharmonic_name("C") is None
+        assert enharmonic_name("Am") is None
+        assert enharmonic_name("B°") is None
+
+
+class TestChordTones:
+    def test_triads_and_sevenths(self) -> None:
+        from guitar_tui.theory.keys import chord_tones
+        assert chord_tones("C") == ["C", "E", "G"]
+        assert chord_tones("Am") == ["A", "C", "E"]
+        assert chord_tones("C#°") == ["C#", "E", "G"]
+        assert chord_tones("G7") == ["G", "B", "D", "F"]
+
+    def test_unknown_quality_returns_none(self) -> None:
+        from guitar_tui.theory.keys import chord_tones
+        assert chord_tones("Cmaj9#11") is None
+        assert chord_tones("") is None

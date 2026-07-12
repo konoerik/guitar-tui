@@ -1,0 +1,123 @@
+# Diminished triad voicings — moveable A-string-root shape
+#
+# One shape covers all 12 diminished chords: root on the A string,
+# frets (relative) [x, 1, 2, 3, 2, x] — the same voicing the curriculum
+# teaches as B° (x2343x) in major_scale_chords.md.
+# Intervals sounded: 1 – b5 – 1 – b3 (the octave root replaces the
+# doubled 3rd of open shapes; all three chord tones are present).
+#
+# All frets are RELATIVE: 1 = first displayed row = base_fret, except A°
+# which uses the open A string in first position.
+#
+# Names use the same spellings keys.py generates for diatonic vii°/ii°
+# chords (C#, Eb, F#, Ab, Bb).
+
+chords:
+
+  - name: A°
+    full_name: A diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (open position)
+        base_fret: 1
+        frets: [null, 0, 1, 2, 1, null]
+        fingers: [null, null, 1, 3, 2, null]
+
+  - name: Bb°
+    full_name: Bb diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (1st fret)
+        base_fret: 1
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: B°
+    full_name: B diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (2nd fret)
+        base_fret: 2
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: C°
+    full_name: C diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (3rd fret)
+        base_fret: 3
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: C#°
+    full_name: C# diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (4th fret)
+        base_fret: 4
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: D°
+    full_name: D diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (5th fret)
+        base_fret: 5
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: Eb°
+    full_name: Eb diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (6th fret)
+        base_fret: 6
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: E°
+    full_name: E diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (7th fret)
+        base_fret: 7
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: F°
+    full_name: F diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (8th fret)
+        base_fret: 8
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: F#°
+    full_name: F# diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (9th fret)
+        base_fret: 9
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: G°
+    full_name: G diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (10th fret)
+        base_fret: 10
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]
+
+  - name: Ab°
+    full_name: Ab diminished
+    voicings:
+      - id: dim_shape
+        label: Dim shape (11th fret)
+        base_fret: 11
+        frets: [null, 1, 2, 3, 2, null]
+        fingers: [null, 1, 2, 4, 3, null]

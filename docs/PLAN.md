@@ -26,8 +26,19 @@
   Text, Static summaries, welcome/info cards); (b) whether source-file hard-wrapping conventions
   (some files ~75-col wrapped, some single-line paragraphs) have any rendering effect, and settle
   on one authoring convention for content files.
-- **Evaluate Tools section** — user noticed issues to review (details TBD next session); sweep the
-  key/scale explorer, chord strip, and reference tables for correctness and UX.
+- **Tools section improvements** (evaluated 2026-07-11; correctness fixes shipped same day —
+  enharmonic chord lookup, 12 moveable diminished voicings, chord-tone fallback). Remaining:
+  - **Key View enhancements**: voicing cycling in the chord detail (only `voicings[0]` shown);
+    context line above the neck ("A Minor · relative major C · 0♯"); highlight each mode's
+    characteristic note on the neck (ties to Track 10)
+  - **Reference-tables visual overhaul — fold into M8** (Theory Web rebuilds this area; don't
+    polish twice): shared Rich Text style system (theme-aware, like full_neck's palette);
+    quality-colored Diatonic Chords table; Notes-on-Strings with dimmed accidentals + inlay-fret
+    markers; Chord Formulas regrouped (Triads/Sevenths/Sus/Power) with altered degrees highlighted;
+    **new Circle of Fifths panel** (ASCII ring, majors outside, relative minors inside);
+    unify interval symbols with the intervals lesson (P4 vs 4); tree section headers
+    (Interactive / Reference)
+  - **Metronome** — user: "kinda hacky"; revisit separately later
 - Inline content blocks — `exercise` and `lick` slug references in lesson Markdown; two-pass loading (loaders independent, resolved in `on_mount`); evaluate alongside Study screen redesign before implementing
 
 ### Content gaps (Tier 3b) — staged

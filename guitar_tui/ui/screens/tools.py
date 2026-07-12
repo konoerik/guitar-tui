@@ -16,7 +16,9 @@ from guitar_tui.theory.keys import (
     QUALITY_NAMES,
     QUALITY_TO_SCALE,
     capo_chart,
+    chord_tones,
     diatonic_chords,
+    enharmonic_name,
     key_signatures,
     note_to_semitone,
     semitone_to_note,
@@ -425,7 +427,19 @@ class ToolsMode(Screen):
         _, chord_name = self._chords[self._chord_idx]
         entry = self.app.data_loader.chords.get(chord_name)
         if entry is None:
-            widget.update(f"  {chord_name}\n  (no voicing)")
+            # Data may store the enharmonic spelling (Db vs C#, G#m vs Abm).
+            alt = enharmonic_name(chord_name)
+            if alt is not None:
+                entry = self.app.data_loader.chords.get(alt)
+        if entry is None:
+            tones = chord_tones(chord_name)
+            if tones:
+                widget.update(
+                    f"  {chord_name}  =  {' · '.join(tones)}\n"
+                    f"  (no voicing in the library yet)"
+                )
+            else:
+                widget.update(f"  {chord_name}\n  (no voicing)")
             return
         voicing = entry.voicings[0]
         barre = None

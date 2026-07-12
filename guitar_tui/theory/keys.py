@@ -40,6 +40,53 @@ def semitone_to_note(st: int) -> str:
     return _CHROMATIC[st % 12]
 
 
+# Enharmonic root spellings. Chord data uses conventional per-chord names
+# (Db major but G#m minor); generated names use one fixed chromatic spelling —
+# lookups must try both.
+_ENHARMONIC_ROOTS: dict[str, str] = {
+    "C#": "Db", "Db": "C#",
+    "D#": "Eb", "Eb": "D#",
+    "F#": "Gb", "Gb": "F#",
+    "G#": "Ab", "Ab": "G#",
+    "A#": "Bb", "Bb": "A#",
+}
+
+
+def enharmonic_name(chord_name: str) -> str | None:
+    """Return *chord_name* with its root respelled enharmonically, or None.
+
+    "C#" -> "Db", "Abm" -> "G#m", "Eb7" -> "D#7"; natural roots return None.
+    """
+    if len(chord_name) >= 2 and chord_name[:2] in _ENHARMONIC_ROOTS:
+        return _ENHARMONIC_ROOTS[chord_name[:2]] + chord_name[2:]
+    return None
+
+
+# Chord spelling — the qualities diatonic_chords() can generate.
+_CHORD_TONE_INTERVALS: dict[str, tuple[int, ...]] = {
+    "":  (0, 4, 7),
+    "m": (0, 3, 7),
+    "°": (0, 3, 6),
+    "7": (0, 4, 7, 10),
+}
+
+
+def chord_tones(chord_name: str) -> list[str] | None:
+    """Spell out a chord's notes, e.g. "C#°" -> ["C#", "E", "G"].
+
+    Returns None when the name's quality is not recognized.
+    """
+    if not chord_name or chord_name[0] not in _NOTE_TO_ST:
+        return None
+    root_len = 2 if len(chord_name) >= 2 and chord_name[1] in "#b" else 1
+    root, suffix = chord_name[:root_len], chord_name[root_len:]
+    intervals = _CHORD_TONE_INTERVALS.get(suffix)
+    if intervals is None or root not in _NOTE_TO_ST:
+        return None
+    root_st = _NOTE_TO_ST[root]
+    return [semitone_to_note(root_st + i) for i in intervals]
+
+
 # ---------------------------------------------------------------------------
 # Quality → DataLoader scale name
 # ---------------------------------------------------------------------------
