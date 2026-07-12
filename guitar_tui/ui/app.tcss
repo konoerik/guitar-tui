@@ -195,6 +195,57 @@ SizeWarningModal {
     padding: 0 2;
 }
 
+/* Chord View pane */
+#content-chord-view { height: 1fr; }
+
+#chord-controls {
+    height: auto;
+    padding: 1 2;
+    background: $panel;
+    border-bottom: solid $primary-darken-2;
+}
+
+#chord-controls Select { width: 24; }
+
+#chord-view-content {
+    height: 1fr;
+    padding: 0 2 1 2;
+}
+
+#chord-voicings { height: auto; padding: 1 0; }
+
+#chord-memberships {
+    height: auto;
+    max-height: 8;
+    margin: 0 2;
+}
+
+/* Song Analysis pane */
+#content-song-analysis { height: 1fr; }
+
+#song-controls {
+    height: auto;
+    padding: 1 2;
+    background: $panel;
+    border-bottom: solid $primary-darken-2;
+}
+
+#song-controls Select {
+    width: 24;
+    margin-right: 2;
+}
+
+#song-view-content {
+    height: 1fr;
+    padding: 0 2 1 2;
+}
+
+#song-links {
+    height: auto;
+    max-height: 10;
+    margin: 0 2;
+}
+
 #key-content { height: 1fr; }
 
 #full-neck {

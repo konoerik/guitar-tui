@@ -3,6 +3,7 @@ title: The F Major Chord
 slug: f_major_chord
 difficulty: beginner
 tags: [chords, barre-chords, major-chords]
+theory_refs: [chord:F]
 prerequisites: [reading_chord_diagrams, reading_tab, bm_chord]
 module: open-chords
 position: 10

@@ -3,6 +3,7 @@ title: The Open G Major Chord
 slug: open_g_chord
 difficulty: beginner
 tags: [chords, open-chords, major-chords]
+theory_refs: [chord:G]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 7

@@ -3,6 +3,7 @@ title: The Open D Major Chord
 slug: open_d_chord
 difficulty: beginner
 tags: [chords, open-chords, major-chords]
+theory_refs: [chord:D]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 5

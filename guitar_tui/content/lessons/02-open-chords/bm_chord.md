@@ -3,6 +3,7 @@ title: The Bm Chord
 slug: bm_chord
 difficulty: beginner
 tags: [chords, barre-chords, minor-chords]
+theory_refs: [chord:Bm]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 9

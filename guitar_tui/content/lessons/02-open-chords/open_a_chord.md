@@ -3,6 +3,7 @@ title: The Open A Major Chord
 slug: open_a_chord
 difficulty: beginner
 tags: [chords, open-chords, major-chords]
+theory_refs: [chord:A]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 3

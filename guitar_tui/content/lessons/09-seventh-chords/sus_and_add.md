@@ -3,6 +3,7 @@ title: Sus and Add Chords
 slug: sus_and_add
 difficulty: intermediate
 tags: [chords, extended-chords, music-theory]
+theory_refs: [chord:Asus2, chord:Asus4, chord:Dsus2, chord:Dsus4, chord:Cadd9]
 prerequisites: [seventh_progressions]
 module: seventh-chords
 position: 5

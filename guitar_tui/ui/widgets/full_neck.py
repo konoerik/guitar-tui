@@ -14,6 +14,7 @@ from textual.widgets import Static
 
 from guitar_tui.theory.keys import note_to_semitone, semitone_to_note
 from guitar_tui.theory.web import fit_position_shift, transposition_offset
+from guitar_tui.ui.styles import palette
 
 # String labels displayed top-to-bottom (string 1 = high e, 6 = low E).
 _LABELS: dict[int, str] = {1: "e", 2: "B", 3: "G", 4: "D", 5: "A", 6: "E"}
@@ -30,15 +31,6 @@ _FRETS    = _MAX_FRET + 1
 
 def _col_start(fret: int) -> int:
     return _PREFIX + fret * _COL
-
-
-_DARK_COLORS  = {
-    "root": "bold red", "tone": "cyan", "bracket": "yellow", "char": "bold magenta",
-}
-_LIGHT_COLORS = {
-    "root": "bold dark_red", "tone": "dark_cyan", "bracket": "dark_goldenrod",
-    "char": "bold dark_magenta",
-}
 
 
 class FullNeckWidget(Static):
@@ -58,7 +50,7 @@ class FullNeckWidget(Static):
         self._refresh()
 
     def _colors(self) -> dict[str, str]:
-        return _DARK_COLORS if self.app.current_theme.dark else _LIGHT_COLORS
+        return palette(self.app.current_theme.dark)
 
     def watch_root_note(self, _: str) -> None:
         self._refresh()

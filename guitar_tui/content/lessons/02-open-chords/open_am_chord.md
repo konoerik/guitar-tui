@@ -3,6 +3,7 @@ title: The Open A Minor Chord
 slug: open_am_chord
 difficulty: beginner
 tags: [chords, open-chords, minor-chords]
+theory_refs: [chord:Am]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 4

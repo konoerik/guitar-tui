@@ -3,6 +3,7 @@ title: Major 7th Chords
 slug: major_7th
 difficulty: intermediate
 tags: [chords, seventh-chords, music-theory]
+theory_refs: [chord:Amaj7, chord:Cmaj7, chord:Dmaj7, chord:Fmaj7]
 prerequisites: [dominant_7th]
 module: seventh-chords
 position: 2

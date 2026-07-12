@@ -3,6 +3,7 @@ title: The Open D Minor Chord
 slug: open_dm_chord
 difficulty: beginner
 tags: [chords, open-chords, minor-chords]
+theory_refs: [chord:Dm]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 6

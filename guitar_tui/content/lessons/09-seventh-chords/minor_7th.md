@@ -3,6 +3,7 @@ title: Minor 7th Chords
 slug: minor_7th
 difficulty: intermediate
 tags: [chords, seventh-chords, music-theory]
+theory_refs: [chord:Am7, chord:Em7, chord:Dm7, chord:Bm7]
 prerequisites: [major_7th]
 module: seventh-chords
 position: 3

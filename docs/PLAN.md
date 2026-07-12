@@ -15,10 +15,10 @@
 - [x] Data layer (2026-07-12, ADR D11): `theory/web.py` (chord_memberships, realize_progression, transposition helpers); `data/progressions.yaml` (16 progressions, validated vs degree tables at startup, `schemas/progression_format.md`); `theory_refs` lesson frontmatter + reverse index (35 lessons tagged)
 - [x] Scale view (2026-07-12) — shipped as Key View extension: positions navigable (existed), diatonic chord strip (existed), + progressions realized in key + lesson cross-refs (`#key-related` panel); 6 world scales selectable (harmonic minor + Phrygian dominant with full degree tables incl. augmented chords; symmetric/gapped scales show "(no diatonic chord set)")
 - [x] Track 16 scale YAML (2026-07-12): 6 files generated from interval formulas (`harmonic_minor`, `phrygian_dominant`, `hungarian_minor`, `whole_tone`, `diminished`, `hirajoshi`), verified by content suite; Track 16 *lessons* still to write (Stage 4 below)
-- [ ] Chord view: select chord → all voicings + keys/scales it belongs to + chord function in those keys (chord_memberships is ready) + cross-references; needs the link-row + history-stack navigation pattern
-- [ ] Song Analysis workflow UI: key + mode → scale, diatonic chords, common progressions, suggested positions, links to lessons and Theory Web
+- [x] Chord view (2026-07-12): all voicings side by side (+ labels), spelled tones, key functions as an OptionList (Enter jumps to Key View landing on the chord's strip slot), tagged lessons; `g` in Key View opens the current chord; `backspace` pops the navigation history stack
+- [x] Song Analysis workflow UI (2026-07-12): key + quality → scale, transposed position spans (suggests lowest), key context, diatonic chords, progressions realized in key, lessons; "Explore" links into Key View / Chord View with history back
 
-### Bugs — triage after M8
+### Bugs — M8 shipped 2026-07-12; triage these now
 
 - **BUG (2026-07-12): Key View neck diagram overflows vertically** — after adding the
   `#key-context` line and the `#key-related` panel, the full-neck diagram no longer fits the
@@ -42,13 +42,13 @@
   - [x] **Key View enhancements** (2026-07-12): voicing cycling (`v` key, 24 multi-voicing
     chords); context line above the neck; characteristic note (◆) for modes, blues, and the
     harmonic-minor family
-  - **Reference-tables visual overhaul — fold into M8** (Theory Web rebuilds this area; don't
-    polish twice): shared Rich Text style system (theme-aware, like full_neck's palette);
-    quality-colored Diatonic Chords table; Notes-on-Strings with dimmed accidentals + inlay-fret
-    markers; Chord Formulas regrouped (Triads/Sevenths/Sus/Power) with altered degrees highlighted;
-    **new Circle of Fifths panel** (ASCII ring, majors outside, relative minors inside);
-    unify interval symbols with the intervals lesson (P4 vs 4); tree section headers
-    (Interactive / Reference)
+  - [x] **Reference-tables visual overhaul** (2026-07-12): shared theme-aware palette in
+    `guitar_tui/ui/styles.py` (also used by full_neck); quality-colored Diatonic Chords table
+    with legend; Notes-on-Strings with dimmed accidentals + highlighted inlay frets; Chord
+    Formulas regrouped (Triads/Sevenths/Sus/Power) with altered degrees highlighted; new
+    Circle of Fifths panel (programmatic ASCII ring, majors outside, relative minors inside);
+    interval symbols unified with the intervals lesson (no P-prefixes); tree section headers
+    (Interactive / Reference); panels rebuild on theme change
   - **Metronome** — user: "kinda hacky"; revisit separately later
 - Inline content blocks — `exercise` and `lick` slug references in lesson Markdown; two-pass loading (loaders independent, resolved in `on_mount`); evaluate alongside Study screen redesign before implementing
 

@@ -3,6 +3,7 @@ title: The Open C Major Chord
 slug: open_c_chord
 difficulty: beginner
 tags: [chords, open-chords, major-chords]
+theory_refs: [chord:C]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 8

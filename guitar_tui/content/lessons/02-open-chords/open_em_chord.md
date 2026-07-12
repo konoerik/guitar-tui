@@ -3,6 +3,7 @@ title: The Open E Minor Chord
 slug: open_em_chord
 difficulty: beginner
 tags: [chords, open-chords, minor-chords]
+theory_refs: [chord:Em]
 prerequisites: [reading_chord_diagrams, reading_tab]
 module: open-chords
 position: 2

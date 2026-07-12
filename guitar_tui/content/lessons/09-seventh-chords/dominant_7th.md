@@ -3,6 +3,7 @@ title: Dominant 7th Chords
 slug: dominant_7th
 difficulty: intermediate
 tags: [chords, seventh-chords, music-theory]
+theory_refs: [chord:A7, chord:E7, chord:D7, chord:G7]
 prerequisites: [chord_construction, one_four_five]
 module: seventh-chords
 position: 1
