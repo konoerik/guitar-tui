@@ -14,14 +14,16 @@ async def _goto_practice(pilot) -> PracticeMode:
     return screen
 
 
-async def test_practice_tree_has_worksheet_leaf():
+async def test_practice_tree_has_worksheets_branch():
     async with GuitarTUI().run_test(size=(120, 40)) as pilot:
         screen = await _goto_practice(pilot)
         tree = screen.query_one("#practice-tree", Tree)
         labels = [str(n.label) for n in tree.root.children]
-        assert "Worksheet" in labels
-        # Sits between Introduction and the Exercises/Licks branches
-        assert labels.index("Worksheet") == labels.index("Introduction") + 1
+        # Branch order: Exercises, Licks, then Worksheets
+        assert labels.index("Worksheets") == labels.index("Licks") + 1
+        ws = next(n for n in tree.root.children if str(n.label) == "Worksheets")
+        assert [str(c.label) for c in ws.children] == ["Song Analysis"]
+        assert ws.children[0].data == ("worksheet",)
 
 
 async def test_worksheet_renders_template():

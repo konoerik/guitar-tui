@@ -28,6 +28,10 @@ v1 shipped 2026-07-12 (see Done); remaining phases:
 
 ### Infrastructure
 
+- **Demo GIF doesn't render on PyPI** — README embeds `demo.gif` (rendered from `demo.tape`)
+  by relative path; GitHub resolves it, PyPI's long description does not. Fix: point the image
+  at the absolute `https://raw.githubusercontent.com/konoerik/guitar-tui/main/demo.gif` URL
+  (verify PyPI renders it), or strip the image from the PyPI description.
 - **Evaluate line wraps in lesson prose** — this is a TUI: the Markdown/Static widgets wrap text
   to widget width, and the size warning already guarantees ≥110 cols for tables/diagrams. There is
   therefore no reason for content to fight "runaway sentences" — prose can be written naturally and

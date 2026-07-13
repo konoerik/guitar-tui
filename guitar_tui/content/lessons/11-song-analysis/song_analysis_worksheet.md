@@ -85,4 +85,4 @@ Verse loops **Em – G – D – A**. Tonal center: everything leans back to Em 
 
 ## What's Next
 
-The worksheet is deliberately paper-first for now. A copy of the template lives in [4] Practice under **Worksheet**, so it is always one keypress away during a session — and the analysis tools in [3] Tools are the same distance in the other direction.
+The worksheet is deliberately paper-first for now. A copy of the template lives in [4] Practice under **Worksheets → Song Analysis**, so it is always one keypress away during a session — and the analysis tools in [3] Tools are the same distance in the other direction.

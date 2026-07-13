@@ -112,7 +112,6 @@ class PracticeMode(Screen):
         tree.show_root = False
 
         tree.root.add_leaf("Introduction", data=("overview",))
-        tree.root.add_leaf("Worksheet", data=("worksheet",))
         tree.root.add_leaf("", data=None)  # spacer
 
         # Exercises branch
@@ -142,6 +141,10 @@ class PracticeMode(Screen):
             for lick in licks:
                 badge = _DIFF_BADGE.get(lick.meta.difficulty, "○")
                 cat.add_leaf(f"{badge} {lick.meta.title}", data=("lick", lick.meta.slug))
+
+        # Worksheets branch
+        ws_branch = tree.root.add("Worksheets", expand=False)
+        ws_branch.add_leaf("Song Analysis", data=("worksheet",))
 
     async def on_tree_node_selected(self, event: Tree.NodeSelected) -> None:
         data = event.node.data
