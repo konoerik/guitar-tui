@@ -92,6 +92,16 @@
 
 ---
 
+### D12 — Song analysis worksheet: one section-based document model, three consumers, phased delivery
+
+**Date:** 2026-07-12
+**Context:** The user proposed a worksheet-style template for analyzing real songs — the practice artifact of Track 11's "Four Questions" method (key → major/minor → chord functions → scale). Songs have intros and bridges that may modulate, so a single flat template cannot describe a song; and three future features (the user worksheet, Phase 4's Songbook of worked analyses, and the M8 Song Analysis tool) all need to describe the same thing.
+**Decision:** A song analysis is modeled as song-level facts plus a **repeating list of section blocks** (label, key/mode, chords, functions, scale, notes) — sections solve the intro/bridge problem structurally rather than with multiple templates. One future schema serves three consumers: a blank instance is the user's worksheet, a filled instructor-authored instance is a Songbook entry, and each section's key + quality is exactly the input the Song Analysis tool consumes. Delivery is phased: **v1** static worksheet (reference panel + printable-style Track 11 lesson, no new machinery); **v2** interactive worksheet in Tools, including key-candidate inference by intersecting `chord_memberships()` of entered chords; **v3** persisted analysis library in the user data dir (per the `settings.py` `user_config_dir` precedent — the "data stays inside `guitar_tui/`" rule governs shipped content, not user files), rendered through the same viewer as Songbook entries.
+**Alternatives considered:** Multiple templates (intro template, bridge template, …) — rejected; repeating section blocks are one shape covering all song forms. Jumping straight to the interactive form — rejected; v1 validates the workflow with real use before the app's first user-input surface (TUI form UX, validation, empty states) is built. Storing user analyses inside the package directory — rejected; user data lives outside the wheel.
+**Consequences:** The section-based schema should be written to `schemas/` before v2 (dev–instructor contract; Songbook needs it regardless). v2's key inference is cheap (~30 lines over `chord_memberships`). v2/v3 introduce user-generated content — deferred deliberately, not forgotten; tracked in PLAN.md.
+
+---
+
 ### D11 — Theory Web data layer: validated progressions YAML, Major/Minor-only memberships, namespaced theory_refs
 
 **Date:** 2026-07-12

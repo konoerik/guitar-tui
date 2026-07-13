@@ -4,24 +4,27 @@
 <!-- Current sprint items. Keep this short — 5-10 items max.
      If it grows beyond that, move lower-priority items to Backlog. -->
 
-### Agreed order of work (2026-07-11, post-audit review)
+### Agreed order of work (2026-07-12, post-M8)
 
-1. **M8 Theory Web** — fold Track 16's 6 new scale YAML files in as scale-view test material;
-   revisit the Exercises-tab redesign decision (Infrastructure below) before or alongside
-2. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
+1. **Review all work since v0.1.0** (user request) — full pass over M8, Track 16, worksheet v1
+2. **Worksheet v2 evaluation** — after v1 has been used on real songs (below)
+3. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
 
-### M8 — Theory Web
+### Song Analysis Worksheet (feature, agreed 2026-07-12 — ADR D12)
 
-- [x] Data layer (2026-07-12, ADR D11): `theory/web.py` (chord_memberships, realize_progression, transposition helpers); `data/progressions.yaml` (16 progressions, validated vs degree tables at startup, `schemas/progression_format.md`); `theory_refs` lesson frontmatter + reverse index (35 lessons tagged)
-- [x] Scale view (2026-07-12) — shipped as Key View extension: positions navigable (existed), diatonic chord strip (existed), + progressions realized in key + lesson cross-refs (`#key-related` panel); 6 world scales selectable (harmonic minor + Phrygian dominant with full degree tables incl. augmented chords; symmetric/gapped scales show "(no diatonic chord set)")
-- [x] Track 16 scale YAML (2026-07-12): 6 files generated from interval formulas (`harmonic_minor`, `phrygian_dominant`, `hungarian_minor`, `whole_tone`, `diminished`, `hirajoshi`), verified by content suite; Track 16 *lessons* still to write (Stage 4 below)
-- [x] Chord view (2026-07-12): all voicings side by side (+ labels), spelled tones, key functions as an OptionList (Enter jumps to Key View landing on the chord's strip slot), tagged lessons; `g` in Key View opens the current chord; `backspace` pops the navigation history stack
-- [x] Song Analysis workflow UI (2026-07-12): key + quality → scale, transposed position spans (suggests lowest), key context, diatonic chords, progressions realized in key, lessons; "Explore" links into Key View / Chord View with history back
+The practice artifact of Track 11's Four Questions: a per-song, per-*section* analysis
+template (sections solve intros/bridges — repeating blocks, not multiple templates).
+One future schema, three consumers: user worksheet, Songbook entries, Song Analysis tool.
+v1 shipped 2026-07-12 (see Done); remaining phases:
 
-### Bugs
-
-- [x] **Key View neck overflow** — fixed 2026-07-12: `#chord-row` capped at 55% + `#key-content`
-  min-height 12; regression test pins zero neck scroll down to MIN_COLS×MIN_ROWS.
+- **v2 — interactive worksheet:** form inputs per section in Tools; **key-candidate
+  inference** — intersect `chord_memberships()` of the chords entered so far and rank keys
+  by diatonic coverage ("Em G C D → G major or E minor"); selected key hydrates the
+  existing Song Analysis panel. Requires the section schema in `schemas/` first, and the
+  app's first Input-widget UX. Evaluate after v1 has been used on real songs.
+- **v3 — persisted analysis library:** save/load analyses in the user data dir
+  (`user_config_dir` precedent from settings.py); render saved analyses through the same
+  viewer as Phase 4 Songbook entries. Sequence alongside Songbook.
 
 ### Infrastructure
 
@@ -32,19 +35,8 @@
   Text, Static summaries, welcome/info cards); (b) whether source-file hard-wrapping conventions
   (some files ~75-col wrapped, some single-line paragraphs) have any rendering effect, and settle
   on one authoring convention for content files.
-- **Tools section improvements** (evaluated 2026-07-11; correctness fixes shipped same day —
-  enharmonic chord lookup, 12 moveable diminished voicings, chord-tone fallback). Remaining:
-  - [x] **Key View enhancements** (2026-07-12): voicing cycling (`v` key, 24 multi-voicing
-    chords); context line above the neck; characteristic note (◆) for modes, blues, and the
-    harmonic-minor family
-  - [x] **Reference-tables visual overhaul** (2026-07-12): shared theme-aware palette in
-    `guitar_tui/ui/styles.py` (also used by full_neck); quality-colored Diatonic Chords table
-    with legend; Notes-on-Strings with dimmed accidentals + highlighted inlay frets; Chord
-    Formulas regrouped (Triads/Sevenths/Sus/Power) with altered degrees highlighted; new
-    Circle of Fifths panel (programmatic ASCII ring, majors outside, relative minors inside);
-    interval symbols unified with the intervals lesson (no P-prefixes); tree section headers
-    (Interactive / Reference); panels rebuild on theme change
-  - **Metronome** — user: "kinda hacky"; revisit separately later
+- **Metronome** — user: "kinda hacky"; revisit separately later (rest of the 2026-07-11
+  "Tools section improvements" list shipped with M8 — see Done)
 - Inline content blocks — `exercise` and `lick` slug references in lesson Markdown; two-pass loading (loaders independent, resolved in `on_mount`); evaluate alongside Study screen redesign before implementing
 
 ### Content gaps (Tier 3b) — staged
@@ -54,15 +46,7 @@
 - Track 15 (5 lessons): ear training guide; explicit about app limitation; looper-as-ear-training format
 - Optional: add `listening_exercise:` Markdown section convention to lick files (no engine change)
 
-**Stage 4** (world sounds): ✓ **complete 2026-07-12**
-- [x] Track 16 — 6 lessons in `16-world-scales` (harmonic_minor_sound, phrygian_dominant,
-  hungarian_minor, whole_tone_scale, diminished_scale, japanese_pentatonic); diagrams generated
-  from the verified scale YAMLs; all cross-linked via theory_refs into the Theory Web
-- [x] 6 looper licks (category `world` → "World Scales" branch in Practice); every note
-  verified against its scale by the content suite
-
-
-
+**Stage 4** (world sounds): ✓ complete 2026-07-12 — see Done
 
 ### Low priority
 
@@ -118,6 +102,17 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 - Exercises tab redesign: lesson tab now shows track-specific drills only (licks model); universal warmups relabeled "Warm-ups" in Practice tree; Practice module order/labels updated for all 9 exercise modules; overview text explains the split ✓
 - chord_melody_intro exercise: Ode to Joy chord-melody arrangement (module seventh-chords, advanced) — last open Chord Exercises item ✓
 - Tools/Key View correctness: enharmonic chord lookup (C#↔Db, Abm↔G#m), 12 moveable diminished voicings (data), chord-tone fallback for missing voicings — "(no voicing)" dead-ends 23% → 0% ✓
+- v0.2.0 released to PyPI (tag v0.2.0): Tracks 13–14 content, Key View fixes, exercises redesign ✓
+- Key View enhancements: `v` voicing cycling (24 multi-voicing chords), key-context line, ◆ characteristic-note highlighting (modes, blues, harmonic-minor family) ✓
+- M8 Theory Web data layer (ADR D11): theory/web.py (chord_memberships, realize_progression, transposition helpers), data/progressions.yaml (16 validated progressions + schemas/progression_format.md), theory_refs frontmatter + reverse index (~49 lessons tagged) ✓
+- M8 scale view (Key View extension): progressions realized in key + lesson cross-refs panel; 6 world scales selectable; harmonic minor + Phrygian dominant degree tables incl. augmented chords ✓
+- Track 16 scale YAML: 6 files generated from interval formulas, verified by content suite ✓
+- M8 Chord View: all voicings side by side, spelled tones, key-function OptionList → Key View jump; Song Analysis workflow (key+quality → full workup + Explore links); history-stack navigation (`g` / backspace) ✓
+- M8 reference overhaul: shared theme-aware palette (ui/styles.py), quality-colored diatonic table, notes panel with inlay markers, grouped chord formulas, lesson-unified interval symbols, Circle of Fifths ASCII ring, Interactive/Reference tree sections ✓
+- Key View neck-overflow bug fixed: #chord-row ≤55% + #key-content min-height 12; regression test to MIN_COLS×MIN_ROWS ✓
+- v0.3.0 released to PyPI (tag v0.3.0) via new Makefile release targets (version-check/build/publish/release) ✓
+- Track 16 content: 6 world-scale lessons (16-world-scales) + 6 looper licks (World Scales branch), all pitch-verified; CURRICULUM at 103/108 lessons ✓
+- Song analysis worksheet v1 (ADR D12): Worksheet leaf in [4] Practice (template-first, spaced) + lesson closing Track 11; v2/v3 phased in Active ✓
 
 - M0 — Project Scaffold: uv project, CLAUDE.md, schemas, hello-world app ✓
 - M1 — Data Layer: Pydantic chord/scale models, YAML data, startup validation, tests ✓

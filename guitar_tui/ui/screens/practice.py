@@ -27,6 +27,63 @@ _MODULE_LABELS = {
 }
 _DIFF_BADGE = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
 
+# Song analysis worksheet — the template dominates; verbiage stays minimal.
+# Full method: Track 11's song_analysis_worksheet lesson.
+_WORKSHEET = """\
+
+  SONG ANALYSIS WORKSHEET
+  [dim]one copy per song · one block per section · full method in Track 11[/dim]
+
+
+
+  SONG      ________________________________
+
+  ARTIST    ________________________________
+
+  TEMPO     ~ ______ BPM          FEEL   straight · swung
+
+  SECTIONS  intro · verse · chorus · bridge · ____________
+
+
+
+  ────────────────────────────────────────────────────────
+
+
+  SECTION  ______________
+
+
+  1   TONAL CENTER    ______
+
+      [dim]last chord of the loop · bass home note · hummed note[/dim]
+
+
+  2   QUALITY         major · minor · mode ____________
+
+
+  3   CHORDS          ______   ______   ______   ______   ______
+
+      FUNCTIONS       ______   ______   ______   ______   ______
+
+      outliers        ____________
+
+
+  4   SCALE           ____________________
+
+      target note     ______
+
+
+  NOTES  __________________________________________________
+
+
+  ────────────────────────────────────────────────────────
+  [dim]repeat the section block for each section[/dim]
+
+
+
+  [dim]stuck on a chord? → [3] Tools, Chord View lists its function in every key
+  key + quality found? → [3] Tools, Song Analysis derives the rest[/dim]
+"""
+
 
 class PracticeMode(Screen):
     """Card-panel practice screen: tree nav on the left, content on the right."""
@@ -55,6 +112,7 @@ class PracticeMode(Screen):
         tree.show_root = False
 
         tree.root.add_leaf("Introduction", data=("overview",))
+        tree.root.add_leaf("Worksheet", data=("worksheet",))
         tree.root.add_leaf("", data=None)  # spacer
 
         # Exercises branch
@@ -93,6 +151,9 @@ class PracticeMode(Screen):
         if kind == "overview":
             self.query_one("#practice-content").border_title = "Practice"
             self._show_overview()
+        elif kind == "worksheet":
+            self.query_one("#practice-content").border_title = "Song Analysis Worksheet"
+            self._show_worksheet()
         elif kind == "exercise":
             ex = self.app.exercise_loader.lessons.get(data[1])
             if ex:
@@ -127,6 +188,12 @@ class PracticeMode(Screen):
             "the lesson view's tabs."
         )
         body.mount(Markdown(md, classes="lesson-overview"))
+
+    def _show_worksheet(self) -> None:
+        body = self.query_one("#practice-body", ScrollableContainer)
+        body.remove_children()
+        body.mount(Static(_WORKSHEET, classes="lesson-text"))
+        body.scroll_home(animate=False)
 
     async def _show_exercise(self, ex: ParsedLesson) -> None:
         body = self.query_one("#practice-body", ScrollableContainer)

@@ -294,6 +294,7 @@ the UI provides the tools.*
 | ✓ | modal_progressions | Modal Progressions | intermediate | scale ×2, fretboard |
 | ✓ | ear_training_basics | Ear Training Basics | intermediate | tab |
 | ✓ | putting_it_together | Putting It All Together | advanced | chord ×4, scale, tab |
+| ✓ | song_analysis_worksheet | The Song Analysis Worksheet | intermediate | — |
 
 > **Note**: `analysis_walkthrough` is a capstone lesson — it works through a complete
 > song analysis (key → scale → progression → positions → song feel) as a single
@@ -509,13 +510,13 @@ written.
 | 8 — Major Scale | 7 | 7 | 0 |
 | 9 — Seventh Chords | 5 | 5 | 0 |
 | 10 — Modes | 6 | 6 | 0 |
-| 11 — Song Analysis | 9 | 9 | 0 |
+| 11 — Song Analysis | 10 | 10 | 0 |
 | 12 — Expressive Techniques | 5 | 5 | 0 |
 | 13 — Phrasing and Musicality | 6 | 6 | 0 |
 | 14 — Rhythm Depth | 6 | 6 | 0 |
 | 15 — Ear Training | 5 | 0 | 0 |
 | 16 — Sounds and Scales Around the World | 6 | 6 | 0 |
-| **Total** | **107** | **102** | **0** |
+| **Total** | **108** | **103** | **0** |
 
 Exercises: 14 complete; ~10 planned for Tracks 13–14.
 Licks: 25 complete; ~5–7 planned for Tracks 13–14.
