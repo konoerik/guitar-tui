@@ -43,6 +43,7 @@ class LessonMode(Screen):
         last = self.app.settings.last_lesson
         if last and last in self.app.lesson_loader.lessons:
             await self._load_lesson(self.app.lesson_loader.lessons[last])
+            self._move_tree_cursor(last)
         else:
             self.query_one("#lessons-content").border_title = "Lessons"
             self._show_overview()
@@ -63,6 +64,19 @@ class LessonMode(Screen):
             for lesson in lessons:
                 badge = badges.get(lesson.meta.difficulty, "○")
                 branch.add_leaf(f"{badge} {lesson.meta.title}", data=lesson.meta.slug)
+
+    def _move_tree_cursor(self, slug: str) -> None:
+        """Expand the track containing *slug* and put the tree cursor on its leaf,
+        so a restored session visibly shows where the user left off."""
+        tree = self.query_one("#lessons-tree", Tree)
+        for branch in tree.root.children:
+            for leaf in branch.children:
+                if leaf.data == slug:
+                    branch.expand()
+                    # The leaf's line exists only after the expand is reflected
+                    # in the tree's layout; defer the cursor move past it.
+                    self.call_after_refresh(tree.move_cursor, leaf)
+                    return
 
     async def on_tree_node_selected(self, event: Tree.NodeSelected) -> None:
         data = event.node.data

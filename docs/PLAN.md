@@ -28,6 +28,13 @@ v1 shipped 2026-07-12 (see Done); remaining phases:
 
 ### Infrastructure
 
+- **Decide: scale-membership checking for key/scale-less tab blocks** — 24 tab blocks
+  (all Track 13/14 lesson tabs + 8 exercises) carry no `key`/`scale` frontmatter, so
+  `test_lick_notes_in_declared_scale` never sees them; the 2026-07-12 audit's I1 shows the
+  failure mode is real. Adding the fields to lesson frontmatter is a `schemas/lesson_format.md`
+  contract change (Developer + Instructor must agree). Decide: extend the lesson schema, or
+  a per-diagram `key`/`scale` field, or accept the gap. Semantics note: melodic tabs (Am pent
+  lines) fit naturally; chord-vamp/chug drills (E5, Am strums) don't really have "a scale".
 - **Demo GIF doesn't render on PyPI** — README embeds `demo.gif` (rendered from `demo.tape`)
   by relative path; GitHub resolves it, PyPI's long description does not. Fix: point the image
   at the absolute `https://raw.githubusercontent.com/konoerik/guitar-tui/main/demo.gif` URL
