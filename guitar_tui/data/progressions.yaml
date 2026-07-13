@@ -1,8 +1,9 @@
 # Common chord progressions — Theory Web data.
 #
 # Schema: schemas/progression_format.md
-# quality must be one of the degree-table families (Major, Minor, Blues,
-# Dorian, Phrygian, Lydian, Mixolydian); numerals must be spelled exactly
+# quality must be one of the degree-table families (DEGREE_QUALITIES in
+# theory/keys.py: Major, Minor, Blues, Dorian, Phrygian, Lydian, Mixolydian,
+# Harmonic Minor, Phrygian Dominant); numerals must be spelled exactly
 # as in theory/keys.py degree tables. The loader validates both on startup.
 
 progressions:

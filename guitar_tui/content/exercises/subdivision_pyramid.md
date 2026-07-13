@@ -56,7 +56,7 @@ lines:
 
 - **70 BPM**, click on every quarter note. Count each bar's subdivision aloud ("1 2 3 4" / "1 & 2 &" / "1 e & a").
 - The transition happens **at the bar line, without hesitation** — the first strum of the new bar lands exactly on beat 1.
-- Strict alternation on eighths and sixteenths: D on the numbers and "&"s, U between.
+- Strict alternation on eighths and sixteenths: on eighths, D on the numbers and U on the "&"s; on sixteenths, D on the numbers and "&"s, U on the "e"s and "a"s.
 - If any transition rushes (the classic fault: sixteenths speeding up), drop 10 BPM and rebuild.
 
 ## Progression

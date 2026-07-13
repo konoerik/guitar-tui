@@ -31,7 +31,7 @@ lines:
       - notes: [8, null, null, null, null, null]
       - notes: [null, 5, null, null, null, null]
       - notes: [null, 7, null, null, null, null]
-        duration: 2
+        duration: 3
       - rest: true
         notes: [null, null, null, null, null, null]
         duration: 2
@@ -40,7 +40,7 @@ lines:
       - notes: [null, 5, null, null, null, null]
       - notes: [8, null, null, null, null, null]
       - notes: [5, null, null, null, null, null]
-        duration: 3
+        duration: 5
 ```
 
 Play the question line alone and stop. Feel how unfinished it is — your ear is leaning toward something. That lean is the tool. The answer line spends it.
@@ -69,7 +69,7 @@ An answer is not just any resolving phrase — it should audibly *belong* to its
 
 1. Loop **Am – G – F – E** (one bar each). Ask on the Am bar, rest on G, answer across F into E. The progression's own tension mirrors the phrase structure.
 2. **Trade with yourself**: improvise a two-bar question, then force the answer to reuse its rhythm exactly. Uncomfortable at first — transformative within a week.
-3. Play the licks referenced below and identify which are questions and which are answers. The *Blues Turnaround* is a textbook answer phrase; the *B.B. King Box* phrase asks.
+3. Play the licks referenced below and identify which are questions and which are answers. The *B.B. King Box* phrase answers — it settles onto the root and stops. The *Blues Turnaround* asks: it ends on the 5th over the V chord, leaning the whole form back to bar 1.
 
 ## Common Mistakes
 

@@ -64,7 +64,7 @@ lines:
 
 ## Pattern 2: The Acoustic Pop Groove
 
-The workhorse of modern acoustic playing — half a bar of the pattern is **D · · U · U D ·**, played twice. Nine strums out of sixteen passes.
+The workhorse of modern acoustic playing — half a bar of the pattern is **D · · U · U D ·**, played twice. Eight strums out of sixteen passes.
 
 ```diagram
 type: tab

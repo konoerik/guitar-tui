@@ -20,7 +20,7 @@ Romani (gypsy) violin music has a quality that even harmonic minor cannot reach 
 | A Harmonic Minor | 1 2 b3 4 5 b6 7 | A B C D E F G# |
 | A Hungarian Minor | 1 2 b3 **#4** 5 b6 7 | A B C **D#** E F G# |
 
-Two augmented 2nds now frame the 5th: **b3 → #4** (C to D#) and **b6 → 7** (F to G#). Nearly half the scale's steps are leaps.
+Two augmented 2nds now frame the 5th: **b3 → #4** (C to D#) and **b6 → 7** (F to G#). Two of the scale's seven steps are three-fret leaps.
 
 ## The Position
 

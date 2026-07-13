@@ -69,14 +69,14 @@ Because the I is major and carries a b7 in the scale (D natural), the tonic ofte
 
 ## Where You Have Heard It
 
-- **Flamenco** — the descending run E–F–G–Am (Andalusian world) with a major tonic
-- **Surf** — "Misirlou" runs the scale straight up one string
+- **Flamenco** — the falling Am–G–F–E chord run (the Andalusian world) landing on a major tonic
+- **Surf** — the opening phrase of "Misirlou" runs the scale straight up one string
 - **Klezmer** — known there as *Freygish*; the standard mode of celebration tunes
 - **Metal** — the b2/major-3 combination under heavy distortion
 
 ## Practice
 
-1. Play the open-position scale slowly, letting open strings ring. String 3: G# at fret 1 against the open-string F on string 4 fret 3 — hear the augmented 2nd.
+1. Play the open-position scale slowly, letting open strings ring. String 3: G# at fret 1 against the F on string 4, fret 3 — hear the augmented 2nd.
 2. Vamp **E – F – E** (one bar each). Over it, walk the top string: open E, F at fret 1, back. The half step above the root is home base, not an avoid note.
 3. Descend the full scale from the high E string down to the open low E — the flamenco gesture.
 

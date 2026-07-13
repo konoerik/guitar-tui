@@ -44,7 +44,7 @@ Play it and notice two things: the peak note is *held* — arrival deserves time
 
 ## The Anti-Phrase
 
-Now the control group — the same position, the same rhythm, but no contour: the line just circles.
+Now the control group — the same position, steady eighths, but no contour: the line just circles.
 
 ```diagram
 type: tab

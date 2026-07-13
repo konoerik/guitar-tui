@@ -14,28 +14,32 @@ summary: A two-phrase conversation - the question climbs to the b7 and hangs, th
 
 ## The Lick
 
-Two phrases, one conversation. The question rises through C–D–E and stops on G — the b7, a leaning, unresolved tone. After a full two-beat silence, the answer walks the same ground in reverse and lands on A, the root, held.
+Two phrases, one conversation. The question rises through C–D–E and stops on G — the b7, a leaning, unresolved tone. After a full bar of silence, the answer walks the same ground in reverse and lands on A, the root, held.
 
 ```diagram
 type: tab
 title: Question and Answer Pair — A minor pentatonic
+time: "4/4"
 lines:
-  - beats:
-      - notes: [null, null, null, 5, null, null]
-      - notes: [null, null, null, 7, null, null]
-      - notes: [null, null, null, null, 5, null]
-      - notes: [null, null, null, null, 8, null]
-        duration: 2
-      - rest: true
-        notes: [null, null, null, null, null, null]
-        duration: 2
+  - measures:
+      - beats:
+          - notes: [null, null, null, 5, null, null]
+          - notes: [null, null, null, 7, null, null]
+          - notes: [null, null, null, null, 5, null]
+            duration: 2
+          - notes: [null, null, null, null, 8, null]
+            duration: 4
+      - beats:
+          - rest: true
+            notes: [null, null, null, null, null, null]
+            duration: 8
   - beats:
       - notes: [null, null, null, null, 8, null]
       - notes: [null, null, null, null, 5, null]
       - notes: [null, null, null, 7, null, null]
       - notes: [null, null, null, 5, null, null]
       - notes: [null, null, 7, null, null, null]
-        duration: 3
+        duration: 4
 ```
 
 **Question: C D E G (ends on the b7 — suspended). Answer: G E D C A (ends on the root — closed).** The answer reuses the question's exact pitches in mirror, which is what makes the two phrases sound like the same speaker.
@@ -51,5 +55,5 @@ The G at the top of the question is doing the asking — it is the b7, one whole
 ## Technique Notes
 
 - **The held G** (B string, fret 8): let it ring its full two beats with a touch of vibrato if you have it — a question mark, not a full stop.
-- **The rest**: count it ("3 &, 4 &"). Coming in early collapses the structure.
+- **The rest**: a full counted bar ("1 & 2 & 3 & 4 &"). Coming in early collapses the structure.
 - **Mirroring**: the answer is the question backwards plus the root. Play the pair slowly until you *hear* the symmetry, then vary the answer's rhythm while keeping its notes.

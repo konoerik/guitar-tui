@@ -23,7 +23,7 @@ lines:
           - notes: [8, null, null, null, null, null]
           - notes: [null, 5, null, null, null, null]
           - notes: [null, 7, null, null, null, null]
-            duration: 4
+            duration: 5
       - beats:
           - notes: [null, null, 5, null, null, null]
           - notes: [null, 7, null, null, null, null]

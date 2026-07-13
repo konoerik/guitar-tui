@@ -26,13 +26,13 @@ lines:
       - notes: [null, 5, null, null, null, null]
       - notes: [null, null, 2, null, null, null]
       - notes: [null, null, 4, null, null, null]
+      - notes: [null, null, null, 1, null, null]
       - notes: [null, null, null, 3, null, null]
-      - notes: [null, null, null, 5, null, null]
 ```
 
 **C whole tone = C D E F# G# Bb. Every step is identical — two frets — so the
-line has motion but no gravity. The last two notes are Bb (b7) and C: the
-phrase lands back on the root's letter but an octave's tension short of home.**
+line has motion but no gravity. It stops on Bb — the b7 — and hangs there,
+because the scale offers nowhere more final to land.**
 
 ## Looper Setup
 

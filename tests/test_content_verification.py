@@ -164,6 +164,12 @@ _KEYED_TABS = [
     if b[2].get("type") == "tab" and b[1].get("key") and b[1].get("scale")
 ]
 
+_MEASURED_TABS = [
+    b for b in _ALL_BLOCKS
+    if b[2].get("type") == "tab"
+    and any(line.get("measures") for line in b[2].get("lines", []))
+]
+
 _CHORD_FILES = sorted((DATA_DIR / "chords").glob("*.yaml"))
 _SCALE_FILES = sorted((DATA_DIR / "scales").glob("*.yaml"))
 
@@ -196,6 +202,28 @@ def test_diagram_renders_and_aligns(block: tuple[str, dict, dict]) -> None:
             assert len({len(r) for r in group}) == 1, f"{tag}: unequal tab staff widths"
             for row in group:
                 assert " " not in row[3:].rstrip(), f"{tag}: space inside staff: {row!r}"
+
+
+# ── tab measures: every bar in a line spans the same number of slots ───────────
+
+
+@pytest.mark.parametrize("block", _MEASURED_TABS, ids=_ids(_MEASURED_TABS))
+def test_tab_measures_equal_slots(block: tuple[str, dict, dict]) -> None:
+    """Bars drawn on one staff must be rhythmically (and visually) equal length.
+
+    The 2026-07-12 audit found bars that summed to 7 slots next to bars of 8 —
+    the renderer draws them without complaint, just narrower.
+    """
+    tag, _, spec = block
+    for line in spec.get("lines", []):
+        measures = line.get("measures")
+        if not measures:
+            continue
+        sums = [
+            sum(beat.get("duration", 1) for beat in measure["beats"])
+            for measure in measures
+        ]
+        assert len(set(sums)) == 1, f"{tag}: unequal bar lengths {sums}"
 
 
 # ── chord diagrams sound like their titles ─────────────────────────────────────

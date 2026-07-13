@@ -64,7 +64,7 @@ Build a chord on the 5th degree of A natural minor and you get Em (E–G–B) �
 - **Classical** — nearly every minor-key cadence from Bach to Beethoven
 - **Neoclassical metal** — Malmsteen, Blackmore; fast runs exploiting the aug 2nd
 - **Gypsy jazz** — Django's minor-key vocabulary leans on it constantly
-- **Surf** — "Misirlou" is built on its 5th mode (next lesson)
+- **Surf** — the opening phrase of "Misirlou" runs its 5th mode (next lesson)
 
 ## Practice
 

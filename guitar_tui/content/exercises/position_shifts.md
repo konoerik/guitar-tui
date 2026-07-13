@@ -29,7 +29,6 @@ lines:
           - notes: [null, null, null, null, 10, null]
           - notes: [null, null, null, null, null, 8]
           - notes: [null, null, null, null, null, 10]
-            duration: 2
 ```
 
 Measure 1 is position 1: index finger at fret 5, pinky reaches fret 8. Measure 2 is position 2: index finger at fret 8, ring finger reaches fret 10. The shift happens in the silence between measures — the hand slides up the neck so that fret 8 is now under the index finger.
