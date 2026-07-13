@@ -1,6 +1,6 @@
 [project]
 name = "guitar-tui"
-version = "0.3.0"
+version = "0.4.0"
 description = "A TUI application for guitar music theory"
 readme = "README.md"
 license = "MIT"
