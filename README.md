@@ -6,7 +6,7 @@ A terminal application for guitar music theory. Structured lessons, interactive 
 
 ## What's inside
 
-- **103 lessons** across 15 tracks — open chords through song analysis, phrasing, rhythm, and world scales
+- **107 lessons** across 16 tracks — open chords through song analysis, phrasing, rhythm, world scales, and equipment
 - **Tools screen** — full-neck scale/key explorer, diatonic chord strip, reference tables (intervals, key signatures, barre positions, capo chart, tunings)
 - **Practice screen** — technique exercises and a lick library with looper-ready phrases across 8 scale categories
 - All content is plain Markdown with YAML frontmatter — readable without running the app

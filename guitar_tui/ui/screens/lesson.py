@@ -151,9 +151,9 @@ class LessonMode(Screen):
         self.query_one("#lessons-content").border_title = progress + lesson.meta.title
 
         tabs = self.query_one("#lesson-tabs", TabbedContent)
-        # Orientation is informational — no drills or licks apply yet.
+        # Orientation and equipment are informational — no drills or licks apply.
         # Future: replace this with per-exercise prerequisite tags (option C).
-        practice_tabs_visible = lesson.meta.module != "orientation"
+        practice_tabs_visible = lesson.meta.module not in ("orientation", "equipment")
         if practice_tabs_visible:
             tabs.show_tab("tab-drills")
             tabs.show_tab("tab-licks")

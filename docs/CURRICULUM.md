@@ -277,6 +277,36 @@ Within a track, lessons are ordered by `position`.
 
 ---
 
+### Track 17 — Your Equipment
+
+*The gear side of playing, kept practical and vendor-neutral. Learning arc position:
+standalone and unsequenced — no prerequisites beyond guitar_anatomy chaining within
+the track; read any lesson when the topic comes up. Rationale: the app's practice
+method assumes a looper (every lick's Looper Setup, phrasing/rhythm workflows, the
+planned Track 15 bridge) but never explained one; lessons reference bridge, palm
+placement, and distortion without anatomy or amp context for the returning-hobbyist
+audience.*
+
+**Scope guardrails:** No buying advice, prices, or model catalogs (dates fast,
+opinion-laden). No setup/maintenance procedures (truss rod = "see a tech" sentence).
+"Common guitars" deliberately reduced to the three families and what each changes
+for the player. US English; "delay (echo)" is the taught term, echo noted as dated.
+
+| Status | Slug | Title | Difficulty | Diagrams needed |
+|--------|------|-------|------------|-----------------|
+| ✓ | guitar_anatomy | Know Your Guitar | beginner | — |
+| ✓ | amp_basics | Amplifier Basics | beginner | — |
+| ✓ | effects_guide | Effects, One at a Time | beginner | — |
+| ✓ | looper_guide | The Looper — Your Practice Partner | beginner | — |
+
+> **Note**: Prose-only — no diagrams, no data files, no engine work. Module
+> `equipment` is in the lesson view's practice-tab suppression list alongside
+> `orientation` (no drills/licks apply). The looper guide is cross-linked from the
+> Practice screen introduction and is prerequisite reading for Track 15's
+> looper-as-ear-training format. Shipped 2026-07-16.
+
+---
+
 ### Track 11 — Song Analysis
 
 *Reverse-engineering the theory of real music. Builds on Tracks 4–8. Requires the

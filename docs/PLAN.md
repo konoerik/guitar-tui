@@ -97,6 +97,7 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 <!-- Completed items land here temporarily.
      The stop hook archives these to .claude/archive/YYYY-MM.md and clears this section. -->
 
+- Track 17 "Your Equipment" (4 beginner lessons: guitar_anatomy, amp_basics, effects_guide, looper_guide) — closes the looper-assumed-but-never-explained gap; prose-only, no engine work; practice-tab suppression extended to `equipment`; Practice intro links the looper guide; 16 tracks / 107 lessons; CURRICULUM.md Track 17 spec added ✓
 - PyPI description split from README: `pyproject.toml` readme → minimal `docs/pypi_readme.md` with one absolute-URL screenshot (`docs/screenshot.png`, fresh 134×46 Key View capture via Textual SVG + rsvg-convert); GitHub README keeps the relative-path gif; METADATA verified in built wheel; goes live on next publish ✓
 - Scale-membership decision + implementation: optional per-diagram `key`/`scale` on TabSpec (verification metadata, renderer ignores; diagram_spec.md updated); 15 melodic tab blocks tagged (Track 13, rhythm_in_leads, 4 exercises incl. chord melody in C major); coverage 36 → 51 blocks; chord-vamp/chug drills intentionally untagged ✓
 
