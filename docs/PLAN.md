@@ -28,17 +28,13 @@ v1 shipped 2026-07-12 (see Done); remaining phases:
 
 ### Infrastructure
 
-- **Decide: scale-membership checking for key/scale-less tab blocks** — 24 tab blocks
-  (all Track 13/14 lesson tabs + 8 exercises) carry no `key`/`scale` frontmatter, so
-  `test_lick_notes_in_declared_scale` never sees them; the 2026-07-12 audit's I1 shows the
-  failure mode is real. Adding the fields to lesson frontmatter is a `schemas/lesson_format.md`
-  contract change (Developer + Instructor must agree). Decide: extend the lesson schema, or
-  a per-diagram `key`/`scale` field, or accept the gap. Semantics note: melodic tabs (Am pent
-  lines) fit naturally; chord-vamp/chug drills (E5, Am strums) don't really have "a scale".
 - **Demo GIF doesn't render on PyPI** — README embeds `demo.gif` (rendered from `demo.tape`)
-  by relative path; GitHub resolves it, PyPI's long description does not. Fix: point the image
-  at the absolute `https://raw.githubusercontent.com/konoerik/guitar-tui/main/demo.gif` URL
-  (verify PyPI renders it), or strip the image from the PyPI description.
+  by relative path; GitHub resolves it, PyPI's long description does not. **Decided direction
+  (2026-07-16): give PyPI its own description file** — point `pyproject.toml` `readme` at a
+  dedicated file (e.g. `docs/pypi_readme.md`): install/usage text, either image-free or with one
+  absolute-URL PNG screenshot (PyPI never hosts images, so any image there must be remote).
+  README.md stays untouched for GitHub with the relative-path animation — this also avoids
+  local README previews fetching a remote gif. Pick image-free vs. screenshot when implementing.
 - **Evaluate line wraps in lesson prose** — this is a TUI: the Markdown/Static widgets wrap text
   to widget width, and the size warning already guarantees ≥110 cols for tables/diagrams. There is
   therefore no reason for content to fight "runaway sentences" — prose can be written naturally and
@@ -103,6 +99,8 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 ## Done
 <!-- Completed items land here temporarily.
      The stop hook archives these to .claude/archive/YYYY-MM.md and clears this section. -->
+
+- Scale-membership decision + implementation: optional per-diagram `key`/`scale` on TabSpec (verification metadata, renderer ignores; diagram_spec.md updated); 15 melodic tab blocks tagged (Track 13, rhythm_in_leads, 4 exercises incl. chord melody in C major); coverage 36 → 51 blocks; chord-vamp/chug drills intentionally untagged ✓
 
 - Full content/engine audit (docs/reviews/2026-07-11_reviewer_assessment.md): ~30 fixes — wrong chord diagrams, reversed lick, scale-box gaps, partial-barre orientation bug, 2-char fretboard labels ✓
 - PyPI release: guitar-tui 0.1.0 live (`uv tool install guitar-tui`), package metadata, README install docs, in-app AI disclosure, .env token flow, tag v0.1.0 pushed ✓

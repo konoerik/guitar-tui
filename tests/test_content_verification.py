@@ -159,9 +159,17 @@ _ALL_BLOCKS = _collect_blocks()
 _CHORD_BLOCKS = [b for b in _ALL_BLOCKS if b[2].get("type") == "chord"]
 _SCALE_BLOCKS = [b for b in _ALL_BLOCKS if b[2].get("type") == "scale"]
 _FRETBOARD_BLOCKS = [b for b in _ALL_BLOCKS if b[2].get("type") == "fretboard"]
+def _tab_key_scale(meta: dict, spec: dict) -> tuple[str | None, str | None]:
+    """Effective key/scale for a tab block: block fields beat file frontmatter."""
+    return (
+        spec.get("key") or meta.get("key"),
+        spec.get("scale") or meta.get("scale"),
+    )
+
+
 _KEYED_TABS = [
     b for b in _ALL_BLOCKS
-    if b[2].get("type") == "tab" and b[1].get("key") and b[1].get("scale")
+    if b[2].get("type") == "tab" and all(_tab_key_scale(b[1], b[2]))
 ]
 
 _MEASURED_TABS = [
@@ -306,9 +314,10 @@ def test_lick_notes_in_declared_scale(block: tuple[str, dict, dict]) -> None:
     tag, meta, spec = block
     if meta.get("slug") in _OUTSIDE_SCALE_ALLOWED:
         pytest.skip("slug allowlisted for chromatic content")
-    formula = _SCALE_FORMULAS.get(meta["scale"])
-    assert formula is not None, f"{tag}: unknown scale {meta['scale']!r}"
-    allowed = {(_pc_of(meta["key"]) + i) % 12 for i in formula}
+    key, scale = _tab_key_scale(meta, spec)
+    formula = _SCALE_FORMULAS.get(scale)
+    assert formula is not None, f"{tag}: unknown scale {scale!r}"
+    allowed = {(_pc_of(key) + i) % 12 for i in formula}
     for line in spec.get("lines", []):
         measures = line.get("measures") or [{"beats": line.get("beats", [])}]
         for measure in measures:

@@ -22,6 +22,8 @@ Here is a plain position-1 fragment, then the identical pitches with rhythmic in
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Straight vs. Placed — A minor pentatonic
 time: "4/4"
 caption: "Bar 1: A-C-D as even quarter-ish notes — correct and lifeless. Bar 2: the same three pitches on the 3-3-2 grid (1, & of 2, 4) — a riff. Count the eighth slots through both bars."

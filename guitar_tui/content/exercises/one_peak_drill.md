@@ -14,6 +14,8 @@ Over a looped **Am** vamp, improvise short phrases (one or two bars) in A minor 
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Example — one rise, one summit, one landing
 caption: "Peak declared in advance: the G on the D string (fret 5). The phrase climbs to it, arrives once (held), and descends to a deliberate landing on the root. Yours should trace the same discipline with different notes."
 lines:

@@ -22,6 +22,8 @@ A motif needs two properties: **short** (the ear must grasp it whole) and **dist
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Seed and Transposition — A minor pentatonic
 caption: "Bar 1 states the motif: A-C-D, long note, breath. Bar 2 repeats its exact rhythm and contour two scale steps up: D-E-G. The ear hears one idea in two places."
 lines:

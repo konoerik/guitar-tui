@@ -23,6 +23,8 @@ The mechanics are simple and learnable:
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Question and Answer — A minor pentatonic, position 1
 caption: "Line 1 asks: same opening climb, but it stops on E (the 5th) and hangs there. Line 2 answers: it picks up from that E and walks back down to the root. Play the pause between them for real — it is part of the music."
 lines:

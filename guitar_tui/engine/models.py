@@ -168,6 +168,11 @@ class TabSpec(BaseModel):
     lines: list[TabLine]
     tempo: int | None = None
     time: str | None = None
+    # Verification metadata for melodic tabs: declares the key/scale the notes
+    # must belong to. The renderer ignores both (the engine stays
+    # music-agnostic); the content-verification suite checks against them.
+    key: str | None = None
+    scale: str | None = None
 
 
 # ── Fretboard ─────────────────────────────────────────────────────────────────

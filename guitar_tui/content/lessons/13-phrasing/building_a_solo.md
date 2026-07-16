@@ -27,6 +27,8 @@ Three phrases over an Am vamp: statement, development, peak-and-resolve. Every t
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Opening — low, sparse, one idea
 caption: "The motif (A-C-D) stated low with a long hold and real silence. You have somewhere to go because you started small."
 lines:
@@ -42,6 +44,8 @@ lines:
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Development — same idea, higher and busier
 caption: "The motif transposed up (D-E-G) and immediately extended (G-A) — recognition plus growth. Less space than the opening: density is rising on purpose."
 lines:
@@ -57,6 +61,8 @@ lines:
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Peak and resolution — highest note once, then home
 caption: "Climb to the high C — the solo's single summit — then walk down the position and land the root on a held final note. The descent is unhurried; arrival was the point."
 lines:

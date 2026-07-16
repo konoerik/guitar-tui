@@ -168,6 +168,8 @@ Renders a guitar tablature block (6-line staff with numbers).
 | `lines`  | list[TabLine]| yes      | Sequence of tab lines. Each line is a staff row rendered as a single block. |
 | `tempo`  | int          | no       | BPM for reference (display only) |
 | `time`   | string       | no       | Time signature (e.g., `"4/4"`) |
+| `key`    | string       | no       | Verification metadata: the key the tab's notes belong to (e.g., `"A"`). Never rendered — the engine ignores it. The content-verification suite recomputes every pitch and asserts scale membership when both `key` and `scale` are present (block fields take precedence over lick-file frontmatter). Declare them on melodic tabs; omit on chord-vamp/percussive drills, which have no meaningful scale. |
+| `scale`  | string       | no       | Verification metadata: scale name as in the suite's formula table (e.g., `"minor_pentatonic"`). See `key`. |
 
 #### TabLine object
 

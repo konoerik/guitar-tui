@@ -22,6 +22,8 @@ The most common phrase shape in melodic playing: climb toward a single highest n
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: The Arc — A minor pentatonic, position 1
 caption: "Rise from the root to the peak (A at the octave, held), then descend back home. One climb, one summit, one descent."
 lines:
@@ -48,6 +50,8 @@ Now the control group — the same position, steady eighths, but no contour: the
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: No Shape — same notes, no destination
 caption: "Technically identical difficulty. Musically inert — it never commits to going anywhere. This is what unplanned noodling sounds like from the outside."
 lines:

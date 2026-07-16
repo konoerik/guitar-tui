@@ -14,6 +14,8 @@ Loop **Am – G – F – E** (one bar each). Improvise a one-bar question phras
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: Example pair — same rhythm, new notes, resolved landing
 caption: "Question (bar 1): short-short-long-hold, ending away from home on the b7. Answer (bar 2): the identical short-short-long-hold rhythm on new pitches, landing on the root. Clap the rhythm between the two if it helps hold it."
 lines:

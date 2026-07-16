@@ -14,6 +14,8 @@ summary: Play the tune and the harmony at once - the melody rides the highest st
 
 ```diagram
 type: tab
+key: C
+scale: major
 title: Ode to Joy — chord melody in C
 time: "4/4"
 caption: "Melody: E E F G | G F E D | C C D E | E D D(hold). Strike the chord on beat 1 of each bar (its top note IS the melody note), then pick the remaining melody notes alone while the chord rings."

@@ -14,6 +14,8 @@ Loop four bars of **Am** (or Am–G–F–E, one bar each). Improvise freely fro
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: The shape of one cycle — phrase, then counted silence
 caption: "Bars 1-2: any phrase (example shown). Bars 3-4: rest — counted, deliberate, complete. End your phrase on purpose; lift or mute so the silence starts cleanly."
 lines:

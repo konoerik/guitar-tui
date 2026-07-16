@@ -20,6 +20,8 @@ The comparison below uses one position, one rhythm, and roughly the same notes. 
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: The Wall — continuous eighths, A minor pentatonic
 caption: "Eight notes, no gaps, straight through the bar and around again. Nothing is wrong with any single note. Everything is wrong with the paragraph — it has no sentences."
 lines:
@@ -38,6 +40,8 @@ lines:
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: With Space — same material as short statements
 caption: "Three statements separated by real rests: a motif, its extension, and the resolution. The held notes and silences are played — count through them, do not skip them."
 lines:

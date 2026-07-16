@@ -26,6 +26,8 @@ Three placements cover most of the territory:
 
 ```diagram
 type: tab
+key: A
+scale: minor_pentatonic
 title: On-Beat vs. Displaced — A minor pentatonic
 time: "4/4"
 caption: "Bar 1: the cell A-C-D-E enters on beat 1 — square and solid. Bar 2: the identical cell enters on the '&' of 1 — every note now lands between the beats. Count 1 & 2 & 3 & 4 & through both."
