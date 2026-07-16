@@ -92,6 +92,16 @@
 
 ---
 
+### D13 — Per-diagram key/scale verification metadata on tab specs
+
+**Date:** 2026-07-16
+**Context:** The 2026-07-12 audit found that tab blocks without `key`/`scale` lick-frontmatter (all Track 13/14 lesson tabs + 8 exercises, 24 blocks) were invisible to the content-verification suite's scale-membership check — and one shipped lick (`floating_whole_tone`) had wrong notes the suite could not see. Extending *lesson* frontmatter would push per-diagram facts to file level (a lesson's tabs can differ) and touch `schemas/lesson_format.md` more broadly than needed.
+**Decision:** `TabSpec` gains optional `key`/`scale` fields as **verification metadata**: the renderer ignores them entirely (the engine stays music-agnostic — they are data *about* the diagram, not rendering input), and the content-verification suite reads block-level values with lick-frontmatter fallback. Declared on melodic tabs only; chord-vamp/chug drills (E5 chugs, Am strums) have no meaningful scale and stay untagged by design. Documented in `schemas/diagram_spec.md` (non-breaking addition, both personas agreed 2026-07-16).
+**Alternatives considered:** Lesson-level `key`/`scale` frontmatter — rejected; per-diagram facts belong on the diagram, and multi-tab lessons could not vary. Accepting the coverage gap — rejected; the audit proved the failure mode is real. Tagging every tab including chord drills — rejected; a declared scale on a percussive chug asserts something musically meaningless.
+**Consequences:** Scale-membership coverage went from 36 to 51 blocks. A first-of-its-kind precedent: spec fields that exist for the test suite, not the renderer — acceptable because Pydantic validates them and the engine's music-agnosticism is preserved by ignoring, not by absence.
+
+---
+
 ### D12 — Song analysis worksheet: one section-based document model, three consumers, phased delivery
 
 **Date:** 2026-07-12

@@ -6,9 +6,8 @@
 
 ### Agreed order of work (2026-07-12, post-M8)
 
-1. **Review all work since v0.1.0** (user request) — full pass over M8, Track 16, worksheet v1
-2. **Worksheet v2 evaluation** — after v1 has been used on real songs (below)
-3. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
+1. **Worksheet v2 evaluation** — after v1 has been used on real songs (below)
+2. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
 
 ### Song Analysis Worksheet (feature, agreed 2026-07-12 — ADR D12)
 
@@ -97,6 +96,9 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 <!-- Completed items land here temporarily.
      The stop hook archives these to .claude/archive/YYYY-MM.md and clears this section. -->
 
+- Review all work since v0.1.0 (docs/reviews/2026-07-12_reviewer_assessment.md): I1–I3 + N1–N8 + D1 all fixed same-session; bar-slot invariant test added (caught pre-existing position_shifts defect); released as v0.4.0 ✓
+- v0.4.1 released: lesson-tree resume sync (call_after_refresh cursor fix + first-run/restore tests), PyPI description split ✓
+- Tone sweep across all content (grep batteries + context reads): 4 fixes, all abbreviations verified defined at first use; content-tone rule saved to session memory ✓
 - Track 17 "Your Equipment" (4 beginner lessons: guitar_anatomy, amp_basics, effects_guide, looper_guide) — closes the looper-assumed-but-never-explained gap; prose-only, no engine work; practice-tab suppression extended to `equipment`; Practice intro links the looper guide; 16 tracks / 107 lessons; CURRICULUM.md Track 17 spec added ✓
 - PyPI description split from README: `pyproject.toml` readme → minimal `docs/pypi_readme.md` with one absolute-URL screenshot (`docs/screenshot.png`, fresh 134×46 Key View capture via Textual SVG + rsvg-convert); GitHub README keeps the relative-path gif; METADATA verified in built wheel; goes live on next publish ✓
 - Scale-membership decision + implementation: optional per-diagram `key`/`scale` on TabSpec (verification metadata, renderer ignores; diagram_spec.md updated); 15 melodic tab blocks tagged (Track 13, rhythm_in_leads, 4 exercises incl. chord melody in C major); coverage 36 → 51 blocks; chord-vamp/chug drills intentionally untagged ✓
