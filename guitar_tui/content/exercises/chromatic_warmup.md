@@ -45,4 +45,5 @@ After completing all 6 strings going up, reverse: high e back down to low E.
 move only the fingers.
 
 **Skipping the pinky.** The pinky is the weakest finger and needs the most
-work. Do not cheat by substituting the ring finger on fret 4.
+work. Do not substitute the ring finger on fret 4 — that avoids exactly the
+training this drill exists for.

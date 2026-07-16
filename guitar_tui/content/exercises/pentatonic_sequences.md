@@ -5,7 +5,7 @@ difficulty: intermediate
 tags: [scale, pentatonic, sequences, phrasing, musicality]
 module: pentatonic-scale
 position: 1
-summary: Playing the pentatonic scale in groups of three consecutive notes — the simplest way to turn a scale pattern into a musical phrase instead of a boring run.
+summary: Playing the pentatonic scale in groups of three consecutive notes — the simplest way to turn a scale pattern into a musical phrase instead of a mechanical run.
 ---
 
 ## The Exercise

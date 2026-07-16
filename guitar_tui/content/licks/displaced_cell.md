@@ -53,7 +53,7 @@ Record **Am** for two bars at 75–85 BPM and loop. Alternate the two placements
 
 ## What to Listen For
 
-The on-beat version sounds like a statement; the displaced version sounds like it is chasing the beat, leaning forward. Great soloists move phrases like this deliberately — the same lick can open a solo on the beat and reappear later displaced, sounding fresh both times. This is the cheapest variety in music: no new notes required.
+The on-beat version sounds like a statement; the displaced version sounds like it is chasing the beat, leaning forward. Great soloists move phrases like this deliberately — the same lick can open a solo on the beat and reappear later displaced, sounding fresh both times. This is the most economical variety in music: no new notes required.
 
 ## Technique Notes
 

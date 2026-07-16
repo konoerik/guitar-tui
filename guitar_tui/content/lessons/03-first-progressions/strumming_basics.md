@@ -97,7 +97,8 @@ Strum:   D      U    D      U    D      U    D      U
 ```
 
 This is not a song pattern — it is a coordination drill. Play it at 60 BPM
-with a single chord and listen for evenness: every stroke should sound the same
+(beats per minute — the metronome's tempo setting) with a single chord and
+listen for evenness: every stroke should sound the same
 volume, and the spacing should be perfectly regular. Most beginners find
 upstrokes quieter than downstrokes. Record yourself and listen back.
 
