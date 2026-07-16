@@ -4,10 +4,15 @@
 <!-- Current sprint items. Keep this short — 5-10 items max.
      If it grows beyond that, move lower-priority items to Backlog. -->
 
-### Agreed order of work (2026-07-12, post-M8)
+### Agreed order of work (2026-07-12, post-M8; Songbook added 2026-07-16)
 
-1. **Worksheet v2 evaluation** — after v1 has been used on real songs (below)
-2. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
+1. **Songbook — PD worked examples** (ongoing, one entry at a time; detailed tracking in
+   CURRICULUM.md § Songbook). Stage 0: entry format/vehicle decision (dev–instructor;
+   likely lesson-Markdown reuse under a `songbook` dir, ADR D12 schema alignment).
+   Then entry 1: House of the Rising Sun — doubles as the worksheet v1 field test.
+2. **Worksheet v2 evaluation** — after v1 has been used on real songs (Songbook entries
+   1–3 provide exactly this)
+3. **Track 15 (ear training) last** — value capped until/unless the audio milestone happens
 
 ### Song Analysis Worksheet (feature, agreed 2026-07-12 — ADR D12)
 

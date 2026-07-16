@@ -477,15 +477,68 @@ major, natural_minor, dorian, phrygian, lydian, mixolydian.
 
 ## 5. Songbook
 
-Theory breakdowns of real songs — key, mode, progression, scale, technique. No
-reproduction of copyrighted material. See IDEAS.md for scope definition and copyright
-boundary.
+Theory breakdowns of real songs — key, mode, progression, scale, technique.
 
-*Content to be defined once the Songbook UI is designed. Initial candidates:*
+### Copyright policy
+
+(Formerly deferred to IDEAS.md, which was never written — the policy lives here.)
+
+- **Public domain songs** (the core of the Songbook): full worked examples — melody
+  in tab, complete progression, chord voicings, section-by-section analysis.
+- **Song vs. arrangement**: PD status covers the *traditional song*, not a famous
+  recording's arrangement. Analyze the traditional changes and melody with our own
+  voicings and patterns; never transcribe a specific recording note-for-note
+  (House of the Rising Sun ≠ The Animals' arpeggiation; Scarborough Fair ≠ Simon &
+  Garfunkel).
+- **Jurisdiction**: the app ships worldwide — require life+70 on the *composer*,
+  not just US pre-1931 publication (rules out e.g. Lecuona's Malagueña in the EU).
+  Traditional/anonymous tunes, Foster, Bach, Beethoven, Carulli, Sor, Tárrega all clear.
+- **Copyrighted songs**: chords and functions are not copyrightable, melodies are.
+  Entries for copyrighted songs are abstract analyses only (key, progression,
+  functions, scale advice) — no melody tab, no lyrics, ever.
+
+### PD worked examples — ongoing effort (started 2026-07-16)
+
+Approach one at a time; each entry doubles as a worksheet-v1 field test and a
+Songbook draft. Classical guitar studies close with a **loop-and-solo** section —
+the piece's own progression becomes the looper backing for improvisation, tying
+the Songbook into the app's core practice method.
+
+**Stage 0 (blocks the first entry):** decide the entry format/vehicle with the
+Developer — likely reuse of lesson Markdown + existing diagram types under a
+`songbook` content dir, rendered through the existing machinery; per ADR D12 the
+section-based analysis schema is shared with worksheet v2/v3. No new engine work
+expected (tab renderer has no p-i-m-a fingering — classical picks stay within the
+existing tab spec, which keeps repertoire difficulty honest).
+
+| Status | Song | Teaches | Ties to |
+|--------|------|---------|---------|
+| ○ 1 | House of the Rising Sun (trad.) | Flagship Four Questions workout: minor key mixing natural minor, major IV, harmonic-minor V; 6/8 | Track 11, harmonic minor |
+| ○ 2 | Scarborough Fair (trad.) | The Dorian example | dorian_mode, dorian_vamp |
+| ○ 3 | Amazing Grace | Major-pentatonic melody over I–IV–V; 3/4 | major pentatonic, Track 3 |
+| ○ 4 | Lágrima — Tárrega | Parallel major/minor in 16 bars (E→Em); classical phrasing | Track 7, relative vs parallel |
+| ○ 5 | Carulli arpeggio study (C/Am; opus TBD at authoring) | Arpeggiated I–V–I; loop-and-solo | Track 3, looper workflow |
+| ○ 6 | Greensleeves (trad.) | Natural vs harmonic minor alternating; 6/8 | Track 7, Track 16 |
+| ○ 7 | Wayfaring Stranger (trad.) | Straight natural minor with V | Track 7 |
+| ○ 8 | Old Joe Clark (trad.) | The Mixolydian fiddle tune | mixolydian_mode |
+| ○ 9 | Drunken Sailor (trad.) | i–bVII Dorian vamp at its simplest | dorian_vamp |
+| ○ 10 | Hava Nagila (trad. melody) | Phrygian dominant / Freygish in the wild | phrygian_dominant |
+| ○ 11 | St. James Infirmary (trad.) | Minor blues | Track 3 blues, Track 6 |
+| ○ 12 | Frankie and Johnny (trad.) | 12-bar ancestry | twelve_bar_blues_a |
+| ○ 13 | Romanza (anon.) | Em arpeggio piece; loop-and-solo | Track 7, looper workflow |
+| ○ 14 | Bourrée in Em — Bach | Classical minor-key analysis; famous guitar repertoire | Tracks 7, 16 |
+| ○ 15 | When the Saints / Oh! Susanna (Foster) | Simplest major-key functions | Track 3 |
+| ○ 16 | Auld Lang Syne (trad.) | Pentatonic melody; 3/4 | major pentatonic |
+| ○ 17 | Sakura (trad.) | Hirajoshi in actual repertoire | japanese_pentatonic |
+| ○ 18 | Ode to Joy — Beethoven | Full entry expanding the chord-melody exercise | chord_melody_intro |
+
+*Optional later: Adelita (Tárrega), Sor Op. 35 No. 22 (Bm), Swing Low Sweet Chariot,
+Shenandoah, Man of Constant Sorrow.*
+
+### Copyrighted-song candidates (abstract analyses only, unscheduled)
 
 - Sultans of Swing — Dire Straits (D minor, pentatonic, hybrid picking)
 - Wonderful Tonight — Eric Clapton (G major, I–V–vi–IV)
-- House of the Rising Sun — The Animals (Am, 12-bar derived, arpeggiated)
 - Wish You Were Here — Pink Floyd (G, Am, C, D — fingerpicking)
 - Knockin' on Heaven's Door — Bob Dylan (G–D–Am / G–D–C, beginner-friendly)
 
