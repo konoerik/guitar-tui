@@ -28,13 +28,10 @@ v1 shipped 2026-07-12 (see Done); remaining phases:
 
 ### Infrastructure
 
-- **Demo GIF doesn't render on PyPI** — README embeds `demo.gif` (rendered from `demo.tape`)
-  by relative path; GitHub resolves it, PyPI's long description does not. **Decided direction
-  (2026-07-16): give PyPI its own description file** — point `pyproject.toml` `readme` at a
-  dedicated file (e.g. `docs/pypi_readme.md`): install/usage text, either image-free or with one
-  absolute-URL PNG screenshot (PyPI never hosts images, so any image there must be remote).
-  README.md stays untouched for GitHub with the relative-path animation — this also avoids
-  local README previews fetching a remote gif. Pick image-free vs. screenshot when implementing.
+- **Re-record demo.gif** — the current demo.gif/demo.tape date from 2026-03 (v0.1.0): the
+  welcome text, Tools screen, and Practice tree have all changed since. Re-run the tape
+  (update it for the new navigation) and refresh `docs/screenshot.png` alongside if the
+  Key View changes.
 - **Evaluate line wraps in lesson prose** — this is a TUI: the Markdown/Static widgets wrap text
   to widget width, and the size warning already guarantees ≥110 cols for tables/diagrams. There is
   therefore no reason for content to fight "runaway sentences" — prose can be written naturally and
@@ -100,6 +97,7 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 <!-- Completed items land here temporarily.
      The stop hook archives these to .claude/archive/YYYY-MM.md and clears this section. -->
 
+- PyPI description split from README: `pyproject.toml` readme → minimal `docs/pypi_readme.md` with one absolute-URL screenshot (`docs/screenshot.png`, fresh 134×46 Key View capture via Textual SVG + rsvg-convert); GitHub README keeps the relative-path gif; METADATA verified in built wheel; goes live on next publish ✓
 - Scale-membership decision + implementation: optional per-diagram `key`/`scale` on TabSpec (verification metadata, renderer ignores; diagram_spec.md updated); 15 melodic tab blocks tagged (Track 13, rhythm_in_leads, 4 exercises incl. chord melody in C major); coverage 36 → 51 blocks; chord-vamp/chug drills intentionally untagged ✓
 
 - Full content/engine audit (docs/reviews/2026-07-11_reviewer_assessment.md): ~30 fixes — wrong chord diagrams, reversed lick, scale-box gaps, partial-barre orientation bug, 2-char fretboard labels ✓
