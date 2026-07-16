@@ -6,7 +6,7 @@ tags: [equipment, gear, tone, effects, reference]
 prerequisites: [amp_basics]
 module: equipment
 position: 3
-summary: A field guide to the common effects — what each one actually does to your signal, where you have heard it, and which ones quietly sabotage practice by hiding your timing.
+summary: A field guide to the common effects — what each one actually does to your signal, where you have heard it, and which ones mask timing errors during practice.
 ---
 
 ## What an Effect Is
@@ -25,7 +25,7 @@ An effect takes your guitar signal and changes it — adds space, repeats it, th
 
 **Phaser / Flanger** — cousins of chorus: a sweeping, swirling filter motion. Phaser is a soft whoosh; flanger is a more metallic jet-plane sweep.
 
-**Compressor** — narrows the gap between your loudest and quietest notes: quiet notes come up, spiky attacks come down, sustain appears longer. Country chicken-pickers and funk players love it. Note what it trades away: *your* dynamics.
+**Compressor** — narrows the gap between your loudest and quietest notes: quiet notes come up, sharp attacks come down, sustain appears longer. Country and funk players use it heavily. Note what it trades away: *your* dynamics.
 
 **Wah** — a foot-rocked filter sweep, from muffled to piercing. Voice-like; funk rhythm and expressive lead.
 
@@ -35,12 +35,12 @@ An effect takes your guitar signal and changes it — adds space, repeats it, th
 
 ## Effects and Practice: a Warning
 
-Two of the most beautiful effects are also the two that lie to you:
+Two of the most widely used effects also interfere with practice in a specific way — they mask the very things you are trying to train:
 
 - **Delay and reverb blur timing.** The repeats and wash fill the gaps between your notes — including the gaps that are timing errors. The rhythm work in Track 14 and the phrasing work in Track 13 (where rests are load-bearing) should be practiced **dry or nearly dry**. Add the ambience back when the timing is real.
 - **Distortion and compression flatten dynamics.** Your accents, ghost strokes, and pick control are inaudible under heavy gain. Practice the mechanics clean; perform with whatever you like.
 
-The honest workflow: practice dry, record dry, listen — then decorate.
+A reliable workflow: practice dry, record and listen dry, then add ambience once the playing itself is right.
 
 ## Do You Need Any of This?
 
@@ -50,7 +50,7 @@ No. Everything this app teaches works with a bare guitar. A reasonable starter s
 
 - **Stacking everything at once** — five effects deep, no idea which knob does what. Add one, learn it, then add the next.
 - **Using reverb as a blanket** — if every note swims, the reverb is hiding your articulation from you.
-- **Chasing a player's pedals instead of their hands** — the tone you admire is mostly fingers, timing, and note choice. The pedalboard is the last 10%.
+- **Attributing a player's sound to their pedals** — most of an admired tone comes from timing, note choice, and touch. Equipment contributes far less than it appears to.
 
 ## What's Next
 

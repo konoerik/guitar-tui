@@ -20,7 +20,7 @@ Lessons in this app say things like "rest your palm right where the strings meet
 
 **Neck and fretboard** — the neck is the long piece of wood; the fretboard (or fingerboard) is its playing surface. The metal strips are **frets**. Pressing a string just *behind* a fret — on the headstock side of it — shortens the vibrating length to that fret, raising the pitch one semitone per fret. The dots or blocks on the fretboard are **position markers** (usually at frets 3, 5, 7, 9, and doubled at 12, where the octave lives).
 
-**Body** — the big end. On an acoustic guitar, the hollow body and **soundhole** are the amplifier: the strings alone are nearly silent, and the body turns their vibration into air movement. On a solid-body electric, the body mostly anchors hardware — the amplification happens electrically.
+**Body** — the largest section. On an acoustic guitar, the hollow body and **soundhole** are the amplifier: the strings alone are nearly silent, and the body turns their vibration into air movement. On a solid-body electric, the body mostly anchors hardware — the amplification happens electrically.
 
 **Bridge and saddle** — where the strings terminate at the body end. The **saddle** is the piece the strings actually cross (one long strip on acoustics, individual adjustable saddles on most electrics). The vibrating string lives between nut and saddle; everything the fretting hand does happens inside that span. Palm muting rests the picking-hand's edge right here — *on* the strings, *at* the saddle.
 
@@ -33,7 +33,7 @@ One part you should know exists but not touch: the **truss rod**, a steel rod in
 | Family | Strings | Neck | Sound and feel |
 |--------|---------|------|----------------|
 | Classical | Nylon | Wide, flat | Soft, mellow; gentle on fingertips; wide string spacing suits fingerstyle |
-| Steel-string acoustic | Steel | Narrower, curved | Loud, bright; higher string tension — expect fingertip callouses |
+| Steel-string acoustic | Steel | Narrower, curved | Loud, bright; higher string tension — expect fingertip calluses |
 | Electric | Steel (lighter) | Narrowest, slim | Nearly silent unplugged; lightest strings and lowest action, so fretting and bending are easiest |
 
 What matters for this app: **everything here applies to all three.** Same tuning, same fretboard logic, same chords and scales. The differences are feel and sound, not theory. If you own more than one, practice on whichever makes you play more — though bends and barre chords are noticeably easier on an electric, and rhythm strumming shines on a steel-string.
@@ -42,7 +42,7 @@ What matters for this app: **everything here applies to all three.** Same tuning
 
 - **Pressing on top of the fret instead of behind it** — the note buzzes or chokes. Just behind the fret, light pressure.
 - **Confusing bridge and saddle in instructions** — for palm muting, aim for where the strings *meet* the bridge; drifting toward the neck kills the pitch.
-- **Blaming your hands for setup problems** — if the strings sit a centimeter off the fretboard, barre chords are hard because of the *guitar*. A basic setup at a shop is transformative for cheap or long-stored instruments.
+- **Blaming your hands for setup problems** — if the strings sit a centimeter off the fretboard, barre chords are hard because of the *guitar*. A basic setup at a shop makes a large difference on inexpensive or long-stored instruments.
 
 ## What's Next
 
