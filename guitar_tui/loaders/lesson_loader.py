@@ -139,6 +139,7 @@ class TrackEntry:
     id: str              # matches the `module:` frontmatter field
     title: str
     description: str = ""
+    reference: bool = False  # unsequenced reference material, not a curriculum step
 
 
 @dataclass
@@ -258,6 +259,10 @@ class LessonLoader:
         """Return all lessons in picker display order as a flat list."""
         return [l for _, lessons in self.ordered_track_lessons() for l in lessons]
 
+    def reference_track_ids(self) -> set[str]:
+        """Return the ids of tracks flagged as reference material in the index."""
+        return {t.id for t in self.tracks if t.reference}
+
     # ── Tag / difficulty helpers ───────────────────────────────────────────────
 
     def by_tag(self, tag: str) -> list[ParsedLesson]:
@@ -297,6 +302,7 @@ class LessonLoader:
                 id=entry["id"],
                 title=entry["title"],
                 description=entry.get("description", ""),
+                reference=bool(entry.get("reference", False)),
             ))
         overview: CurriculumOverview | None = None
         raw_ov = raw.get("overview")

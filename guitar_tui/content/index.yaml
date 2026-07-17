@@ -204,6 +204,7 @@ tracks:
 
   - id: equipment
     title: "Your Equipment"
+    reference: true
     description: |-
       The gear side of playing, kept practical: the names of your guitar's parts
       and what changes between classical, acoustic, and electric; what an amp's

@@ -563,3 +563,62 @@ class TestPrerequisiteWarnings:
             warnings.simplefilter("always")
             loader.load()
         assert "orphan" in loader.lessons
+
+
+# ── reference tracks ───────────────────────────────────────────────────────────
+
+
+class TestReferenceTracks:
+    def _write_fixtures(self, tmp_path: Path) -> LessonLoader:
+        (tmp_path / "index.yaml").write_text(textwrap.dedent("""\
+            tracks:
+              - id: basics
+                title: "Basics"
+              - id: gear
+                title: "Gear"
+                reference: true
+        """), encoding="utf-8")
+        write_lesson(tmp_path, "lesson_a", textwrap.dedent("""\
+            ---
+            title: Lesson A
+            slug: lesson_a
+            difficulty: beginner
+            tags: [chords]
+            module: basics
+            position: 1
+            ---
+            Body.
+        """))
+        write_lesson(tmp_path, "gear_a", textwrap.dedent("""\
+            ---
+            title: Gear A
+            slug: gear_a
+            difficulty: beginner
+            tags: [gear]
+            module: gear
+            position: 1
+            ---
+            Body.
+        """))
+        loader = LessonLoader(lessons_dir=tmp_path, index_path=tmp_path / "index.yaml")
+        loader.load()
+        return loader
+
+    def test_reference_flag_parsed(self, tmp_path: Path) -> None:
+        loader = self._write_fixtures(tmp_path)
+        by_id = {t.id: t for t in loader.tracks}
+        assert by_id["gear"].reference is True
+
+    def test_reference_defaults_false(self, tmp_path: Path) -> None:
+        loader = self._write_fixtures(tmp_path)
+        by_id = {t.id: t for t in loader.tracks}
+        assert by_id["basics"].reference is False
+
+    def test_reference_track_ids(self, tmp_path: Path) -> None:
+        loader = self._write_fixtures(tmp_path)
+        assert loader.reference_track_ids() == {"gear"}
+
+    def test_shipped_index_flags_equipment(self) -> None:
+        loader = LessonLoader()
+        loader.load()
+        assert loader.reference_track_ids() == {"equipment"}

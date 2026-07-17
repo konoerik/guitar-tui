@@ -125,7 +125,7 @@ but never lost interest in the instrument.
 
 [dim]Assumes you can already hold a guitar, fret a note, and strum a chord.[/dim]
 
-[bold][2] Lessons[/bold]    Curriculum — 16 tracks, 107 lessons, open chords through world scales and gear.
+[bold][2] Lessons[/bold]    Curriculum — 15 tracks plus an equipment reference, 107 lessons in all.
 [bold][3] Tools[/bold]      Key and scale explorer, chord strip, reference tables.
 [bold][4] Practice[/bold]   Technique exercises and a lick library for looper use.
 

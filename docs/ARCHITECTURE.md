@@ -92,6 +92,16 @@
 
 ---
 
+### D14 — Reference tracks: index-level flag, unnumbered tree section
+
+**Date:** 2026-07-17
+**Context:** Track 17 (Your Equipment) is designed as standalone, unsequenced reference material ("read any lesson when the topic comes up"), but the lessons tree rendered it as the final numbered curriculum step — implying sequence, and silently renumbering whenever a track is inserted before it (Track 15 ear training is planned).
+**Decision:** Track entries in `content/index.yaml` gain an optional `reference: true` flag (default false), carried on `TrackEntry` and exposed via `LessonLoader.reference_track_ids()`. The lessons tree numbers only non-reference tracks, then renders reference tracks unnumbered under a dim "Reference" section header — mirroring the Tools tree's Interactive/Reference split. The flag also drives behavior that previously hard-coded the `equipment` slug: practice-tab suppression (now `{"orientation"} | reference_track_ids()`) and the `[pos / total]` progress indicator (suppressed — reference lessons are unsequenced). The Introduction track count excludes reference tracks.
+**Alternatives considered:** Moving the lessons to the Tools screen's Reference branch — rejected; Tools reference panels are compact programmatic lookup tables, and prose lessons need the Markdown lesson viewer (a duplicate rendering path for no gain). Leaving it numbered — rejected; the numbering instability alone (equipment shifts when Track 15 lands) justifies the split.
+**Consequences:** The index gains a track *type* concept — Instructor classifies (index.yaml + CURRICULUM.md), Developer renders. Future unsequenced material (e.g. Songbook, if delivered as lessons) has a home without joining the curriculum sequence. `orientation` stays a numbered curriculum track; its tab suppression remains a slug special case until per-exercise prerequisite tags exist.
+
+---
+
 ### D13 — Per-diagram key/scale verification metadata on tab specs
 
 **Date:** 2026-07-16

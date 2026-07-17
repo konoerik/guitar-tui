@@ -60,3 +60,37 @@ async def test_restored_lesson_syncs_tree(tmp_path, monkeypatch):
         node = tree.cursor_node
         assert node is not None and node.data == "minor_pentatonic_intro"
         assert node.parent is not None and node.parent.is_expanded
+
+
+async def test_reference_track_unnumbered_in_tree():
+    """Equipment renders under a Reference header, not as a numbered track."""
+    from textual.widgets import Tree
+
+    async with GuitarTUI().run_test(size=(120, 40)) as pilot:
+        await pilot.press("2")
+        screen: LessonMode = pilot.app.screen  # type: ignore[assignment]
+        tree = screen.query_one("#lessons-tree", Tree)
+        labels = [str(node.label) for node in tree.root.children]
+        assert "Reference" in labels
+        assert "Your Equipment" in labels
+        numbered = [l for l in labels if l[:2].isdigit()]
+        assert numbered, "Curriculum tracks should be numbered"
+        assert not any("Equipment" in l for l in numbered)
+        # Reference section comes after the numbered tracks
+        assert labels.index("Reference") > labels.index(numbered[-1])
+
+
+async def test_reference_lesson_hides_practice_tabs_and_progress():
+    """Reference lessons show no [pos / total] and no Exercises/Licks tabs."""
+    from textual.widgets import TabbedContent
+
+    async with GuitarTUI().run_test(size=(120, 40)) as pilot:
+        await pilot.press("2")
+        screen: LessonMode = pilot.app.screen  # type: ignore[assignment]
+        lesson = pilot.app.lesson_loader.lessons["amp_basics"]
+        await screen._load_lesson(lesson)
+        await pilot.pause()
+        assert str(screen.query_one("#lessons-content").border_title) == "Amplifier Basics"
+        tabs = screen.query_one("#lesson-tabs", TabbedContent)
+        assert not tabs.get_tab("tab-drills").display
+        assert not tabs.get_tab("tab-licks").display

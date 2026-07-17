@@ -1,5 +1,6 @@
 """LessonMode — card-panel lesson viewer with inline track tree."""
 
+from rich.text import Text
 from textual.app import ComposeResult
 from textual.containers import Horizontal, ScrollableContainer, Vertical, VerticalScroll
 from textual.screen import Screen
@@ -57,13 +58,24 @@ class LessonMode(Screen):
         tree.root.add_leaf("Introduction", data=_OVERVIEW_SENTINEL)
         tree.root.add_leaf("", data=_SEP_SENTINEL)
         badges = {"beginner": "●", "intermediate": "◉", "advanced": "◎"}
-        for i, (track, lessons) in enumerate(
-            self.app.lesson_loader.ordered_track_lessons(), start=1
-        ):
-            branch = tree.root.add(f"{i:02d}. {track.title}", expand=False)
+        grouped = self.app.lesson_loader.ordered_track_lessons()
+        curriculum = [(t, ls) for t, ls in grouped if not t.reference]
+        reference = [(t, ls) for t, ls in grouped if t.reference]
+
+        def add_track(label: str, lessons: list[ParsedLesson]) -> None:
+            branch = tree.root.add(label, expand=False)
             for lesson in lessons:
                 badge = badges.get(lesson.meta.difficulty, "○")
                 branch.add_leaf(f"{badge} {lesson.meta.title}", data=lesson.meta.slug)
+
+        for i, (track, lessons) in enumerate(curriculum, start=1):
+            add_track(f"{i:02d}. {track.title}", lessons)
+
+        if reference:
+            tree.root.add_leaf("", data=_SEP_SENTINEL)
+            tree.root.add_leaf(Text("Reference", style="dim"), data=_SEP_SENTINEL)
+            for track, lessons in reference:
+                add_track(track.title, lessons)
 
     def _move_tree_cursor(self, slug: str) -> None:
         """Expand the track containing *slug* and put the tree cursor on its leaf,
@@ -104,7 +116,7 @@ class LessonMode(Screen):
     def _show_overview(self) -> None:
         loader = self.app.lesson_loader
         total = sum(len(ls) for _, ls in loader.ordered_track_lessons())
-        track_count = len(loader.tracks)
+        track_count = sum(1 for t in loader.tracks if not t.reference)
         intro = (
             f"# Introduction\n\n"
             f"{track_count} tracks · {total} lessons · beginner → advanced\n\n"
@@ -135,7 +147,11 @@ class LessonMode(Screen):
     # ── Lesson loading ────────────────────────────────────────────────────────
 
     def _track_progress(self, lesson: ParsedLesson) -> str:
-        """Return a ' [pos / total]' string for the lesson's position in its track."""
+        """Return a ' [pos / total]' string for the lesson's position in its track.
+
+        Reference tracks are unsequenced, so their lessons show no position."""
+        if lesson.meta.module in self.app.lesson_loader.reference_track_ids():
+            return ""
         for _, lessons in self.app.lesson_loader.ordered_track_lessons():
             slugs = [l.meta.slug for l in lessons]
             if lesson.meta.slug in slugs:
@@ -151,9 +167,10 @@ class LessonMode(Screen):
         self.query_one("#lessons-content").border_title = progress + lesson.meta.title
 
         tabs = self.query_one("#lesson-tabs", TabbedContent)
-        # Orientation and equipment are informational — no drills or licks apply.
+        # Orientation and reference tracks are informational — no drills or licks apply.
         # Future: replace this with per-exercise prerequisite tags (option C).
-        practice_tabs_visible = lesson.meta.module not in ("orientation", "equipment")
+        informational = {"orientation"} | self.app.lesson_loader.reference_track_ids()
+        practice_tabs_visible = lesson.meta.module not in informational
         if practice_tabs_visible:
             tabs.show_tab("tab-drills")
             tabs.show_tab("tab-licks")

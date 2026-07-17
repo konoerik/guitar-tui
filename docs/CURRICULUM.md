@@ -299,11 +299,13 @@ for the player. US English; "delay (echo)" is the taught term, echo noted as dat
 | ✓ | effects_guide | Effects, One at a Time | beginner | — |
 | ✓ | looper_guide | The Looper — Your Practice Partner | beginner | — |
 
-> **Note**: Prose-only — no diagrams, no data files, no engine work. Module
-> `equipment` is in the lesson view's practice-tab suppression list alongside
-> `orientation` (no drills/licks apply). The looper guide is cross-linked from the
-> Practice screen introduction and is prerequisite reading for Track 15's
-> looper-as-ear-training format. Shipped 2026-07-16.
+> **Note**: Prose-only — no diagrams, no data files, no engine work. The track is
+> flagged `reference: true` in `content/index.yaml` (ADR D14, 2026-07-17): it renders
+> unnumbered under the lessons tree's "Reference" section rather than as a numbered
+> curriculum step, and the flag suppresses the practice tabs (no drills/licks apply,
+> as with `orientation`) and the `[pos / total]` progress indicator. The looper guide
+> is cross-linked from the Practice screen introduction and is prerequisite reading
+> for Track 15's looper-as-ear-training format. Shipped 2026-07-16.
 
 ---
 
