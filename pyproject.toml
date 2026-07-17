@@ -1,6 +1,6 @@
 [project]
 name = "guitar-tui"
-version = "0.4.1"
+version = "0.5.0"
 description = "A TUI application for guitar music theory"
 readme = "docs/pypi_readme.md"
 license = "MIT"

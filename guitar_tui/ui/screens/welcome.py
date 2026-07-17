@@ -134,7 +134,7 @@ but never lost interest in the instrument.
 """
 
 _INFO_TEXT = """\
-[bold]Guitar TUI[/bold]  v0.4.1  ·  MIT License  ·  © 2026 Erikton Konomi
+[bold]Guitar TUI[/bold]  v0.5.0  ·  MIT License  ·  © 2026 Erikton Konomi
 
 github.com/konoerik/guitar-tui
 
