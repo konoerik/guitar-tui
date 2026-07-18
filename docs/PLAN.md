@@ -32,10 +32,6 @@ v1 shipped 2026-07-12 (see Done); remaining phases:
 
 ### Infrastructure
 
-- **Re-record demo.gif** — the current demo.gif/demo.tape date from 2026-03 (v0.1.0): the
-  welcome text, Tools screen, and Practice tree have all changed since. Re-run the tape
-  (update it for the new navigation) and refresh `docs/screenshot.png` alongside if the
-  Key View changes.
 - **Evaluate line wraps in lesson prose** — this is a TUI: the Markdown/Static widgets wrap text
   to widget width, and the size warning already guarantees ≥110 cols for tables/diagrams. There is
   therefore no reason for content to fight "runaway sentences" — prose can be written naturally and
@@ -101,6 +97,10 @@ If audio is added, implement it as one coherent feature rather than piecemeal �
 <!-- Completed items land here temporarily.
      The stop hook archives these to .claude/archive/YYYY-MM.md and clears this section. -->
 
+- Track 18 "Expanding Your Improvisation" (user-initiated, not previously planned): 6-lesson single-note-addition ladder in A minor, 5 licks (new `improvisation` category in lick_loader), 2 drills (target_tones, pentatonic_switch); capstone targets the traditional HotRS changes as the Songbook on-ramp; scale-mixing diagrams split per-scale for verification, `changes_runner` allowlisted in `_OUTSIDE_SCALE_ALLOWED`; no new data/engine work; 1137 tests ✓
+- Reference tracks (ADR D14): `reference: true` flag in index.yaml; equipment moved to unnumbered Reference tree section; flag drives practice-tab suppression + hides [pos/total]; welcome/intro counts updated; 6 new tests ✓
+- Re-record demo.gif: demo.tape rewritten for current navigation (Hide-block fresh GUITAR_TUI_CONFIG_DIR, two-Tab tree focus, tab-bar switching), re-recorded and frame-verified; screenshot.png confirmed still current (Key View unchanged) ✓
+- v0.5.0 released to PyPI: Track 17 + tone sweep + reference tree section + new demo; version bumped both places, tag pushed, `make release` clean, PyPI verified live ✓
 - Review all work since v0.1.0 (docs/reviews/2026-07-12_reviewer_assessment.md): I1–I3 + N1–N8 + D1 all fixed same-session; bar-slot invariant test added (caught pre-existing position_shifts defect); released as v0.4.0 ✓
 - v0.4.1 released: lesson-tree resume sync (call_after_refresh cursor fix + first-run/restore tests), PyPI description split ✓
 - Tone sweep across all content (grep batteries + context reads): 4 fixes, all abbreviations verified defined at first use; content-tone rule saved to session memory ✓
