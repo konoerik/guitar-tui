@@ -202,6 +202,18 @@ tracks:
       Standalone — most valuable after Modes, but accessible any time after the
       Natural Minor track. Every scale here is explorable in the Theory Web.
 
+  - id: improvisation
+    title: "Expanding Your Improvisation"
+    description: |-
+      How a soloist goes from playing one pentatonic box over everything to
+      choosing notes chord by chord. A ladder of single-note additions, climbed
+      one rung per lesson and all in A minor: the blues note's passing
+      treatment, the safe 9th and the spicy b6, the Dorian sixth the chords
+      vote for, the major-minor pentatonic switch, and the G# that belongs to
+      the E chord alone. The capstone assembles every rung over one famous
+      folk progression — and hands off directly to the Songbook. Builds on the
+      Pentatonic track; pairs naturally with Phrasing and Song Analysis.
+
   - id: equipment
     title: "Your Equipment"
     reference: true

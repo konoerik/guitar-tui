@@ -76,7 +76,10 @@ _SCALE_FORMULAS: dict[str, list[int]] = {
 
 # Licks that intentionally use notes outside their declared scale (chromatic
 # passing tones etc.). Add the slug here with a justification comment.
-_OUTSIDE_SCALE_ALLOWED: set[str] = set()
+# Content whose premise is that no single scale fits: the Track 18 capstone
+# lick spans natural minor plus both borrowed notes (F# over the D chord,
+# G# over the E chord), so its tab cannot be verified against one formula.
+_OUTSIDE_SCALE_ALLOWED: set[str] = {"changes_runner"}
 
 _CHORD_NAME_RE = re.compile(r"^([A-G][#b]?)(m7b5|maj7|dim7|add9|sus2|sus4|dim|aug|m7|m6|m|7|6|9|5|°)?$")
 

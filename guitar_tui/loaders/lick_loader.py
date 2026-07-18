@@ -41,6 +41,7 @@ CATEGORY_ORDER = [
     "lydian",
     "mixolydian",
     "world",
+    "improvisation",
 ]
 
 CATEGORY_LABELS: dict[str, str] = {
@@ -53,6 +54,7 @@ CATEGORY_LABELS: dict[str, str] = {
     "lydian":       "Lydian",
     "mixolydian":   "Mixolydian",
     "world":        "World Scales",
+    "improvisation": "Improvisation",
 }
 
 

@@ -309,6 +309,38 @@ for the player. US English; "delay (echo)" is the taught term, echo noted as dat
 
 ---
 
+### Track 18 — Expanding Your Improvisation
+
+*How the intermediate soloist moves beyond one pentatonic box: a ladder of
+single-note additions, one rung per lesson, each adding one or two notes and one
+concept. The entire track stays in A minor so the ear tracks the changing notes,
+not changing keys. Learning arc position: after Track 6 (Pentatonic) and
+Track 13 (Phrasing); touches Tracks 7, 10, and 16 without requiring them.
+The capstone hands off directly to Songbook entry 1 (House of the Rising Sun,
+whose traditional changes contain every decision the track teaches).*
+
+**Data note:** No new data or engine work — all scales (minor/major pentatonic,
+blues, natural minor, dorian, harmonic minor) and progressions (dorian_vamp,
+harmonic_minor_cadence, twelve_bar, minor_pop) already exist. Concept ladder:
+passing tones → color vs. tension → context decides → parallel colors →
+chord-tone targeting.
+
+| Status | Slug | Title | Difficulty | Diagrams needed |
+|--------|------|-------|------------|-----------------|
+| ✓ | beyond_one_scale | Beyond One Scale | intermediate | scale, tab |
+| ✓ | the_safe_and_spicy_notes | The Safe Note and the Spicy Note | intermediate | scale, tab |
+| ✓ | the_chords_vote | The Chords Vote | intermediate | scale, tab |
+| ✓ | major_minor_switching | The Major–Minor Switch | intermediate | scale, tab |
+| ✓ | one_note_one_chord | One Note, One Chord | intermediate | tab |
+| ✓ | playing_the_changes | Playing the Changes | advanced | tab |
+
+> **Note**: Licks: 5 (one per rung, category `improvisation`). Exercises: 2
+> (target_tones, pentatonic_switch). Lesson 1 reuses `blues_tritone_pass`;
+> lessons 4–5 cross-reference `blues_bb_king_box` and `gypsy_cadence_run`.
+> Shipped 2026-07-17.
+
+---
+
 ### Track 11 — Song Analysis
 
 *Reverse-engineering the theory of real music. Builds on Tracks 4–8. Requires the
@@ -436,6 +468,13 @@ needed to perform the exercise correctly.
 | ✓ | open_chord_arpeggio | Open Chord Arpeggio Drill | beginner | chord, tab |
 | ✓ | chord_melody_intro | Simple Chord Melody | advanced | tab |
 
+### Improvisation Exercises
+
+| Status | Slug | Title | Difficulty | Diagrams needed |
+|--------|------|-------|------------|-----------------|
+| ✓ | target_tones | Target Tones | intermediate | tab |
+| ✓ | pentatonic_switch | The Pentatonic Switch | intermediate | tab |
+
 ---
 
 ## 4. Licks Library
@@ -474,6 +513,11 @@ major, natural_minor, dorian, phrygian, lydian, mixolydian.
 | ✓ | mixolydian_chord_riff | Mixolydian Chord-Riff Hybrid | G | mixolydian | mixolydian |
 | ✓ | legato_phrase | Legato Phrase | A | minor_pentatonic | pentatonic |
 | ✓ | slide_connector | Slide Connector | A | minor_pentatonic | pentatonic |
+| ✓ | spicy_note_resolve | The Spicy Note Resolve | A | natural_minor | improvisation |
+| ✓ | dorian_swap_vamp | The Sixth Swap | A | dorian | improvisation |
+| ✓ | major_minor_switch | Major–Minor Phrase Pair | A | major_pentatonic | improvisation |
+| ✓ | cadence_spotlight | The G# Spotlight | A | harmonic_minor | improvisation |
+| ✓ | changes_runner | Running the Changes | A | natural_minor | improvisation |
 
 ---
 
@@ -601,7 +645,9 @@ written.
 | 14 — Rhythm Depth | 6 | 6 | 0 |
 | 15 — Ear Training | 5 | 0 | 0 |
 | 16 — Sounds and Scales Around the World | 6 | 6 | 0 |
-| **Total** | **108** | **103** | **0** |
+| 17 — Your Equipment (reference) | 4 | 4 | 0 |
+| 18 — Expanding Your Improvisation | 6 | 6 | 0 |
+| **Total** | **118** | **113** | **0** |
 
-Exercises: 14 complete; ~10 planned for Tracks 13–14.
-Licks: 25 complete; ~5–7 planned for Tracks 13–14.
+Exercises: 24 complete.
+Licks: 41 complete.
